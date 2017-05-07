@@ -1,0 +1,65 @@
+' Gambas class file
+
+Public Sub _new()
+
+  Dim i As Integer
+  Dim arrStatus As New String[]
+  Dim arrName As New String[]
+  Dim arrAddress As New String[]
+  Dim arrPort As New String[]
+  Dim objNas As CNas
+
+  arrStatus = Split(Settings["Servers/Status"], ";")
+  arrName = Split(Settings["Servers/Name"], ";")
+  arrAddress = Split(Settings["Servers/Address"], ";")
+  arrPort = Split(Settings["Servers/Port"], ";")
+
+End
+
+
+Public Sub Form_Resize()
+
+  With pnlTitle
+    .W = Me.ClientW - MMain.MARGIN * 2
+    .Left = MMain.MARGIN
+    .Top = MMain.MARGIN
+  End With
+
+  With lblTitle
+    .W = pnlTitle.W - pctClose.W - MMain.MARGIN
+    .Left = MMain.MARGIN
+    .Top = MMain.MARGIN
+  End With
+
+  With pctClose
+    .Left = pnlTitle.W - .W
+    .Top = 0
+  End With
+
+  With pnlToolBar
+    .W = Me.ClientW - MMain.MARGIN * 2
+    .H = MMain.TLB_HEIGHT
+    .Left = MMain.MARGIN
+    .Top = pnlTitle.H + MMain.MARGIN
+  End With
+
+  With wksServers
+    .W = Me.ClientW - MMain.MARGIN * 2
+    .H = Me.ClientH - pnlTitle.H - pnlToolBar.H - MMain.MARGIN * 2
+    .Left = MMain.MARGIN
+    .Top = pnlTitle.H + pnlToolBar.H + MMain.MARGIN
+  End With
+
+End
+
+Public Sub tlbAddSrv_Click()
+
+  FServers.ShowModal()
+
+End
+
+Public Sub pctClose_MouseDown()
+
+  FMain.Close()
+
+End

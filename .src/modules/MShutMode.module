@@ -1,0 +1,8 @@
+' Gambas module file
+
+Public Const {Default} As String = ""
+Public Const Soft As String = "soft"
+Public Const Hard As String = "hard"
+Public Const Cancel As String = "cancel"
+
+Public Mode As String[] = [{Default}, Soft, Hard, Cancel]

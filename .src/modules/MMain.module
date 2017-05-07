@@ -1,0 +1,98 @@
+' Gambas module file
+
+' Name of global config file
+Public Const GLOBAL_CONFIG As String = "accelgui.conf"
+' Margin between controls
+Public Const MARGIN As Byte = 8
+' Toolbar height
+Public Const TLB_HEIGHT As Byte = 64
+' Symbols used in ip-addresses
+Private Const IP_SYMBOLS As String = "0123456789."
+' Object for saving application settings
+Public objSettings As Settings
+
+Public Sub Main()
+
+  objSettings = New Settings(User.Home & "/.config/" & GLOBAL_CONFIG)
+  FMain.Show()
+
+End
+
+' -----------------------------------------------------------------------
+'' The function checks whether given string complies to ip-address format
+' -----------------------------------------------------------------------
+
+Public Function IsIpAddress(strIp As String) As Boolean
+
+  Dim i As Byte
+  Dim bytLastPos, bytNewPos As Byte
+  Dim shtOctet As Short
+
+  strIp = Trim(strIp)
+  ' The length of ip-address must be from 7 to 15 symbols
+  If Len(strIp) < 7 Or If Len(strIp) > 15 Then Return False
+  For i = 1 To Len(strIp)
+    If InStr(IP_SYMBOLS, Mid(strIp, i, 1)) = 0 Then Return False
+  Next
+  bytLastPos = 1
+  For i = 1 To 3
+    bytNewPos = InStr(strIp, ".", bytLastPos)
+    If bytNewPos = 0 Then Return False
+    shtOctet = CShort(Mid(strIp, bytLastPos, bytNewPos - bytLastPos))
+    ' Octets can be from 0 to 255
+    If shtOctet > 255 Then Return False
+    bytLastPos = bytNewPos + 1
+    If i = 3 Then
+      shtOctet = CShort(Mid(strIp, bytLastPos, Len(strIp) + 1 - bytLastPos))
+      If shtOctet > 255 Then Return False
+    Endif
+  Next
+  Return True
+
+End
+
+Public Sub ActivateRow(Grid As GridView, Row As Integer)
+
+  Grid.Rows[Row].Selected = True
+  Grid.Current.EnsureVisible()
+
+End
+
+Public Sub ShowMsg(strTitle As String, strMessage As String)
+
+  Message.Title = strTitle
+  Message.Warning(strMessage)
+
+End
+
+Public Function NoDuplicates(strName As String, varAddress As Variant, Optional intSkip As Integer = -1) As Boolean
+
+  Dim i As Integer
+
+  For i = 0 To FServers.grvServers.Rows.Max
+    If intSkip > -1 Then
+      If i = intSkip Then Continue
+    Endif
+    If FServers.grvServers[i, 1].Text = Trim(strName) Then Return False
+    If FServers.grvServers[i, 2].Text = Trim(CStr(varAddress)) Then Return False
+  Next
+  Return True
+
+End
+
+Public Sub EnableControls(bolAction As Boolean)
+
+  Dim objControl As Control
+
+  With FServers
+    For Each objControl In .Controls
+      If Object.Type(objControl) = "ToolButton" Then
+        objControl.Enabled = bolAction
+      Endif
+    Next
+    .lblSrvCount.Enabled = bolAction
+    .tlbAdd.Enabled = True
+    .tlbSave.Enabled = True
+  End With
+
+End

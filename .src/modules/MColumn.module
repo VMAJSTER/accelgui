@@ -1,0 +1,16 @@
+' Gambas module file
+
+Public Const {Default} As String = ""
+Public Const IFName As String = "ifname"
+Public Const UserName As String = "username"
+Public Const IP As String = "ip"
+Public Const Type As String = "type"
+Public Const State As String = "state"
+Public Const UpTime As String = "uptime"
+Public Const CallingSID As String = "calling-sid"
+Public Const CalledSID As String = "called-sid"
+Public Const SID As String = "sid"
+Public Const Compression As String = "comp"
+Public Const RateLimit As String = "rate-limit"
+
+Public Columns As String[] = [{Default}, IFName, UserName, IP, Type, State, UpTime, CallingSID, CalledSID, SID, Compression, RateLimit]

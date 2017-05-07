@@ -1,0 +1,109 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,931,546)
+  #Scaled = False
+  Text = ("Accel GUI")
+  Icon = Picture["icons/16.png"]
+  Resizable = False
+  Border = False
+  Maximized = True
+  { wksServers Workspace
+    Move(7,126,917,413)
+  }
+  { pnlToolBar Panel
+    Move(7,56,917,64)
+    { tlbFilter ToolButton
+      Move(70,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Filter")
+      Picture = Picture["images/filteradd.png"]
+    }
+    { tlbSearch ToolButton
+      Move(140,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Search")
+      Picture = Picture["images/search.png"]
+    }
+    { tlbKillOne ToolButton
+      Move(210,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Terminate one session")
+      Picture = Picture["images/onedel.png"]
+    }
+    { tlbKillGroup ToolButton
+      Move(266,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Terminate group of sessions")
+      Picture = Picture["images/groupdel.png"]
+    }
+    { tlbRefresh ToolButton
+      Move(336,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Refresh")
+      Picture = Picture["images/update.png"]
+    }
+    { tlbSettings ToolButton
+      Move(406,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Settings")
+      Picture = Picture["images/settings.png"]
+    }
+    { tlbAbout ToolButton
+      Move(476,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Help")
+      Picture = Picture["images/help.png"]
+    }
+    { Separator1 Separator
+      Move(48,8,21,48)
+    }
+    { Separator2 Separator
+      Move(118,8,21,48)
+    }
+    { Separator3 Separator
+      Move(188,8,21,48)
+    }
+    { Separator4 Separator
+      Move(314,8,21,48)
+    }
+    { Separator5 Separator
+      Move(384,8,21,48)
+    }
+    { Separator6 Separator
+      Move(454,8,21,48)
+    }
+    { tlbAddSrv ToolButton
+      Move(0,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Servers")
+      Picture = Picture["images/servers.png"]
+    }
+  }
+  { pnlTitle Panel
+    Move(7,7,917,35)
+    Background = Color.SelectedBackground
+    { lblTitle Label
+      Move(8,8,833,19)
+      Font = Font["Bold,12"]
+      Foreground = Color.White
+      Text = ("Accel GUI")
+    }
+    { pctClose PictureBox
+      Move(882,0,35,35)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Close")
+      Picture = Picture["icon:/22/quit"]
+      Alignment = Align.Center
+    }
+  }
+}

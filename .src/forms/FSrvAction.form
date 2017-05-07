@@ -1,0 +1,77 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,315,217)
+  #Scaled = False
+  Icon = Picture["icons/16.png"]
+  Resizable = False
+  Border = False
+  SkipTaskbar = True
+  { Panel1 Panel
+    Move(7,49,301,126)
+    Border = Border.Plain
+    { Label1 Label
+      Move(14,16,63,21)
+      Text = ("Name: ")
+      Alignment = Align.Right
+    }
+    { Label2 Label
+      Move(14,53,63,21)
+      Text = ("Address: ")
+      Alignment = Align.Right
+    }
+    { Label3 Label
+      Move(14,88,63,21)
+      Text = ("Port: ")
+      Alignment = Align.Right
+    }
+    { txbName TextBox
+      Move(84,14,203,28)
+      Text = ("accel-ppp")
+    }
+    { vlbAddress ValueBox
+      Move(84,49,147,28)
+      Type = ValueBox.IPAddress
+    }
+    { vlbPort ValueBox
+      Move(84,84,84,28)
+      Text = ("2001")
+    }
+  }
+  { btnApply Button
+    Move(7,182,112,28)
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Apply")
+    Picture = Picture["icon:/16/apply"]
+    Default = True
+  }
+  { btnCancel Button
+    Move(196,182,112,28)
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Cancel")
+    Picture = Picture["icon:/16/quit"]
+    Cancel = True
+  }
+  { pnlTitle Panel
+    Move(7,7,301,35)
+    Background = Color.SelectedBackground
+    Tracking = True
+    { lblTitle Label
+      Move(7,7,210,21)
+      Font = Font["Bold,12"]
+      Foreground = Color.White
+      Tracking = True
+      Text = ("Current session")
+    }
+    { pctClose PictureBox
+      Move(266,0,35,35)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Close")
+      Picture = Picture["icon:/22/quit"]
+      Alignment = Align.Center
+    }
+  }
+}

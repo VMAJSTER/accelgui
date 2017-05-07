@@ -1,0 +1,20 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.9.2
+Title=accelgui
+Startup=MMain
+Icon=icons/128.png
+Version=0.0.64
+Component=gb.image
+Component=gb.gui.qt
+Component=gb.form
+Component=gb.settings
+Component=gb.form.mdi
+Component=gb.net
+Description="Graphical user interface for accel-ppp vpn server"
+Authors="Zagirov Abdul Askerovich"
+TabSize=4
+Translate=1
+Language=en_US
+ControlPublic=1
+Warnings=0
+Packager=1

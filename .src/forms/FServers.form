@@ -1,0 +1,147 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,542,434)
+  #Scaled = False
+  Text = ("Servers")
+  Icon = Picture["icons/16.png"]
+  Resizable = False
+  Border = False
+  SkipTaskbar = True
+  { grvServers GridView
+    Move(7,91,528,336)
+    Mouse = Mouse.Pointing
+    Mode = Select.Single
+    Header = GridView.Both
+    ScrollBar = Scroll.Vertical
+    Resizable = False
+  }
+  { pnlToolBar Panel
+    Move(7,50,528,32)
+    { tlbAdd ToolButton
+      Move(0,0,32,32)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Add")
+      Picture = Picture["icon:/16/add"]
+    }
+    { tlbEdit ToolButton
+      Move(35,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Edit")
+      Picture = Picture["icon:/16/edit"]
+    }
+    { tlbDelete ToolButton
+      Move(70,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Delete")
+      Picture = Picture["icon:/16/delete"]
+    }
+    { tlbClear ToolButton
+      Move(105,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Clear")
+      Picture = Picture["icon:/16/clear"]
+    }
+    { tlbFirst ToolButton
+      Move(203,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("First")
+      Picture = Picture["icon:/16/first"]
+    }
+    { tlbPrevious ToolButton
+      Move(238,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Previous")
+      Picture = Picture["icon:/16/previous"]
+    }
+    { tlbNext ToolButton
+      Move(364,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Next")
+      Picture = Picture["icon:/16/next"]
+    }
+    { tlbLast ToolButton
+      Move(399,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Last")
+      Picture = Picture["icon:/16/last"]
+    }
+    { tlbCheck ToolButton
+      Move(448,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Autostart")
+      Picture = Picture["icon:/16/apply"]
+    }
+    { tlbSave ToolButton
+      Move(497,0,32,32)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Save")
+      Picture = Picture["icon:/16/save"]
+    }
+    { Separator1 Separator
+      Move(135,0,21,32)
+    }
+    { Separator2 Separator
+      Move(429,0,21,32)
+    }
+    { Separator3 Separator
+      Move(478,0,21,32)
+    }
+    { lblSrvCount Label
+      Move(275,0,84,35)
+      Enabled = False
+      Font = Font["Ubuntu,Bold,12"]
+      Text = ("0 / 0")
+      Alignment = Align.Center
+    }
+    { tlbAction ToolButton
+      Move(154,0,32,32)
+      Enabled = False
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Start")
+      Picture = Picture["icon:/16/play"]
+    }
+    { Separator4 Separator
+      Move(184,0,21,32)
+    }
+  }
+  { pnlTitle Panel
+    Move(7,7,528,35)
+    Background = Color.SelectedBackground
+    Tracking = True
+    { lblTitle Label
+      Move(7,7,392,21)
+      Font = Font["Bold,12"]
+      Foreground = Color.White
+      Tracking = True
+      Text = ("Servers manager")
+    }
+    { pctClose PictureBox
+      Move(492,0,35,35)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Close")
+      Picture = Picture["icon:/22/quit"]
+      Alignment = Align.Center
+    }
+  }
+}

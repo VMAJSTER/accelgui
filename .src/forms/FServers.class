@@ -1,0 +1,289 @@
+' Gambas class file
+
+Private intX As Integer
+Private intY As Integer
+
+Public Sub _new()
+
+    Dim i As Byte
+
+    grvServers.Columns.Count = 5
+    grvServers.Columns[0].Width = 25
+    grvServers.Columns[0].Text = ("P")
+    grvServers.Columns[1].Width = 25
+    grvServers.Columns[1].Text = ("S")
+    grvServers.Columns[2].Width = 250
+    grvServers.Columns[2].Text = ("Name")
+    grvServers.Columns[3].Width = 100
+    grvServers.Columns[3].Text = ("Address")
+    grvServers.Columns[4].Width = 35
+    grvServers.Columns[4].Text = ("Port")
+    For i = 0 To 4
+        grvServers.Columns[i].Alignment = Align.Center
+    Next
+
+End
+
+Public Sub Form_Open()
+
+    Dim i As Integer
+    Dim arrStatus As New String[]
+    Dim arrName As New String[]
+    Dim arrAddress As New String[]
+    Dim arrPort As New String[]
+
+    tlbClear_Click()
+    arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
+    arrName = Split(MMain.objSettings["Servers/Name"], ";")
+    arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
+    arrPort = Split(MMain.objSettings["Servers/Port"], ";")
+    For i = 0 To arrAddress.Max
+        Inc grvServers.Rows.Count
+        grvServers[i, 0].Picture = Picture["icon:/16/stop"]
+        If arrStatus[i] = "True" Then
+            grvServers[i, 1].Picture = Picture["icon:/16/apply"]
+        Else
+            grvServers[i, 1].Picture = Picture["icon:/16/halt"]
+        Endif
+        grvServers[i, 2].Text = arrName[i]
+        grvServers[i, 3].Text = arrAddress[i]
+        grvServers[i, 4].Text = arrPort[i]
+    Next
+    If grvServers.Rows.Count > 0 Then
+        MMain.ActivateRow(grvServers, grvServers.Rows.Max)
+        MMain.EnableControls(True)
+    Endif
+
+End
+
+Public Sub tlbAdd_Click()
+
+    With FSrvAction
+        .bolEdit = False
+        .lblTitle.Text = ("Add server")
+        .ShowModal()
+    End With
+
+End
+
+Public Sub tlbEdit_Click()
+
+    With FSrvAction
+        If grvServers.Row > -1 Then
+            .bolEdit = True
+            .lblTitle.Text = ("Edit server")
+            .ShowModal()
+        Endif
+    End With
+
+End
+
+Public Sub tlbDelete_Click()
+
+    Dim intRow As Integer
+
+    If grvServers.Row > -1 Then
+        intRow = grvServers.Row
+        grvServers.Rows.Remove(intRow)
+        If intRow = grvServers.Rows.Count Then Dec intRow
+        If grvServers.Rows.Count > 0 Then
+            MMain.ActivateRow(grvServers, intRow)
+        Endif
+        ShowRowNum(intRow + 1)
+        If grvServers.Rows.Count = 0 Then MMain.EnableControls(False)
+    Endif
+
+End
+
+Public Sub tlbClear_Click()
+
+    grvServers.Clear()
+    grvServers.Rows.Count = 0
+    ShowRowNum(0)
+    MMain.EnableControls(False)
+
+End
+
+Public Sub tlbFirst_Click()
+
+    If grvServers.Rows.Count > 0 Then
+        MMain.ActivateRow(grvServers, 0)
+        ShowRowNum(1)
+    Endif
+
+End
+
+Public Sub tlbPrevious_Click()
+
+    If grvServers.Row > 0 Then
+        MMain.ActivateRow(grvServers, grvServers.Row - 1)
+        ShowRowNum(grvServers.Row + 1)
+    Endif
+
+End
+
+Public Sub tlbNext_Click()
+
+    If grvServers.Row < grvServers.Rows.Max Then
+        MMain.ActivateRow(grvServers, grvServers.Row + 1)
+        ShowRowNum(grvServers.Row + 1)
+    Endif
+
+End
+
+Public Sub tlbLast_Click()
+
+    If grvServers.Rows.Count > 0 Then
+        MMain.ActivateRow(grvServers, grvServers.Rows.Max)
+        ShowRowNum(grvServers.Rows.Count)
+    Endif
+
+End
+
+Public Sub tlbCheck_Click()
+
+    If grvServers.Row > -1 Then
+        If grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/apply"] Then
+            grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/halt"]
+            tlbCheck.Picture = Picture["icon:/16/apply"]
+        Else
+            grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/apply"]
+            tlbCheck.Picture = Picture["icon:/16/halt"]
+        Endif
+    Endif
+
+End
+
+Public Sub tlbSave_Click()
+
+    Dim i As Integer
+    Dim arrStatus As New String[]
+    Dim arrName As New String[]
+    Dim arrAddress As New String[]
+    Dim arrPort As New String[]
+
+    For i = 0 To grvServers.Rows.Max
+        If grvServers[i, 1].Picture = Picture["icon:/16/apply"] Then
+            arrStatus.Add("True")
+        Else
+            arrStatus.Add("False")
+        Endif
+        arrName.Add(grvServers[i, 2].Text)
+        arrAddress.Add(grvServers[i, 3].Text)
+        arrPort.Add(grvServers[i, 4].Text)
+    Next
+    MMain.objSettings["Servers/Status"] = arrStatus.Join(";")
+    MMain.objSettings["Servers/Name"] = arrName.Join(";")
+    MMain.objSettings["Servers/Address"] = arrAddress.Join(";")
+    MMain.objSettings["Servers/Port"] = arrPort.Join(";")
+
+End
+
+Public Sub grvServers_Select()
+
+    If grvServers.Row > -1 Then
+        ShowRowNum(grvServers.Row + 1)
+        If grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/halt"] Then
+            tlbCheck.Picture = Picture["icon:/16/apply"]
+        Else
+            tlbCheck.Picture = Picture["icon:/16/halt"]
+        Endif
+        If grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"] Then
+            tlbAction.Picture = Picture["icon:/16/stop"]
+            tlbAction.Tooltip = ("Stop")
+        Else
+            tlbAction.Picture = Picture["icon:/16/play"]
+            tlbAction.Tooltip = ("Start")
+        Endif
+    Endif
+
+End
+
+Private Sub ShowRowNum(intCur As Integer)
+
+    lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
+
+End
+
+Public Sub pctClose_MouseDown()
+
+    Me.Close()
+
+End
+
+Public Sub grvServers_DblClick()
+
+    tlbEdit_Click()
+
+End
+
+Public Sub tlbAction_Click()
+
+    Dim objForm As FSessions
+    Dim strName As String
+    Dim strHost As String
+    Dim intPort As Integer
+    Dim objWindow As Window
+
+    If grvServers.Row > -1 Then
+        If grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"] Then
+            grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/stop"]
+            tlbAction.Picture = Picture["icon:/16/play"]
+            tlbAction.Tooltip = ("Start")
+            For Each objWindow In FMain.wksServers.Children
+                ' If objWindow.Text = grvServers[grvServers.Row, 2].Text Then
+                objWindow.Close()
+                ' Endif
+            Next
+        Else
+            grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"]
+            tlbAction.Picture = Picture["icon:/16/stop"]
+            tlbAction.Tooltip = ("Stop")
+            strName = grvServers[grvServers.Row, 2].Text
+            strHost = grvServers[grvServers.Row, 3].Text
+            intPort = CInt(grvServers[grvServers.Row, 4].Text)
+            objForm = New FSessions(strName, strHost, intPort)
+            FMain.wksServers.Add(objForm)
+        Endif
+    Endif
+
+End
+
+Public Sub pnlTitle_MouseDown()
+
+    intX = Mouse.X + pnlTitle.Left
+    intY = Mouse.Y + pnlTitle.Top
+
+End
+
+Public Sub pnlTitle_MouseMove()
+
+    Dim intLeft As Integer
+    Dim intTop As Integer
+
+    If Mouse.Left Then
+        intLeft = Mouse.ScreenX - intX
+        intTop = Mouse.ScreenY - intY
+        If intLeft >= 0 And intTop >= 0 Then
+            If intLeft + Me.W <= Screen.W Then
+                If intTop + Me.H <= Screen.H Then
+                    Me.Left = intLeft
+                    Me.Top = intTop
+                Endif
+            Endif
+        Endif
+    Endif
+
+End
+
+Public Sub lblTitle_MouseDown()
+
+    pnlTitle_MouseDown()
+
+End
+
+Public Sub lblTitle_MouseMove()
+
+    pnlTitle_MouseMove()
+
+End

@@ -1,0 +1,129 @@
+' Gambas class file
+
+Private Const DFL_ADDRESS As String = "127.0.0.1"
+
+Public bolEdit As Boolean = False
+
+Private intX As Integer
+Private intY As Integer
+
+Public Sub Form_Open()
+
+    Dim intRow As Integer
+
+    vlbAddress.Value = DFL_ADDRESS
+    If bolEdit Then
+        With FServers
+            intRow = .grvServers.Row
+            txbName.Text = .grvServers[intRow, 2].Text
+            vlbAddress.Text = .grvServers[intRow, 3].Text
+            vlbPort.Text = .grvServers[intRow, 4].Text
+        End With
+    Endif
+
+End
+
+Public Sub btnApply_Click()
+
+    Dim intRow As Integer
+    Dim intSkip As Integer
+
+    If Not FieldsAreFilled() Then
+        MMain.ShowMsg(("Attention"), ("Fill in text fields"))
+        Return
+    Endif
+    If bolEdit Then
+        intSkip = FServers.grvServers.Row
+    Else
+        intSkip = -1
+    Endif
+    If Not MMain.NoDuplicates(txbName.Text, vlbAddress.Value, intSkip) Then
+        MMain.ShowMsg(("Attention"), ("Name or address already exists"))
+        Return
+    Endif
+    With FServers
+        If bolEdit Then
+            intRow = .grvServers.Row
+        Else
+            intRow = .grvServers.Rows.Count
+            Inc .grvServers.Rows.Count
+            .grvServers[intRow, 0].Picture = Picture["icon:/16/stop"]
+            .grvServers[intRow, 1].Picture = Picture["icon:/16/halt"]
+        Endif
+        .grvServers[intRow, 2].Text = txbName.Text
+        .grvServers[intRow, 3].Text = CStr(vlbAddress.Value)
+        .grvServers[intRow, 4].Text = CStr(vlbPort.Value)
+        MMain.ActivateRow(.grvServers, intRow)
+    End With
+    MMain.EnableControls(True)
+    Me.Close()
+
+End
+
+Public Sub btnCancel_Click()
+
+    Me.Close()
+
+End
+
+Private Function FieldsAreFilled() As Boolean
+
+    If Trim(txbName.Text) = Null Then Return False
+    If Trim(vlbAddress.Text) = Null Then Return False
+    If Trim(vlbPort.Text) = Null Then Return False
+    Return True
+
+End
+
+Public Sub pctClose_MouseDown()
+
+    btnCancel_Click()
+
+End
+
+Public Sub vlbPort_Change()
+
+    If vlbPort.Value < 1 Or If vlbPort.Value > 65535 Then
+        vlbPort.Value = 2001
+    Endif
+
+End
+
+Public Sub pnlTitle_MouseDown()
+
+    intX = Mouse.X + pnlTitle.Left
+    intY = Mouse.Y + pnlTitle.Top
+
+End
+
+Public Sub pnlTitle_MouseMove()
+
+    Dim intLeft As Integer
+    Dim intTop As Integer
+
+    If Mouse.Left Then
+        intLeft = Mouse.ScreenX - intX
+        intTop = Mouse.ScreenY - intY
+        If intLeft >= 0 And intTop >= 0 Then
+            If intLeft + Me.W <= Screen.W Then
+                If intTop + Me.H <= Screen.H Then
+                    Me.Left = intLeft
+                    Me.Top = intTop
+                Endif
+            Endif
+        Endif
+    Endif
+
+End
+
+Public Sub lblTitle_MouseDown()
+
+    pnlTitle_MouseDown()
+
+End
+
+Public Sub lblTitle_MouseMove()
+
+    pnlTitle_MouseMove()
+
+End

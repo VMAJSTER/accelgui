@@ -1,0 +1,208 @@
+' Gambas class file
+
+Private objServer As CNas
+
+Private intX As Integer
+Private intY As Integer
+
+Public Sub _new(Name As String, Host As String, Port As Integer)
+
+    Dim i As Integer
+
+    With grvSessions
+        .Columns.Count = 10
+        .Columns[0].Text = ("IFName")
+        .Columns[0].Width = 75
+        .Columns[1].Text = ("Username")
+        .Columns[2].Text = ("CallingSID")
+        .Columns[2].Width = 125
+        .Columns[3].Text = ("IP")
+        .Columns[3].Width = 125
+        .Columns[4].Text = ("RateIn")
+        .Columns[4].Width = 75
+        .Columns[5].Text = ("RateOut")
+        .Columns[5].Width = 75
+        .Columns[6].Text = ("Type")
+        .Columns[6].Width = 50
+        .Columns[7].Text = ("Comp")
+        .Columns[7].Width = 50
+        .Columns[8].Text = ("State")
+        .Columns[8].Width = 75
+        .Columns[9].Text = ("Uptime")
+        .Columns[9].Width = 100
+        For i = 0 To 9
+            .Columns[i].Alignment = Align.Center
+        Next
+    End With
+
+    With grvStats
+        .Columns.Count = 2
+        .Rows.Count = 4
+        .Columns[0].Width = 100
+        .Columns[0].Text = ("Name")
+        .Columns[0].Background = Color.Background
+        .Columns[0].Alignment = Align.Center
+        .Columns[1].Text = ("Value")
+        .Columns[1].Alignment = Align.Center
+    End With
+    grvStats[0, 0].Text = ("UpTime")
+    grvStats[1, 0].Text = ("Cpu")
+    grvStats[2, 0].Text = ("MemRss")
+    grvStats[3, 0].Text = ("MemVirt")
+
+    objServer = New CNas As "objServer"
+    With objServer
+        .Name = Name
+        .Host = Host
+        .Port = Port
+        .Connect()
+    End With
+
+    Me.Text = Name
+
+End
+
+
+Public Sub Form_Resize()
+
+    With grvSessions
+        .Width = Me.ClientW - MMain.MARGIN * 2
+        .Height = Me.ClientH - MMain.MARGIN * 2
+        .Left = MMain.MARGIN
+        .Top = MMain.MARGIN
+        .Columns[1].Width = grvSessions.ScrollWidth - 800
+    End With
+
+    With pnlStat
+        .Left = grvSessions.W - .W - 25
+    End With
+
+End
+
+Public Sub mnuShowStats_Click()
+
+    If pnlStat.Visible Then
+        pnlStat.Hide()
+        mnuShowStats.Text = ("Show statistics")
+    Else
+        pnlStat.Show()
+        mnuShowStats.Text = ("Hide statistics")
+    Endif
+
+End
+
+Public Sub pctCloseStat_MouseDown()
+
+    mnuShowStats_Click()
+
+End
+
+Private Sub FillSessions()
+
+    Dim i As Integer
+
+    If objServer.Sessions.Count > 0 Then
+        grvSessions.Clear()
+        grvSessions.Rows.Count = 0
+        For i = 0 To objServer.Sessions.Max
+            Inc grvSessions.Rows.Count
+            grvSessions[i, 0].Text = objServer.Sessions[i].IFName
+            grvSessions[i, 1].Text = objServer.Sessions[i].UserName
+            grvSessions[i, 2].Text = objServer.Sessions[i].CallingSID
+            grvSessions[i, 3].Text = objServer.Sessions[i].IP
+            grvSessions[i, 4].Text = objServer.Sessions[i].RateIn
+            grvSessions[i, 5].Text = objServer.Sessions[i].RateOut
+            grvSessions[i, 6].Text = objServer.Sessions[i].Type
+            grvSessions[i, 7].Text = objServer.Sessions[i].Comp
+            grvSessions[i, 8].Text = objServer.Sessions[i].State
+            grvSessions[i, 9].Text = objServer.Sessions[i].Uptime
+        Next
+    Endif
+
+End
+
+Private Sub FillStats()
+
+    grvStats[0, 1].Text = objServer.Stats.Uptime
+    grvStats[2, 1].Text = objServer.Stats.Cpu
+    grvStats[3, 1].Text = objServer.Stats.MemRss
+    grvStats[4, 1].Text = objServer.Stats.MemVirt
+
+End
+
+
+Public Sub Form_Close()
+
+    objServer.Disconnect()
+
+End
+
+Public Sub grvSessions_MouseDown()
+
+    objServer.GetSessions()
+
+End
+
+Public Sub objServer_Connected()
+
+    objServer.GetSessions()
+    ' objServer.GetStats()
+
+End
+
+
+Public Sub objServer_GotSessions()
+
+    FillSessions()
+    ' FillStats()
+
+End
+
+Public Sub pnlTitle_MouseDown()
+
+    intX = Mouse.X + pnlTitle.Left
+    intY = Mouse.Y + pnlTitle.Top
+
+End
+
+Public Sub pnlTitle_MouseMove()
+
+    Dim intLeft As Integer
+    Dim intTop As Integer
+
+    If Mouse.Left Then
+        intLeft = Mouse.ScreenX - Me.ScreenX - intX
+        intTop = Mouse.ScreenY - Me.ScreenY - intY
+        If intLeft >= 0 And intTop >= 0 Then
+            If intLeft + pnlStat.W <= Me.W Then
+                If intTop + pnlStat.H <= Me.H Then
+                    pnlStat.Left = intLeft
+                    pnlStat.Top = intTop
+                Endif
+            Endif
+        Endif
+    Endif
+
+End
+
+Public Sub lblTitle_MouseDown()
+
+    pnlTitle_MouseDown()
+
+End
+
+Public Sub lblTitle_MouseMove()
+
+    pnlTitle_MouseMove()
+
+End
+
+Public Sub tmrState_Timer()
+
+    If objServer.Connected Then
+        Me.Icon = Picture["./images/active.png"]
+    Else
+        Me.Icon = Picture["./images/passive.png"]
+    Endif
+
+End

@@ -1,0 +1,143 @@
+' Gambas class file
+
+Private strIFName As String
+Private strUserName As String
+Private strCallingSID As String
+Private strIP As String
+Private intRateIn As Integer
+Private intRateOut As Integer
+Private strType As String
+Private bolComp As Boolean
+Private strState As String
+Private strUptime As String
+
+Property IFName As String
+Property UserName As String
+Property CallingSID As String
+Property IP As String
+Property RateIn As Integer
+Property RateOut As Integer
+Property Type As String
+Property Comp As Boolean
+Property State As String
+Property Uptime As String
+
+Private Function IFName_Read() As String
+
+    Return strIFName
+
+End
+
+Private Sub IFName_Write(Value As String)
+
+    strIFName = Value
+
+End
+
+Private Function UserName_Read() As String
+
+    Return strUserName
+
+End
+
+Private Sub UserName_Write(Value As String)
+
+    strUserName = Value
+
+End
+
+Private Function CallingSID_Read() As String
+
+    Return strCallingSID
+
+End
+
+Private Sub CallingSID_Write(Value As String)
+
+    strCallingSID = Value
+
+End
+
+Private Function IP_Read() As String
+
+    Return strIP
+
+End
+
+Private Sub IP_Write(Value As String)
+
+    strIP = Value
+
+End
+
+Private Function RateIn_Read() As Integer
+
+    Return intRateIn
+
+End
+
+Private Sub RateIn_Write(Value As Integer)
+
+    intRateIn = Value
+
+End
+
+Private Function RateOut_Read() As Integer
+
+    Return intRateOut
+
+End
+
+Private Sub RateOut_Write(Value As Integer)
+
+    intRateOut = Value
+
+End
+
+Private Function Type_Read() As String
+
+    Return strType
+
+End
+
+Private Sub Type_Write(Value As String)
+
+    strType = Value
+
+End
+
+Private Function Comp_Read() As Boolean
+
+    Return bolComp
+
+End
+
+Private Sub Comp_Write(Value As Boolean)
+
+    bolComp = Value
+
+End
+
+Private Function State_Read() As String
+
+    Return strState
+
+End
+
+Private Sub State_Write(Value As String)
+
+    strState = Value
+
+End
+
+Private Function Uptime_Read() As String
+
+    Return strUptime
+
+End
+
+Private Sub Uptime_Write(Value As String)
+
+    strUptime = Value
+
+End

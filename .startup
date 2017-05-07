@@ -1,0 +1,13 @@
+MMain
+accelgui
+0
+0
+0.0.64
+
+gb.image
+gb.gui.qt
+gb.form
+gb.settings
+gb.form.mdi
+gb.net
+

@@ -1,0 +1,404 @@
+' Gambas class file
+
+' ---------
+' Constants
+' ---------
+Private Const CMD_STATS As String = "show stat"
+Private Const CMD_SESSIONS As String = "show sessions"
+Private Const CMD_RELOAD As String = "reload"
+Private Const CMD_SHUTDOWN As String = "shutdown"
+
+' ---------------------
+' Fields default values
+' ---------------------
+Private Const DFL_NAME As String = "accel-ppp"
+Private Const DFL_HOST As String = "127.0.0.1"
+Private Const DFL_PORT As Integer = 2001
+Private Const DFL_MATCH As String = "active"
+
+' ---------
+' Variables
+' ---------
+Private objSrv As Socket
+Private arrSessionsData As String[]
+Private arrStatsData As String[]
+Private strLastSrv As Byte
+
+' ------
+' Fields
+' ------
+Private strName As String = DFL_NAME
+Private strHost As String = DFL_HOST
+Private intPort As Integer = DFL_PORT
+Private arrConnected As Boolean
+Private arrSessions As CSession[]
+Private clsStats As CStat
+Private strShutMode As String = MShutMode.Default
+Private strOrderMode As String = MColumn.UserName
+Private strMatchMode As String = MColumn.State
+Private strMatchValue As String = DFL_MATCH
+Private strColumn As String = MColumn.Default
+
+' ----------
+' Properties
+' ----------
+Property Name As String
+Property Host As String
+Property Port As Integer
+Property Read Connected As Boolean
+Property Read Sessions As CSession[]
+Property Read Stats As CStat
+Property ShutMode As String
+Property OrderMode As String
+Property MatchMode As String
+Property MatchValue As String
+Property Column As String
+
+' ------
+' Events
+' ------
+Event Connected
+Event Disconnected
+Event GotSessions
+Event GotStats
+Event Reloaded
+Event Shutdown
+
+' ------------------------------
+' Properties setters and getters
+' ------------------------------
+Private Function Name_Read() As String
+
+    Return strName
+
+End
+
+Private Sub Name_Write(Value As String)
+
+    Value = Trim(Value)
+    If Value = Null Then Value = DFL_NAME
+    strName = Value
+
+End
+
+Private Function Host_Read() As String
+
+    Return strHost
+
+End
+
+Private Sub Host_Write(Value As String)
+
+    Value = Trim(Value)
+    If Value = Null Or If Not MMain.IsIpAddress(Value) Then Value = DFL_HOST
+    strHost = Value
+
+End
+
+Private Function Port_Read() As Integer
+
+    Return intPort
+
+End
+
+Private Sub Port_Write(Value As Integer)
+
+    If Value < 1 Or Value > 65535 Then Value = DFL_PORT
+    intPort = Value
+
+End
+
+Private Function Connected_Read() As Boolean
+
+    Return arrConnected
+
+End
+
+Private Function Sessions_Read() As CSession[]
+
+    Return arrSessions
+
+End
+
+Private Function Stats_Read() As CStat
+
+    Return clsStats
+
+End
+
+Private Function ShutMode_Read() As String
+
+    Return strShutMode
+
+End
+
+Private Sub ShutMode_Write(Value As String)
+
+    Value = Trim(Value)
+    If MShutMode.Mode.Exist(Value) Then
+        strShutMode = Value
+    Else
+        strShutMode = MShutMode.Default
+    Endif
+
+End
+
+Private Function OrderMode_Read() As String
+
+    Return strOrderMode
+
+End
+
+Private Sub OrderMode_Write(Value As String)
+
+    Value = Trim(Value)
+    If MColumn.Columns.Exist(Value) Then
+        strOrderMode = Value
+    Else
+        strOrderMode = MColumn.Default
+    Endif
+
+End
+
+Private Function MatchMode_Read() As String
+
+    Return strMatchMode
+
+End
+
+Private Sub MatchMode_Write(Value As String)
+
+    Value = Trim(Value)
+    If MColumn.Columns.Exist(Value) Then
+        strMatchMode = Value
+    Else
+        strMatchMode = MColumn.Default
+    Endif
+
+End
+
+Private Function MatchValue_Read() As String
+
+    Return strMatchValue
+
+End
+
+Private Sub MatchValue_Write(Value As String)
+
+    strMatchValue = Value
+
+End
+
+Private Function Column_Read() As String
+
+    Return strColumn
+
+End
+
+Private Sub Column_Write(Value As String)
+
+    Value = Trim(Value)
+    If MColumn.Columns.Exist(Value) Then
+        strColumn = Value
+    Else
+        strColumn = MColumn.Default
+    Endif
+
+End
+
+' -----------
+' Constructor
+' -----------
+Public Sub _new()
+
+    objSrv = New Socket As "objSrv"
+    arrSessionsData = New String[]
+    arrStatsData = New String[]
+    arrSessions = New CSession[]
+    clsStats = New CStat
+
+End
+
+' -----------
+' Desctructor
+' -----------
+Public Sub _free()
+
+    Disconnect()
+
+End
+
+
+' -------
+' Methods
+' -------
+Public Sub Connect()
+
+    If Not arrConnected Then objSrv.Connect(strHost, intPort)
+
+End
+
+Public Sub Disconnect()
+
+    If arrConnected Then objSrv.Close()
+
+End
+
+Public Sub Reload()
+
+    strLastSrv = MSrv.Others
+    SendData(CMD_RELOAD)
+    Raise Reloaded
+
+End
+
+Public Sub Shutdown()
+
+    strLastSrv = MSrv.Others
+    If strShutMode = MShutMode.Default Then
+        SendData(CMD_SHUTDOWN)
+    Else
+        SendData(CMD_SHUTDOWN & " " & strShutMode)
+    Endif
+    Raise Shutdown
+
+End
+
+Public Sub GetSessions()
+
+    Dim strLineToSend As String
+
+    strLineToSend = CMD_SESSIONS
+    If strColumn <> MColumn.Default Then
+        strLineToSend &= " " & strColumn
+    Endif
+    If strOrderMode <> MColumn.Default Then
+        strLineToSend &= " order " & strOrderMode
+    Endif
+    If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
+        strLineToSend &= " match " & strMatchMode & " " & strMatchValue
+    Endif
+    arrSessionsData.Clear()
+    strLastSrv = MSrv.Sessions
+    SendData(strLineToSend)
+
+End
+
+Public Sub GetStats()
+
+    arrStatsData.Clear()
+    strLastSrv = MSrv.Stats
+    SendData(CMD_STATS)
+
+End
+
+' ---------------------
+' Socket event handlers
+' ---------------------
+
+Public Sub objSrv_Closed()
+
+    arrConnected = False
+    Raise Disconnected
+
+End
+
+Public Sub objSrv_Error()
+
+    arrConnected = False
+    Raise Disconnected
+
+End
+
+Public Sub objSrv_Ready()
+
+    arrConnected = True
+    Raise Connected
+
+End
+
+Public Sub objSrv_Read()
+
+    Dim strLine As String
+
+    Select Case strLastSrv
+        Case MSrv.Stats
+            For Each strline In objSrv.Lines
+                arrStatsData.Add(strline)
+            Next
+            ParseStats()
+        Case MSrv.Sessions
+            For Each strline In objSrv.Lines
+                arrSessionsData.Add(strline)
+            Next
+            ParseSessions()
+    End Select
+
+End
+
+' -------------------
+' Private subroutines
+' -------------------
+Private Sub SendData(strCommand As String)
+
+    Dim intCommandLength As Integer
+
+    strCommand &= gb.Lf
+    intCommandLength = Len(strCommand)
+    Write #objSrv, strCommand, intCommandLength
+
+End
+
+Private Sub ParseStats()
+
+    Dim strCpuData As String
+    Dim strMemData As String
+
+    If arrStatsData.Length > 3 Then
+        clsStats.Uptime = Trim(Split(arrStatsData[0], " ")[1])
+        strCpuData = Trim(Split(arrStatsData[1], " ")[1])
+        strCpuData = Left(strCpuData, Len(strCpuData) - 1)
+        clsStats.Cpu = CByte(strCpuData)
+        strMemData = Split(arrStatsData[2], " ")[1]
+        clsStats.MemRss = CInt(Split(strMemData, "/")[0])
+        clsStats.MemVirt = CInt(Split(strMemData, "/")[1])
+        Raise GotStats
+    Endif
+
+End
+
+Private Sub ParseSessions()
+
+    Dim i As Integer
+    Dim arrRecord As New String[]
+    Dim arrSession As CSession
+    Dim arrRate As New String[]
+
+    If arrSessionsData.Length > 3 Then
+        arrSessions.Clear()
+        For i = 2 To arrSessionsData.Max
+            arrRecord.Clear()
+            arrRate.Clear()
+            arrRecord = Split(arrSessionsData[i], "|")
+            If arrRecord.Length = 9 Then
+                arrRate = Split(Trim(arrRecord[4]), "/")
+                arrSession = New CSession
+                With arrSession
+                    .IFName = Trim(arrRecord[0])
+                    .UserName = Trim(arrRecord[1])
+                    .CallingSID = Trim(arrRecord[2])
+                    .IP = Trim(arrRecord[3])
+                    .RateIn = CInt(arrRate[0])
+                    .RateOut = CInt(arrRate[1])
+                    .Type = Trim(arrRecord[5])
+                    .Comp = CBool(Trim(arrRecord[6]))
+                    .State = Trim(arrRecord[7])
+                    .Uptime = Trim(arrRecord[8])
+                End With
+                arrSessions.Add(arrSession)
+            Endif
+        Next
+        Raise GotSessions
+    Endif
+
+End
