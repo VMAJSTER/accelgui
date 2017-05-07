@@ -1,2 +1,2 @@
-.gambas/* linguist-vendored
-.src/* linguist-vendored
+*.module linguist-language=Basic
+*.class linguist-language=Basic
