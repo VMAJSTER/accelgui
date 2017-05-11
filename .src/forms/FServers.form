@@ -23,7 +23,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Add")
-      Picture = Picture["icon:/16/add"]
+      Picture = Picture["images/add.png"]
     }
     { tlbEdit ToolButton
       Move(35,0,32,32)
@@ -31,7 +31,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Edit")
-      Picture = Picture["icon:/16/edit"]
+      Picture = Picture["images/edit.png"]
     }
     { tlbDelete ToolButton
       Move(70,0,32,32)
@@ -39,7 +39,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Delete")
-      Picture = Picture["icon:/16/delete"]
+      Picture = Picture["images/delete.png"]
     }
     { tlbClear ToolButton
       Move(105,0,32,32)
@@ -47,7 +47,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Clear")
-      Picture = Picture["icon:/16/clear"]
+      Picture = Picture["images/clear.png"]
     }
     { tlbFirst ToolButton
       Move(203,0,32,32)
@@ -55,7 +55,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("First")
-      Picture = Picture["icon:/16/first"]
+      Picture = Picture["images/first.png"]
     }
     { tlbPrevious ToolButton
       Move(238,0,32,32)
@@ -63,7 +63,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Previous")
-      Picture = Picture["icon:/16/previous"]
+      Picture = Picture["images/previous.png"]
     }
     { tlbNext ToolButton
       Move(364,0,32,32)
@@ -71,7 +71,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Next")
-      Picture = Picture["icon:/16/next"]
+      Picture = Picture["images/next.png"]
     }
     { tlbLast ToolButton
       Move(399,0,32,32)
@@ -79,7 +79,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Last")
-      Picture = Picture["icon:/16/last"]
+      Picture = Picture["images/last.png"]
     }
     { tlbCheck ToolButton
       Move(448,0,32,32)
@@ -87,14 +87,14 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Autostart")
-      Picture = Picture["icon:/16/apply"]
+      Picture = Picture["images/enable.png"]
     }
     { tlbSave ToolButton
       Move(497,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Save")
-      Picture = Picture["icon:/16/save"]
+      Picture = Picture["images/save.png"]
     }
     { Separator1 Separator
       Move(135,0,21,32)
@@ -118,7 +118,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Start")
-      Picture = Picture["icon:/16/play"]
+      Picture = Picture["images/start.png"]
     }
     { Separator4 Separator
       Move(184,0,21,32)
@@ -140,7 +140,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")
-      Picture = Picture["icon:/22/quit"]
+      Picture = Picture["images/exit.png"]
       Alignment = Align.Center
     }
   }

@@ -47,8 +47,8 @@ Public Sub btnApply_Click()
         Else
             intRow = .grvServers.Rows.Count
             Inc .grvServers.Rows.Count
-            .grvServers[intRow, 0].Picture = Picture["icon:/16/stop"]
-            .grvServers[intRow, 1].Picture = Picture["icon:/16/halt"]
+            .grvServers[intRow, 0].Picture = Picture["images/stop.png"]
+            .grvServers[intRow, 1].Picture = Picture["images/disable.png"]
         Endif
         .grvServers[intRow, 2].Text = txbName.Text
         .grvServers[intRow, 3].Text = CStr(vlbAddress.Value)

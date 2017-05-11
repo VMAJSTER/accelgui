@@ -102,7 +102,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")
-      Picture = Picture["icon:/22/quit"]
+      Picture = Picture["images/exit.png"]
       Alignment = Align.Center
     }
   }

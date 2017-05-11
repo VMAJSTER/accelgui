@@ -43,7 +43,7 @@
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Apply")
-    Picture = Picture["icon:/16/apply"]
+    Picture = Picture["images/enable.png"]
     Default = True
   }
   { btnCancel Button
@@ -51,7 +51,7 @@
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Cancel")
-    Picture = Picture["icon:/16/quit"]
+    Picture = Picture["images/close.png"]
     Cancel = True
   }
   { pnlTitle Panel
@@ -70,7 +70,7 @@
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")
-      Picture = Picture["icon:/22/quit"]
+      Picture = Picture["images/exit.png"]
       Alignment = Align.Center
     }
   }

@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,931,546)
+  Move(0,0,931,553)
   #Scaled = False
   Text = (" Primary server")
   Icon = Picture["images/passive.png"]
@@ -18,7 +18,7 @@
     }
   }
   { grvSessions GridView
-    Move(7,7,917,532)
+    Move(7,7,917,539)
     Mouse = Mouse.Pointing
     PopupMenu = "mnuPopup"
     Mode = Select.Single
@@ -46,7 +46,7 @@
         NoTabFocus = True
         Mouse = Mouse.Pointing
         ToolTip = ("Close")
-        Picture = Picture["icon:/22/quit"]
+        Picture = Picture["images/exit.png"]
         Alignment = Align.Center
       }
     }
@@ -64,10 +64,7 @@
     }
   }
   { tmrState #Timer
-    #Move(861,476)
+    #Move(861,483)
     Enabled = True
-  }
-  { tmrStats #Timer
-    #Move(798,476)
   }
 }

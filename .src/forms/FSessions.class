@@ -139,14 +139,13 @@ End
 
 Public Sub grvSessions_MouseDown()
 
-    objServer.GetSessions()
+    If objServer.Connected Then objServer.GetSessions()
 
 End
 
 Public Sub objServer_Connected()
 
     objServer.GetSessions()
-    ' objServer.GetStats()
 
 End
 
@@ -154,7 +153,6 @@ End
 Public Sub objServer_GotSessions()
 
     FillSessions()
-    ' FillStats()
 
 End
 

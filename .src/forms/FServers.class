@@ -26,7 +26,7 @@ End
 
 Public Sub Form_Open()
 
-    Dim i As Integer
+    Dim i, j As Integer
     Dim arrStatus As New String[]
     Dim arrName As New String[]
     Dim arrAddress As New String[]
@@ -39,11 +39,16 @@ Public Sub Form_Open()
     arrPort = Split(MMain.objSettings["Servers/Port"], ";")
     For i = 0 To arrAddress.Max
         Inc grvServers.Rows.Count
-        grvServers[i, 0].Picture = Picture["icon:/16/stop"]
+        grvServers[i, 0].Picture = Picture["images/stop.png"]
+        For j = 0 To FMain.wksServers.Windows.Max
+            If FMain.wksServers.Windows[j].Text = arrName[i] Then
+                grvServers[i, 0].Picture = Picture["images/start.png"]
+            Endif
+        Next
         If arrStatus[i] = "True" Then
-            grvServers[i, 1].Picture = Picture["icon:/16/apply"]
+            grvServers[i, 1].Picture = Picture["images/enable.png"]
         Else
-            grvServers[i, 1].Picture = Picture["icon:/16/halt"]
+            grvServers[i, 1].Picture = Picture["images/disable.png"]
         Endif
         grvServers[i, 2].Text = arrName[i]
         grvServers[i, 3].Text = arrAddress[i]
@@ -143,12 +148,12 @@ End
 Public Sub tlbCheck_Click()
 
     If grvServers.Row > -1 Then
-        If grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/apply"] Then
-            grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/halt"]
-            tlbCheck.Picture = Picture["icon:/16/apply"]
+        If grvServers[grvServers.Row, 1].Picture = Picture["images/enable.png"] Then
+            grvServers[grvServers.Row, 1].Picture = Picture["images/disable.png"]
+            tlbCheck.Picture = Picture["images/enable.png"]
         Else
-            grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/apply"]
-            tlbCheck.Picture = Picture["icon:/16/halt"]
+            grvServers[grvServers.Row, 1].Picture = Picture["images/enable.png"]
+            tlbCheck.Picture = Picture["images/disable.png"]
         Endif
     Endif
 
@@ -163,7 +168,7 @@ Public Sub tlbSave_Click()
     Dim arrPort As New String[]
 
     For i = 0 To grvServers.Rows.Max
-        If grvServers[i, 1].Picture = Picture["icon:/16/apply"] Then
+        If grvServers[i, 1].Picture = Picture["images/enable.png"] Then
             arrStatus.Add("True")
         Else
             arrStatus.Add("False")
@@ -183,25 +188,19 @@ Public Sub grvServers_Select()
 
     If grvServers.Row > -1 Then
         ShowRowNum(grvServers.Row + 1)
-        If grvServers[grvServers.Row, 1].Picture = Picture["icon:/16/halt"] Then
-            tlbCheck.Picture = Picture["icon:/16/apply"]
+        If grvServers[grvServers.Row, 1].Picture = Picture["images/disable.png"] Then
+            tlbCheck.Picture = Picture["images/enable.png"]
         Else
-            tlbCheck.Picture = Picture["icon:/16/halt"]
+            tlbCheck.Picture = Picture["images/disable.png"]
         Endif
-        If grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"] Then
-            tlbAction.Picture = Picture["icon:/16/stop"]
+        If grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"] Then
+            tlbAction.Picture = Picture["images/stop.png"]
             tlbAction.Tooltip = ("Stop")
         Else
-            tlbAction.Picture = Picture["icon:/16/play"]
+            tlbAction.Picture = Picture["images/start.png"]
             tlbAction.Tooltip = ("Start")
         Endif
     Endif
-
-End
-
-Private Sub ShowRowNum(intCur As Integer)
-
-    lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
 
 End
 
@@ -226,18 +225,18 @@ Public Sub tlbAction_Click()
     Dim objWindow As Window
 
     If grvServers.Row > -1 Then
-        If grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"] Then
-            grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/stop"]
-            tlbAction.Picture = Picture["icon:/16/play"]
+        If grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"] Then
+            grvServers[grvServers.Row, 0].Picture = Picture["images/stop.png"]
+            tlbAction.Picture = Picture["images/start.png"]
             tlbAction.Tooltip = ("Start")
-            For Each objWindow In FMain.wksServers.Children
-                ' If objWindow.Text = grvServers[grvServers.Row, 2].Text Then
-                objWindow.Close()
-                ' Endif
+            For Each objWindow In FMain.wksServers.Windows
+                If objWindow.Text = grvServers[grvServers.Row, 2].Text Then
+                    objWindow.Close()
+                Endif
             Next
         Else
-            grvServers[grvServers.Row, 0].Picture = Picture["icon:/16/play"]
-            tlbAction.Picture = Picture["icon:/16/stop"]
+            grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"]
+            tlbAction.Picture = Picture["images/stop.png"]
             tlbAction.Tooltip = ("Stop")
             strName = grvServers[grvServers.Row, 2].Text
             strHost = grvServers[grvServers.Row, 3].Text
@@ -285,5 +284,11 @@ End
 Public Sub lblTitle_MouseMove()
 
     pnlTitle_MouseMove()
+
+End
+
+Private Sub ShowRowNum(intCur As Integer)
+
+    lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
 
 End
