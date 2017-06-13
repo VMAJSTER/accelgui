@@ -30,7 +30,7 @@ Private strLastSrv As Byte
 Private strName As String = DFL_NAME
 Private strHost As String = DFL_HOST
 Private intPort As Integer = DFL_PORT
-Private arrConnected As Boolean
+Private bolConnected As Boolean
 Private arrSessions As CSession[]
 Private clsStats As CStat
 Private strShutMode As String = MShutMode.Default
@@ -110,7 +110,7 @@ End
 
 Private Function Connected_Read() As Boolean
 
-    Return arrConnected
+    Return bolConnected
 
 End
 
@@ -234,13 +234,13 @@ End
 ' -------
 Public Sub Connect()
 
-    If Not arrConnected Then objSrv.Connect(strHost, intPort)
+    If Not bolConnected Then objSrv.Connect(strHost, intPort)
 
 End
 
 Public Sub Disconnect()
 
-    If arrConnected Then objSrv.Close()
+    If bolConnected Then objSrv.Close()
 
 End
 
@@ -298,21 +298,21 @@ End
 
 Public Sub objSrv_Closed()
 
-    arrConnected = False
+    bolConnected = False
     Raise Disconnected
 
 End
 
 Public Sub objSrv_Error()
 
-    arrConnected = False
+    bolConnected = False
     Raise Disconnected
 
 End
 
 Public Sub objSrv_Ready()
 
-    arrConnected = True
+    bolConnected = True
     Raise Connected
 
 End

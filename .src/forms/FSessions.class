@@ -137,12 +137,6 @@ Public Sub Form_Close()
 
 End
 
-Public Sub grvSessions_MouseDown()
-
-    If objServer.Connected Then objServer.GetSessions()
-
-End
-
 Public Sub objServer_Connected()
 
     objServer.GetSessions()

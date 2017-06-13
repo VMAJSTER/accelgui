@@ -1,22 +1,5 @@
 ' Gambas class file
 
-Public Sub _new()
-
-    Dim i As Integer
-    Dim arrStatus As New String[]
-    Dim arrName As New String[]
-    Dim arrAddress As New String[]
-    Dim arrPort As New String[]
-    Dim objNas As CNas
-
-    arrStatus = Split(Settings["Servers/Status"], ";")
-    arrName = Split(Settings["Servers/Name"], ";")
-    arrAddress = Split(Settings["Servers/Address"], ";")
-    arrPort = Split(Settings["Servers/Port"], ";")
-
-End
-
-
 Public Sub Form_Resize()
 
     With pnlTitle
@@ -61,5 +44,28 @@ End
 Public Sub pctClose_MouseDown()
 
     FMain.Close()
+
+End
+
+Public Sub Form_Open()
+
+    Dim i As Integer
+    Dim arrStatus As New String[]
+    Dim arrName As New String[]
+    Dim arrAddress As New String[]
+    Dim arrPort As New String[]
+    Dim objForm As FSessions
+
+    arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
+    arrName = Split(MMain.objSettings["Servers/Name"], ";")
+    arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
+    arrPort = Split(MMain.objSettings["Servers/Port"], ";")
+
+    For i = 0 To arrAddress.Max
+        If arrStatus[i] = "True" Then
+            objForm = New FSessions(arrName[i], arrAddress[i], arrPort[i])
+            wksServers.Add(objForm)
+        Endif
+    Next
 
 End
