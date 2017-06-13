@@ -1,2 +1,2 @@
 # accelgui
-Graphical user interface for accel-ppp
+Графический интерфейс для сервера доступа accel-ppp
