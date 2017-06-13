@@ -3,73 +3,73 @@ msgid ""
 msgstr ""
 "#-#-#-#-#  #project.pot (accelgui 3.9.2)  #-#-#-#-#\n"
 "Project-Id-Version: accelgui 3.9.2\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:54 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CNas.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CSession.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CStat.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FServers.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSessions.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSrvAction.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MColumn.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MShutMode.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MSrv.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 07:45 UTC\n"
+"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,43 +82,51 @@ msgstr ""
 msgid "Graphical user interface for accel-ppp vpn server"
 msgstr ""
 
-#: FMain.form:26
+#: FMain.form:29
 msgid "Accel GUI"
 msgstr ""
 
-#: FMain.form:43
+#: FMain.form:46
 msgid "Filter"
 msgstr ""
 
-#: FMain.form:51
+#: FMain.form:54
 msgid "Search"
 msgstr ""
 
-#: FMain.form:59
+#: FMain.form:62
 msgid "Terminate one session"
 msgstr ""
 
-#: FMain.form:67
+#: FMain.form:70
 msgid "Terminate group of sessions"
 msgstr ""
 
-#: FMain.form:75
-msgid "Refresh"
+#: FMain.form:78
+msgid "Update"
 msgstr ""
 
-#: FMain.form:83
+#: FMain.form:86
 msgid "Settings"
 msgstr ""
 
-#: FMain.form:91
+#: FMain.form:94
 msgid "Help"
 msgstr ""
 
-#: FMain.form:123 FServers.form:28
+#: FMain.form:126 FServers.form:28
 msgid "Servers"
 msgstr ""
 
-#: FMain.form:143 FServers.form:185 FSessions.form:66 FSrvAction.form:97
+#: FMain.form:134
+msgid "Reboot"
+msgstr ""
+
+#: FMain.form:142
+msgid "Shutdown"
+msgstr ""
+
+#: FMain.form:166 FServers.form:185 FSessions.form:66 FSrvAction.form:97
 msgid "Close"
 msgstr ""
 

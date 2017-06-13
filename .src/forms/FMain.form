@@ -41,22 +41,22 @@
       ToolTip = ("Terminate group of sessions")
       Picture = Picture["images/groupdel.png"]
     }
-    { tlbRefresh ToolButton
+    { tlbUpdate ToolButton
       Move(336,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Refresh")
+      ToolTip = ("Update")
       Picture = Picture["images/update.png"]
     }
     { tlbSettings ToolButton
-      Move(406,8,48,48)
+      Move(532,7,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Settings")
       Picture = Picture["images/settings.png"]
     }
     { tlbAbout ToolButton
-      Move(476,8,48,48)
+      Move(602,7,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Help")
@@ -78,7 +78,7 @@
       Move(384,8,21,48)
     }
     { Separator6 Separator
-      Move(454,8,21,48)
+      Move(581,7,21,48)
     }
     { tlbAddSrv ToolButton
       Move(0,8,48,48)
@@ -86,6 +86,23 @@
       Mouse = Mouse.Pointing
       ToolTip = ("Servers")
       Picture = Picture["images/servers.png"]
+    }
+    { tlbReboot ToolButton
+      Move(406,7,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Reboot")
+      Picture = Picture["images/reboot.png"]
+    }
+    { tlbShutdown ToolButton
+      Move(462,7,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Shutdown")
+      Picture = Picture["images/shutdown.png"]
+    }
+    { Separator7 Separator
+      Move(511,7,21,48)
     }
   }
   { pnlTitle Panel
