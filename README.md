@@ -1,2 +1,2 @@
 # accelgui
-Графический интерфейс для сервера доступа accel-ppp
+Graphical user interface for accel-ppp vpn server
