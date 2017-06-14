@@ -126,7 +126,7 @@
   }
   { pnlTitle Panel
     Move(7,7,528,35)
-    Background = Color.SelectedBackground
+    Background = &H3F81B8&
     Tracking = True
     { lblTitle Label
       Move(7,7,392,21)

@@ -5,56 +5,52 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-13 08:49 UTC\n"
+"POT-Creation-Date: 2017-06-14 07:29 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMain.form:29
+#: FMain.form:27
 msgid "Accel GUI"
 msgstr ""
 
-#: FMain.form:46
+#: FMain.form:44
 msgid "Filter"
 msgstr ""
 
-#: FMain.form:54
-msgid "Search"
-msgstr ""
-
-#: FMain.form:62
+#: FMain.form:52
 msgid "Terminate one session"
 msgstr ""
 
-#: FMain.form:70
+#: FMain.form:60
 msgid "Terminate group of sessions"
 msgstr ""
 
-#: FMain.form:78
+#: FMain.form:68
 msgid "Update"
 msgstr ""
 
-#: FMain.form:86
+#: FMain.form:76
 msgid "Settings"
 msgstr ""
 
-#: FMain.form:94
+#: FMain.form:84
 msgid "Help"
 msgstr ""
 
-#: FMain.form:126
+#: FMain.form:112
 msgid "Servers"
 msgstr ""
 
-#: FMain.form:134
+#: FMain.form:120
 msgid "Reboot"
 msgstr ""
 
-#: FMain.form:142
+#: FMain.form:128
 msgid "Shutdown"
 msgstr ""
 
-#: FMain.form:166
+#: FMain.form:152
 msgid "Close"
 msgstr ""
 

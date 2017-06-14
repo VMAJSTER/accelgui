@@ -77,6 +77,11 @@ Public Sub Form_Resize()
         .Left = grvSessions.W - .W - 25
     End With
 
+    With pnlToolBar
+        .Left = (Me.ClientW - .W) / 2
+        .Top = Me.ClientH - .H - MMain.MARGIN * 2
+    End With
+
 End
 
 Public Sub mnuShowStats_Click()
@@ -147,6 +152,9 @@ End
 Public Sub objServer_GotSessions()
 
     FillSessions()
+    If grvSessions.Rows.Count > 0 Then
+        MMain.ActivateRow(grvSessions, 0)
+    Endif
 
 End
 
@@ -196,5 +204,72 @@ Public Sub tmrState_Timer()
     Else
         Me.Icon = Picture["./images/passive.png"]
     Endif
+
+End
+
+Public Sub grvSessions_MouseMove()
+
+    Dim X, Y As Integer
+
+    X = Mouse.X
+    Y = Mouse.Y
+
+    If X >= pnlToolBar.Left And X <= pnlToolBar.Left + pnlToolBar.W Then
+        If Y >= pnlToolBar.Top And Y <= pnlToolBar.Top + pnlToolBar.H Then
+            pnlToolBar.Show()
+        Else
+            pnlToolBar.Hide()
+        Endif
+    Endif
+
+End
+
+Public Sub tlbFirst_Click()
+
+    If grvSessions.Rows.Count > 0 Then
+        MMain.ActivateRow(grvSessions, 0)
+        ShowRowNum(1)
+    Endif
+
+End
+
+Public Sub tlbPrevious_Click()
+
+    If grvSessions.Row > 0 Then
+        MMain.ActivateRow(grvSessions, grvSessions.Row - 1)
+        ShowRowNum(grvSessions.Row + 1)
+    Endif
+
+End
+
+Public Sub tlbNext_Click()
+
+    If grvSessions.Row < grvSessions.Rows.Max Then
+        MMain.ActivateRow(grvSessions, grvSessions.Row + 1)
+        ShowRowNum(grvSessions.Row + 1)
+    Endif
+
+End
+
+Public Sub tlbLast_Click()
+
+    If grvSessions.Rows.Count > 0 Then
+        MMain.ActivateRow(grvSessions, grvSessions.Rows.Max)
+        ShowRowNum(grvSessions.Rows.Count)
+    Endif
+
+End
+
+Public Sub grvSessions_Select()
+
+    If grvSessions.Row > -1 Then
+        ShowRowNum(grvSessions.Row + 1)
+    Endif
+
+End
+
+Private Sub ShowRowNum(intCur As Integer)
+
+    lblSessions.Text = CStr(intCur) & " / " & CStr(grvSessions.Rows.Count)
 
 End

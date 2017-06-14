@@ -19,6 +19,7 @@
   }
   { grvSessions GridView
     Move(7,7,917,539)
+    Tracking = True
     Mouse = Mouse.Pointing
     PopupMenu = "mnuPopup"
     Mode = Select.Single
@@ -32,7 +33,7 @@
     Background = Color.Background
     { pnlTitle Panel
       Move(7,7,308,35)
-      Background = Color.SelectedBackground
+      Background = &H3F81B8&
       Tracking = True
       { lblTitle Label
         Move(7,7,210,21)
@@ -66,5 +67,45 @@
   { tmrState #Timer
     #Move(861,483)
     Enabled = True
+  }
+  { pnlToolBar Panel
+    Move(287,462,350,62)
+    Visible = False
+    Background = Color.Background
+    { tlbFirst ToolButton
+      Move(7,7,48,48)
+      Background = &HE0007FFF&
+      Mouse = Mouse.Pointing
+      ToolTip = ("Первая сессия")
+      Picture = Picture["images/big_first.png"]
+    }
+    { tlbPrevious ToolButton
+      Move(56,7,48,48)
+      Background = &HE0007FFF&
+      Mouse = Mouse.Pointing
+      ToolTip = ("Предыдущая сессия")
+      Picture = Picture["images/big_previous.png"]
+    }
+    { tlbNext ToolButton
+      Move(245,7,48,48)
+      Background = &HE0007FFF&
+      Mouse = Mouse.Pointing
+      ToolTip = ("Следующая сессия")
+      Picture = Picture["images/big_next.png"]
+    }
+    { tlbLast ToolButton
+      Move(294,7,48,48)
+      Background = &HE0007FFF&
+      Mouse = Mouse.Pointing
+      ToolTip = ("Последняя сессия")
+      Picture = Picture["images/big_last.png"]
+    }
+    { lblSessions Label
+      Move(112,7,126,49)
+      Font = Font["Bold,12"]
+      Foreground = &H3F81B8&
+      Text = ("0 / 0")
+      Alignment = Align.Center
+    }
   }
 }
