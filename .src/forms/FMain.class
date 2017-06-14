@@ -69,3 +69,14 @@ Public Sub Form_Open()
     Next
 
 End
+
+Public Sub tlbUpdate_Click()
+
+    Dim objWindow As FSessions
+
+    If wksServers.Windows.Count > 0 Then
+        objWindow = wksServers.ActiveWindow
+        objWindow.objServer.GetSessions()
+    Endif
+
+End

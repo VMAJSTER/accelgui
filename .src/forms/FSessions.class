@@ -1,6 +1,6 @@
 ' Gambas class file
 
-Private objServer As CNas
+Public objServer As CNas
 
 Private intX As Integer
 Private intY As Integer
