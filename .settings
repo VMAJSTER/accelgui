@@ -88,6 +88,12 @@ Geometry=[911,191,388,505]
 [DebugWindow/objServer.Stats]
 Geometry=[897,177,388,505]
 
+[DebugWindow/objSettings]
+Geometry=[0,0,224,280]
+
+[DebugWindow/objSettings.Keys]
+Geometry=[14,14,224,280]
+
 [DebugWindow/objSrv]
 Geometry=[970,92,224,280]
 
@@ -104,9 +110,11 @@ Geometry=[14,26,224,280]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=1
+Count=3
 File[1]=".src/forms/FMain.form"
 Active=1
+File[2]=".src/forms/FServers.form"
+File[3]=".src/forms/FServers.class:0.0"
 
 [Watches]
 Count=0

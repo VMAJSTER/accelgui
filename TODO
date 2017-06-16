@@ -11,3 +11,7 @@
  - Kill group of sessions
  
  - Server statistics
+ 
+ - When changing name of server if it is already open change the name of open window either
+ 
+ - Login / pass authentication with permissions
