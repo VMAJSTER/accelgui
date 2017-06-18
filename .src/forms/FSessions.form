@@ -76,28 +76,28 @@
       Move(7,7,48,48)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
-      ToolTip = ("Первая сессия")
+      ToolTip = ("First session")
       Picture = Picture["images/big_first.png"]
     }
     { tlbPrevious ToolButton
       Move(56,7,48,48)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
-      ToolTip = ("Предыдущая сессия")
+      ToolTip = ("Previous session")
       Picture = Picture["images/big_previous.png"]
     }
     { tlbNext ToolButton
       Move(245,7,48,48)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
-      ToolTip = ("Следующая сессия")
+      ToolTip = ("Next session")
       Picture = Picture["images/big_next.png"]
     }
     { tlbLast ToolButton
       Move(294,7,48,48)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
-      ToolTip = ("Последняя сессия")
+      ToolTip = ("Last session")
       Picture = Picture["images/big_last.png"]
     }
     { lblSessions Label

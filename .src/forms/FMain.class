@@ -35,7 +35,7 @@ Public Sub Form_Resize()
 
 End
 
-Public Sub tlbAddSrv_Click()
+Public Sub tlbServers_Click()
 
     FServers.ShowModal()
 
@@ -60,13 +60,21 @@ Public Sub Form_Open()
     arrName = Split(MMain.objSettings["Servers/Name"], ";")
     arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
     arrPort = Split(MMain.objSettings["Servers/Port"], ";")
-
     For i = 0 To arrAddress.Max
         If arrStatus[i] = "True" Then
             objForm = New FSessions(arrName[i], arrAddress[i], arrPort[i])
             wksServers.Add(objForm)
         Endif
     Next
+    If MMain.strCurrentUser = "user" Or If MMain.strCurrentUser = "guest" Then
+        tlbReboot.Enabled = False
+        tlbShutdown.Enabled = False
+        tlbSettings.Enabled = False
+    Endif
+    If MMain.strCurrentUser = "guest" Then
+        tlbKillGroup.Enabled = False
+        tlbKillOne.Enabled = False
+    Endif
 
 End
 

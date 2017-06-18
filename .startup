@@ -2,11 +2,12 @@ MMain
 accelgui
 0
 0
-0.0.78
+0.0.84
 
 gb.image
 gb.gui.qt
 gb.form
+gb.crypt
 gb.settings
 gb.form.mdi
 gb.net

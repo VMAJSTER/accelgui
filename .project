@@ -3,10 +3,11 @@
 Title=accelgui
 Startup=MMain
 Icon=icons/128.png
-Version=0.0.79
+Version=0.0.84
 Component=gb.image
 Component=gb.gui.qt
 Component=gb.form
+Component=gb.crypt
 Component=gb.settings
 Component=gb.form.mdi
 Component=gb.net

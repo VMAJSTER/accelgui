@@ -70,7 +70,7 @@
     { Separator6 Separator
       Move(511,6,21,48)
     }
-    { tlbAddSrv ToolButton
+    { tlbServers ToolButton
       Move(0,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing

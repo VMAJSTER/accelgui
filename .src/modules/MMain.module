@@ -2,6 +2,8 @@
 
 ' Name of global config file
 Public Const GLOBAL_CONFIG As String = "accelgui.conf"
+' Name of authorization config file
+Public Const AUTH_CONF As String = "/etc/accelgui_auth.conf"
 ' Margin between controls
 Public Const MARGIN As Byte = 8
 ' Toolbar height
@@ -10,11 +12,13 @@ Public Const TLB_HEIGHT As Byte = 64
 Private Const IP_SYMBOLS As String = "0123456789."
 ' Object for saving application settings
 Public objSettings As Settings
+' Currently authorized user
+Public strCurrentUser As String
 
 Public Sub Main()
 
     objSettings = New Settings(User.Home & "/.config/" & GLOBAL_CONFIG)
-    FMain.Show()
+    FAuth.Show()
 
 End
 

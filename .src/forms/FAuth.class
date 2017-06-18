@@ -1,0 +1,55 @@
+' Gambas class file
+
+Public Sub btnExit_Click()
+
+    Me.Close()
+
+End
+
+Public Sub pctClose_MouseDown()
+
+    btnExit_Click()
+
+End
+
+Public Sub btnEnter_Click()
+
+    Dim objAuthConf As New Settings(MMain.AUTH_CONF)
+    Dim strSavedPass As String
+    Dim strEnteredPass As String
+
+    If Exist(MMain.AUTH_CONF) Then
+        strSavedPass = objAuthConf["Auth/" & cmbUsername.Text]
+        strEnteredPass = Crypt.SHA512(txbPassword.Text)
+        If strEnteredPass = strSavedPass Then
+            PassOk()
+        Else
+            PassError()
+        Endif
+    Else
+        If txbPassword.Text = cmbUsername.Text Then
+            PassOk()
+        Else
+            PassError()
+        Endif
+    Endif
+
+End
+
+Private Sub PassOk()
+
+    MMain.strCurrentUser = cmbUsername.Text
+    Me.Close()
+    FMain.Show()
+
+End
+
+
+Private Sub PassError()
+
+    Message.Title = ("Authorization error")
+    Message.Error(("Password you entered is incorrect"))
+    txbPassword.Clear()
+    txbPassword.SetFocus()
+
+End

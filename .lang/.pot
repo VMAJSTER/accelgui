@@ -3,73 +3,79 @@ msgid ""
 msgstr ""
 "#-#-#-#-#  #project.pot (accelgui 3.8.4)  #-#-#-#-#\n"
 "Project-Id-Version: accelgui 3.8.4\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CNas.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CSession.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CStat.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  FAuth.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
+"Project-Id-Version: $(PACKAGE) $(VERSION)\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FServers.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSessions.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSrvAction.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MColumn.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MShutMode.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MSrv.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-16 14:44 UTC\n"
+"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,6 +86,51 @@ msgstr ""
 
 #: .project:2
 msgid "Graphical user interface for accel-ppp vpn server"
+msgstr ""
+
+#: FAuth.form:17
+msgid "Authorization"
+msgstr ""
+
+#: FAuth.form:39 FMain.form:152 FServers.form:185 FSessions.form:73
+#: FSrvAction.form:97
+msgid "Close"
+msgstr ""
+
+#: FAuth.form:49
+msgid "Enter"
+msgstr ""
+
+#: FAuth.form:58
+msgid "Exit"
+msgstr ""
+
+#: FAuth.form:74
+msgid "Username:"
+msgstr ""
+
+#: FAuth.form:80
+msgid "Password:"
+msgstr ""
+
+#: FAuth.form:88
+msgid "admin"
+msgstr ""
+
+#: FAuth.form:88
+msgid "user"
+msgstr ""
+
+#: FAuth.form:88
+msgid "guest"
+msgstr ""
+
+#: FAuth.class:50
+msgid "Authorization error"
+msgstr ""
+
+#: FAuth.class:51
+msgid "Password you entered is incorrect"
 msgstr ""
 
 #: FMain.form:27
@@ -120,10 +171,6 @@ msgstr ""
 
 #: FMain.form:128
 msgid "Shutdown"
-msgstr ""
-
-#: FMain.form:152 FServers.form:185 FSessions.form:73 FSrvAction.form:97
-msgid "Close"
 msgstr ""
 
 #: FServers.form:50
@@ -198,15 +245,15 @@ msgstr ""
 msgid "Port"
 msgstr ""
 
-#: FServers.class:68
+#: FServers.class:74
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:79
+#: FServers.class:85
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:198
+#: FServers.class:204
 msgid "Stop"
 msgstr ""
 
@@ -231,19 +278,19 @@ msgid "no data"
 msgstr ""
 
 #: FSessions.form:107
-msgid "Первая сессия"
+msgid "First session"
 msgstr ""
 
 #: FSessions.form:115
-msgid "Предыдущая сессия"
+msgid "Previous session"
 msgstr ""
 
 #: FSessions.form:123
-msgid "Следующая сессия"
+msgid "Next session"
 msgstr ""
 
 #: FSessions.form:131
-msgid "Последняя сессия"
+msgid "Last session"
 msgstr ""
 
 #: FSessions.class:14
