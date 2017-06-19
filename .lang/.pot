@@ -3,85 +3,85 @@ msgid ""
 msgstr ""
 "#-#-#-#-#  #project.pot (accelgui 3.8.4)  #-#-#-#-#\n"
 "Project-Id-Version: accelgui 3.8.4\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:52 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CNas.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CSession.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CStat.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FAuth.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FServers.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSessions.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSettings.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSrvAction.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MColumn.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MShutMode.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MSrv.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 10:21 UTC\n"
+"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Authorization"
 msgstr ""
 
-#: FAuth.form:39 FMain.form:152 FServers.form:184 FSessions.form:72
+#: FAuth.form:39 FMain.form:152 FServers.form:185 FSessions.form:72
 #: FSettings.form:44 FSrvAction.form:96
 msgid "Close"
 msgstr ""
@@ -131,11 +131,11 @@ msgstr ""
 msgid "guest"
 msgstr ""
 
-#: FAuth.class:54
+#: FAuth.class:52
 msgid "Authorization error"
 msgstr ""
 
-#: FAuth.class:55
+#: FAuth.class:53
 msgid "Password you entered is incorrect"
 msgstr ""
 
@@ -179,55 +179,55 @@ msgstr ""
 msgid "Shutdown"
 msgstr ""
 
-#: FServers.form:49
+#: FServers.form:50
 msgid "Add"
 msgstr ""
 
-#: FServers.form:58
+#: FServers.form:59
 msgid "Edit"
 msgstr ""
 
-#: FServers.form:67
+#: FServers.form:68
 msgid "Delete"
 msgstr ""
 
-#: FServers.form:76
+#: FServers.form:77
 msgid "Clear"
 msgstr ""
 
-#: FServers.form:85
+#: FServers.form:86
 msgid "First"
 msgstr ""
 
-#: FServers.form:94
+#: FServers.form:95
 msgid "Previous"
 msgstr ""
 
-#: FServers.form:103
+#: FServers.form:104
 msgid "Next"
 msgstr ""
 
-#: FServers.form:112
+#: FServers.form:113
 msgid "Last"
 msgstr ""
 
-#: FServers.form:121
+#: FServers.form:122
 msgid "Autostart"
 msgstr ""
 
-#: FServers.form:129 FSettings.form:63
+#: FServers.form:131 FSettings.form:63
 msgid "Save"
 msgstr ""
 
-#: FServers.form:149 FSessions.form:138
+#: FServers.form:150 FSessions.form:138
 msgid "0 / 0"
 msgstr ""
 
-#: FServers.form:158
+#: FServers.form:159
 msgid "Start"
 msgstr ""
 
-#: FServers.form:177
+#: FServers.form:178
 msgid "Servers manager"
 msgstr ""
 
@@ -251,15 +251,15 @@ msgstr ""
 msgid "Port"
 msgstr ""
 
-#: FServers.class:74
+#: FServers.class:76
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:85
+#: FServers.class:87
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:204
+#: FServers.class:206
 msgid "Stop"
 msgstr ""
 

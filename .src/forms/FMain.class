@@ -66,15 +66,22 @@ Public Sub Form_Open()
             wksServers.Add(objForm)
         Endif
     Next
-    If MMain.strCurrentUser = "user" Or If MMain.strCurrentUser = "guest" Then
-        tlbReboot.Enabled = False
-        tlbShutdown.Enabled = False
-        tlbSettings.Enabled = False
-    Endif
-    If MMain.strCurrentUser = "guest" Then
-        tlbKillGroup.Enabled = False
-        tlbKillOne.Enabled = False
-    Endif
+    Select Case MMain.strCurrentUser
+        Case "admin"
+            If User.Id > 0 Then
+                tlbSettings.Enabled = False
+            Endif
+        Case "user"
+            tlbReboot.Enabled = False
+            tlbShutdown.Enabled = False
+            tlbSettings.Enabled = False
+        Case "guest"
+            tlbReboot.Enabled = False
+            tlbShutdown.Enabled = False
+            tlbSettings.Enabled = False
+            tlbKillGroup.Enabled = False
+            tlbKillOne.Enabled = False
+    End Select
 
 End
 

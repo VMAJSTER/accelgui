@@ -1,14 +1,14 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,542,434)
+  Move(0,0,544,434)
   #Scaled = False
   Text = ("Servers")
   Resizable = False
   Border = False
   SkipTaskbar = True
   { grvServers GridView
-    Move(7,91,528,336)
+    Move(7,91,530,336)
     Mouse = Mouse.Pointing
     Mode = Select.Single
     Header = GridView.Both
@@ -16,9 +16,10 @@
     Resizable = False
   }
   { pnlToolBar Panel
-    Move(7,50,528,32)
+    Move(7,50,530,32)
     { tlbAdd ToolButton
       Move(0,0,32,32)
+      Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Add")
@@ -90,6 +91,7 @@
     }
     { tlbSave ToolButton
       Move(497,0,32,32)
+      Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Save")
@@ -106,7 +108,6 @@
     }
     { lblSrvCount Label
       Move(275,0,84,35)
-      Enabled = False
       Font = Font["Ubuntu,Bold,12"]
       Text = ("0 / 0")
       Alignment = Align.Center
@@ -124,7 +125,7 @@
     }
   }
   { pnlTitle Panel
-    Move(7,7,528,32)
+    Move(7,7,530,32)
     Background = &H3F81B8&
     Tracking = True
     { lblTitle Label
@@ -135,7 +136,7 @@
       Text = ("Servers manager")
     }
     { pctClose PictureBox
-      Move(494,0,32,32)
+      Move(496,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")

@@ -58,11 +58,13 @@ Public Sub Form_Open()
         MMain.ActivateRow(grvServers, grvServers.Rows.Max)
         MMain.EnableControls(True)
     Endif
-    If MMain.strCurrentUser = "user" Or If MMain.strCurrentUser = "guest" Then
-        tlbAdd.Enabled = False
-        tlbEdit.Enabled = False
-        tlbDelete.Enabled = False
-        tlbClear.Enabled = False
+    If MMain.strCurrentUser = "admin" And If User.Id = 0 Then
+        tlbAdd.Enabled = True
+        tlbEdit.Enabled = True
+        tlbDelete.Enabled = True
+        tlbClear.Enabled = True
+        tlbCheck.Enabled = True
+        tlbSave.Enabled = True
     Endif
 
 End

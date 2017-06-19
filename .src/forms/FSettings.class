@@ -66,33 +66,31 @@ End
 
 Public Sub btnSave_Click()
 
-    Dim objAcctSettings As Settings
     Dim objControl As Control
     Dim objRadio As RadioButton
 
-    objAcctSettings = New Settings(MMain.AUTH_CONF)
     If Trim(txbAdmin.Text) <> "" Then
-        objAcctSettings["Auth/admin"] = Crypt.SHA512(txbAdmin.Text, MMain.PREFIX)
+        MMain.objSettings["Auth/admin"] = Crypt.SHA512(txbAdmin.Text, MMain.PREFIX)
     Else
-        objAcctSettings["Auth/admin"] = Crypt.SHA512("admin", MMain.PREFIX)
+        MMain.objSettings["Auth/admin"] = Crypt.SHA512("admin", MMain.PREFIX)
     Endif
     If Trim(txbUser.Text) <> "" Then
-        objAcctSettings["Auth/user"] = Crypt.SHA512(txbUser.Text, MMain.PREFIX)
+        MMain.objSettings["Auth/user"] = Crypt.SHA512(txbUser.Text, MMain.PREFIX)
     Else
-        objAcctSettings["Auth/user"] = Crypt.SHA512("user", MMain.PREFIX)
+        MMain.objSettings["Auth/user"] = Crypt.SHA512("user", MMain.PREFIX)
     Endif
     If Trim(txbGuest.Text) <> "" Then
-        objAcctSettings["Auth/guest"] = Crypt.SHA512(txbGuest.Text, MMain.PREFIX)
+        MMain.objSettings["Auth/guest"] = Crypt.SHA512(txbGuest.Text, MMain.PREFIX)
     Else
-        objAcctSettings["Auth/guest"] = Crypt.SHA512("guest", MMain.PREFIX)
+        MMain.objSettings["Auth/guest"] = Crypt.SHA512("guest", MMain.PREFIX)
     Endif
     For Each objControl In Me.Controls
         If objControl Is RadioButton Then
             objRadio = objControl
             If objRadio.Value Then
-                objAcctSettings["Auth/default"] = objRadio.Tag
+                MMain.objSettings["Auth/default"] = objRadio.Tag
             Else
-                objAcctSettings["Auth/default"] = "0"
+                MMain.objSettings["Auth/default"] = "0"
             Endif
         Endif
     Next

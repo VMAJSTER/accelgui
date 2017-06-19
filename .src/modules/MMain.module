@@ -1,9 +1,7 @@
 ' Gambas module file
 
 ' Name of global config file
-Public Const GLOBAL_CONFIG As String = "accelgui.conf"
-' Name of authorization config file
-Public Const AUTH_CONF As String = "/etc/accelgui_auth.conf"
+Public Const GLOBAL_CONFIG As String = "/etc/accelgui.conf"
 ' Margin between controls
 Public Const MARGIN As Byte = 8
 ' Toolbar height
@@ -19,7 +17,7 @@ Public strCurrentUser As String
 
 Public Sub Main()
 
-    objSettings = New Settings(User.Home & "/.config/" & GLOBAL_CONFIG)
+    objSettings = New Settings(GLOBAL_CONFIG)
     FAuth.Show()
 
 End
@@ -88,17 +86,12 @@ End
 
 Public Sub EnableControls(bolAction As Boolean)
 
-    Dim objControl As Control
-
     With FServers
-        For Each objControl In .Controls
-            If Object.Type(objControl) = "ToolButton" Then
-                objControl.Enabled = bolAction
-            Endif
-        Next
-        .lblSrvCount.Enabled = bolAction
-        .tlbAdd.Enabled = True
-        .tlbSave.Enabled = True
+        .tlbAction.Enabled = bolAction
+        .tlbFirst.Enabled = bolAction
+        .tlbPrevious.Enabled = bolAction
+        .tlbNext.Enabled = bolAction
+        .tlbLast.Enabled = bolAction
     End With
 
 End

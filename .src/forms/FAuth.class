@@ -17,14 +17,12 @@ End
 
 Public Sub btnEnter_Click()
 
-    Dim objAuthConf As Settings
     Dim strSavedPass As String
     Dim strEnteredPass As String
 
-    objAuthConf = New Settings(MMain.AUTH_CONF)
-    If Exist(MMain.AUTH_CONF) Then
-        strSavedPass = objAuthConf["Auth/" & cmbUsername.Text, ""]
-        strEnteredPass = Crypt.SHA512(txbPassword.Text, MMain.PREFIX)
+    strSavedPass = MMain.objSettings["Auth/" & cmbUsername.Text, ""]
+    strEnteredPass = Crypt.SHA512(txbPassword.Text, MMain.PREFIX)
+    If strSavedPass <> "" Then
         If strEnteredPass = strSavedPass Then
             PassOk()
         Else
@@ -99,11 +97,9 @@ End
 
 Public Sub Form_Open()
 
-    Dim objAuthConf As Settings
     Dim bytDefault As Byte
 
-    objAuthConf = New Settings(MMain.AUTH_CONF)
-    bytDefault = CByte(objAuthConf["Auth/default", "0"])
+    bytDefault = CByte(MMain.objSettings["Auth/default", "0"])
     cmbUsername.Index = bytDefault
 
 End
