@@ -9,6 +9,7 @@
   SkipTaskbar = True
   { grvServers GridView
     Move(7,91,530,336)
+    Font = Font["10"]
     Mouse = Mouse.Pointing
     Mode = Select.Single
     Header = GridView.Both

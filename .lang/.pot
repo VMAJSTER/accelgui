@@ -3,85 +3,85 @@ msgid ""
 msgstr ""
 "#-#-#-#-#  #project.pot (accelgui 3.8.4)  #-#-#-#-#\n"
 "Project-Id-Version: accelgui 3.8.4\n"
-"POT-Creation-Date: 2017-06-19 12:52 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CNas.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CSession.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CStat.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FAuth.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FServers.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSessions.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSettings.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSrvAction.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MColumn.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MShutMode.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MSrv.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-19 12:51 UTC\n"
+"POT-Creation-Date: 2017-06-19 14:50 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Authorization"
 msgstr ""
 
-#: FAuth.form:39 FMain.form:152 FServers.form:185 FSessions.form:72
+#: FAuth.form:39 FMain.form:152 FServers.form:186 FSessions.form:73
 #: FSettings.form:44 FSrvAction.form:96
 msgid "Close"
 msgstr ""
@@ -179,55 +179,55 @@ msgstr ""
 msgid "Shutdown"
 msgstr ""
 
-#: FServers.form:50
+#: FServers.form:51
 msgid "Add"
 msgstr ""
 
-#: FServers.form:59
+#: FServers.form:60
 msgid "Edit"
 msgstr ""
 
-#: FServers.form:68
+#: FServers.form:69
 msgid "Delete"
 msgstr ""
 
-#: FServers.form:77
+#: FServers.form:78
 msgid "Clear"
 msgstr ""
 
-#: FServers.form:86
+#: FServers.form:87
 msgid "First"
 msgstr ""
 
-#: FServers.form:95
+#: FServers.form:96
 msgid "Previous"
 msgstr ""
 
-#: FServers.form:104
+#: FServers.form:105
 msgid "Next"
 msgstr ""
 
-#: FServers.form:113
+#: FServers.form:114
 msgid "Last"
 msgstr ""
 
-#: FServers.form:122
+#: FServers.form:123
 msgid "Autostart"
 msgstr ""
 
-#: FServers.form:131 FSettings.form:63
+#: FServers.form:132 FSettings.form:63
 msgid "Save"
 msgstr ""
 
-#: FServers.form:150 FSessions.form:138
+#: FServers.form:151 FSessions.form:139
 msgid "0 / 0"
 msgstr ""
 
-#: FServers.form:159
+#: FServers.form:160
 msgid "Start"
 msgstr ""
 
-#: FServers.form:178
+#: FServers.form:179
 msgid "Servers manager"
 msgstr ""
 
@@ -275,27 +275,27 @@ msgstr ""
 msgid "Show statistics"
 msgstr ""
 
-#: FSessions.form:65
+#: FSessions.form:66
 msgid "Statistics"
 msgstr ""
 
-#: FSessions.form:88
+#: FSessions.form:89
 msgid "no data"
 msgstr ""
 
-#: FSessions.form:106
+#: FSessions.form:107
 msgid "First session"
 msgstr ""
 
-#: FSessions.form:114
+#: FSessions.form:115
 msgid "Previous session"
 msgstr ""
 
-#: FSessions.form:122
+#: FSessions.form:123
 msgid "Next session"
 msgstr ""
 
-#: FSessions.form:130
+#: FSessions.form:131
 msgid "Last session"
 msgstr ""
 

@@ -18,6 +18,7 @@
   }
   { grvSessions GridView
     Move(7,7,917,539)
+    Font = Font["10"]
     Tracking = True
     Mouse = Mouse.Pointing
     PopupMenu = "mnuPopup"

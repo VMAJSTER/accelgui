@@ -14,9 +14,9 @@ Public Sub _new()
     grvServers.Columns[1].Text = ("S")
     grvServers.Columns[2].Width = 250
     grvServers.Columns[2].Text = ("Name")
-    grvServers.Columns[3].Width = 100
+    grvServers.Columns[3].Width = 125
     grvServers.Columns[3].Text = ("Address")
-    grvServers.Columns[4].Width = 35
+    grvServers.Columns[4].Width = 75
     grvServers.Columns[4].Text = ("Port")
     For i = 0 To 4
         grvServers.Columns[i].Alignment = Align.Center
@@ -55,7 +55,7 @@ Public Sub Form_Open()
         grvServers[i, 4].Text = arrPort[i]
     Next
     If grvServers.Rows.Count > 0 Then
-        MMain.ActivateRow(grvServers, grvServers.Rows.Max)
+        MMain.ActivateRow(grvServers, 0)
         MMain.EnableControls(True)
     Endif
     If MMain.strCurrentUser = "admin" And If User.Id = 0 Then
