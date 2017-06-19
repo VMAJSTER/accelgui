@@ -3,7 +3,6 @@
 { Form Form
   Move(0,0,315,217)
   #Scaled = False
-  Icon = Picture["icons/16.png"]
   Resizable = False
   Border = False
   SkipTaskbar = True

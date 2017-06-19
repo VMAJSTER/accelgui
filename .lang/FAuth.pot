@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-18 09:56 UTC\n"
+"POT-Creation-Date: 2017-06-19 07:34 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,11 +46,11 @@ msgstr ""
 msgid "guest"
 msgstr ""
 
-#: FAuth.class:50
+#: FAuth.class:53
 msgid "Authorization error"
 msgstr ""
 
-#: FAuth.class:51
+#: FAuth.class:54
 msgid "Password you entered is incorrect"
 msgstr ""
 

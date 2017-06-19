@@ -4,7 +4,6 @@
   Move(0,0,931,553)
   #Scaled = False
   Text = (" Primary server")
-  Icon = Picture["images/passive.png"]
   Resizable = False
   Border = False
   Maximized = True
