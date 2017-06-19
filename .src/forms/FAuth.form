@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,328,204)
+  Move(0,0,328,208)
   #Scaled = False
   Text = ("Authorization")
   Resizable = False
@@ -12,7 +12,7 @@
     Background = &H3F81B8&
     Tracking = True
     { lblTitle Label
-      Move(6,6,210,20)
+      Move(8,4,264,24)
       Font = Font["Bold,12"]
       Foreground = Color.White
       Tracking = True
@@ -28,7 +28,7 @@
     }
   }
   { btnEnter Button
-    Move(8,168,112,28)
+    Move(8,168,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Enter")
@@ -36,7 +36,7 @@
     Default = True
   }
   { btnExit Button
-    Move(208,168,112,28)
+    Move(192,168,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Exit")

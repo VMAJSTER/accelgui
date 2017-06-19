@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-18 08:45 UTC\n"
+"PO-Revision-Date: 2017-06-19 08:22 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -14,14 +14,14 @@ msgid "accelgui"
 msgstr "-"
 
 #: .project:2
-msgid "Graphical user interface for accel-ppp vpn server"
-msgstr "Графический пользовательский интерфейс для впн-сервера accel-ppp"
+msgid "Graphical user interface for accel-ppp access server"
+msgstr "Графический интерфейс пользователя для сервера доступа accel-ppp"
 
-#: FAuth.class:26
+#: FAuth.class:53
 msgid "Authorization error"
 msgstr "Ошибка авторизации"
 
-#: FAuth.class:27
+#: FAuth.class:54
 msgid "Password you entered is incorrect"
 msgstr "Введенный вами пароль не верен"
 
@@ -29,7 +29,7 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FSrvAction.form:97
+#: FSettings.form:44 FSrvAction.form:96
 msgid "Close"
 msgstr "Закрыть"
 
@@ -37,27 +37,27 @@ msgstr "Закрыть"
 msgid "Enter"
 msgstr "Войти"
 
-#: FAuth.form:58
+#: FAuth.form:58 FSettings.form:54
 msgid "Exit"
 msgstr "Выход"
 
-#: FAuth.form:73
+#: FAuth.form:74
 msgid "Username:"
 msgstr "Пользователь:"
 
-#: FAuth.form:79
+#: FAuth.form:80
 msgid "Password:"
 msgstr "Пароль:"
 
-#: FAuth.form:87
+#: FAuth.form:88 FSettings.form:73
 msgid "admin"
 msgstr "-"
 
-#: FAuth.form:87
+#: FAuth.form:88 FSettings.form:85
 msgid "guest"
 msgstr "-"
 
-#: FAuth.form:87
+#: FAuth.form:88 FSettings.form:79
 msgid "user"
 msgstr "-"
 
@@ -81,7 +81,7 @@ msgstr "Сбросить группу сессий"
 msgid "Update"
 msgstr "Обновить"
 
-#: FMain.form:76
+#: FMain.form:76 FSettings.form:37
 msgid "Settings"
 msgstr "Настройки"
 
@@ -121,67 +121,67 @@ msgstr "Адрес"
 msgid "Port"
 msgstr "Порт"
 
-#: FServers.class:68
+#: FServers.class:74
 msgid "Add server"
 msgstr "Добавить сервер"
 
-#: FServers.class:79
+#: FServers.class:85
 msgid "Edit server"
 msgstr "Изменить сервер"
 
-#: FServers.class:198
+#: FServers.class:204
 msgid "Stop"
 msgstr "Остановить"
 
-#: FServers.form:50
+#: FServers.form:49
 msgid "Add"
 msgstr "Добавить"
 
-#: FServers.form:59
+#: FServers.form:58
 msgid "Edit"
 msgstr "Изменить"
 
-#: FServers.form:68
+#: FServers.form:67
 msgid "Delete"
 msgstr "Удалить"
 
-#: FServers.form:77
+#: FServers.form:76
 msgid "Clear"
 msgstr "Очистить"
 
-#: FServers.form:86
+#: FServers.form:85
 msgid "First"
 msgstr "Первый"
 
-#: FServers.form:95
+#: FServers.form:94
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: FServers.form:104
+#: FServers.form:103
 msgid "Next"
 msgstr "Следующий"
 
-#: FServers.form:113
+#: FServers.form:112
 msgid "Last"
 msgstr "Последний"
 
-#: FServers.form:122
+#: FServers.form:121
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: FServers.form:130
+#: FServers.form:129 FSettings.form:63
 msgid "Save"
 msgstr "Сохранить"
 
-#: FServers.form:150 FSessions.form:139
+#: FServers.form:149 FSessions.form:138
 msgid "0 / 0"
 msgstr "-"
 
-#: FServers.form:159
+#: FServers.form:158
 msgid "Start"
 msgstr "Запустить"
 
-#: FServers.form:178
+#: FServers.form:177
 msgid "Servers manager"
 msgstr "Менеджер серверов"
 
@@ -253,37 +253,45 @@ msgstr "Скрыть статистику"
 msgid " Primary server"
 msgstr "-"
 
-#: FSessions.form:31
+#: FSessions.form:30
 msgid "Popup"
 msgstr "-"
 
-#: FSessions.form:35
+#: FSessions.form:34
 msgid "Show statistics"
 msgstr "Показать статистику"
 
-#: FSessions.form:66
+#: FSessions.form:65
 msgid "Statistics"
 msgstr "Статистика"
 
-#: FSessions.form:89
+#: FSessions.form:88
 msgid "no data"
 msgstr "данные отсутствуют"
 
-#: FSessions.form:107
+#: FSessions.form:106
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:115
+#: FSessions.form:114
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:123
+#: FSessions.form:122
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:131
+#: FSessions.form:130
 msgid "Last session"
 msgstr "Последняя сессия"
+
+#: FSettings.form:104
+msgid "default"
+msgstr "по-умолчанию"
+
+#: FSettings.form:125
+msgid "Reset"
+msgstr "Сброс"
 
 #: FSrvAction.class:32
 msgid "Attention"
@@ -297,35 +305,35 @@ msgstr "Заполните текстовые поля"
 msgid "Name or address already exists"
 msgstr "Имя или адрес уже существуют"
 
-#: FSrvAction.form:30
+#: FSrvAction.form:29
 msgid "Name: "
 msgstr "Имя: "
 
-#: FSrvAction.form:36
+#: FSrvAction.form:35
 msgid "Address: "
 msgstr "Адрес: "
 
-#: FSrvAction.form:42
+#: FSrvAction.form:41
 msgid "Port: "
 msgstr "Порт: "
 
-#: FSrvAction.form:48
+#: FSrvAction.form:47
 msgid "accel-ppp"
 msgstr "-"
 
-#: FSrvAction.form:58
+#: FSrvAction.form:57
 msgid "2001"
 msgstr "-"
 
-#: FSrvAction.form:66
+#: FSrvAction.form:65
 msgid "Apply"
 msgstr "Применить"
 
-#: FSrvAction.form:75
+#: FSrvAction.form:74
 msgid "Cancel"
 msgstr "Отмена"
 
-#: FSrvAction.form:90
+#: FSrvAction.form:89
 msgid "Current session"
 msgstr "Текущая сессия"
 

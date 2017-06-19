@@ -10,6 +10,8 @@ Public Const MARGIN As Byte = 8
 Public Const TLB_HEIGHT As Byte = 64
 ' Symbols used in ip-addresses
 Private Const IP_SYMBOLS As String = "0123456789."
+' Prefix for crypting
+Public Const PREFIX As String = "0123456789012"
 ' Object for saving application settings
 Public objSettings As Settings
 ' Currently authorized user

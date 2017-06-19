@@ -9,9 +9,9 @@ Public Sub Form_Resize()
     End With
 
     With lblTitle
-        .W = pnlTitle.W - pctClose.W - MMain.MARGIN
+        .W = pnlTitle.W - pctClose.W - MMain.MARGIN * 2
         .Left = MMain.MARGIN
-        .Top = MMain.MARGIN
+        .Top = MMain.MARGIN / 2
     End With
 
     With pctClose
@@ -86,5 +86,11 @@ Public Sub tlbUpdate_Click()
         objWindow = wksServers.ActiveWindow
         objWindow.objServer.GetSessions()
     Endif
+
+End
+
+Public Sub tlbSettings_Click()
+
+    FSettings.ShowModal()
 
 End

@@ -27,22 +27,22 @@
     Resizable = False
   }
   { pnlStat Panel
-    Move(581,49,322,150)
+    Move(578,49,322,150)
     Visible = False
     Background = Color.Background
     { pnlTitle Panel
-      Move(7,7,308,35)
+      Move(7,7,308,32)
       Background = &H3F81B8&
       Tracking = True
       { lblTitle Label
-        Move(7,7,210,21)
+        Move(8,4,256,24)
         Font = Font["Bold,12"]
         Foreground = Color.White
         Tracking = True
         Text = ("Statistics")
       }
       { pctCloseStat PictureBox
-        Move(273,0,35,35)
+        Move(274,0,32,32)
         NoTabFocus = True
         Mouse = Mouse.Pointing
         ToolTip = ("Close")
@@ -51,7 +51,7 @@
       }
     }
     { grvStats GridView
-      Move(7,49,308,94)
+      Move(8,48,308,94)
       Visible = False
       Mouse = Mouse.Pointing
       ScrollBar = Scroll.None

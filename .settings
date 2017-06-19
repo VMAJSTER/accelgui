@@ -110,10 +110,9 @@ Geometry=[14,26,224,280]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=2
-File[1]=".src/forms/FAuth.form"
+Count=1
+File[1]=".src/forms/FMain.form"
 Active=1
-File[2]=".src/forms/FAuth.class:12.31"
 
 [Watches]
 Count=0

@@ -96,16 +96,16 @@
     }
   }
   { pnlTitle Panel
-    Move(7,7,917,35)
+    Move(7,7,917,32)
     Background = &H3F81B8&
     { lblTitle Label
-      Move(8,8,833,19)
+      Move(8,4,833,24)
       Font = Font["Bold,12"]
       Foreground = Color.White
       Text = ("Accel GUI")
     }
     { pctClose PictureBox
-      Move(882,0,35,35)
+      Move(882,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")

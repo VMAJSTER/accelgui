@@ -124,18 +124,18 @@
     }
   }
   { pnlTitle Panel
-    Move(7,7,528,35)
+    Move(7,7,528,32)
     Background = &H3F81B8&
     Tracking = True
     { lblTitle Label
-      Move(7,7,392,21)
+      Move(8,4,480,24)
       Font = Font["Bold,12"]
       Foreground = Color.White
       Tracking = True
       Text = ("Servers manager")
     }
     { pctClose PictureBox
-      Move(492,0,35,35)
+      Move(494,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")
