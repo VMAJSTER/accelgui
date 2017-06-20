@@ -91,6 +91,8 @@ Public Sub tlbUpdate_Click()
 
     If wksServers.Windows.Count > 0 Then
         objWindow = wksServers.ActiveWindow
+        objWindow.grvSessions.Clear()
+        objWindow.grvSessions.Rows.Count = 0
         objWindow.objServer.GetSessions()
     Endif
 

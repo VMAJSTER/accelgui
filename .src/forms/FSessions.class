@@ -70,7 +70,7 @@ Public Sub Form_Resize()
         .Height = Me.ClientH - MMain.MARGIN * 2
         .Left = MMain.MARGIN
         .Top = MMain.MARGIN
-        .Columns[1].Width = grvSessions.ScrollWidth - 915
+        .Columns[1].Width = grvSessions.ClientW - 855
     End With
 
     With pnlStat
@@ -122,6 +122,7 @@ Private Sub FillSessions()
             grvSessions[i, 8].Text = objServer.Sessions[i].State
             grvSessions[i, 9].Text = objServer.Sessions[i].Uptime
         Next
+        grvSessions.Columns[1].Width = grvSessions.ClientW - 855
     Endif
 
 End
@@ -197,16 +198,6 @@ Public Sub lblTitle_MouseMove()
 
 End
 
-Public Sub tmrState_Timer()
-
-    If objServer.Connected Then
-        Me.Icon = Picture["./images/active.png"]
-    Else
-        Me.Icon = Picture["./images/passive.png"]
-    Endif
-
-End
-
 Public Sub grvSessions_MouseMove()
 
     Dim X, Y As Integer
@@ -271,5 +262,17 @@ End
 Private Sub ShowRowNum(intCur As Integer)
 
     lblSessions.Text = CStr(intCur) & " / " & CStr(grvSessions.Rows.Count)
+
+End
+
+Public Sub tmrState_Timer()
+
+    If objServer.Connected Then
+        Me.Icon = Picture["./images/active.png"]
+    Else
+        Me.Icon = Picture["./images/passive.png"]
+        grvSessions.Clear()
+        grvSessions.Rows.Count = 0
+    Endif
 
 End

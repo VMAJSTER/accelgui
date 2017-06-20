@@ -27,6 +27,8 @@ Public Sub btnApply_Click()
 
     Dim intRow As Integer
     Dim intSkip As Integer
+    Dim strOldName As String
+    Dim objWindow As Window
 
     If Not FieldsAreFilled() Then
         MMain.ShowMsg(("Attention"), ("Fill in text fields"))
@@ -34,6 +36,7 @@ Public Sub btnApply_Click()
     Endif
     If bolEdit Then
         intSkip = FServers.grvServers.Row
+        strOldName = FServers.grvServers[intSkip, 2].Text
     Else
         intSkip = -1
     Endif
@@ -44,6 +47,12 @@ Public Sub btnApply_Click()
     With FServers
         If bolEdit Then
             intRow = .grvServers.Row
+            For Each objWindow In FMain.wksServers.Windows
+                If objWindow.Text = strOldName Then
+                    objWindow.Text = txbName.Text
+                    Break
+                Endif
+            Next
         Else
             intRow = .grvServers.Rows.Count
             Inc .grvServers.Rows.Count

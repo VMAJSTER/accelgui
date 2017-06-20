@@ -67,6 +67,7 @@ Event Shutdown
 ' ------------------------------
 ' Properties setters and getters
 ' ------------------------------
+
 Private Function Name_Read() As String
 
     Return strName
@@ -232,6 +233,7 @@ End
 ' -------
 ' Methods
 ' -------
+
 Public Sub Connect()
 
     If Not bolConnected Then objSrv.Connect(strHost, intPort)
@@ -246,21 +248,25 @@ End
 
 Public Sub Reload()
 
-    strLastSrv = MSrv.Others
-    SendData(CMD_RELOAD)
-    Raise Reloaded
+    If bolConnected Then
+        strLastSrv = MSrv.Others
+        SendData(CMD_RELOAD)
+        Raise Reloaded
+    Endif
 
 End
 
 Public Sub Shutdown()
 
-    strLastSrv = MSrv.Others
-    If strShutMode = MShutMode.Default Then
-        SendData(CMD_SHUTDOWN)
-    Else
-        SendData(CMD_SHUTDOWN & " " & strShutMode)
+    If bolConnected Then
+        strLastSrv = MSrv.Others
+        If strShutMode = MShutMode.Default Then
+            SendData(CMD_SHUTDOWN)
+        Else
+            SendData(CMD_SHUTDOWN & " " & strShutMode)
+        Endif
+        Raise Shutdown
     Endif
-    Raise Shutdown
 
 End
 
@@ -268,27 +274,31 @@ Public Sub GetSessions()
 
     Dim strLineToSend As String
 
-    strLineToSend = CMD_SESSIONS
-    If strColumn <> MColumn.Default Then
-        strLineToSend &= " " & strColumn
+    If bolConnected Then
+        strLineToSend = CMD_SESSIONS
+        If strColumn <> MColumn.Default Then
+            strLineToSend &= " " & strColumn
+        Endif
+        If strOrderMode <> MColumn.Default Then
+            strLineToSend &= " order " & strOrderMode
+        Endif
+        If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
+            strLineToSend &= " match " & strMatchMode & " " & strMatchValue
+        Endif
+        arrSessionsData.Clear()
+        strLastSrv = MSrv.Sessions
+        SendData(strLineToSend)
     Endif
-    If strOrderMode <> MColumn.Default Then
-        strLineToSend &= " order " & strOrderMode
-    Endif
-    If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
-        strLineToSend &= " match " & strMatchMode & " " & strMatchValue
-    Endif
-    arrSessionsData.Clear()
-    strLastSrv = MSrv.Sessions
-    SendData(strLineToSend)
 
 End
 
 Public Sub GetStats()
 
-    arrStatsData.Clear()
-    strLastSrv = MSrv.Stats
-    SendData(CMD_STATS)
+    If bolConnected Then
+        arrStatsData.Clear()
+        strLastSrv = MSrv.Stats
+        SendData(CMD_STATS)
+    Endif
 
 End
 
@@ -339,6 +349,7 @@ End
 ' -------------------
 ' Private subroutines
 ' -------------------
+
 Private Sub SendData(strCommand As String)
 
     Dim intCommandLength As Integer
@@ -354,7 +365,7 @@ Private Sub ParseStats()
     Dim strCpuData As String
     Dim strMemData As String
 
-    If arrStatsData.Length > 3 Then
+    If arrStatsData.Length > 2 Then
         clsStats.Uptime = Trim(Split(arrStatsData[0], " ")[1])
         strCpuData = Trim(Split(arrStatsData[1], " ")[1])
         strCpuData = Left(strCpuData, Len(strCpuData) - 1)
@@ -374,7 +385,7 @@ Private Sub ParseSessions()
     Dim arrSession As CSession
     Dim arrRate As New String[]
 
-    If arrSessionsData.Length > 3 Then
+    If arrSessionsData.Length > 2 Then
         arrSessions.Clear()
         For i = 2 To arrSessionsData.Max
             arrRecord.Clear()

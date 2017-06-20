@@ -23,7 +23,7 @@
     Mouse = Mouse.Pointing
     PopupMenu = "mnuPopup"
     Mode = Select.Single
-    Header = GridView.Both
+    Header = GridView.Horizontal
     ScrollBar = Scroll.Vertical
     Resizable = False
   }
@@ -65,7 +65,7 @@
     }
   }
   { tmrState #Timer
-    #Move(861,483)
+    #Move(856,480)
     Enabled = True
   }
   { pnlToolBar Panel

@@ -1,4 +1,6 @@
- - Hide programme to tray
+ - When changing name of server, if it is already open, change the name of open window either
+ 
+ - Check server availabily and reconnect when needed
  
  - Server reboot
  
@@ -12,6 +14,6 @@
  
  - Server statistics
  
- - When changing name of server if it is already open change the name of open window either
+ - Shaper functionality
  
- - Login / pass authentication with permissions
+ - Hide programme to tray

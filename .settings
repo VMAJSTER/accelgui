@@ -32,7 +32,7 @@ Geometry=[958,43,334,660]
 Geometry=[832,88,224,280]
 
 [DebugWindow/arrRecord]
-Geometry=[906,107,224,280]
+Geometry=[906,107,256,320]
 
 [DebugWindow/arrSession]
 Geometry=[962,126,224,280]
@@ -41,7 +41,7 @@ Geometry=[962,126,224,280]
 Geometry=[0,12,224,280]
 
 [DebugWindow/arrSessions]
-Geometry=[0,12,224,280]
+Geometry=[0,12,256,320]
 
 [DebugWindow/arrSessionsData]
 Geometry=[627,212,721,442]
@@ -53,10 +53,10 @@ Geometry=[14,26,224,280]
 Geometry=[14,26,224,280]
 
 [DebugWindow/arrStatsData]
-Geometry=[0,12,224,280]
+Geometry=[0,12,256,320]
 
 [DebugWindow/clsStats]
-Geometry=[0,12,224,280]
+Geometry=[0,12,256,320]
 
 [DebugWindow/grvServers]
 Geometry=[1095,36,224,647]
@@ -95,7 +95,10 @@ Geometry=[0,0,224,280]
 Geometry=[14,14,224,280]
 
 [DebugWindow/objSrv]
-Geometry=[970,92,224,280]
+Geometry=[970,92,256,320]
+
+[DebugWindow/objSrv.Lines]
+Geometry=[986,108,256,320]
 
 [DebugWindow/objSrvCommon]
 Geometry=[0,12,224,280]
@@ -110,11 +113,9 @@ Geometry=[14,26,224,280]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=3
+Count=1
 File[1]=".src/forms/FMain.form"
-Active=3
-File[2]=".src/forms/FSessions.form"
-File[3]=".src/forms/FSessions.class:0.64"
+Active=1
 
 [Watches]
 Count=0
