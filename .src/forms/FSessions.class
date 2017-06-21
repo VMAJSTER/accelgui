@@ -201,16 +201,18 @@ End
 Public Sub grvSessions_MouseMove()
 
     Dim X, Y As Integer
+    Dim bolCondition As Boolean
 
     X = Mouse.X
     Y = Mouse.Y
-
-    If X >= pnlToolBar.Left And X <= pnlToolBar.Left + pnlToolBar.W Then
-        If Y >= pnlToolBar.Top And Y <= pnlToolBar.Top + pnlToolBar.H Then
-            pnlToolBar.Show()
-        Else
-            pnlToolBar.Hide()
-        Endif
+    bolCondition = (X >= pnlToolBar.Left)
+    bolCondition = (Y >= pnlToolBar.Top) And bolCondition
+    bolCondition = (X <= pnlToolBar.Left + pnlToolBar.W) And bolCondition
+    bolCondition = (Y <= pnlToolBar.Top + pnlToolBar.H) And bolCondition
+    If bolCondition Then
+        pnlToolBar.Show()
+    Else
+        pnlToolBar.Hide()
     Endif
 
 End

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-19 08:22 UTC\n"
+"PO-Revision-Date: 2017-06-21 07:05 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr "-"
 msgid "Graphical user interface for accel-ppp access server"
 msgstr "Графический интерфейс пользователя для сервера доступа accel-ppp"
 
-#: FAuth.class:53
+#: FAuth.class:52
 msgid "Authorization error"
 msgstr "Ошибка авторизации"
 
-#: FAuth.class:54
+#: FAuth.class:53
 msgid "Password you entered is incorrect"
 msgstr "Введенный вами пароль не верен"
 
@@ -66,8 +66,8 @@ msgid "Accel GUI"
 msgstr "-"
 
 #: FMain.form:44
-msgid "Filter"
-msgstr "Фильтр"
+msgid "Filter sessions"
+msgstr "Фильтр сессий"
 
 #: FMain.form:52
 msgid "Terminate one session"
@@ -78,8 +78,8 @@ msgid "Terminate group of sessions"
 msgstr "Сбросить группу сессий"
 
 #: FMain.form:68
-msgid "Update"
-msgstr "Обновить"
+msgid "Update list of sessions"
+msgstr "Обновить список сессий"
 
 #: FMain.form:76 FSettings.form:37
 msgid "Settings"
@@ -89,17 +89,17 @@ msgstr "Настройки"
 msgid "Help"
 msgstr "Справка"
 
-#: FMain.form:112 FServers.form:28
-msgid "Servers"
-msgstr "Сервера"
+#: FMain.form:112 FServers.form:179
+msgid "Servers manager"
+msgstr "Менеджер серверов"
 
 #: FMain.form:120
-msgid "Reboot"
-msgstr "Перезагрузить"
+msgid "Reload config file"
+msgstr "Перезагрузить файл конфигурации"
 
 #: FMain.form:128
-msgid "Shutdown"
-msgstr "Выключить"
+msgid "Shutdown daemon"
+msgstr "Отключить службу"
 
 #: FServers.class:12
 msgid "P"
@@ -121,69 +121,69 @@ msgstr "Адрес"
 msgid "Port"
 msgstr "Порт"
 
-#: FServers.class:74
+#: FServers.class:76
 msgid "Add server"
 msgstr "Добавить сервер"
 
-#: FServers.class:85
+#: FServers.class:87
 msgid "Edit server"
 msgstr "Изменить сервер"
 
-#: FServers.class:204
+#: FServers.class:206
 msgid "Stop"
 msgstr "Остановить"
 
-#: FServers.form:49
+#: FServers.form:28
+msgid "Servers"
+msgstr "Сервера"
+
+#: FServers.form:51
 msgid "Add"
 msgstr "Добавить"
 
-#: FServers.form:58
+#: FServers.form:60
 msgid "Edit"
 msgstr "Изменить"
 
-#: FServers.form:67
+#: FServers.form:69
 msgid "Delete"
 msgstr "Удалить"
 
-#: FServers.form:76
+#: FServers.form:78
 msgid "Clear"
 msgstr "Очистить"
 
-#: FServers.form:85
+#: FServers.form:87
 msgid "First"
 msgstr "Первый"
 
-#: FServers.form:94
+#: FServers.form:96
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: FServers.form:103
+#: FServers.form:105
 msgid "Next"
 msgstr "Следующий"
 
-#: FServers.form:112
+#: FServers.form:114
 msgid "Last"
 msgstr "Последний"
 
-#: FServers.form:121
+#: FServers.form:123
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: FServers.form:129 FSettings.form:63
+#: FServers.form:132 FSettings.form:63
 msgid "Save"
 msgstr "Сохранить"
 
-#: FServers.form:149 FSessions.form:138
+#: FServers.form:151 FSessions.form:139
 msgid "0 / 0"
 msgstr "-"
 
-#: FServers.form:158
+#: FServers.form:160
 msgid "Start"
 msgstr "Запустить"
-
-#: FServers.form:177
-msgid "Servers manager"
-msgstr "Менеджер серверов"
 
 #: FSessions.class:14
 msgid "IFName"
@@ -261,47 +261,47 @@ msgstr "-"
 msgid "Show statistics"
 msgstr "Показать статистику"
 
-#: FSessions.form:65
+#: FSessions.form:66
 msgid "Statistics"
 msgstr "Статистика"
 
-#: FSessions.form:88
+#: FSessions.form:89
 msgid "no data"
 msgstr "данные отсутствуют"
 
-#: FSessions.form:106
+#: FSessions.form:107
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:114
+#: FSessions.form:115
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:122
+#: FSessions.form:123
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:130
+#: FSessions.form:131
 msgid "Last session"
 msgstr "Последняя сессия"
 
-#: FSettings.form:104
+#: FSettings.form:108
 msgid "default"
 msgstr "по-умолчанию"
 
-#: FSettings.form:125
+#: FSettings.form:131
 msgid "Reset"
 msgstr "Сброс"
 
-#: FSrvAction.class:32
+#: FSrvAction.class:34
 msgid "Attention"
 msgstr "Внимание"
 
-#: FSrvAction.class:32
+#: FSrvAction.class:34
 msgid "Fill in text fields"
 msgstr "Заполните текстовые поля"
 
-#: FSrvAction.class:41
+#: FSrvAction.class:44
 msgid "Name or address already exists"
 msgstr "Имя или адрес уже существуют"
 

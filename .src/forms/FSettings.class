@@ -71,18 +71,12 @@ Public Sub btnSave_Click()
 
     If Trim(txbAdmin.Text) <> "" Then
         MMain.objSettings["Auth/admin"] = Crypt.SHA512(txbAdmin.Text, MMain.PREFIX)
-    Else
-        MMain.objSettings["Auth/admin"] = Crypt.SHA512("admin", MMain.PREFIX)
     Endif
     If Trim(txbUser.Text) <> "" Then
         MMain.objSettings["Auth/user"] = Crypt.SHA512(txbUser.Text, MMain.PREFIX)
-    Else
-        MMain.objSettings["Auth/user"] = Crypt.SHA512("user", MMain.PREFIX)
     Endif
     If Trim(txbGuest.Text) <> "" Then
         MMain.objSettings["Auth/guest"] = Crypt.SHA512(txbGuest.Text, MMain.PREFIX)
-    Else
-        MMain.objSettings["Auth/guest"] = Crypt.SHA512("guest", MMain.PREFIX)
     Endif
     For Each objControl In Me.Controls
         If objControl Is RadioButton Then

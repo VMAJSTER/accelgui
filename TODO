@@ -1,12 +1,10 @@
- - When changing name of server, if it is already open, change the name of open window either
- 
  - Check server availabily and reconnect when needed
  
  - Server reboot
  
  - Shutdown server
  
- - Filter and search of sessions
+ - Filter sessions
  
  - Kill selected session
  
@@ -14,6 +12,6 @@
  
  - Server statistics
  
- - Shaper functionality
+ - Shaper
  
- - Hide programme to tray
+ - Tray icon

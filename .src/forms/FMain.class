@@ -72,11 +72,11 @@ Public Sub Form_Open()
                 tlbSettings.Enabled = False
             Endif
         Case "user"
-            tlbReboot.Enabled = False
+            tlbReload.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
         Case "guest"
-            tlbReboot.Enabled = False
+            tlbReload.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
             tlbKillGroup.Enabled = False
@@ -101,5 +101,16 @@ End
 Public Sub tlbSettings_Click()
 
     FSettings.ShowModal()
+
+End
+
+Public Sub tlbReload_Click()
+
+    Dim objWindow As FSessions
+
+    If wksServers.Windows.Count > 0 Then
+        objWindow = wksServers.ActiveWindow
+        objWindow.objServer.Reload()
+    Endif
 
 End

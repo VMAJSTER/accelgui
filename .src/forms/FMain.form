@@ -17,7 +17,7 @@
       Move(70,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Filter")
+      ToolTip = ("Filter sessions")
       Picture = Picture["images/filteradd.png"]
     }
     { tlbKillOne ToolButton
@@ -38,7 +38,7 @@
       Move(266,7,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Update")
+      ToolTip = ("Update list of sessions")
       Picture = Picture["images/update.png"]
     }
     { tlbSettings ToolButton
@@ -74,21 +74,21 @@
       Move(0,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Servers")
+      ToolTip = ("Servers manager")
       Picture = Picture["images/servers.png"]
     }
-    { tlbReboot ToolButton
+    { tlbReload ToolButton
       Move(336,6,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Reboot")
+      ToolTip = ("Reload config file")
       Picture = Picture["images/reboot.png"]
     }
     { tlbShutdown ToolButton
       Move(392,6,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Shutdown")
+      ToolTip = ("Shutdown daemon")
       Picture = Picture["images/shutdown.png"]
     }
     { Separator7 Separator
