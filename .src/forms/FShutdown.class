@@ -1,0 +1,71 @@
+' Gambas class file
+
+Private intX As Integer
+Private intY As Integer
+
+Public Sub btnExit_Click()
+
+    Me.Close()
+
+End
+
+Public Sub pctClose_MouseDown()
+
+    btnExit_Click()
+
+End
+
+Public Sub pnlTitle_MouseDown()
+
+    intX = Mouse.X + pnlTitle.Left
+    intY = Mouse.Y + pnlTitle.Top
+
+End
+
+Public Sub pnlTitle_MouseMove()
+
+    Dim intLeft As Integer
+    Dim intTop As Integer
+
+    If Mouse.Left Then
+        intLeft = Mouse.ScreenX - intX
+        intTop = Mouse.ScreenY - intY
+        If intLeft >= 0 And intTop >= 0 Then
+            If intLeft + Me.W <= Screen.W Then
+                If intTop + Me.H <= Screen.H Then
+                    Me.Left = intLeft
+                    Me.Top = intTop
+                Endif
+            Endif
+        Endif
+    Endif
+
+End
+
+Public Sub lblTitle_MouseDown()
+
+    pnlTitle_MouseDown()
+
+End
+
+Public Sub lblTitle_MouseMove()
+
+    pnlTitle_MouseMove()
+
+End
+
+Public Sub btnApply_Click()
+
+    Dim objWindow As FSessions
+
+    objWindow = FMain.wksServers.ActiveWindow
+    If rdbDefault.Value Then objWindow.objServer.ShutMode = MShutMode.Default
+    If rdbSoft.Value Then objWindow.objServer.ShutMode = MShutMode.Soft
+    If rdbHard.Value Then objWindow.objServer.ShutMode = MShutMode.Hard
+    If rdbCancel.Value Then objWindow.objServer.ShutMode = MShutMode.Cancel
+    objWindow.grvSessions.Clear()
+    objWindow.grvSessions.Rows.Count = 0
+    objWindow.objServer.Shutdown()
+    Me.Close()
+
+End

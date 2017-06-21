@@ -114,3 +114,11 @@ Public Sub tlbReload_Click()
     Endif
 
 End
+
+Public Sub tlbShutdown_Click()
+
+    If wksServers.Windows.Count > 0 Then
+        FShutdown.ShowModal()
+    Endif
+
+End

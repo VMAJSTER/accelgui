@@ -1,0 +1,73 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,328,264)
+  #Scaled = False
+  Resizable = False
+  Border = False
+  SkipTaskbar = True
+  { pnlTitle Panel
+    Move(8,8,312,32)
+    Background = &H3F81B8&
+    Tracking = True
+    { lblTitle Label
+      Move(8,4,264,24)
+      Font = Font["Bold,12"]
+      Foreground = Color.White
+      Tracking = True
+      Text = ("Shutdown daemon")
+    }
+    { pctClose PictureBox
+      Move(280,0,32,32)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Close")
+      Picture = Picture["images/exit.png"]
+      Alignment = Align.Center
+    }
+  }
+  { btnApply Button
+    Move(8,224,128,32)
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Apply")
+    Picture = Picture["images/enable.png"]
+    Default = True
+  }
+  { btnExit Button
+    Move(192,224,128,32)
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Exit")
+    Picture = Picture["images/close.png"]
+    Cancel = True
+  }
+  { Panel1 Panel
+    Move(8,48,312,168)
+    Border = Border.Plain
+    { rdbDefault RadioButton
+      Move(24,16,264,24)
+      Mouse = Mouse.Pointing
+      Text = ("Shutdown default")
+      Value = True
+    }
+    { rdbSoft RadioButton
+      Move(24,48,264,24)
+      Mouse = Mouse.Pointing
+      Text = ("Shutdown soft")
+    }
+    { rdbHard RadioButton
+      Move(24,80,264,24)
+      Mouse = Mouse.Pointing
+      Text = ("Shutdown hard")
+    }
+    { rdbCancel RadioButton
+      Move(24,128,264,24)
+      Mouse = Mouse.Pointing
+      Text = ("Shutdown cancel")
+    }
+    { Separator1 Separator
+      Move(24,104,264,24)
+    }
+  }
+}

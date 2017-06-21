@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-21 07:05 UTC\n"
+"PO-Revision-Date: 2017-06-21 07:29 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FSettings.form:44 FSrvAction.form:96
+#: FSettings.form:44 FShutdown.form:38 FSrvAction.form:96
 msgid "Close"
 msgstr "Закрыть"
 
@@ -37,7 +37,7 @@ msgstr "Закрыть"
 msgid "Enter"
 msgstr "Войти"
 
-#: FAuth.form:58 FSettings.form:54
+#: FAuth.form:58 FSettings.form:54 FShutdown.form:57
 msgid "Exit"
 msgstr "Выход"
 
@@ -97,7 +97,7 @@ msgstr "Менеджер серверов"
 msgid "Reload config file"
 msgstr "Перезагрузить файл конфигурации"
 
-#: FMain.form:128
+#: FMain.form:132 FShutdown.form:31
 msgid "Shutdown daemon"
 msgstr "Отключить службу"
 
@@ -293,6 +293,26 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
+#: FShutdown.form:48 FSrvAction.form:65
+msgid "Apply"
+msgstr "Применить"
+
+#: FShutdown.form:69
+msgid "Shutdown default"
+msgstr "Отключение по-умолчанию"
+
+#: FShutdown.form:76
+msgid "Shutdown soft"
+msgstr "Легкое отключение"
+
+#: FShutdown.form:82
+msgid "Shutdown hard"
+msgstr "Жесткое отключение"
+
+#: FShutdown.form:88
+msgid "Shutdown cancel"
+msgstr "Отмена отключения"
+
 #: FSrvAction.class:34
 msgid "Attention"
 msgstr "Внимание"
@@ -324,10 +344,6 @@ msgstr "-"
 #: FSrvAction.form:57
 msgid "2001"
 msgstr "-"
-
-#: FSrvAction.form:65
-msgid "Apply"
-msgstr "Применить"
 
 #: FSrvAction.form:74
 msgid "Cancel"

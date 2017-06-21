@@ -21,35 +21,35 @@
       Picture = Picture["images/filteradd.png"]
     }
     { tlbKillOne ToolButton
-      Move(140,7,48,48)
+      Move(140,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Terminate one session")
       Picture = Picture["images/onedel.png"]
     }
     { tlbKillGroup ToolButton
-      Move(196,7,48,48)
+      Move(196,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Terminate group of sessions")
       Picture = Picture["images/groupdel.png"]
     }
     { tlbUpdate ToolButton
-      Move(266,7,48,48)
+      Move(266,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Update list of sessions")
       Picture = Picture["images/update.png"]
     }
     { tlbSettings ToolButton
-      Move(462,6,48,48)
+      Move(462,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Settings")
       Picture = Picture["images/settings.png"]
     }
     { tlbAbout ToolButton
-      Move(532,6,48,48)
+      Move(532,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Help")
@@ -59,16 +59,16 @@
       Move(48,8,21,48)
     }
     { Separator3 Separator
-      Move(118,7,21,48)
+      Move(118,8,21,48)
     }
     { Separator4 Separator
-      Move(244,7,21,48)
+      Move(244,8,21,48)
     }
     { Separator5 Separator
-      Move(314,7,21,48)
+      Move(314,8,21,48)
     }
     { Separator6 Separator
-      Move(511,6,21,48)
+      Move(511,8,21,48)
     }
     { tlbServers ToolButton
       Move(0,8,48,48)
@@ -78,21 +78,21 @@
       Picture = Picture["images/servers.png"]
     }
     { tlbReload ToolButton
-      Move(336,6,48,48)
+      Move(336,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Reload config file")
       Picture = Picture["images/reboot.png"]
     }
+    { Separator7 Separator
+      Move(441,8,21,48)
+    }
     { tlbShutdown ToolButton
-      Move(392,6,48,48)
+      Move(392,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Shutdown daemon")
       Picture = Picture["images/shutdown.png"]
-    }
-    { Separator7 Separator
-      Move(441,6,21,48)
     }
   }
   { pnlTitle Panel
