@@ -271,10 +271,22 @@ Public Sub tmrState_Timer()
 
     If objServer.Connected Then
         Me.Icon = Picture["./images/active.png"]
+        If tmrServer.Enabled = True Then
+            tmrServer.Stop()
+        Endif
     Else
         Me.Icon = Picture["./images/passive.png"]
         grvSessions.Clear()
         grvSessions.Rows.Count = 0
+        If tmrServer.Enabled = False Then
+            tmrServer.Start()
+        Endif
     Endif
+
+End
+
+Public Sub tmrServer_Timer()
+
+    objServer.Connect()
 
 End

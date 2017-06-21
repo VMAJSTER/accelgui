@@ -108,4 +108,9 @@
       Alignment = Align.Center
     }
   }
+  { tmrServer #Timer
+    #Move(792,480)
+    Enabled = True
+    Delay = 5000
+  }
 }

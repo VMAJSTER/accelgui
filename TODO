@@ -1,9 +1,3 @@
- - Check server availabily and reconnect when needed
- 
- - Server reboot
- 
- - Shutdown server
- 
  - Filter sessions
  
  - Kill selected session
@@ -13,5 +7,7 @@
  - Server statistics
  
  - Shaper
+ 
+ - IP pool
  
  - Tray icon
