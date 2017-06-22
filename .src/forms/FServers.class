@@ -32,7 +32,10 @@ Public Sub Form_Open()
     Dim arrAddress As New String[]
     Dim arrPort As New String[]
 
-    tlbClear_Click()
+    grvServers.Clear()
+    grvServers.Rows.Count = 0
+    ShowRowNum(0)
+    MMain.EnableControls(False)
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
     arrName = Split(MMain.objSettings["Servers/Name"], ";")
     arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
@@ -96,24 +99,30 @@ Public Sub tlbDelete_Click()
     Dim intRow As Integer
 
     If grvServers.Row > -1 Then
-        intRow = grvServers.Row
-        grvServers.Rows.Remove(intRow)
-        If intRow = grvServers.Rows.Count Then Dec intRow
-        If grvServers.Rows.Count > 0 Then
-            MMain.ActivateRow(grvServers, intRow)
+        Message.Title = ("Delete server")
+        If Message.Warning(("Are you sure to delete server?"), ("Yes"), ("No")) = 1 Then
+            intRow = grvServers.Row
+            grvServers.Rows.Remove(intRow)
+            If intRow = grvServers.Rows.Count Then Dec intRow
+            If grvServers.Rows.Count > 0 Then
+                MMain.ActivateRow(grvServers, intRow)
+            Endif
+            ShowRowNum(intRow + 1)
+            If grvServers.Rows.Count = 0 Then MMain.EnableControls(False)
         Endif
-        ShowRowNum(intRow + 1)
-        If grvServers.Rows.Count = 0 Then MMain.EnableControls(False)
     Endif
 
 End
 
 Public Sub tlbClear_Click()
 
-    grvServers.Clear()
-    grvServers.Rows.Count = 0
-    ShowRowNum(0)
-    MMain.EnableControls(False)
+    Message.Title = ("Clear servers list")
+    If Message.Warning(("Are you sure to clear list of servers?"), ("Yes"), ("No")) = 1 Then
+        grvServers.Clear()
+        grvServers.Rows.Count = 0
+        ShowRowNum(0)
+        MMain.EnableControls(False)
+    Endif
 
 End
 

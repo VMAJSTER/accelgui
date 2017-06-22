@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-21 07:29 UTC\n"
+"PO-Revision-Date: 2017-06-22 06:51 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FSettings.form:44 FShutdown.form:38 FSrvAction.form:96
+#: FSettings.form:44 FShutdown.form:39 FSrvAction.form:96
 msgid "Close"
 msgstr "Закрыть"
 
@@ -37,7 +37,7 @@ msgstr "Закрыть"
 msgid "Enter"
 msgstr "Войти"
 
-#: FAuth.form:58 FSettings.form:54 FShutdown.form:57
+#: FAuth.form:58 FSettings.form:54 FShutdown.form:58
 msgid "Exit"
 msgstr "Выход"
 
@@ -97,7 +97,7 @@ msgstr "Менеджер серверов"
 msgid "Reload config file"
 msgstr "Перезагрузить файл конфигурации"
 
-#: FMain.form:132 FShutdown.form:31
+#: FMain.form:132 FShutdown.form:32
 msgid "Shutdown daemon"
 msgstr "Отключить службу"
 
@@ -121,15 +121,39 @@ msgstr "Адрес"
 msgid "Port"
 msgstr "Порт"
 
-#: FServers.class:76
+#: FServers.class:79
 msgid "Add server"
 msgstr "Добавить сервер"
 
-#: FServers.class:87
+#: FServers.class:90
 msgid "Edit server"
 msgstr "Изменить сервер"
 
-#: FServers.class:206
+#: FServers.class:102
+msgid "Delete server"
+msgstr "Удаление сервера"
+
+#: FServers.class:103
+msgid "Are you sure to delete server?"
+msgstr "Уверены, что хотите удалить сервер?"
+
+#: FServers.class:103 FShutdown.class:62
+msgid "No"
+msgstr "Нет"
+
+#: FServers.class:103 FShutdown.class:62
+msgid "Yes"
+msgstr "Да"
+
+#: FServers.class:119
+msgid "Clear servers list"
+msgstr "Очистка списка серверов"
+
+#: FServers.class:120
+msgid "Are you sure to clear list of servers?"
+msgstr "Уверены, что хотите очистить список серверов?"
+
+#: FServers.class:215
 msgid "Stop"
 msgstr "Остановить"
 
@@ -177,7 +201,7 @@ msgstr "Автозапуск"
 msgid "Save"
 msgstr "Сохранить"
 
-#: FServers.form:151 FSessions.form:139
+#: FServers.form:151 FSessions.form:140
 msgid "0 / 0"
 msgstr "-"
 
@@ -249,39 +273,39 @@ msgstr "-"
 msgid "Hide statistics"
 msgstr "Скрыть статистику"
 
-#: FSessions.form:23
+#: FSessions.form:24
 msgid " Primary server"
 msgstr "-"
 
-#: FSessions.form:30
+#: FSessions.form:31
 msgid "Popup"
 msgstr "-"
 
-#: FSessions.form:34
+#: FSessions.form:35
 msgid "Show statistics"
 msgstr "Показать статистику"
 
-#: FSessions.form:66
+#: FSessions.form:67
 msgid "Statistics"
 msgstr "Статистика"
 
-#: FSessions.form:89
+#: FSessions.form:90
 msgid "no data"
 msgstr "данные отсутствуют"
 
-#: FSessions.form:107
+#: FSessions.form:108
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:115
+#: FSessions.form:116
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:123
+#: FSessions.form:124
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:131
+#: FSessions.form:132
 msgid "Last session"
 msgstr "Последняя сессия"
 
@@ -293,23 +317,27 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
-#: FShutdown.form:48 FSrvAction.form:65
+#: FShutdown.class:62
+msgid "Are you sure to shutdown the daemon?"
+msgstr "Уверены, что хотите отключить службу?"
+
+#: FShutdown.form:49 FSrvAction.form:65
 msgid "Apply"
 msgstr "Применить"
 
-#: FShutdown.form:69
+#: FShutdown.form:70
 msgid "Shutdown default"
 msgstr "Отключение по-умолчанию"
 
-#: FShutdown.form:76
+#: FShutdown.form:77
 msgid "Shutdown soft"
 msgstr "Легкое отключение"
 
-#: FShutdown.form:82
+#: FShutdown.form:83
 msgid "Shutdown hard"
 msgstr "Жесткое отключение"
 
-#: FShutdown.form:88
+#: FShutdown.form:89
 msgid "Shutdown cancel"
 msgstr "Отмена отключения"
 
