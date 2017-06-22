@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-22 06:51 UTC\n"
+"PO-Revision-Date: 2017-06-22 08:59 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FSettings.form:44 FShutdown.form:39 FSrvAction.form:96
+#: FSessions.form:74 FSettings.form:44 FShutdown.form:39 FSrvAction.form:96
 msgid "Close"
 msgstr "Закрыть"
 
@@ -37,7 +37,7 @@ msgstr "Закрыть"
 msgid "Enter"
 msgstr "Войти"
 
-#: FAuth.form:58 FSettings.form:54 FShutdown.form:58
+#: FAuth.form:58 FFilter.form:112 FSettings.form:54 FShutdown.form:58
 msgid "Exit"
 msgstr "Выход"
 
@@ -61,13 +61,73 @@ msgstr "-"
 msgid "user"
 msgstr "-"
 
+#: FFilter.form:35 FMain.form:44
+msgid "Filter sessions"
+msgstr "Фильтр сессий"
+
+#: FFilter.form:54
+msgid "Column:"
+msgstr "Столбец:"
+
+#: FFilter.form:60
+msgid "Criteria:"
+msgstr "Критерий:"
+
+#: FFilter.form:66
+msgid "Value:"
+msgstr "Значение:"
+
+#: FFilter.form:74
+msgid "Calling"
+msgstr "Вызывающий"
+
+#: FFilter.form:74
+msgid "Compression"
+msgstr "Сжатие"
+
+#: FFilter.form:74
+msgid "Interface"
+msgstr "Интерфейс"
+
+#: FFilter.form:74
+msgid "Ip Address"
+msgstr "Айпи адрес"
+
+#: FFilter.form:74
+msgid "Rate In"
+msgstr ""
+
+#: FFilter.form:74
+msgid "Rate Out"
+msgstr ""
+
+#: FFilter.form:74 FSessions.class:29
+msgid "State"
+msgstr "Состояние"
+
+#: FFilter.form:74 FSessions.class:25
+msgid "Type"
+msgstr "Тип"
+
+#: FFilter.form:74 FSessions.class:31
+msgid "Uptime"
+msgstr "Время"
+
+#: FFilter.form:74 FSessions.class:16
+msgid "Username"
+msgstr "Пользователь"
+
+#: FFilter.form:95 FShutdown.form:49 FSrvAction.form:65
+msgid "Apply"
+msgstr "Применить"
+
+#: FFilter.form:104 FSettings.form:131
+msgid "Reset"
+msgstr "Сброс"
+
 #: FMain.form:27
 msgid "Accel GUI"
 msgstr "-"
-
-#: FMain.form:44
-msgid "Filter sessions"
-msgstr "Фильтр сессий"
 
 #: FMain.form:52
 msgid "Terminate one session"
@@ -213,10 +273,6 @@ msgstr "Запустить"
 msgid "IFName"
 msgstr "Интер"
 
-#: FSessions.class:16
-msgid "Username"
-msgstr "Пользователь"
-
 #: FSessions.class:17
 msgid "CallingSID"
 msgstr "Вызывающий"
@@ -233,21 +289,9 @@ msgstr "СкорВх"
 msgid "RateOut"
 msgstr "СкорИсх"
 
-#: FSessions.class:25
-msgid "Type"
-msgstr "Тип"
-
 #: FSessions.class:27
 msgid "Comp"
 msgstr "Сжат"
-
-#: FSessions.class:29
-msgid "State"
-msgstr "Состояние"
-
-#: FSessions.class:31
-msgid "Uptime"
-msgstr "Время"
 
 #: FSessions.class:45
 msgid "Value"
@@ -313,17 +357,9 @@ msgstr "Последняя сессия"
 msgid "default"
 msgstr "по-умолчанию"
 
-#: FSettings.form:131
-msgid "Reset"
-msgstr "Сброс"
-
 #: FShutdown.class:62
 msgid "Are you sure to shutdown the daemon?"
 msgstr "Уверены, что хотите отключить службу?"
-
-#: FShutdown.form:49 FSrvAction.form:65
-msgid "Apply"
-msgstr "Применить"
 
 #: FShutdown.form:70
 msgid "Shutdown default"
