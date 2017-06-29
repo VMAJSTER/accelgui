@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-22 09:01 UTC\n"
+"POT-Creation-Date: 2017-06-29 12:39 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,11 +50,11 @@ msgstr ""
 msgid "Attention"
 msgstr ""
 
-#: FSrvAction.class:34
+#: FSrvAction.class:35
 msgid "Fill in text fields"
 msgstr ""
 
-#: FSrvAction.class:44
+#: FSrvAction.class:46
 msgid "Name or address already exists"
 msgstr ""
 

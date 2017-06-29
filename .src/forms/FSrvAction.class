@@ -31,7 +31,8 @@ Public Sub btnApply_Click()
     Dim objWindow As Window
 
     If Not FieldsAreFilled() Then
-        MMain.ShowMsg(("Attention"), ("Fill in text fields"))
+        Message.Title = ("Attention")
+        Message.Warning(("Fill in text fields"))
         Return
     Endif
     If bolEdit Then
@@ -41,7 +42,8 @@ Public Sub btnApply_Click()
         intSkip = -1
     Endif
     If Not MMain.NoDuplicates(txbName.Text, vlbAddress.Value, intSkip) Then
-        MMain.ShowMsg(("Attention"), ("Name or address already exists"))
+        Message.Title = ("Attention")
+        Message.Warning(("Name or address already exists"))
         Return
     Endif
     With FServers

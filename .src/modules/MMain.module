@@ -2,6 +2,7 @@
 
 ' Name of global config file
 Public Const GLOBAL_CONFIG As String = "/etc/accelgui.conf"
+Public Const GLOBAL_CONFIG_BACKUP As String = "/etc/accelgui.conf.bak"
 ' Margin between controls
 Public Const MARGIN As Byte = 8
 ' Toolbar height
@@ -17,6 +18,16 @@ Public strCurrentUser As String
 
 Public Sub Main()
 
+    If Not Exist(MMain.GLOBAL_CONFIG) Then
+        If Exist(MMain.GLOBAL_CONFIG_BACKUP) Then
+            If User.Id = 0 Then
+                Message.Title = ("Import config")
+                If Message.Question(("Config file does not exist.") & gb.CrLf & ("Want to use backup?"), ("Yes"), ("No")) = 1 Then
+                    Copy MMain.GLOBAL_CONFIG_BACKUP To MMain.GLOBAL_CONFIG
+                Endif
+            Endif
+        Endif
+    Endif
     objSettings = New Settings(GLOBAL_CONFIG)
     FAuth.Show()
 
@@ -59,13 +70,6 @@ Public Sub ActivateRow(Grid As GridView, Row As Integer)
 
     Grid.Rows[Row].Selected = True
     Grid.Current.EnsureVisible()
-
-End
-
-Public Sub ShowMsg(strTitle As String, strMessage As String)
-
-    Message.Title = strTitle
-    Message.Warning(strMessage)
 
 End
 

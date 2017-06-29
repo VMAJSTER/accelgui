@@ -3,7 +3,6 @@
 ' ---------
 ' Constants
 ' ---------
-Private Const CMD_STATS As String = "show stat"
 Private Const CMD_SESSIONS As String = "show sessions"
 Private Const CMD_RELOAD As String = "reload"
 Private Const CMD_SHUTDOWN As String = "shutdown"
@@ -21,8 +20,6 @@ Private Const DFL_MATCH As String = "active"
 ' ---------
 Private objSrv As Socket
 Private arrSessionsData As String[]
-Private arrStatsData As String[]
-Private strLastSrv As Byte
 
 ' ------
 ' Fields
@@ -32,7 +29,6 @@ Private strHost As String = DFL_HOST
 Private intPort As Integer = DFL_PORT
 Private bolConnected As Boolean
 Private arrSessions As CSession[]
-Private clsStats As CStat
 Private strShutMode As String = MShutMode.Default
 Private strOrderMode As String = MColumn.UserName
 Private strMatchMode As String = MColumn.State
@@ -47,7 +43,6 @@ Property Host As String
 Property Port As Integer
 Property Read Connected As Boolean
 Property Read Sessions As CSession[]
-Property Read Stats As CStat
 Property ShutMode As String
 Property OrderMode As String
 Property MatchMode As String
@@ -60,7 +55,7 @@ Property Column As String
 Event Connected
 Event Disconnected
 Event GotSessions
-Event GotStats
+' Event GotStats
 Event Reloaded
 Event Shutdown
 
@@ -118,12 +113,6 @@ End
 Private Function Sessions_Read() As CSession[]
 
     Return arrSessions
-
-End
-
-Private Function Stats_Read() As CStat
-
-    Return clsStats
 
 End
 
@@ -210,19 +199,19 @@ End
 ' -----------
 ' Constructor
 ' -----------
+
 Public Sub _new()
 
     objSrv = New Socket As "objSrv"
     arrSessionsData = New String[]
-    arrStatsData = New String[]
     arrSessions = New CSession[]
-    clsStats = New CStat
 
 End
 
 ' -----------
 ' Desctructor
 ' -----------
+
 Public Sub _free()
 
     Disconnect()
@@ -249,7 +238,6 @@ End
 Public Sub Reload()
 
     If bolConnected Then
-        strLastSrv = MSrv.Others
         SendData(CMD_RELOAD)
         Raise Reloaded
     Endif
@@ -259,7 +247,6 @@ End
 Public Sub Shutdown()
 
     If bolConnected Then
-        strLastSrv = MSrv.Others
         If strShutMode = MShutMode.Default Then
             SendData(CMD_SHUTDOWN)
         Else
@@ -286,18 +273,7 @@ Public Sub GetSessions()
             strLineToSend &= " match " & strMatchMode & " " & strMatchValue
         Endif
         arrSessionsData.Clear()
-        strLastSrv = MSrv.Sessions
         SendData(strLineToSend)
-    Endif
-
-End
-
-Public Sub GetStats()
-
-    If bolConnected Then
-        arrStatsData.Clear()
-        strLastSrv = MSrv.Stats
-        SendData(CMD_STATS)
     Endif
 
 End
@@ -331,18 +307,10 @@ Public Sub objSrv_Read()
 
     Dim strLine As String
 
-    Select Case strLastSrv
-        Case MSrv.Stats
-            For Each strline In objSrv.Lines
-                arrStatsData.Add(strline)
-            Next
-            ParseStats()
-        Case MSrv.Sessions
-            For Each strline In objSrv.Lines
-                arrSessionsData.Add(strline)
-            Next
-            ParseSessions()
-    End Select
+    For Each strline In objSrv.Lines
+        arrSessionsData.Add(strline)
+    Next
+    ParseSessions()
 
 End
 
@@ -357,24 +325,6 @@ Private Sub SendData(strCommand As String)
     strCommand &= gb.Lf
     intCommandLength = Len(strCommand)
     Write #objSrv, strCommand, intCommandLength
-
-End
-
-Private Sub ParseStats()
-
-    Dim strCpuData As String
-    Dim strMemData As String
-
-    If arrStatsData.Length > 2 Then
-        clsStats.Uptime = Trim(Split(arrStatsData[0], " ")[1])
-        strCpuData = Trim(Split(arrStatsData[1], " ")[1])
-        strCpuData = Left(strCpuData, Len(strCpuData) - 1)
-        clsStats.Cpu = CByte(strCpuData)
-        strMemData = Split(arrStatsData[2], " ")[1]
-        clsStats.MemRss = CInt(Split(strMemData, "/")[0])
-        clsStats.MemVirt = CInt(Split(strMemData, "/")[1])
-        Raise GotStats
-    Endif
 
 End
 

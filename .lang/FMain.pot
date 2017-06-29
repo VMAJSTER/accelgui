@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-06-22 09:01 UTC\n"
+"POT-Creation-Date: 2017-06-29 12:39 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,5 +52,21 @@ msgstr ""
 
 #: FMain.form:152
 msgid "Close"
+msgstr ""
+
+#: FMain.class:114
+msgid "Config reload"
+msgstr ""
+
+#: FMain.class:115
+msgid "Are you sure to reload config file?"
+msgstr ""
+
+#: FMain.class:115
+msgid "Yes"
+msgstr ""
+
+#: FMain.class:115
+msgid "No"
 msgstr ""
 

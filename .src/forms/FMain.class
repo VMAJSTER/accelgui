@@ -110,23 +110,38 @@ Public Sub tlbReload_Click()
 
     If wksServers.Windows.Count > 0 Then
         objWindow = wksServers.ActiveWindow
-        objWindow.objServer.Reload()
+        If objWindow.objServer.Connected Then
+            Message.Title = ("Config reload")
+            If Message.Question(("Are you sure to reload config file?"), ("Yes"), ("No")) = 1 Then
+                objWindow.objServer.Reload()
+            Endif
+        Endif
     Endif
 
 End
 
 Public Sub tlbShutdown_Click()
 
+    Dim objWindow As FSessions
+
     If wksServers.Windows.Count > 0 Then
-        FShutdown.ShowModal()
+        objWindow = wksServers.ActiveWindow
+        If objWindow.objServer.Connected Then
+            FShutdown.ShowModal()
+        Endif
     Endif
 
 End
 
 Public Sub tlbFilter_Click()
 
+    Dim objWindow As FSessions
+
     If wksServers.Windows.Count > 0 Then
-        FFilter.ShowModal()
+        objWindow = wksServers.ActiveWindow
+        If objWindow.objServer.Connected Then
+            FFilter.ShowModal()
+        Endif
     Endif
 
 End

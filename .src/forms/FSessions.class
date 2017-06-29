@@ -11,7 +11,7 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
 
     With grvSessions
         .Columns.Count = 10
-        .Columns[0].Text = ("IFName")
+        .Columns[0].Text = ("Interface")
         .Columns[0].Width = 100
         .Columns[1].Text = ("Username")
         .Columns[2].Text = ("CallingSID")
@@ -24,7 +24,7 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
         .Columns[5].Width = 85
         .Columns[6].Text = ("Type")
         .Columns[6].Width = 60
-        .Columns[7].Text = ("Comp")
+        .Columns[7].Text = ("Compress")
         .Columns[7].Width = 60
         .Columns[8].Text = ("State")
         .Columns[8].Width = 85
@@ -33,22 +33,8 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
         For i = 0 To 9
             .Columns[i].Alignment = Align.Center
         Next
+        .Columns.Sort = 1
     End With
-
-    With grvStats
-        .Columns.Count = 2
-        .Rows.Count = 4
-        .Columns[0].Width = 100
-        .Columns[0].Text = ("Name")
-        .Columns[0].Background = Color.Background
-        .Columns[0].Alignment = Align.Center
-        .Columns[1].Text = ("Value")
-        .Columns[1].Alignment = Align.Center
-    End With
-    grvStats[0, 0].Text = ("UpTime")
-    grvStats[1, 0].Text = ("Cpu")
-    grvStats[2, 0].Text = ("MemRss")
-    grvStats[3, 0].Text = ("MemVirt")
 
     objServer = New CNas As "objServer"
     With objServer
@@ -62,7 +48,6 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
 
 End
 
-
 Public Sub Form_Resize()
 
     With grvSessions
@@ -73,32 +58,10 @@ Public Sub Form_Resize()
         .Columns[1].Width = grvSessions.ClientW - 855
     End With
 
-    With pnlStat
-        .Left = grvSessions.W - .W - 25
-    End With
-
     With pnlToolBar
         .Left = (Me.ClientW - .W) / 2
         .Top = Me.ClientH - .H - MMain.MARGIN * 2
     End With
-
-End
-
-Public Sub mnuShowStats_Click()
-
-    If pnlStat.Visible Then
-        pnlStat.Hide()
-        mnuShowStats.Text = ("Show statistics")
-    Else
-        pnlStat.Show()
-        mnuShowStats.Text = ("Hide statistics")
-    Endif
-
-End
-
-Public Sub pctCloseStat_MouseDown()
-
-    mnuShowStats_Click()
 
 End
 
@@ -127,16 +90,6 @@ Private Sub FillSessions()
 
 End
 
-Private Sub FillStats()
-
-    grvStats[0, 1].Text = objServer.Stats.Uptime
-    grvStats[2, 1].Text = objServer.Stats.Cpu
-    grvStats[3, 1].Text = objServer.Stats.MemRss
-    grvStats[4, 1].Text = objServer.Stats.MemVirt
-
-End
-
-
 Public Sub Form_Close()
 
     objServer.Disconnect()
@@ -149,52 +102,12 @@ Public Sub objServer_Connected()
 
 End
 
-
 Public Sub objServer_GotSessions()
 
     FillSessions()
     If grvSessions.Rows.Count > 0 Then
         MMain.ActivateRow(grvSessions, 0)
     Endif
-
-End
-
-Public Sub pnlTitle_MouseDown()
-
-    intX = Mouse.X + pnlTitle.Left
-    intY = Mouse.Y + pnlTitle.Top
-
-End
-
-Public Sub pnlTitle_MouseMove()
-
-    Dim intLeft As Integer
-    Dim intTop As Integer
-
-    If Mouse.Left Then
-        intLeft = Mouse.ScreenX - Me.ScreenX - intX
-        intTop = Mouse.ScreenY - Me.ScreenY - intY
-        If intLeft >= 0 And intTop >= 0 Then
-            If intLeft + pnlStat.W <= Me.W Then
-                If intTop + pnlStat.H <= Me.H Then
-                    pnlStat.Left = intLeft
-                    pnlStat.Top = intTop
-                Endif
-            Endif
-        Endif
-    Endif
-
-End
-
-Public Sub lblTitle_MouseDown()
-
-    pnlTitle_MouseDown()
-
-End
-
-Public Sub lblTitle_MouseMove()
-
-    pnlTitle_MouseMove()
 
 End
 
@@ -287,6 +200,30 @@ End
 
 Public Sub tmrServer_Timer()
 
-    objServer.Connect()
+    If Not objServer.Connected Then
+        objServer.Connect()
+    Endif
+
+End
+
+Public Sub grvSessions_Sort()
+
+    Select Case grvSessions.Columns.Sort
+        Case 0
+            objServer.OrderMode = MColumn.IFName
+        Case 1
+            objServer.OrderMode = MColumn.UserName
+        Case 2
+            objServer.OrderMode = MColumn.CallingSID
+        Case 3
+            objServer.OrderMode = MColumn.IP
+        Case 6
+            objServer.OrderMode = MColumn.Type
+        Case 8
+            objServer.OrderMode = MColumn.State
+        Case 9
+            objServer.OrderMode = MColumn.UpTime
+    End Select
+    FMain.tlbUpdate_click()
 
 End

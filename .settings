@@ -29,13 +29,13 @@ Geometry=[0,12,224,280]
 Geometry=[958,43,334,660]
 
 [DebugWindow/arrRate]
-Geometry=[832,88,224,280]
+Geometry=[832,88,256,320]
 
 [DebugWindow/arrRecord]
 Geometry=[906,107,256,320]
 
 [DebugWindow/arrSession]
-Geometry=[962,126,224,280]
+Geometry=[962,126,256,320]
 
 [DebugWindow/arrSessionData]
 Geometry=[0,12,224,280]
@@ -47,10 +47,13 @@ Geometry=[0,12,256,320]
 Geometry=[627,212,721,442]
 
 [DebugWindow/arrSessions[0]]
-Geometry=[14,26,224,280]
+Geometry=[16,28,256,320]
 
 [DebugWindow/arrSessions[8]]
 Geometry=[14,26,224,280]
+
+[DebugWindow/arrSessions[979]]
+Geometry=[16,28,256,320]
 
 [DebugWindow/arrStatsData]
 Geometry=[0,12,256,320]
@@ -65,13 +68,16 @@ Geometry=[1095,36,224,647]
 Geometry=[1109,50,224,647]
 
 [DebugWindow/grvSessions]
-Geometry=[0,12,224,280]
+Geometry=[0,12,256,320]
+
+[DebugWindow/grvSessions.Rows]
+Geometry=[16,28,256,320]
 
 [DebugWindow/hWindow]
 Geometry=[879,169,224,280]
 
 [DebugWindow/objServer]
-Geometry=[706,44,388,505]
+Geometry=[893,53,388,505]
 
 [DebugWindow/objServer.Connected]
 Geometry=[720,58,388,505]
@@ -80,7 +86,7 @@ Geometry=[720,58,388,505]
 Geometry=[897,177,388,505]
 
 [DebugWindow/objServer.Sessions]
-Geometry=[720,58,388,505]
+Geometry=[722,60,388,505]
 
 [DebugWindow/objServer.Sessions[0]]
 Geometry=[911,191,388,505]
@@ -113,10 +119,9 @@ Geometry=[14,26,224,280]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=2
-File[1]=".src/forms/FMain.form"
-Active=2
-File[2]=".src/forms/FFilter.form"
+Count=1
+File[1]=".src/forms/FSessions.form"
+Active=1
 
 [Watches]
 Count=0

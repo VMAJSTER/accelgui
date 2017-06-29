@@ -8,14 +8,6 @@
   Border = False
   Maximized = True
   SkipTaskbar = True
-  { mnuPopup Menu
-    Text = ("Popup")
-    Visible = False
-    { mnuShowStats Menu
-      Text = ("Show statistics")
-      Shortcut = "Ctrl+A"
-    }
-  }
   { grvSessions GridView
     Move(7,7,917,539)
     Font = Font["10"]
@@ -26,43 +18,7 @@
     Header = GridView.Horizontal
     ScrollBar = Scroll.Vertical
     Resizable = False
-  }
-  { pnlStat Panel
-    Move(578,49,322,150)
-    Visible = False
-    Background = Color.Background
-    { pnlTitle Panel
-      Move(7,7,308,32)
-      Background = &H3F81B8&
-      Tracking = True
-      { lblTitle Label
-        Move(8,4,256,24)
-        Font = Font["Bold,12"]
-        Foreground = Color.White
-        Tracking = True
-        Text = ("Statistics")
-      }
-      { pctCloseStat PictureBox
-        Move(274,0,32,32)
-        NoTabFocus = True
-        Mouse = Mouse.Pointing
-        ToolTip = ("Close")
-        Picture = Picture["images/exit.png"]
-        Alignment = Align.Center
-      }
-    }
-    { grvStats GridView
-      Move(8,48,308,94)
-      Visible = False
-      Mouse = Mouse.Pointing
-      ScrollBar = Scroll.None
-      Resizable = False
-    }
-    { Label2 Label
-      Move(14,84,294,21)
-      Text = ("no data")
-      Alignment = Align.Center
-    }
+    Sorted = True
   }
   { tmrState #Timer
     #Move(856,480)

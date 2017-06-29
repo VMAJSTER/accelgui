@@ -59,7 +59,7 @@ Public Sub btnApply_Click()
     Dim objWindow As FSessions
 
     Message.Title = ("Shutdown daemon")
-    If Message.Warning(("Are you sure to shutdown the daemon?"), ("Yes"), ("No")) = 1 Then
+    If Message.Question(("Are you sure to shutdown the daemon?"), ("Yes"), ("No")) = 1 Then
         objWindow = FMain.wksServers.ActiveWindow
         If rdbDefault.Value Then objWindow.objServer.ShutMode = MShutMode.Default
         If rdbSoft.Value Then objWindow.objServer.ShutMode = MShutMode.Soft

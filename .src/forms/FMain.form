@@ -28,14 +28,14 @@
       Picture = Picture["images/onedel.png"]
     }
     { tlbKillGroup ToolButton
-      Move(196,8,48,48)
+      Move(195,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Terminate group of sessions")
       Picture = Picture["images/groupdel.png"]
     }
     { tlbUpdate ToolButton
-      Move(266,8,48,48)
+      Move(265,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Update list of sessions")

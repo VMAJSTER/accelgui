@@ -69,6 +69,11 @@ Public Sub btnSave_Click()
     Dim objControl As Control
     Dim objRadio As RadioButton
 
+    ' It is very useful to save last copy of config file as a backup
+    If Exist(MMain.GLOBAL_CONFIG) Then
+        Copy MMain.GLOBAL_CONFIG To MMain.GLOBAL_CONFIG_BACKUP
+    Endif
+    ' Save encrypted passwords if the appropriate text fields are filled in
     If Trim(txbAdmin.Text) <> "" Then
         MMain.objSettings["Auth/admin"] = Crypt.SHA512(txbAdmin.Text, MMain.PREFIX)
     Endif
@@ -83,8 +88,7 @@ Public Sub btnSave_Click()
             objRadio = objControl
             If objRadio.Value Then
                 MMain.objSettings["Auth/default"] = objRadio.Tag
-            Else
-                MMain.objSettings["Auth/default"] = "0"
+                Break
             Endif
         Endif
     Next

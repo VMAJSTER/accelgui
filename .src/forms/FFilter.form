@@ -45,21 +45,18 @@
       Alignment = Align.Right
     }
     { ComboBox1 ComboBox
-      Move(120,16,152,32)
+      Move(120,16,160,32)
       Mouse = Mouse.Pointing
       ReadOnly = True
       List = [("Interface"), ("Username"), ("Calling"), ("Ip Address"), ("RateIn"), ("RateOut"), ("Type"), ("Compression"), ("State"), ("Uptime")]
     }
     { ComboBox2 ComboBox
-      Move(120,64,152,32)
+      Move(120,64,160,32)
       Mouse = Mouse.Pointing
       ReadOnly = True
     }
     { TextBox1 TextBox
-      Move(120,112,152,32)
-    }
-    { Separator1 Separator
-      Move(272,8,24,144)
+      Move(120,112,160,32)
     }
     { btnApply Button
       Move(296,16,128,32)

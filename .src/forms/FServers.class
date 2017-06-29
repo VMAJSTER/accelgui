@@ -100,7 +100,7 @@ Public Sub tlbDelete_Click()
 
     If grvServers.Row > -1 Then
         Message.Title = ("Delete server")
-        If Message.Warning(("Are you sure to delete server?"), ("Yes"), ("No")) = 1 Then
+        If Message.Question(("Are you sure to delete server?"), ("Yes"), ("No")) = 1 Then
             intRow = grvServers.Row
             grvServers.Rows.Remove(intRow)
             If intRow = grvServers.Rows.Count Then Dec intRow
@@ -117,7 +117,7 @@ End
 Public Sub tlbClear_Click()
 
     Message.Title = ("Clear servers list")
-    If Message.Warning(("Are you sure to clear list of servers?"), ("Yes"), ("No")) = 1 Then
+    If Message.Question(("Are you sure to clear list of servers?"), ("Yes"), ("No")) = 1 Then
         grvServers.Clear()
         grvServers.Rows.Count = 0
         ShowRowNum(0)
