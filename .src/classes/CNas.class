@@ -55,7 +55,6 @@ Property Column As String
 Event Connected
 Event Disconnected
 Event GotSessions
-' Event GotStats
 Event Reloaded
 Event Shutdown
 

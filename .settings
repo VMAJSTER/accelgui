@@ -16,6 +16,9 @@ Geometry=[0,12,224,280]
 [DebugWindow/Grid.Rows]
 Geometry=[14,26,224,280]
 
+[DebugWindow/Me]
+Geometry=[555,212,256,320]
+
 [DebugWindow/Server]
 Geometry=[1117,37,224,389]
 
@@ -76,6 +79,9 @@ Geometry=[16,28,256,320]
 [DebugWindow/hWindow]
 Geometry=[879,169,224,280]
 
+[DebugWindow/lblSessions]
+Geometry=[555,212,256,320]
+
 [DebugWindow/objServer]
 Geometry=[893,53,388,505]
 
@@ -120,7 +126,7 @@ Path="accelgui.gambas"
 
 [OpenFile]
 Count=1
-File[1]=".src/forms/FSessions.form"
+File[1]=".src/forms/FMain.form"
 Active=1
 
 [Watches]

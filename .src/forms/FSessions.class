@@ -5,6 +5,8 @@ Public objServer As CNas
 Private intX As Integer
 Private intY As Integer
 
+Private bytColSort As Byte = 1
+
 Public Sub _new(Name As String, Host As String, Port As Integer)
 
     Dim i As Integer
@@ -33,7 +35,7 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
         For i = 0 To 9
             .Columns[i].Alignment = Align.Center
         Next
-        .Columns.Sort = 1
+        .Columns.Sort = bytColSort
     End With
 
     objServer = New CNas As "objServer"
@@ -208,22 +210,25 @@ End
 
 Public Sub grvSessions_Sort()
 
-    Select Case grvSessions.Columns.Sort
-        Case 0
-            objServer.OrderMode = MColumn.IFName
-        Case 1
-            objServer.OrderMode = MColumn.UserName
-        Case 2
-            objServer.OrderMode = MColumn.CallingSID
-        Case 3
-            objServer.OrderMode = MColumn.IP
-        Case 6
-            objServer.OrderMode = MColumn.Type
-        Case 8
-            objServer.OrderMode = MColumn.State
-        Case 9
-            objServer.OrderMode = MColumn.UpTime
-    End Select
-    FMain.tlbUpdate_click()
+    If grvSessions.Columns.Sort <> bytColSort Then
+        Select Case grvSessions.Columns.Sort
+            Case 0
+                objServer.OrderMode = MColumn.IFName
+            Case 1
+                objServer.OrderMode = MColumn.UserName
+            Case 2
+                objServer.OrderMode = MColumn.CallingSID
+            Case 3
+                objServer.OrderMode = MColumn.IP
+            Case 6
+                objServer.OrderMode = MColumn.Type
+            Case 8
+                objServer.OrderMode = MColumn.State
+            Case 9
+                objServer.OrderMode = MColumn.UpTime
+        End Select
+        bytColSort = grvSessions.Columns.Sort
+        FMain.tlbUpdate_click()
+    Endif
 
 End
