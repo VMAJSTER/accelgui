@@ -121,12 +121,21 @@ Geometry=[0,12,224,280]
 [DebugWindow/objSrvSessions.Lines]
 Geometry=[14,26,224,280]
 
+[DebugWindow/objWindow]
+Geometry=[892,196,256,320]
+
+[DebugWindow/objWindow.objServer]
+Geometry=[908,212,256,320]
+
+[DebugWindow/objWindow.objServer.Sessions]
+Geometry=[587,244,256,320]
+
 [Executable]
 Path="accelgui.gambas"
 
 [OpenFile]
 Count=1
-File[1]=".src/forms/FMain.form"
+File[1]=".src/forms/FFilter.form"
 Active=1
 
 [Watches]

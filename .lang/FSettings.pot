@@ -5,44 +5,44 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-07-02 13:21 UTC\n"
+"POT-Creation-Date: 2017-08-22 09:26 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FSettings.form:37
+#: FSettings.form:38
 msgid "Settings"
 msgstr ""
 
-#: FSettings.form:44
+#: FSettings.form:45
 msgid "Close"
 msgstr ""
 
-#: FSettings.form:54
+#: FSettings.form:55
 msgid "Exit"
 msgstr ""
 
-#: FSettings.form:63
+#: FSettings.form:64
 msgid "Save"
 msgstr ""
 
-#: FSettings.form:73
+#: FSettings.form:74
 msgid "admin"
 msgstr ""
 
-#: FSettings.form:79
+#: FSettings.form:80
 msgid "user"
 msgstr ""
 
-#: FSettings.form:85
+#: FSettings.form:86
 msgid "guest"
 msgstr ""
 
-#: FSettings.form:108
+#: FSettings.form:109
 msgid "default"
 msgstr ""
 
-#: FSettings.form:131
+#: FSettings.form:132
 msgid "Reset"
 msgstr ""
 

@@ -5,40 +5,40 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-07-02 13:21 UTC\n"
+"POT-Creation-Date: 2017-08-22 09:26 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FShutdown.form:32
+#: FShutdown.form:33
 msgid "Shutdown daemon"
 msgstr ""
 
-#: FShutdown.form:39
+#: FShutdown.form:40
 msgid "Close"
 msgstr ""
 
-#: FShutdown.form:49
+#: FShutdown.form:50
 msgid "Apply"
 msgstr ""
 
-#: FShutdown.form:58
+#: FShutdown.form:59
 msgid "Exit"
 msgstr ""
 
-#: FShutdown.form:70
+#: FShutdown.form:71
 msgid "Shutdown default"
 msgstr ""
 
-#: FShutdown.form:77
+#: FShutdown.form:78
 msgid "Shutdown soft"
 msgstr ""
 
-#: FShutdown.form:83
+#: FShutdown.form:84
 msgid "Shutdown hard"
 msgstr ""
 
-#: FShutdown.form:89
+#: FShutdown.form:90
 msgid "Shutdown cancel"
 msgstr ""
 

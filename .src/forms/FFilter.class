@@ -53,3 +53,69 @@ Public Sub lblTitle_MouseMove()
     pnlTitle_MouseMove()
 
 End
+
+Public Sub cmbColumn_Click()
+
+    txbValue.Enabled = IIf(cmbColumn.Index > 0, True, False)
+    If cmbColumn.Index = 0 Then txbValue.Clear()
+
+End
+
+Public Sub btnApply_Click()
+
+    Dim objWindow As FSessions
+
+    objWindow = FMain.wksServers.ActiveWindow
+    If cmbColumn.Index > 0 Then
+        If Trim(txbValue.Text) <> "" Then
+            Select Case cmbColumn.Index
+                Case 1
+                    objWindow.objServer.MatchMode = MColumn.IFName
+                Case 2
+                    objWindow.objServer.MatchMode = MColumn.UserName
+                Case 3
+                    objWindow.objServer.MatchMode = MColumn.CallingSID
+                Case 4
+                    objWindow.objServer.MatchMode = MColumn.IP
+            End Select
+            objWindow.objServer.MatchValue = txbValue.Text
+            FMain.tlbUpdate_Click()
+            Me.Close()
+        Else
+            Message.Title = ("Error")
+            Message.Error(("Value is not entered"))
+            txbValue.Clear()
+            txbValue.SetFocus()
+        Endif
+    Else
+        txbValue.Clear()
+        objWindow.objServer.MatchMode = "state"
+        objWindow.objServer.MatchValue = "active"
+        FMain.tlbUpdate_Click()
+        Me.Close()
+    Endif
+
+End
+
+Public Sub Form_Open()
+
+    Dim objWindow As FSessions
+
+    If FMain.wksServers.Windows.Count > 0 Then
+        objWindow = FMain.wksServers.ActiveWindow
+        Select Case objWindow.objServer.MatchMode
+            Case MColumn.IFName
+                cmbColumn.Index = 1
+            Case MColumn.UserName
+                cmbColumn.Index = 2
+            Case MColumn.CallingSID
+                cmbColumn.Index = 3
+            Case MColumn.IP
+                cmbColumn.Index = 4
+        End Select
+        If objWindow.objServer.MatchValue <> "active" Then
+            txbValue.Text = objWindow.objServer.MatchValue
+        Endif
+    Endif
+
+End

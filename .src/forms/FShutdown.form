@@ -5,6 +5,7 @@
   #Scaled = False
   Resizable = False
   Border = False
+  Utility = True
   SkipTaskbar = True
   { pnlTitle Panel
     Move(8,8,312,32)

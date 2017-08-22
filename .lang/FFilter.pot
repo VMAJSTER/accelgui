@@ -5,80 +5,60 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-07-02 13:21 UTC\n"
+"POT-Creation-Date: 2017-08-22 09:26 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FFilter.form:34
+#: FFilter.form:32
 msgid "Filter sessions"
 msgstr ""
 
-#: FFilter.form:41
+#: FFilter.form:39
 msgid "Close"
 msgstr ""
 
-#: FFilter.form:53
+#: FFilter.form:51
 msgid "Column:"
 msgstr ""
 
-#: FFilter.form:59
-msgid "Criteria:"
-msgstr ""
-
-#: FFilter.form:65
+#: FFilter.form:57
 msgid "Value:"
 msgstr ""
 
-#: FFilter.form:73
+#: FFilter.form:65
+msgid "Not chosen"
+msgstr ""
+
+#: FFilter.form:65
 msgid "Interface"
 msgstr ""
 
-#: FFilter.form:73
+#: FFilter.form:65
 msgid "Username"
 msgstr ""
 
-#: FFilter.form:73
+#: FFilter.form:65
 msgid "Calling"
 msgstr ""
 
-#: FFilter.form:73
+#: FFilter.form:65
 msgid "Ip Address"
 msgstr ""
 
-#: FFilter.form:73
-msgid "RateIn"
-msgstr ""
-
-#: FFilter.form:73
-msgid "RateOut"
-msgstr ""
-
-#: FFilter.form:73
-msgid "Type"
-msgstr ""
-
-#: FFilter.form:73
-msgid "Compression"
-msgstr ""
-
-#: FFilter.form:73
-msgid "State"
-msgstr ""
-
-#: FFilter.form:73
-msgid "Uptime"
-msgstr ""
-
-#: FFilter.form:90
+#: FFilter.form:72
 msgid "Apply"
 msgstr ""
 
-#: FFilter.form:99
-msgid "Reset"
+#: FFilter.form:81
+msgid "Exit"
 msgstr ""
 
-#: FFilter.form:107
-msgid "Exit"
+#: FFilter.class:85
+msgid "Error"
+msgstr ""
+
+#: FFilter.class:86
+msgid "Value is not entered"
 msgstr ""
 

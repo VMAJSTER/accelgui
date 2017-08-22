@@ -5,6 +5,7 @@
   #Scaled = False
   Resizable = False
   Border = False
+  Utility = True
   SkipTaskbar = True
   { Panel1 Panel
     Move(8,48,304,144)

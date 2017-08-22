@@ -28,6 +28,7 @@ Private strName As String = DFL_NAME
 Private strHost As String = DFL_HOST
 Private intPort As Integer = DFL_PORT
 Private bolConnected As Boolean
+Private bolConnecting As Boolean
 Private arrSessions As CSession[]
 Private strShutMode As String = MShutMode.Default
 Private strOrderMode As String = MColumn.UserName
@@ -42,6 +43,7 @@ Property Name As String
 Property Host As String
 Property Port As Integer
 Property Read Connected As Boolean
+Property Read Connecting As Boolean
 Property Read Sessions As CSession[]
 Property ShutMode As String
 Property OrderMode As String
@@ -106,6 +108,12 @@ End
 Private Function Connected_Read() As Boolean
 
     Return bolConnected
+
+End
+
+Private Function Connecting_Read() As Boolean
+
+    Return bolConnecting
 
 End
 
@@ -224,22 +232,22 @@ End
 
 Public Sub Connect()
 
-    If Not bolConnected Then objSrv.Connect(strHost, intPort)
+    If Not bolConnected And If Not bolConnecting Then
+        objSrv.Connect(strHost, intPort)
+        bolConnecting = True
+    Endif
 
 End
 
 Public Sub Disconnect()
 
-    If bolConnected Then objSrv.Close()
+    If bolConnected Or bolConnecting Then objSrv.Close()
 
 End
 
 Public Sub Reload()
 
-    If bolConnected Then
-        SendData(CMD_RELOAD)
-        Raise Reloaded
-    Endif
+    If bolConnected Then SendData(CMD_RELOAD)
 
 End
 
@@ -251,7 +259,6 @@ Public Sub Shutdown()
         Else
             SendData(CMD_SHUTDOWN & " " & strShutMode)
         Endif
-        Raise Shutdown
     Endif
 
 End
@@ -269,6 +276,7 @@ Public Sub GetSessions()
             strLineToSend &= " order " & strOrderMode
         Endif
         If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
+            strLineToSend &= " match state active"
             strLineToSend &= " match " & strMatchMode & " " & strMatchValue
         Endif
         arrSessionsData.Clear()
@@ -284,6 +292,7 @@ End
 Public Sub objSrv_Closed()
 
     bolConnected = False
+    bolConnecting = False
     Raise Disconnected
 
 End
@@ -291,6 +300,7 @@ End
 Public Sub objSrv_Error()
 
     bolConnected = False
+    bolConnecting = False
     Raise Disconnected
 
 End
@@ -298,6 +308,7 @@ End
 Public Sub objSrv_Ready()
 
     bolConnected = True
+    bolConnecting = False
     Raise Connected
 
 End
@@ -324,6 +335,12 @@ Private Sub SendData(strCommand As String)
     strCommand &= gb.Lf
     intCommandLength = Len(strCommand)
     Write #objSrv, strCommand, intCommandLength
+    Select Case strCommand
+        Case Like CMD_RELOAD
+            Raise Reloaded
+        Case Like CMD_SHUTDOWN
+            Raise Shutdown
+    End Select
 
 End
 
@@ -337,8 +354,6 @@ Private Sub ParseSessions()
     If arrSessionsData.Length > 2 Then
         arrSessions.Clear()
         For i = 2 To arrSessionsData.Max
-            arrRecord.Clear()
-            arrRate.Clear()
             arrRecord = Split(arrSessionsData[i], "|")
             If arrRecord.Length = 9 Then
                 arrRate = Split(Trim(arrRecord[4]), "/")
@@ -348,8 +363,13 @@ Private Sub ParseSessions()
                     .UserName = Trim(arrRecord[1])
                     .CallingSID = Trim(arrRecord[2])
                     .IP = Trim(arrRecord[3])
-                    .RateIn = CInt(arrRate[0])
-                    .RateOut = CInt(arrRate[1])
+                    If arrRate.Length < 2 Then
+                        .RateIn = 0
+                        .RateOut = 0
+                    Else
+                        .RateIn = CInt(arrRate[0])
+                        .RateOut = CInt(arrRate[1])
+                    Endif
                     .Type = Trim(arrRecord[5])
                     .Comp = CBool(Trim(arrRecord[6]))
                     .State = Trim(arrRecord[7])

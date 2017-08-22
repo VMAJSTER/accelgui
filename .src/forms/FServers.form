@@ -6,6 +6,7 @@
   Text = ("Servers")
   Resizable = False
   Border = False
+  Utility = True
   SkipTaskbar = True
   { grvServers GridView
     Move(7,91,530,336)

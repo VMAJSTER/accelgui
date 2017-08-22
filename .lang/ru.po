@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-06-27 08:04 UTC\n"
+"PO-Revision-Date: 2017-08-22 09:06 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,101 +29,85 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FSessions.form:74 FSettings.form:44 FShutdown.form:39 FSrvAction.form:96
+#: FSettings.form:45 FShutdown.form:40 FSrvAction.form:97
 msgid "Close"
 msgstr "Закрыть"
 
-#: FAuth.form:49
+#: FAuth.form:50
 msgid "Enter"
 msgstr "Войти"
 
-#: FAuth.form:58 FFilter.form:107 FSettings.form:54 FShutdown.form:58
+#: FAuth.form:59 FFilter.form:81 FSettings.form:55 FShutdown.form:59
 msgid "Exit"
 msgstr "Выход"
 
-#: FAuth.form:74
+#: FAuth.form:75
 msgid "Username:"
 msgstr "Пользователь:"
 
-#: FAuth.form:80
+#: FAuth.form:81
 msgid "Password:"
 msgstr "Пароль:"
 
-#: FAuth.form:88 FSettings.form:73
+#: FAuth.form:89 FSettings.form:74
 msgid "admin"
 msgstr "-"
 
-#: FAuth.form:88 FSettings.form:85
+#: FAuth.form:89 FSettings.form:86
 msgid "guest"
 msgstr "-"
 
-#: FAuth.form:88 FSettings.form:79
+#: FAuth.form:89 FSettings.form:80
 msgid "user"
 msgstr "-"
 
-#: FFilter.form:34 FMain.form:44
+#: FFilter.class:84
+msgid "Error"
+msgstr "Ошибка"
+
+#: FFilter.class:85
+msgid "Value is not entered"
+msgstr "Значение не указано"
+
+#: FFilter.class:89
+msgid "Column is not chosen"
+msgstr "Не выбран столбец"
+
+#: FFilter.form:32 FMain.form:44
 msgid "Filter sessions"
 msgstr "Фильтр сессий"
 
-#: FFilter.form:53
+#: FFilter.form:51
 msgid "Column:"
 msgstr "Столбец:"
 
-#: FFilter.form:59
-msgid "Criteria:"
-msgstr "Критерий:"
-
-#: FFilter.form:65
+#: FFilter.form:57
 msgid "Value:"
 msgstr "Значение:"
 
-#: FFilter.form:73
+#: FFilter.form:65
 msgid "Calling"
 msgstr "Вызывающий"
 
-#: FFilter.form:73
-msgid "Compression"
-msgstr "Сжатие"
-
-#: FFilter.form:73 FSessions.class:14
+#: FFilter.form:65 FSessions.class:16
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: FFilter.form:73
+#: FFilter.form:65
 msgid "Ip Address"
 msgstr "Айпи адрес"
 
-#: FFilter.form:73 FSessions.class:21
-msgid "RateIn"
-msgstr "СкорВх"
+#: FFilter.form:65
+msgid "Not chosen"
+msgstr "Не выбрано"
 
-#: FFilter.form:73 FSessions.class:23
-msgid "RateOut"
-msgstr "СкорИсх"
-
-#: FFilter.form:73 FSessions.class:29
-msgid "State"
-msgstr "Состояние"
-
-#: FFilter.form:73 FSessions.class:25
-msgid "Type"
-msgstr "Тип"
-
-#: FFilter.form:73 FSessions.class:31
-msgid "Uptime"
-msgstr "Время"
-
-#: FFilter.form:73 FSessions.class:16
+#: FFilter.form:65 FSessions.class:18
 msgid "Username"
 msgstr "Пользователь"
 
-#: FFilter.form:90 FShutdown.form:49 FSrvAction.form:65
+#: FFilter.form:72 FShutdown.form:50 FSrvAction.form:66
 msgid "Apply"
 msgstr "Применить"
-
-#: FFilter.form:99 FSettings.form:131
-msgid "Reset"
-msgstr "Сброс"
 
 #: FMain.class:114
 msgid "Config reload"
@@ -133,11 +117,11 @@ msgstr "Перезагрузка конфигурации"
 msgid "Are you sure to reload config file?"
 msgstr "Уверены, что хотите перезагрузить файл конфигурации?"
 
-#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:24
+#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:25
 msgid "No"
 msgstr "Нет"
 
-#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:24
+#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:25
 msgid "Yes"
 msgstr "Да"
 
@@ -157,7 +141,7 @@ msgstr "Сбросить группу сессий"
 msgid "Update list of sessions"
 msgstr "Обновить список сессий"
 
-#: FMain.form:76 FSettings.form:37
+#: FMain.form:76 FSettings.form:38
 msgid "Settings"
 msgstr "Настройки"
 
@@ -165,7 +149,7 @@ msgstr "Настройки"
 msgid "Help"
 msgstr "Справка"
 
-#: FMain.form:112 FServers.form:179
+#: FMain.form:112 FServers.form:180
 msgid "Servers manager"
 msgstr "Менеджер серверов"
 
@@ -173,7 +157,7 @@ msgstr "Менеджер серверов"
 msgid "Reload config file"
 msgstr "Перезагрузить файл конфигурации"
 
-#: FMain.form:132 FShutdown.form:32
+#: FMain.form:132 FShutdown.form:33
 msgid "Shutdown daemon"
 msgstr "Отключение службы"
 
@@ -185,7 +169,7 @@ msgstr "Н"
 msgid "S"
 msgstr "С"
 
-#: FServers.class:16 FSessions.class:42
+#: FServers.class:16
 msgid "Name"
 msgstr "Имя"
 
@@ -229,147 +213,131 @@ msgstr "Остановить"
 msgid "Servers"
 msgstr "Сервера"
 
-#: FServers.form:51
+#: FServers.form:52
 msgid "Add"
 msgstr "Добавить"
 
-#: FServers.form:60
+#: FServers.form:61
 msgid "Edit"
 msgstr "Изменить"
 
-#: FServers.form:69
+#: FServers.form:70
 msgid "Delete"
 msgstr "Удалить"
 
-#: FServers.form:78
+#: FServers.form:79
 msgid "Clear"
 msgstr "Очистить"
 
-#: FServers.form:87
+#: FServers.form:88
 msgid "First"
 msgstr "Первый"
 
-#: FServers.form:96
+#: FServers.form:97
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: FServers.form:105
+#: FServers.form:106
 msgid "Next"
 msgstr "Следующий"
 
-#: FServers.form:114
+#: FServers.form:115
 msgid "Last"
 msgstr "Последний"
 
-#: FServers.form:123
+#: FServers.form:124
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: FServers.form:132 FSettings.form:63
+#: FServers.form:133 FSettings.form:64
 msgid "Save"
 msgstr "Сохранить"
 
-#: FServers.form:151 FSessions.form:140
+#: FServers.form:152 FSessions.form:80
 msgid "0 / 0"
 msgstr "-"
 
-#: FServers.form:160
+#: FServers.form:161
 msgid "Start"
 msgstr "Запустить"
 
-#: FSessions.class:17
+#: FSessions.class:19
 msgid "CallingSID"
 msgstr "Вызывающий"
 
-#: FSessions.class:19
+#: FSessions.class:21
 msgid "IP"
 msgstr "Айпи"
 
+#: FSessions.class:23
+msgid "RateIn"
+msgstr "СкорВх"
+
+#: FSessions.class:25
+msgid "RateOut"
+msgstr "СкорИсх"
+
 #: FSessions.class:27
+msgid "Type"
+msgstr "Тип"
+
+#: FSessions.class:29
 msgid "Compress"
 msgstr "Сжатие"
 
-#: FSessions.class:45
-msgid "Value"
-msgstr "Значение"
+#: FSessions.class:31
+msgid "State"
+msgstr "Состояние"
 
-#: FSessions.class:48
-msgid "UpTime"
-msgstr "-"
+#: FSessions.class:33
+msgid "Uptime"
+msgstr "Время"
 
-#: FSessions.class:49
-msgid "Cpu"
-msgstr "-"
-
-#: FSessions.class:50
-msgid "MemRss"
-msgstr "-"
-
-#: FSessions.class:51
-msgid "MemVirt"
-msgstr "-"
-
-#: FSessions.class:94
-msgid "Hide statistics"
-msgstr "Скрыть статистику"
-
-#: FSessions.form:24
+#: FSessions.form:16
 msgid " Primary server"
 msgstr "-"
 
-#: FSessions.form:31
-msgid "Popup"
-msgstr "-"
-
-#: FSessions.form:35
-msgid "Show statistics"
-msgstr "Показать статистику"
-
-#: FSessions.form:67
-msgid "Statistics"
-msgstr "Статистика"
-
-#: FSessions.form:90
-msgid "no data"
-msgstr "данные отсутствуют"
-
-#: FSessions.form:108
+#: FSessions.form:48
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:116
+#: FSessions.form:56
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:124
+#: FSessions.form:64
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:132
+#: FSessions.form:72
 msgid "Last session"
 msgstr "Последняя сессия"
 
-#: FSettings.form:108
+#: FSettings.form:109
 msgid "default"
 msgstr "по-умолчанию"
+
+#: FSettings.form:132
+msgid "Reset"
+msgstr "Сброс"
 
 #: FShutdown.class:62
 msgid "Are you sure to shutdown the daemon?"
 msgstr "Уверены, что хотите отключить службу?"
 
-#: FShutdown.form:70
+#: FShutdown.form:71
 msgid "Shutdown default"
 msgstr "Отключение по-умолчанию"
 
-#: FShutdown.form:77
+#: FShutdown.form:78
 msgid "Shutdown soft"
 msgstr "Легкое отключение"
 
-#: FShutdown.form:83
+#: FShutdown.form:84
 msgid "Shutdown hard"
 msgstr "Жесткое отключение"
 
-#: FShutdown.form:89
+#: FShutdown.form:90
 msgid "Shutdown cancel"
 msgstr "Отмена отключения"
 
@@ -385,43 +353,43 @@ msgstr "Заполните текстовые поля"
 msgid "Name or address already exists"
 msgstr "Имя или адрес уже существуют"
 
-#: FSrvAction.form:29
+#: FSrvAction.form:30
 msgid "Name: "
 msgstr "Имя: "
 
-#: FSrvAction.form:35
+#: FSrvAction.form:36
 msgid "Address: "
 msgstr "Адрес: "
 
-#: FSrvAction.form:41
+#: FSrvAction.form:42
 msgid "Port: "
 msgstr "Порт: "
 
-#: FSrvAction.form:47
+#: FSrvAction.form:48
 msgid "accel-ppp"
 msgstr "-"
 
-#: FSrvAction.form:57
+#: FSrvAction.form:58
 msgid "2001"
 msgstr "-"
 
-#: FSrvAction.form:74
+#: FSrvAction.form:75
 msgid "Cancel"
 msgstr "Отмена"
 
-#: FSrvAction.form:89
+#: FSrvAction.form:90
 msgid "Current session"
 msgstr "Текущая сессия"
 
-#: MMain.module:23
+#: MMain.module:24
 msgid "Import config"
 msgstr "Импорт конфигурации"
 
-#: MMain.module:24
+#: MMain.module:25
 msgid "Config file does not exist."
 msgstr "Файл конфигурации отсутствует."
 
-#: MMain.module:24
+#: MMain.module:25
 msgid "Want to use backup?"
 msgstr "Хотите использовать резервную копию?"
 

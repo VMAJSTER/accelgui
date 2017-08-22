@@ -1,24 +1,25 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,456,216)
+  Move(0,0,464,160)
   #Scaled = False
   Resizable = False
   Border = False
+  Utility = True
   SkipTaskbar = True
   { pnlTitle Panel
-    Move(8,8,440,32)
+    Move(8,8,448,32)
     Background = &H3F81B8&
     Tracking = True
     { lblTitle Label
-      Move(8,4,392,24)
+      Move(8,4,408,24)
       Font = Font["Bold,12"]
       Foreground = Color.White
       Tracking = True
       Text = ("Filter sessions")
     }
     { pctClose PictureBox
-      Move(408,0,32,32)
+      Move(416,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")
@@ -27,59 +28,43 @@
     }
   }
   { Panel1 Panel
-    Move(8,48,440,160)
+    Move(8,48,448,104)
     Border = Border.Plain
     { Label1 Label
       Move(16,20,96,24)
       Text = ("Column:")
       Alignment = Align.Right
     }
-    { Label2 Label
-      Move(16,68,96,24)
-      Text = ("Criteria:")
-      Alignment = Align.Right
-    }
     { Label3 Label
-      Move(16,116,96,24)
+      Move(16,60,96,24)
       Text = ("Value:")
       Alignment = Align.Right
     }
-    { ComboBox1 ComboBox
-      Move(120,16,160,32)
+    { cmbColumn ComboBox
+      Move(120,16,168,32)
       Mouse = Mouse.Pointing
       ReadOnly = True
-      List = [("Interface"), ("Username"), ("Calling"), ("Ip Address"), ("RateIn"), ("RateOut"), ("Type"), ("Compression"), ("State"), ("Uptime")]
-    }
-    { ComboBox2 ComboBox
-      Move(120,64,160,32)
-      Mouse = Mouse.Pointing
-      ReadOnly = True
-    }
-    { TextBox1 TextBox
-      Move(120,112,160,32)
+      List = [("Not chosen"), ("Interface"), ("Username"), ("Calling"), ("Ip Address")]
     }
     { btnApply Button
-      Move(296,16,128,32)
+      Move(304,16,128,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       Text = ("Apply")
       Picture = Picture["images/enable.png"]
       Default = True
     }
-    { btnReset Button
-      Move(296,64,128,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      Text = ("Reset")
-      Picture = Picture["images/reset.png"]
-    }
     { btnExit Button
-      Move(296,112,128,32)
+      Move(304,56,128,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       Text = ("Exit")
       Picture = Picture["images/close.png"]
       Cancel = True
+    }
+    { txbValue TextBox
+      Move(120,56,168,32)
+      Enabled = False
     }
   }
 }
