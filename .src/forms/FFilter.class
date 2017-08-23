@@ -79,6 +79,7 @@ Public Sub btnApply_Click()
                     objWindow.objServer.MatchMode = MColumn.IP
             End Select
             objWindow.objServer.MatchValue = txbValue.Text
+            FMain.tlbFilter.Picture = Picture["images/filterdel.png"]
             FMain.tlbUpdate_Click()
             Me.Close()
         Else
@@ -91,6 +92,7 @@ Public Sub btnApply_Click()
         txbValue.Clear()
         objWindow.objServer.MatchMode = "state"
         objWindow.objServer.MatchValue = "active"
+        FMain.tlbFilter.Picture = Picture["images/filteradd.png"]
         FMain.tlbUpdate_Click()
         Me.Close()
     Endif

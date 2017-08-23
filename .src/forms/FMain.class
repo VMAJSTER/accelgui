@@ -144,3 +144,16 @@ Public Sub tlbFilter_Click()
     Endif
 
 End
+
+Public Sub wksServers_Activate()
+
+    Dim objWindow As FSessions
+
+    objWindow = FMain.wksServers.ActiveWindow
+    If objWindow.objServer.MatchMode = MColumn.State Then
+        FMain.tlbFilter.Picture = Picture["images/filteradd.png"]
+    Else
+        FMain.tlbFilter.Picture = Picture["images/filterdel.png"]
+    Endif
+
+End
