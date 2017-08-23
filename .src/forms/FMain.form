@@ -20,7 +20,7 @@
       ToolTip = ("Filter sessions")
       Picture = Picture["images/filteradd.png"]
     }
-    { tlbKillOne ToolButton
+    { tlbKill ToolButton
       Move(140,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing

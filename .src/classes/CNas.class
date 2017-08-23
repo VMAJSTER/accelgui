@@ -6,6 +6,7 @@
 Private Const CMD_SESSIONS As String = "show sessions"
 Private Const CMD_RELOAD As String = "reload"
 Private Const CMD_SHUTDOWN As String = "shutdown"
+Private Const CMD_KILL As String = "terminate username"
 
 ' ---------------------
 ' Fields default values
@@ -59,6 +60,7 @@ Event Disconnected
 Event GotSessions
 Event Reloaded
 Event Shutdown
+Event Killed
 
 ' ------------------------------
 ' Properties setters and getters
@@ -278,6 +280,18 @@ Public Sub GetSessions()
 
 End
 
+Public Sub KillSession(Username As String)
+
+    Dim strLineToSend As String
+
+    Username = Trim(Username)
+    If Username = "" Then Return
+    strLineToSend = CMD_KILL & " " & Username
+    SendData(strLineToSend)
+
+End
+
+
 ' ---------------------
 ' Socket event handlers
 ' ---------------------
@@ -333,6 +347,8 @@ Private Sub SendData(strCommand As String)
             Raise Reloaded
         Case Like CMD_SHUTDOWN
             Raise Shutdown
+        Case Like CMD_KILL & "*"
+            Raise Killed
     End Select
 
 End
@@ -348,7 +364,7 @@ Private Sub ParseSessions()
     arrSessions.Clear()
     For i = 2 To arrSessionsData.Max
         arrRecord = Split(arrSessionsData[i], "|")
-        If arrRecord.Length <> 9 Then Return
+        If arrRecord.Length < 9 Then Return
         arrRate = Split(Trim(arrRecord[4]), "/")
         arrSession = New CSession
         With arrSession

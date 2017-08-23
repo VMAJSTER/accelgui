@@ -113,6 +113,15 @@ Public Sub objServer_GotSessions()
 
 End
 
+Public Sub objServer_Killed()
+
+    grvSessions.Clear()
+    grvSessions.Rows.Count = 0
+    objServer.GetSessions()
+
+End
+
+
 Public Sub grvSessions_MouseMove()
 
     Dim X, Y As Integer

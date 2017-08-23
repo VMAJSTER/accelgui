@@ -79,7 +79,7 @@ Public Sub Form_Open()
             tlbReload.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
-            tlbKillOne.Enabled = False
+            tlbKill.Enabled = False
     End Select
 
 End
@@ -149,11 +149,26 @@ Public Sub wksServers_Activate()
 
     Dim objWindow As FSessions
 
-    objWindow = FMain.wksServers.ActiveWindow
+    objWindow = wksServers.ActiveWindow
     If objWindow.objServer.MatchMode = MColumn.State Then
-        FMain.tlbFilter.Picture = Picture["images/filteradd.png"]
+        tlbFilter.Picture = Picture["images/filteradd.png"]
     Else
-        FMain.tlbFilter.Picture = Picture["images/filterdel.png"]
+        tlbFilter.Picture = Picture["images/filterdel.png"]
     Endif
+
+End
+
+Public Sub tlbKill_Click()
+
+    Dim objWindow As FSessions
+    Dim intRow As Integer
+    Dim strName As String
+
+    If wksServers.Windows.Count = 0 Then Return
+    objWindow = wksServers.ActiveWindow
+    intRow = objWindow.grvSessions.Row
+    If intRow < 0 Then Return
+    strName = objWindow.grvSessions[intRow, 1].Text
+    objWindow.objServer.KillSession(strName)
 
 End
