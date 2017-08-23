@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-08-22 09:06 UTC\n"
+"PO-Revision-Date: 2017-08-22 13:21 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -61,19 +61,15 @@ msgstr "-"
 msgid "user"
 msgstr "-"
 
-#: FFilter.class:84
+#: FFilter.class:85
 msgid "Error"
 msgstr "Ошибка"
 
-#: FFilter.class:85
+#: FFilter.class:86
 msgid "Value is not entered"
 msgstr "Значение не указано"
 
-#: FFilter.class:89
-msgid "Column is not chosen"
-msgstr "Не выбран столбец"
-
-#: FFilter.form:32 FMain.form:44
+#: FFilter.form:32 FMain.form:43
 msgid "Filter sessions"
 msgstr "Фильтр сессий"
 
@@ -109,55 +105,51 @@ msgstr "Пользователь"
 msgid "Apply"
 msgstr "Применить"
 
-#: FMain.class:114
+#: FMain.class:113
 msgid "Config reload"
 msgstr "Перезагрузка конфигурации"
 
-#: FMain.class:115
+#: FMain.class:114
 msgid "Are you sure to reload config file?"
 msgstr "Уверены, что хотите перезагрузить файл конфигурации?"
 
-#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:25
+#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:25
 msgid "No"
 msgstr "Нет"
 
-#: FMain.class:115 FServers.class:103 FShutdown.class:62 MMain.module:25
+#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:25
 msgid "Yes"
 msgstr "Да"
 
-#: FMain.form:27
+#: FMain.form:26
 msgid "Accel GUI"
 msgstr "-"
 
-#: FMain.form:52
-msgid "Terminate one session"
-msgstr "Сбросить одну сессию"
+#: FMain.form:51
+msgid "Terminate session"
+msgstr "Сбросить сессию"
 
-#: FMain.form:60
-msgid "Terminate group of sessions"
-msgstr "Сбросить группу сессий"
-
-#: FMain.form:68
+#: FMain.form:59
 msgid "Update list of sessions"
 msgstr "Обновить список сессий"
 
-#: FMain.form:76 FSettings.form:38
+#: FMain.form:67 FSettings.form:38
 msgid "Settings"
 msgstr "Настройки"
 
-#: FMain.form:84
+#: FMain.form:75
 msgid "Help"
 msgstr "Справка"
 
-#: FMain.form:112 FServers.form:180
+#: FMain.form:103 FServers.form:180
 msgid "Servers manager"
 msgstr "Менеджер серверов"
 
-#: FMain.form:120
+#: FMain.form:111
 msgid "Reload config file"
 msgstr "Перезагрузить файл конфигурации"
 
-#: FMain.form:132 FShutdown.form:33
+#: FMain.form:123 FShutdown.form:33
 msgid "Shutdown daemon"
 msgstr "Отключение службы"
 

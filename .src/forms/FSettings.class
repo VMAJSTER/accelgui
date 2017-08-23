@@ -71,6 +71,7 @@ Public Sub btnSave_Click()
 
     ' It is very useful to save last copy of config file as a backup
     If Exist(MMain.GLOBAL_CONFIG) Then
+        If Exist(MMain.GLOBAL_CONFIG_BACKUP) Then Kill MMain.GLOBAL_CONFIG_BACKUP
         Copy MMain.GLOBAL_CONFIG To MMain.GLOBAL_CONFIG_BACKUP
     Endif
     ' Save encrypted passwords if the appropriate text fields are filled in

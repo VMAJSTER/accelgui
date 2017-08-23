@@ -2,8 +2,8 @@
 # Compiled with Gambas 3.8.4
 Title=accelgui
 Startup=MMain
-Icon=icons/256.png
-Version=0.1.72
+Icon=icons/128.png
+Version=0.1.78
 Component=gb.image
 Component=gb.gui.qt
 Component=gb.form

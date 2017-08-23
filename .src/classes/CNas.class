@@ -253,12 +253,11 @@ End
 
 Public Sub Shutdown()
 
-    If bolConnected Then
-        If strShutMode = MShutMode.Default Then
-            SendData(CMD_SHUTDOWN)
-        Else
-            SendData(CMD_SHUTDOWN & " " & strShutMode)
-        Endif
+    If Not bolConnected Then Return
+    If strShutMode = MShutMode.Default Then
+        SendData(CMD_SHUTDOWN)
+    Else
+        SendData(CMD_SHUTDOWN & " " & strShutMode)
     Endif
 
 End
@@ -267,21 +266,15 @@ Public Sub GetSessions()
 
     Dim strLineToSend As String
 
-    If bolConnected Then
-        strLineToSend = CMD_SESSIONS
-        If strColumn <> MColumn.Default Then
-            strLineToSend &= " " & strColumn
-        Endif
-        If strOrderMode <> MColumn.Default Then
-            strLineToSend &= " order " & strOrderMode
-        Endif
-        If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
-            strLineToSend &= " match state active"
-            strLineToSend &= " match " & strMatchMode & " " & strMatchValue
-        Endif
-        arrSessionsData.Clear()
-        SendData(strLineToSend)
+    If Not bolConnected Then Return
+    strLineToSend = CMD_SESSIONS
+    If strColumn <> MColumn.Default Then strLineToSend &= " " & strColumn
+    If strOrderMode <> MColumn.Default Then strLineToSend &= " order " & strOrderMode
+    If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
+        strLineToSend &= " match " & strMatchMode & " " & strMatchValue
     Endif
+    arrSessionsData.Clear()
+    SendData(strLineToSend)
 
 End
 
@@ -351,34 +344,27 @@ Private Sub ParseSessions()
     Dim arrSession As CSession
     Dim arrRate As New String[]
 
-    If arrSessionsData.Length > 2 Then
-        arrSessions.Clear()
-        For i = 2 To arrSessionsData.Max
-            arrRecord = Split(arrSessionsData[i], "|")
-            If arrRecord.Length = 9 Then
-                arrRate = Split(Trim(arrRecord[4]), "/")
-                arrSession = New CSession
-                With arrSession
-                    .IFName = Trim(arrRecord[0])
-                    .UserName = Trim(arrRecord[1])
-                    .CallingSID = Trim(arrRecord[2])
-                    .IP = Trim(arrRecord[3])
-                    If arrRate.Length < 2 Then
-                        .RateIn = 0
-                        .RateOut = 0
-                    Else
-                        .RateIn = CInt(arrRate[0])
-                        .RateOut = CInt(arrRate[1])
-                    Endif
-                    .Type = Trim(arrRecord[5])
-                    .Comp = CBool(Trim(arrRecord[6]))
-                    .State = Trim(arrRecord[7])
-                    .Uptime = Trim(arrRecord[8])
-                End With
-                arrSessions.Add(arrSession)
-            Endif
-        Next
-        Raise GotSessions
-    Endif
+    If arrSessionsData.Length <= 2 Then Return
+    arrSessions.Clear()
+    For i = 2 To arrSessionsData.Max
+        arrRecord = Split(arrSessionsData[i], "|")
+        If arrRecord.Length <> 9 Then Return
+        arrRate = Split(Trim(arrRecord[4]), "/")
+        arrSession = New CSession
+        With arrSession
+            .IFName = Trim(arrRecord[0])
+            .UserName = Trim(arrRecord[1])
+            .CallingSID = Trim(arrRecord[2])
+            .IP = Trim(arrRecord[3])
+            .RateIn = IIf(arrRate.Length < 2, 0, CInt(arrRate[0]))
+            .RateOut = IIf(arrRate.Length < 2, 0, CInt(arrRate[1]))
+            .Type = Trim(arrRecord[5])
+            .Comp = CBool(Trim(arrRecord[6]))
+            .State = Trim(arrRecord[7])
+            .Uptime = Trim(arrRecord[8])
+        End With
+        arrSessions.Add(arrSession)
+    Next
+    Raise GotSessions
 
 End

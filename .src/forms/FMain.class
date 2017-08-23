@@ -79,7 +79,6 @@ Public Sub Form_Open()
             tlbReload.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
-            tlbKillGroup.Enabled = False
             tlbKillOne.Enabled = False
     End Select
 

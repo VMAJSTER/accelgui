@@ -135,7 +135,7 @@ Path="accelgui.gambas"
 
 [OpenFile]
 Count=1
-File[1]=".src/forms/FFilter.form"
+File[1]=".src/forms/FMain.form"
 Active=1
 
 [Watches]
