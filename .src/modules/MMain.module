@@ -5,6 +5,8 @@ Public Const GLOBAL_CONFIG As String = "/etc/accelgui.conf"
 Public Const GLOBAL_CONFIG_BACKUP As String = "/etc/accelgui.conf.bak"
 ' Margin between controls
 Public Const MARGIN As Byte = 8
+' Help file path
+Public Const HELPFILE As String = "help/index.html"
 ' Toolbar height
 Public Const TLB_HEIGHT As Byte = 64
 ' Symbols used in ip-addresses

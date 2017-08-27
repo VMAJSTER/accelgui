@@ -149,6 +149,7 @@ Public Sub wksServers_Activate()
 
     Dim objWindow As FSessions
 
+    If wksServers.Windows.Count = 0 Then Return
     objWindow = wksServers.ActiveWindow
     If objWindow.objServer.MatchMode = MColumn.State Then
         tlbFilter.Picture = Picture["images/filteradd.png"]
@@ -169,6 +170,19 @@ Public Sub tlbKill_Click()
     intRow = objWindow.grvSessions.Row
     If intRow < 0 Then Return
     strName = objWindow.grvSessions[intRow, 1].Text
-    objWindow.objServer.KillSession(strName)
+    If Message.Question(("Are you sure to kill session?"), ("Yes"), ("No")) = 1 Then
+        objWindow.objServer.KillSession(strName)
+    Endif
+
+End
+
+Public Sub tlbAbout_Click()
+
+    If Exist(MMain.HELPFILE) Then
+        FHelp.wwwHelp.Url = "file://" & Application.Path &/ MMain.HELPFILE
+        FHelp.Show()
+    Else
+        Message.Error(("Help file was not found"))
+    Endif
 
 End

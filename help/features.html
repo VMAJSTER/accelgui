@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Справочная система : Возможности</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-9">
+          <h2 class="text-primary"><b>Справочная система</b></h2>
+          <h5>
+            Воспользуйтесь меню в левой части окна для перехода
+            в соответствующий раздел
+          </h5>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="list-group">
+            <a href="index.html" class="list-group-item">
+              <h4 class="list-group-item-heading">О программе</h4>
+              <p class="list-group-item-text">
+                Краткая информация о программе и ее авторе
+              </p>
+            </a>
+          </div>
+          <div class="list-group">
+            <a href="features.html" class="list-group-item active">
+              <h4 class="list-group-item-heading">Возможности</h4>
+              <p class="list-group-item-text">
+                Список функциональных возможностей приложения
+              </p>
+            </a>
+          </div>
+          <div class="list-group">
+            <a href="settings.html" class="list-group-item">
+              <h4 class="list-group-item-heading">Настройка</h4>
+              <p class="list-group-item-text">
+                Подробная инструкция по настройке приложения
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-9">
+          <h4 class="text-primary"><b>Возможности</b></h4>
+          <h5>Список функциональных возможностей приложения</h5><br><hr>
+          <p>
+            <b>Accel GUI</b> - является графическим интерфейсом популярного
+            vpn сервера accel-ppp.
+          </p>
+          <p>
+            Приложение получает данные от сервера путем отсылки соответствующих
+            команд по сети, использую протокол tcp, на порт, указанный в файле
+            конфигурации vpn сервера.
+          </p>
+          <p>
+            В программе реализованы не все возможности, предоставляемые интерфейсом
+            командной строки vpn сервера. В частности не поддерживается работа с
+            пулами ip адресов, работа с шейпером и возможность получения статистики
+            работы vpn сервера.
+          </p>
+          <p>На данный момент приложение поддерживает следующие возможности:</p>
+          <ol>
+            <li>
+              <dl>
+                <dt>Многоязычность</dt>
+                <dd>
+                  Интерфейс имеет поддержку двух языков: английского и русского.
+                  Переключение осуществляется автоматически. К сожалению, справка
+                  на данный момент только на русском языке.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Мультисервер</dt>
+                <dd>
+                  Приложение дает возможность просматривать данные по активным сессиям
+                  одновременно с нескольких серверов.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Перезапуск</dt>
+                <dd>
+                  Имеется возможность выполнить из приложения перезагрузку файла
+                  конфигурации.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Отключение</dt>
+                <dd>
+                  Из приложения возможно отключение службы vpn сервера, а также
+                  отменить это действие.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Фильтр</dt>
+                <dd>
+                  Возможна фильтрация сессий по содержимому одного из четырех столбцов.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Сортировка</dt>
+                <dd>
+                  Можно сортировать данные по различным столбцам.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Автозапуск</dt>
+                <dd>
+                  В менеджере серверов есть возможность активировать автоматическое
+                  открытие окна сервера при запуске приложения.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Сброс</dt>
+                <dd>
+                  Любую активную сессию на сервере можно сбросить.
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Авторизация</dt>
+                <dd>
+                  В приложении имеется система авторизации по паролю с возможностью
+                  указания учетной записи по-умолчанию.
+                </dd>
+              </dl>
+            </li>
+          </ol>
+          <div class="alert alert-info" role="alert">
+            <strong>Внимание!</strong>
+            Более детальное описание всех функциональных возможностей приложения
+            можно найти перейдя по ссылке "Настройка" в главном меню
+            справочной системы.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

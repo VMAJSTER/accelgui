@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.8.4\n"
-"PO-Revision-Date: 2017-08-22 13:21 UTC\n"
+"PO-Revision-Date: 2017-08-27 08:06 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -61,11 +61,11 @@ msgstr "-"
 msgid "user"
 msgstr "-"
 
-#: FFilter.class:85
+#: FFilter.class:86
 msgid "Error"
 msgstr "Ошибка"
 
-#: FFilter.class:86
+#: FFilter.class:87
 msgid "Value is not entered"
 msgstr "Значение не указано"
 
@@ -105,6 +105,26 @@ msgstr "Пользователь"
 msgid "Apply"
 msgstr "Применить"
 
+#: FHelp.form:19
+msgid "Help system - Accel GUI"
+msgstr "Справочная система - Accel GUI"
+
+#: FHelp.form:37
+msgid "Refresh - F5"
+msgstr "Обновить - F5"
+
+#: FHelp.form:48
+msgid "Home - Home"
+msgstr "Домой - Home"
+
+#: FHelp.form:59
+msgid "Forward - Right"
+msgstr "Вперед - Right"
+
+#: FHelp.form:66
+msgid "Backward - Left"
+msgstr "Назад - Left"
+
 #: FMain.class:113
 msgid "Config reload"
 msgstr "Перезагрузка конфигурации"
@@ -113,13 +133,21 @@ msgstr "Перезагрузка конфигурации"
 msgid "Are you sure to reload config file?"
 msgstr "Уверены, что хотите перезагрузить файл конфигурации?"
 
-#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:25
+#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:27
 msgid "No"
 msgstr "Нет"
 
-#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:25
+#: FMain.class:114 FServers.class:103 FShutdown.class:62 MMain.module:27
 msgid "Yes"
 msgstr "Да"
+
+#: FMain.class:173
+msgid "Are you sure to kill session?"
+msgstr "Уверены, что хотите сбросить сессию?"
+
+#: FMain.class:185
+msgid "Help file was not found"
+msgstr "Файл справки не найден"
 
 #: FMain.form:26
 msgid "Accel GUI"
@@ -373,15 +401,15 @@ msgstr "Отмена"
 msgid "Current session"
 msgstr "Текущая сессия"
 
-#: MMain.module:24
+#: MMain.module:26
 msgid "Import config"
 msgstr "Импорт конфигурации"
 
-#: MMain.module:25
+#: MMain.module:27
 msgid "Config file does not exist."
 msgstr "Файл конфигурации отсутствует."
 
-#: MMain.module:25
+#: MMain.module:27
 msgid "Want to use backup?"
 msgstr "Хотите использовать резервную копию?"
 
