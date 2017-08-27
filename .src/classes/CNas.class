@@ -372,8 +372,13 @@ Private Sub ParseSessions()
             .UserName = Trim(arrRecord[1])
             .CallingSID = Trim(arrRecord[2])
             .IP = Trim(arrRecord[3])
-            .RateIn = IIf(arrRate.Length < 2, 0, CInt(arrRate[0]))
-            .RateOut = IIf(arrRate.Length < 2, 0, CInt(arrRate[1]))
+            If arrRate.Count < 2 Then
+                .RateIn = 0
+                .RateOut = 0
+            Else
+                .RateIn = CInt(arrRate[0])
+                .RateOut = CInt(arrRate[1])
+            Endif
             .Type = Trim(arrRecord[5])
             .Comp = CBool(Trim(arrRecord[6]))
             .State = Trim(arrRecord[7])
