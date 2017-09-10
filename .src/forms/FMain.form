@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,931,546)
+  Move(0,0,928,560)
   #Scaled = False
   Text = ("Accel GUI")
   Icon = Picture["icons/16.png"]
@@ -9,10 +9,10 @@
   Border = False
   Maximized = True
   { wksServers Workspace
-    Move(7,126,917,413)
+    Move(8,128,912,424)
   }
   { pnlToolBar Panel
-    Move(7,49,917,64)
+    Move(7,49,912,64)
     { tlbFilter ToolButton
       Move(70,8,48,48)
       NoTabFocus = True
@@ -89,7 +89,7 @@
     }
   }
   { pnlTitle Panel
-    Move(7,7,917,32)
+    Move(7,7,912,32)
     Background = &H3F81B8&
     { lblTitle Label
       Move(8,4,833,24)
@@ -98,7 +98,7 @@
       Text = ("Accel GUI")
     }
     { pctClose PictureBox
-      Move(882,0,32,32)
+      Move(880,0,32,32)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Close")

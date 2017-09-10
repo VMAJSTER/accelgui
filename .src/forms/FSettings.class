@@ -96,3 +96,9 @@ Public Sub btnSave_Click()
     Me.Close()
 
 End
+
+Public Sub Form_Open()
+
+    Me.Center()
+
+End

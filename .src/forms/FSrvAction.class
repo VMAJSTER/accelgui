@@ -11,6 +11,7 @@ Public Sub Form_Open()
 
     Dim intRow As Integer
 
+    Me.Center()
     vlbAddress.Value = DFL_ADDRESS
     If bolEdit Then
         With FServers

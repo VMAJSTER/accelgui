@@ -4,8 +4,13 @@ Public objServer As CNas
 
 Private intX As Integer
 Private intY As Integer
-
 Private bytColSort As Byte = 1
+
+Private Sub ShowRowNum(intCur As Integer)
+
+    lblSessions.Text = CStr(intCur) & " / " & CStr(grvSessions.Rows.Count)
+
+End
 
 Public Sub _new(Name As String, Host As String, Port As Integer)
 
@@ -67,31 +72,6 @@ Public Sub Form_Resize()
 
 End
 
-Private Sub FillSessions()
-
-    Dim i As Integer
-
-    If objServer.Sessions.Count > 0 Then
-        grvSessions.Clear()
-        grvSessions.Rows.Count = 0
-        For i = 0 To objServer.Sessions.Max
-            Inc grvSessions.Rows.Count
-            grvSessions[i, 0].Text = objServer.Sessions[i].IFName
-            grvSessions[i, 1].Text = objServer.Sessions[i].UserName
-            grvSessions[i, 2].Text = objServer.Sessions[i].CallingSID
-            grvSessions[i, 3].Text = objServer.Sessions[i].IP
-            grvSessions[i, 4].Text = objServer.Sessions[i].RateIn
-            grvSessions[i, 5].Text = objServer.Sessions[i].RateOut
-            grvSessions[i, 6].Text = objServer.Sessions[i].Type
-            grvSessions[i, 7].Text = objServer.Sessions[i].Comp
-            grvSessions[i, 8].Text = objServer.Sessions[i].State
-            grvSessions[i, 9].Text = objServer.Sessions[i].Uptime
-        Next
-        grvSessions.Columns[1].Width = grvSessions.ClientW - 855
-    Endif
-
-End
-
 Public Sub Form_Close()
 
     objServer.Disconnect()
@@ -106,9 +86,10 @@ End
 
 Public Sub objServer_GotSessions()
 
-    FillSessions()
+    grvSessions.Rows.Count = objServer.Sessions.Count
     If grvSessions.Rows.Count > 0 Then
         MMain.ActivateRow(grvSessions, 0)
+        grvSessions.Columns[1].Width = grvSessions.ClientW - 855
     Endif
 
 End
@@ -185,12 +166,6 @@ Public Sub grvSessions_Select()
 
 End
 
-Private Sub ShowRowNum(intCur As Integer)
-
-    lblSessions.Text = CStr(intCur) & " / " & CStr(grvSessions.Rows.Count)
-
-End
-
 Public Sub tmrState_Timer()
 
     If objServer.Connected Then
@@ -239,5 +214,32 @@ Public Sub grvSessions_Sort()
         bytColSort = grvSessions.Columns.Sort
         FMain.tlbUpdate_click()
     Endif
+
+End
+
+Public Sub grvSessions_Data(Row As Integer, Column As Integer)
+
+    Select Case Column
+        Case 0
+            grvSessions.Data.Text = objServer.Sessions[Row].IFName
+        Case 1
+            grvSessions.Data.Text = objServer.Sessions[Row].UserName
+        Case 2
+            grvSessions.Data.Text = objServer.Sessions[Row].CallingSID
+        Case 3
+            grvSessions.Data.Text = objServer.Sessions[Row].IP
+        Case 4
+            grvSessions.Data.Text = objServer.Sessions[Row].RateIn
+        Case 5
+            grvSessions.Data.Text = objServer.Sessions[Row].RateOut
+        Case 6
+            grvSessions.Data.Text = objServer.Sessions[Row].Type
+        Case 7
+            grvSessions.Data.Text = objServer.Sessions[Row].Comp
+        Case 8
+            grvSessions.Data.Text = objServer.Sessions[Row].State
+        Case 9
+            grvSessions.Data.Text = objServer.Sessions[Row].Uptime
+    End Select
 
 End

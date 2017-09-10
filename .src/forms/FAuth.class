@@ -99,6 +99,7 @@ Public Sub Form_Open()
 
     Dim bytDefault As Byte
 
+    Me.Center()
     bytDefault = CByte(MMain.objSettings["Auth/default", "0"])
     cmbUsername.Index = bytDefault
 

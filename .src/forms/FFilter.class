@@ -103,6 +103,7 @@ Public Sub Form_Open()
 
     Dim objWindow As FSessions
 
+    Me.Center()
     If FMain.wksServers.Windows.Count > 0 Then
         objWindow = FMain.wksServers.ActiveWindow
         Select Case objWindow.objServer.MatchMode
