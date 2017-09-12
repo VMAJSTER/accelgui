@@ -23,6 +23,7 @@
   { tmrState #Timer
     #Move(856,480)
     Enabled = True
+    Delay = 100
   }
   { pnlToolBar Panel
     Move(287,462,350,62)
@@ -63,10 +64,5 @@
       Text = ("0 / 0")
       Alignment = Align.Center
     }
-  }
-  { tmrServer #Timer
-    #Move(792,480)
-    Enabled = True
-    Delay = 5000
   }
 }

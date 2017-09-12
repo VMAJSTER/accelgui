@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,15 +42,15 @@ msgstr ""
 msgid "Shutdown cancel"
 msgstr ""
 
-#: FShutdown.class:62
+#: FShutdown.class:67
 msgid "Are you sure to shutdown the daemon?"
 msgstr ""
 
-#: FShutdown.class:62
+#: FShutdown.class:67
 msgid "Yes"
 msgstr ""
 
-#: FShutdown.class:62
+#: FShutdown.class:67
 msgid "No"
 msgstr ""
 

@@ -3,6 +3,21 @@
 Private intX As Integer
 Private intY As Integer
 
+Private Sub ShowRowNum(intCur As Integer)
+
+    lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
+
+End
+
+Private Sub ClearGrid()
+
+    grvServers.Clear()
+    grvServers.Rows.Count = 0
+    ShowRowNum(0)
+
+End
+
+
 Public Sub _new()
 
     Dim i As Byte
@@ -33,9 +48,7 @@ Public Sub Form_Open()
     Dim arrPort As New String[]
 
     Me.Center()
-    grvServers.Clear()
-    grvServers.Rows.Count = 0
-    ShowRowNum(0)
+    ClearGrid()
     MMain.EnableControls(False)
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
     arrName = Split(MMain.objSettings["Servers/Name"], ";")
@@ -100,7 +113,6 @@ Public Sub tlbDelete_Click()
     Dim intRow As Integer
 
     If grvServers.Row > -1 Then
-        Message.Title = ("Delete server")
         If Message.Question(("Are you sure to delete server?"), ("Yes"), ("No")) = 1 Then
             intRow = grvServers.Row
             grvServers.Rows.Remove(intRow)
@@ -117,12 +129,41 @@ End
 
 Public Sub tlbClear_Click()
 
-    Message.Title = ("Clear servers list")
     If Message.Question(("Are you sure to clear list of servers?"), ("Yes"), ("No")) = 1 Then
-        grvServers.Clear()
-        grvServers.Rows.Count = 0
-        ShowRowNum(0)
+        ClearGrid()
         MMain.EnableControls(False)
+    Endif
+
+End
+
+Public Sub tlbAction_Click()
+
+    Dim objForm As FSessions
+    Dim strName As String
+    Dim strHost As String
+    Dim intPort As Integer
+    Dim objWindow As Window
+
+    If grvServers.Row > -1 Then
+        If grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"] Then
+            grvServers[grvServers.Row, 0].Picture = Picture["images/stop.png"]
+            tlbAction.Picture = Picture["images/start.png"]
+            tlbAction.Tooltip = ("Start")
+            For Each objWindow In FMain.wksServers.Windows
+                If objWindow.Text = grvServers[grvServers.Row, 2].Text Then
+                    objWindow.Close()
+                Endif
+            Next
+        Else
+            grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"]
+            tlbAction.Picture = Picture["images/stop.png"]
+            tlbAction.Tooltip = ("Stop")
+            strName = grvServers[grvServers.Row, 2].Text
+            strHost = grvServers[grvServers.Row, 3].Text
+            intPort = CInt(grvServers[grvServers.Row, 4].Text)
+            objForm = New FSessions(strName, strHost, intPort)
+            FMain.wksServers.Add(objForm)
+        Endif
     Endif
 
 End
@@ -234,38 +275,6 @@ Public Sub grvServers_DblClick()
 
 End
 
-Public Sub tlbAction_Click()
-
-    Dim objForm As FSessions
-    Dim strName As String
-    Dim strHost As String
-    Dim intPort As Integer
-    Dim objWindow As Window
-
-    If grvServers.Row > -1 Then
-        If grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"] Then
-            grvServers[grvServers.Row, 0].Picture = Picture["images/stop.png"]
-            tlbAction.Picture = Picture["images/start.png"]
-            tlbAction.Tooltip = ("Start")
-            For Each objWindow In FMain.wksServers.Windows
-                If objWindow.Text = grvServers[grvServers.Row, 2].Text Then
-                    objWindow.Close()
-                Endif
-            Next
-        Else
-            grvServers[grvServers.Row, 0].Picture = Picture["images/start.png"]
-            tlbAction.Picture = Picture["images/stop.png"]
-            tlbAction.Tooltip = ("Stop")
-            strName = grvServers[grvServers.Row, 2].Text
-            strHost = grvServers[grvServers.Row, 3].Text
-            intPort = CInt(grvServers[grvServers.Row, 4].Text)
-            objForm = New FSessions(strName, strHost, intPort)
-            FMain.wksServers.Add(objForm)
-        Endif
-    Endif
-
-End
-
 Public Sub pnlTitle_MouseDown()
 
     intX = Mouse.X + pnlTitle.Left
@@ -302,11 +311,5 @@ End
 Public Sub lblTitle_MouseMove()
 
     pnlTitle_MouseMove()
-
-End
-
-Private Sub ShowRowNum(intCur As Integer)
-
-    lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
 
 End

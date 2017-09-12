@@ -3,6 +3,12 @@
 Private intX As Integer
 Private intY As Integer
 
+Public Sub Form_Open()
+
+    Me.Center()
+
+End
+
 Public Sub btnExit_Click()
 
     Me.Close()
@@ -94,11 +100,5 @@ Public Sub btnSave_Click()
         Endif
     Next
     Me.Close()
-
-End
-
-Public Sub Form_Open()
-
-    Me.Center()
 
 End

@@ -5,28 +5,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: MMain.module:26
-msgid "Import config"
-msgstr ""
-
-#: MMain.module:27
 msgid "Config file does not exist."
 msgstr ""
 
-#: MMain.module:27
+#: MMain.module:26
 msgid "Want to use backup?"
 msgstr ""
 
-#: MMain.module:27
+#: MMain.module:26
 msgid "Yes"
 msgstr ""
 
-#: MMain.module:27
+#: MMain.module:26
 msgid "No"
 msgstr ""
 

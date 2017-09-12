@@ -3,6 +3,30 @@
 Private intX As Integer
 Private intY As Integer
 
+Public Sub Form_Open()
+
+    Dim objWindow As FSessions
+
+    Me.Center()
+    If FMain.wksServers.Windows.Count > 0 Then
+        objWindow = FMain.wksServers.ActiveWindow
+        Select Case objWindow.objServer.MatchMode
+            Case MColumn.IFName
+                cmbColumn.Index = 1
+            Case MColumn.UserName
+                cmbColumn.Index = 2
+            Case MColumn.CallingSID
+                cmbColumn.Index = 3
+            Case MColumn.IP
+                cmbColumn.Index = 4
+        End Select
+        If objWindow.objServer.MatchValue <> "active" Then
+            txbValue.Text = objWindow.objServer.MatchValue
+        Endif
+    Endif
+
+End
+
 Public Sub btnExit_Click()
 
     Me.Close()
@@ -83,7 +107,6 @@ Public Sub btnApply_Click()
             FMain.tlbUpdate_Click()
             Me.Close()
         Else
-            Message.Title = ("Error")
             Message.Error(("Value is not entered"))
             txbValue.Clear()
             txbValue.SetFocus()
@@ -95,30 +118,6 @@ Public Sub btnApply_Click()
         FMain.tlbFilter.Picture = Picture["images/filteradd.png"]
         FMain.tlbUpdate_Click()
         Me.Close()
-    Endif
-
-End
-
-Public Sub Form_Open()
-
-    Dim objWindow As FSessions
-
-    Me.Center()
-    If FMain.wksServers.Windows.Count > 0 Then
-        objWindow = FMain.wksServers.ActiveWindow
-        Select Case objWindow.objServer.MatchMode
-            Case MColumn.IFName
-                cmbColumn.Index = 1
-            Case MColumn.UserName
-                cmbColumn.Index = 2
-            Case MColumn.CallingSID
-                cmbColumn.Index = 3
-            Case MColumn.IP
-                cmbColumn.Index = 4
-        End Select
-        If objWindow.objServer.MatchValue <> "active" Then
-            txbValue.Text = objWindow.objServer.MatchValue
-        Endif
     Endif
 
 End

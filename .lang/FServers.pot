@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,59 +70,51 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: FServers.class:12
+#: FServers.class:27
 msgid "P"
 msgstr ""
 
-#: FServers.class:14
+#: FServers.class:29
 msgid "S"
 msgstr ""
 
-#: FServers.class:16
+#: FServers.class:31
 msgid "Name"
 msgstr ""
 
-#: FServers.class:18
+#: FServers.class:33
 msgid "Address"
 msgstr ""
 
-#: FServers.class:20
+#: FServers.class:35
 msgid "Port"
 msgstr ""
 
-#: FServers.class:80
+#: FServers.class:93
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:91
+#: FServers.class:104
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:103
-msgid "Delete server"
-msgstr ""
-
-#: FServers.class:104
+#: FServers.class:116
 msgid "Are you sure to delete server?"
 msgstr ""
 
-#: FServers.class:104
+#: FServers.class:116
 msgid "Yes"
 msgstr ""
 
-#: FServers.class:104
+#: FServers.class:116
 msgid "No"
 msgstr ""
 
-#: FServers.class:120
-msgid "Clear servers list"
-msgstr ""
-
-#: FServers.class:121
+#: FServers.class:132
 msgid "Are you sure to clear list of servers?"
 msgstr ""
 
-#: FServers.class:216
+#: FServers.class:160
 msgid "Stop"
 msgstr ""
 

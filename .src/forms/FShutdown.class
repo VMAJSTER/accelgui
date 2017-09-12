@@ -3,6 +3,12 @@
 Private intX As Integer
 Private intY As Integer
 
+Public Sub Form_Open()
+
+    Me.Center()
+
+End
+
 Public Sub btnExit_Click()
 
     Me.Close()
@@ -58,7 +64,6 @@ Public Sub btnApply_Click()
 
     Dim objWindow As FSessions
 
-    Message.Title = ("Shutdown daemon")
     If Message.Question(("Are you sure to shutdown the daemon?"), ("Yes"), ("No")) = 1 Then
         objWindow = FMain.wksServers.ActiveWindow
         If rdbDefault.Value Then objWindow.objServer.ShutMode = MShutMode.Default
@@ -70,11 +75,5 @@ Public Sub btnApply_Click()
         objWindow.objServer.Shutdown()
         Me.Close()
     Endif
-
-End
-
-Public Sub Form_Open()
-
-    Me.Center()
 
 End

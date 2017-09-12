@@ -3,91 +3,91 @@ msgid ""
 msgstr ""
 "#-#-#-#-#  #project.pot (accelgui 3.8.4)  #-#-#-#-#\n"
 "Project-Id-Version: accelgui 3.8.4\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CNas.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  CSession.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FAuth.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FFilter.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FHelp.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FServers.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSessions.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSettings.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FShutdown.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  FSrvAction.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MColumn.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MMain.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "#-#-#-#-#  MShutMode.pot ($(PACKAGE) $(VERSION))  #-#-#-#-#\n"
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -137,11 +137,7 @@ msgstr ""
 msgid "guest"
 msgstr ""
 
-#: FAuth.class:52
-msgid "Authorization error"
-msgstr ""
-
-#: FAuth.class:53
+#: FAuth.class:16
 msgid "Password you entered is incorrect"
 msgstr ""
 
@@ -181,11 +177,7 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
-#: FFilter.class:86
-msgid "Error"
-msgstr ""
-
-#: FFilter.class:87
+#: FFilter.class:110
 msgid "Value is not entered"
 msgstr ""
 
@@ -241,23 +233,19 @@ msgstr ""
 msgid "Shutdown daemon"
 msgstr ""
 
-#: FMain.class:113
-msgid "Config reload"
-msgstr ""
-
-#: FMain.class:114
+#: FMain.class:111
 msgid "Are you sure to reload config file?"
 msgstr ""
 
-#: FMain.class:114 FServers.class:104 FShutdown.class:62 MMain.module:27
+#: FMain.class:111 FServers.class:116 FShutdown.class:67 MMain.module:26
 msgid "Yes"
 msgstr ""
 
-#: FMain.class:114 FServers.class:104 FShutdown.class:62 MMain.module:27
+#: FMain.class:111 FServers.class:116 FShutdown.class:67 MMain.module:26
 msgid "No"
 msgstr ""
 
-#: FMain.class:173
+#: FMain.class:171
 msgid "Are you sure to kill session?"
 msgstr ""
 
@@ -317,55 +305,47 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: FServers.class:12
+#: FServers.class:27
 msgid "P"
 msgstr ""
 
-#: FServers.class:14
+#: FServers.class:29
 msgid "S"
 msgstr ""
 
-#: FServers.class:16
+#: FServers.class:31
 msgid "Name"
 msgstr ""
 
-#: FServers.class:18
+#: FServers.class:33
 msgid "Address"
 msgstr ""
 
-#: FServers.class:20
+#: FServers.class:35
 msgid "Port"
 msgstr ""
 
-#: FServers.class:80
+#: FServers.class:93
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:91
+#: FServers.class:104
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:103
-msgid "Delete server"
-msgstr ""
-
-#: FServers.class:104
+#: FServers.class:116
 msgid "Are you sure to delete server?"
 msgstr ""
 
-#: FServers.class:120
-msgid "Clear servers list"
-msgstr ""
-
-#: FServers.class:121
+#: FServers.class:132
 msgid "Are you sure to clear list of servers?"
 msgstr ""
 
-#: FServers.class:216
+#: FServers.class:160
 msgid "Stop"
 msgstr ""
 
-#: FSessions.form:16
+#: FSessions.form:15
 msgid " Primary server"
 msgstr ""
 
@@ -441,7 +421,7 @@ msgstr ""
 msgid "Shutdown cancel"
 msgstr ""
 
-#: FShutdown.class:62
+#: FShutdown.class:67
 msgid "Are you sure to shutdown the daemon?"
 msgstr ""
 
@@ -473,26 +453,18 @@ msgstr ""
 msgid "Current session"
 msgstr ""
 
-#: FSrvAction.class:35
-msgid "Attention"
-msgstr ""
-
-#: FSrvAction.class:36
+#: FSrvAction.class:44
 msgid "Fill in text fields"
 msgstr ""
 
-#: FSrvAction.class:47
+#: FSrvAction.class:54
 msgid "Name or address already exists"
 msgstr ""
 
 #: MMain.module:26
-msgid "Import config"
-msgstr ""
-
-#: MMain.module:27
 msgid "Config file does not exist."
 msgstr ""
 
-#: MMain.module:27
+#: MMain.module:26
 msgid "Want to use backup?"
 msgstr ""

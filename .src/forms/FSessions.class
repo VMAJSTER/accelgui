@@ -1,9 +1,9 @@
 ' Gambas class file
 
 Public objServer As CNas
-
 Private intX As Integer
 Private intY As Integer
+' Column number to sort by
 Private bytColSort As Byte = 1
 
 Private Sub ShowRowNum(intCur As Integer)
@@ -170,23 +170,12 @@ Public Sub tmrState_Timer()
 
     If objServer.Connected Then
         Me.Icon = Picture["./images/active.png"]
-        If tmrServer.Enabled Then
-            tmrServer.Stop()
-        Endif
+        ShowRowNum(grvSessions.Row + 1)
     Else
         Me.Icon = Picture["./images/passive.png"]
         grvSessions.Clear()
         grvSessions.Rows.Count = 0
-        If Not tmrServer.Enabled Then
-            tmrServer.Start()
-        Endif
-    Endif
-
-End
-
-Public Sub tmrServer_Timer()
-
-    If Not objServer.Connected And If Not objServer.Connecting Then
+        ShowRowNum(0)
         objServer.Connect()
     Endif
 

@@ -23,7 +23,6 @@ Public Sub Main()
     If Not Exist(MMain.GLOBAL_CONFIG) Then
         If Exist(MMain.GLOBAL_CONFIG_BACKUP) Then
             If User.Id = 0 Then
-                Message.Title = ("Import config")
                 If Message.Question(("Config file does not exist.") & gb.CrLf & ("Want to use backup?"), ("Yes"), ("No")) = 1 Then
                     Copy MMain.GLOBAL_CONFIG_BACKUP To MMain.GLOBAL_CONFIG
                 Endif
@@ -70,8 +69,10 @@ End
 
 Public Sub ActivateRow(Grid As GridView, Row As Integer)
 
-    Grid.Rows[Row].Selected = True
-    Grid.Current.EnsureVisible()
+    If Grid.Rows.Count > 0 Then
+        Grid.Rows[Row].Selected = True
+        Grid.Current.EnsureVisible()
+    Endif
 
 End
 

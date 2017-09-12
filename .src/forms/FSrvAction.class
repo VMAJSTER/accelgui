@@ -1,11 +1,20 @@
 ' Gambas class file
 
 Private Const DFL_ADDRESS As String = "127.0.0.1"
-
+' Dialogbox is in edit mode
 Public bolEdit As Boolean = False
 
 Private intX As Integer
 Private intY As Integer
+
+Private Function FieldsAreFilled() As Boolean
+
+    If Trim(txbName.Text) = Null Then Return False
+    If Trim(vlbAddress.Text) = Null Then Return False
+    If Trim(vlbPort.Text) = Null Then Return False
+    Return True
+
+End
 
 Public Sub Form_Open()
 
@@ -32,7 +41,6 @@ Public Sub btnApply_Click()
     Dim objWindow As Window
 
     If Not FieldsAreFilled() Then
-        Message.Title = ("Attention")
         Message.Warning(("Fill in text fields"))
         Return
     Endif
@@ -43,7 +51,6 @@ Public Sub btnApply_Click()
         intSkip = -1
     Endif
     If Not MMain.NoDuplicates(txbName.Text, vlbAddress.Value, intSkip) Then
-        Message.Title = ("Attention")
         Message.Warning(("Name or address already exists"))
         Return
     Endif
@@ -75,15 +82,6 @@ End
 Public Sub btnCancel_Click()
 
     Me.Close()
-
-End
-
-Private Function FieldsAreFilled() As Boolean
-
-    If Trim(txbName.Text) = Null Then Return False
-    If Trim(vlbAddress.Text) = Null Then Return False
-    If Trim(vlbPort.Text) = Null Then Return False
-    Return True
 
 End
 

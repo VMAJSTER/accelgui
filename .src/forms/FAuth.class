@@ -3,6 +3,32 @@
 Private intX As Integer
 Private intY As Integer
 
+Private Sub PassOk()
+
+    MMain.strCurrentUser = cmbUsername.Text
+    Me.Close()
+    FMain.Show()
+
+End
+
+Private Sub PassError()
+
+    Message.Error(("Password you entered is incorrect"))
+    txbPassword.Clear()
+    txbPassword.SetFocus()
+
+End
+
+Public Sub Form_Open()
+
+    Dim bytDefault As Byte
+
+    Me.Center()
+    bytDefault = CByte(MMain.objSettings["Auth/default", "0"])
+    cmbUsername.Index = bytDefault
+
+End
+
 Public Sub btnExit_Click()
 
     Me.Close()
@@ -35,24 +61,6 @@ Public Sub btnEnter_Click()
             PassError()
         Endif
     Endif
-
-End
-
-Private Sub PassOk()
-
-    MMain.strCurrentUser = cmbUsername.Text
-    Me.Close()
-    FMain.Show()
-
-End
-
-
-Private Sub PassError()
-
-    Message.Title = ("Authorization error")
-    Message.Error(("Password you entered is incorrect"))
-    txbPassword.Clear()
-    txbPassword.SetFocus()
 
 End
 
@@ -92,15 +100,5 @@ End
 Public Sub lblTitle_MouseMove()
 
     pnlTitle_MouseMove()
-
-End
-
-Public Sub Form_Open()
-
-    Dim bytDefault As Byte
-
-    Me.Center()
-    bytDefault = CByte(MMain.objSettings["Auth/default", "0"])
-    cmbUsername.Index = bytDefault
 
 End

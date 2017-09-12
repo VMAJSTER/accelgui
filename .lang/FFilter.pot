@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-10 10:20 UTC\n"
+"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,11 +54,7 @@ msgstr ""
 msgid "Exit"
 msgstr ""
 
-#: FFilter.class:86
-msgid "Error"
-msgstr ""
-
-#: FFilter.class:87
+#: FFilter.class:110
 msgid "Value is not entered"
 msgstr ""
 

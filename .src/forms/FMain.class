@@ -35,18 +35,6 @@ Public Sub Form_Resize()
 
 End
 
-Public Sub tlbServers_Click()
-
-    FServers.ShowModal()
-
-End
-
-Public Sub pctClose_MouseDown()
-
-    FMain.Close()
-
-End
-
 Public Sub Form_Open()
 
     Dim i As Integer
@@ -68,9 +56,7 @@ Public Sub Form_Open()
     Next
     Select Case MMain.strCurrentUser
         Case "admin"
-            If User.Id > 0 Then
-                tlbSettings.Enabled = False
-            Endif
+            If User.Id > 0 Then tlbSettings.Enabled = False
         Case "user"
             tlbReload.Enabled = False
             tlbShutdown.Enabled = False
@@ -81,6 +67,24 @@ Public Sub Form_Open()
             tlbSettings.Enabled = False
             tlbKill.Enabled = False
     End Select
+
+End
+
+Public Sub pctClose_MouseDown()
+
+    FMain.Close()
+
+End
+
+Public Sub tlbServers_Click()
+
+    FServers.ShowModal()
+
+End
+
+Public Sub tlbSettings_Click()
+
+    FSettings.ShowModal()
 
 End
 
@@ -97,12 +101,6 @@ Public Sub tlbUpdate_Click()
 
 End
 
-Public Sub tlbSettings_Click()
-
-    FSettings.ShowModal()
-
-End
-
 Public Sub tlbReload_Click()
 
     Dim objWindow As FSessions
@@ -110,7 +108,6 @@ Public Sub tlbReload_Click()
     If wksServers.Windows.Count > 0 Then
         objWindow = wksServers.ActiveWindow
         If objWindow.objServer.Connected Then
-            Message.Title = ("Config reload")
             If Message.Question(("Are you sure to reload config file?"), ("Yes"), ("No")) = 1 Then
                 objWindow.objServer.Reload()
             Endif
@@ -149,12 +146,13 @@ Public Sub wksServers_Activate()
 
     Dim objWindow As FSessions
 
-    If wksServers.Windows.Count = 0 Then Return
-    objWindow = wksServers.ActiveWindow
-    If objWindow.objServer.MatchMode = MColumn.State Then
-        tlbFilter.Picture = Picture["images/filteradd.png"]
-    Else
-        tlbFilter.Picture = Picture["images/filterdel.png"]
+    If wksServers.Windows.Count > 0 Then
+        objWindow = wksServers.ActiveWindow
+        If objWindow.objServer.MatchMode = MColumn.State Then
+            tlbFilter.Picture = Picture["images/filteradd.png"]
+        Else
+            tlbFilter.Picture = Picture["images/filterdel.png"]
+        Endif
     Endif
 
 End
@@ -165,13 +163,15 @@ Public Sub tlbKill_Click()
     Dim intRow As Integer
     Dim strName As String
 
-    If wksServers.Windows.Count = 0 Then Return
-    objWindow = wksServers.ActiveWindow
-    intRow = objWindow.grvSessions.Row
-    If intRow < 0 Then Return
-    strName = objWindow.grvSessions[intRow, 1].Text
-    If Message.Question(("Are you sure to kill session?"), ("Yes"), ("No")) = 1 Then
-        objWindow.objServer.KillSession(strName)
+    If wksServers.Windows.Count > 0 Then
+        objWindow = wksServers.ActiveWindow
+        intRow = objWindow.grvSessions.Row
+        If intRow >= 0 Then
+            strName = objWindow.grvSessions[intRow, 1].Text
+            If Message.Question(("Are you sure to kill session?"), ("Yes"), ("No")) = 1 Then
+                objWindow.objServer.KillSession(strName)
+            Endif
+        Endif
     Endif
 
 End
