@@ -1,15 +1,14 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,544,434)
+  Move(0,0,546,392)
   #Scaled = False
-  Text = ("Servers")
+  Text = ("Servers manager")
   Resizable = False
-  Border = False
   Utility = True
   SkipTaskbar = True
   { grvServers GridView
-    Move(7,91,530,336)
+    Move(8,48,530,336)
     Font = Font["10"]
     Mouse = Mouse.Pointing
     Mode = Select.Single
@@ -18,7 +17,7 @@
     Resizable = False
   }
   { pnlToolBar Panel
-    Move(7,50,530,32)
+    Move(8,7,530,32)
     { tlbAdd ToolButton
       Move(0,0,32,32)
       Enabled = False
@@ -124,26 +123,6 @@
     }
     { Separator4 Separator
       Move(184,0,21,32)
-    }
-  }
-  { pnlTitle Panel
-    Move(7,7,530,32)
-    Background = &H3F81B8&
-    Tracking = True
-    { lblTitle Label
-      Move(8,4,480,24)
-      Font = Font["Bold,12"]
-      Foreground = Color.White
-      Tracking = True
-      Text = ("Servers manager")
-    }
-    { pctClose PictureBox
-      Move(496,0,32,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Close")
-      Picture = Picture["images/exit.png"]
-      Alignment = Align.Center
     }
   }
 }

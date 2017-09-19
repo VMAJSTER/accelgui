@@ -5,52 +5,44 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
+"POT-Creation-Date: 2017-09-19 13:47 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FSrvAction.form:30
+#: FSrvAction.form:26
 msgid "Name: "
 msgstr ""
 
-#: FSrvAction.form:36
+#: FSrvAction.form:32
 msgid "Address: "
 msgstr ""
 
-#: FSrvAction.form:42
+#: FSrvAction.form:38
 msgid "Port: "
 msgstr ""
 
-#: FSrvAction.form:48
+#: FSrvAction.form:44
 msgid "accel-ppp"
 msgstr ""
 
-#: FSrvAction.form:58
+#: FSrvAction.form:54
 msgid "2001"
 msgstr ""
 
-#: FSrvAction.form:66
+#: FSrvAction.form:62
 msgid "Apply"
 msgstr ""
 
-#: FSrvAction.form:75
+#: FSrvAction.form:71
 msgid "Cancel"
 msgstr ""
 
-#: FSrvAction.form:90
-msgid "Current session"
-msgstr ""
-
-#: FSrvAction.form:97
-msgid "Close"
-msgstr ""
-
-#: FSrvAction.class:44
+#: FSrvAction.class:42
 msgid "Fill in text fields"
 msgstr ""
 
-#: FSrvAction.class:54
+#: FSrvAction.class:52
 msgid "Name or address already exists"
 msgstr ""
 

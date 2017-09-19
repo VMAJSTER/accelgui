@@ -5,68 +5,64 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
+"POT-Creation-Date: 2017-09-19 13:47 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMain.form:26
+#: FMain.form:23
 msgid "Accel GUI"
 msgstr ""
 
-#: FMain.form:43
+#: FMain.form:39
 msgid "Filter sessions"
 msgstr ""
 
-#: FMain.form:51
+#: FMain.form:47
 msgid "Terminate session"
 msgstr ""
 
-#: FMain.form:59
+#: FMain.form:55
 msgid "Update list of sessions"
 msgstr ""
 
-#: FMain.form:67
+#: FMain.form:63
 msgid "Settings"
 msgstr ""
 
-#: FMain.form:75
+#: FMain.form:71
 msgid "Help"
 msgstr ""
 
-#: FMain.form:103
+#: FMain.form:99
 msgid "Servers manager"
 msgstr ""
 
-#: FMain.form:111
+#: FMain.form:107
 msgid "Reload config file"
 msgstr ""
 
-#: FMain.form:123
+#: FMain.form:119
 msgid "Shutdown daemon"
 msgstr ""
 
-#: FMain.form:143
-msgid "Close"
-msgstr ""
-
-#: FMain.class:111
+#: FMain.class:89
 msgid "Are you sure to reload config file?"
 msgstr ""
 
-#: FMain.class:111
+#: FMain.class:89
 msgid "Yes"
 msgstr ""
 
-#: FMain.class:111
+#: FMain.class:89
 msgid "No"
 msgstr ""
 
-#: FMain.class:171
+#: FMain.class:149
 msgid "Are you sure to kill session?"
 msgstr ""
 
-#: FMain.class:185
+#: FMain.class:163
 msgid "Help file was not found"
 msgstr ""
 

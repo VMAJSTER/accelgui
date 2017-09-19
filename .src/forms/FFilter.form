@@ -1,34 +1,14 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,464,160)
+  Move(0,0,464,120)
   #Scaled = False
+  Text = ("Filter sessions")
   Resizable = False
-  Border = False
   Utility = True
   SkipTaskbar = True
-  { pnlTitle Panel
-    Move(8,8,448,32)
-    Background = &H3F81B8&
-    Tracking = True
-    { lblTitle Label
-      Move(8,4,408,24)
-      Font = Font["Bold,12"]
-      Foreground = Color.White
-      Tracking = True
-      Text = ("Filter sessions")
-    }
-    { pctClose PictureBox
-      Move(416,0,32,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Close")
-      Picture = Picture["images/exit.png"]
-      Alignment = Align.Center
-    }
-  }
   { Panel1 Panel
-    Move(8,48,448,104)
+    Move(8,8,448,104)
     Border = Border.Plain
     { Label1 Label
       Move(16,20,96,24)

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
+"POT-Creation-Date: 2017-09-19 13:47 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,43 +34,43 @@ msgstr ""
 msgid "0 / 0"
 msgstr ""
 
-#: FSessions.class:21
+#: FSessions.class:19
 msgid "Interface"
 msgstr ""
 
-#: FSessions.class:23
+#: FSessions.class:21
 msgid "Username"
 msgstr ""
 
-#: FSessions.class:24
+#: FSessions.class:22
 msgid "CallingSID"
 msgstr ""
 
-#: FSessions.class:26
+#: FSessions.class:24
 msgid "IP"
 msgstr ""
 
-#: FSessions.class:28
+#: FSessions.class:26
 msgid "RateIn"
 msgstr ""
 
-#: FSessions.class:30
+#: FSessions.class:28
 msgid "RateOut"
 msgstr ""
 
-#: FSessions.class:32
+#: FSessions.class:30
 msgid "Type"
 msgstr ""
 
-#: FSessions.class:34
+#: FSessions.class:32
 msgid "Compress"
 msgstr ""
 
-#: FSessions.class:36
+#: FSessions.class:34
 msgid "State"
 msgstr ""
 
-#: FSessions.class:38
+#: FSessions.class:36
 msgid "Uptime"
 msgstr ""
 

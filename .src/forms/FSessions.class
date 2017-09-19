@@ -1,8 +1,6 @@
 ' Gambas class file
 
 Public objServer As CNas
-Private intX As Integer
-Private intY As Integer
 ' Column number to sort by
 Private bytColSort As Byte = 1
 
@@ -55,6 +53,12 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
 
 End
 
+Public Sub Form_Open()
+
+    Message.Title = "Accel GUI"
+
+End
+
 Public Sub Form_Resize()
 
     With grvSessions
@@ -101,7 +105,6 @@ Public Sub objServer_Killed()
     objServer.GetSessions()
 
 End
-
 
 Public Sub grvSessions_MouseMove()
 

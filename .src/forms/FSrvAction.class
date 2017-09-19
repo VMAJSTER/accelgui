@@ -4,9 +4,6 @@ Private Const DFL_ADDRESS As String = "127.0.0.1"
 ' Dialogbox is in edit mode
 Public bolEdit As Boolean = False
 
-Private intX As Integer
-Private intY As Integer
-
 Private Function FieldsAreFilled() As Boolean
 
     If Trim(txbName.Text) = Null Then Return False
@@ -21,6 +18,7 @@ Public Sub Form_Open()
     Dim intRow As Integer
 
     Me.Center()
+    Message.Title = "Accel GUI"
     vlbAddress.Value = DFL_ADDRESS
     If bolEdit Then
         With FServers
@@ -85,55 +83,10 @@ Public Sub btnCancel_Click()
 
 End
 
-Public Sub pctClose_MouseDown()
-
-    btnCancel_Click()
-
-End
-
 Public Sub vlbPort_Change()
 
     If vlbPort.Value < 1 Or If vlbPort.Value > 65535 Then
         vlbPort.Value = 2001
     Endif
-
-End
-
-Public Sub pnlTitle_MouseDown()
-
-    intX = Mouse.X + pnlTitle.Left
-    intY = Mouse.Y + pnlTitle.Top
-
-End
-
-Public Sub pnlTitle_MouseMove()
-
-    Dim intLeft As Integer
-    Dim intTop As Integer
-
-    If Mouse.Left Then
-        intLeft = Mouse.ScreenX - intX
-        intTop = Mouse.ScreenY - intY
-        If intLeft >= 0 And intTop >= 0 Then
-            If intLeft + Me.W <= Screen.W Then
-                If intTop + Me.H <= Screen.H Then
-                    Me.Left = intLeft
-                    Me.Top = intTop
-                Endif
-            Endif
-        Endif
-    Endif
-
-End
-
-Public Sub lblTitle_MouseDown()
-
-    pnlTitle_MouseDown()
-
-End
-
-Public Sub lblTitle_MouseMove()
-
-    pnlTitle_MouseMove()
 
 End

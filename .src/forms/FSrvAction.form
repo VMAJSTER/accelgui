@@ -1,14 +1,13 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,320,240)
+  Move(0,0,320,200)
   #Scaled = False
   Resizable = False
-  Border = False
   Utility = True
   SkipTaskbar = True
   { Panel1 Panel
-    Move(8,48,304,144)
+    Move(8,8,304,144)
     Border = Border.Plain
     { Label1 Label
       Move(14,20,63,21)
@@ -39,7 +38,7 @@
     }
   }
   { btnApply Button
-    Move(8,200,128,32)
+    Move(8,160,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Apply")
@@ -47,31 +46,11 @@
     Default = True
   }
   { btnCancel Button
-    Move(184,200,128,32)
+    Move(184,160,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Cancel")
     Picture = Picture["images/close.png"]
     Cancel = True
-  }
-  { pnlTitle Panel
-    Move(7,7,306,32)
-    Background = &H3F81B8&
-    Tracking = True
-    { lblTitle Label
-      Move(8,4,256,24)
-      Font = Font["Bold,12"]
-      Foreground = Color.White
-      Tracking = True
-      Text = ("Current session")
-    }
-    { pctClose PictureBox
-      Move(272,0,32,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Close")
-      Picture = Picture["images/exit.png"]
-      Alignment = Align.Center
-    }
   }
 }

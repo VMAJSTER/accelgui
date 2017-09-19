@@ -5,116 +5,108 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
+"POT-Creation-Date: 2017-09-19 13:47 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FServers.form:28
-msgid "Servers"
-msgstr ""
-
-#: FServers.form:52
-msgid "Add"
-msgstr ""
-
-#: FServers.form:61
-msgid "Edit"
-msgstr ""
-
-#: FServers.form:70
-msgid "Delete"
-msgstr ""
-
-#: FServers.form:79
-msgid "Clear"
-msgstr ""
-
-#: FServers.form:88
-msgid "First"
-msgstr ""
-
-#: FServers.form:97
-msgid "Previous"
-msgstr ""
-
-#: FServers.form:106
-msgid "Next"
-msgstr ""
-
-#: FServers.form:115
-msgid "Last"
-msgstr ""
-
-#: FServers.form:124
-msgid "Autostart"
-msgstr ""
-
-#: FServers.form:133
-msgid "Save"
-msgstr ""
-
-#: FServers.form:152
-msgid "0 / 0"
-msgstr ""
-
-#: FServers.form:161
-msgid "Start"
-msgstr ""
-
-#: FServers.form:180
+#: FServers.form:25
 msgid "Servers manager"
 msgstr ""
 
-#: FServers.form:187
-msgid "Close"
+#: FServers.form:48
+msgid "Add"
 msgstr ""
 
-#: FServers.class:27
+#: FServers.form:57
+msgid "Edit"
+msgstr ""
+
+#: FServers.form:66
+msgid "Delete"
+msgstr ""
+
+#: FServers.form:75
+msgid "Clear"
+msgstr ""
+
+#: FServers.form:84
+msgid "First"
+msgstr ""
+
+#: FServers.form:93
+msgid "Previous"
+msgstr ""
+
+#: FServers.form:102
+msgid "Next"
+msgstr ""
+
+#: FServers.form:111
+msgid "Last"
+msgstr ""
+
+#: FServers.form:120
+msgid "Autostart"
+msgstr ""
+
+#: FServers.form:129
+msgid "Save"
+msgstr ""
+
+#: FServers.form:148
+msgid "0 / 0"
+msgstr ""
+
+#: FServers.form:157
+msgid "Start"
+msgstr ""
+
+#: FServers.class:24
 msgid "P"
 msgstr ""
 
-#: FServers.class:29
+#: FServers.class:26
 msgid "S"
 msgstr ""
 
-#: FServers.class:31
+#: FServers.class:28
 msgid "Name"
 msgstr ""
 
-#: FServers.class:33
+#: FServers.class:30
 msgid "Address"
 msgstr ""
 
-#: FServers.class:35
+#: FServers.class:32
 msgid "Port"
 msgstr ""
 
-#: FServers.class:93
+#: FServers.class:91
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:104
+#: FServers.class:102
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:116
+#: FServers.class:114
 msgid "Are you sure to delete server?"
 msgstr ""
 
-#: FServers.class:116
+#: FServers.class:114
 msgid "Yes"
 msgstr ""
 
-#: FServers.class:116
+#: FServers.class:114
 msgid "No"
 msgstr ""
 
-#: FServers.class:132
+#: FServers.class:130
 msgid "Are you sure to clear list of servers?"
 msgstr ""
 
-#: FServers.class:160
+#: FServers.class:158
 msgid "Stop"
 msgstr ""
 

@@ -1,35 +1,14 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,328,208)
+  Move(0,0,328,168)
   #Scaled = False
   Text = ("Authorization")
   Resizable = False
-  Border = False
   Utility = True
   SkipTaskbar = True
-  { pnlTitle Panel
-    Move(8,8,312,32)
-    Background = &H3F81B8&
-    Tracking = True
-    { lblTitle Label
-      Move(8,4,264,24)
-      Font = Font["Bold,12"]
-      Foreground = Color.White
-      Tracking = True
-      Text = ("Authorization")
-    }
-    { pctClose PictureBox
-      Move(280,0,32,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Close")
-      Picture = Picture["images/exit.png"]
-      Alignment = Align.Center
-    }
-  }
   { btnEnter Button
-    Move(8,168,128,32)
+    Move(8,128,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Enter")
@@ -37,7 +16,7 @@
     Default = True
   }
   { btnExit Button
-    Move(192,168,128,32)
+    Move(192,128,128,32)
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Exit")
@@ -45,7 +24,7 @@
     Cancel = True
   }
   { Panel1 Panel
-    Move(8,48,312,112)
+    Move(8,8,312,112)
     Border = Border.Plain
     { txbPassword TextBox
       Move(136,64,160,32)

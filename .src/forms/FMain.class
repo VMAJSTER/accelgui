@@ -2,35 +2,18 @@
 
 Public Sub Form_Resize()
 
-    With pnlTitle
-        .W = Me.ClientW - MMain.MARGIN * 2
-        .Left = MMain.MARGIN
-        .Top = MMain.MARGIN
-    End With
-
-    With lblTitle
-        .W = pnlTitle.W - pctClose.W - MMain.MARGIN * 2
-        .Left = MMain.MARGIN
-        .Top = MMain.MARGIN / 2
-    End With
-
-    With pctClose
-        .Left = pnlTitle.W - .W
-        .Top = 0
-    End With
-
     With pnlToolBar
         .W = Me.ClientW - MMain.MARGIN * 2
         .H = MMain.TLB_HEIGHT
         .Left = MMain.MARGIN
-        .Top = pnlTitle.H + MMain.MARGIN
+        .Top = 0
     End With
 
     With wksServers
         .W = Me.ClientW - MMain.MARGIN * 2
-        .H = Me.ClientH - pnlTitle.H - pnlToolBar.H - MMain.MARGIN * 2
+        .H = Me.ClientH - pnlToolBar.H - MMain.MARGIN
         .Left = MMain.MARGIN
-        .Top = pnlTitle.H + pnlToolBar.H + MMain.MARGIN
+        .Top = pnlToolBar.H
     End With
 
 End
@@ -44,6 +27,7 @@ Public Sub Form_Open()
     Dim arrPort As New String[]
     Dim objForm As FSessions
 
+    Message.Title = "Accel GUI"
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
     arrName = Split(MMain.objSettings["Servers/Name"], ";")
     arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
@@ -67,12 +51,6 @@ Public Sub Form_Open()
             tlbSettings.Enabled = False
             tlbKill.Enabled = False
     End Select
-
-End
-
-Public Sub pctClose_MouseDown()
-
-    FMain.Close()
 
 End
 
@@ -180,7 +158,7 @@ Public Sub tlbAbout_Click()
 
     If Exist(MMain.HELPFILE) Then
         FHelp.wwwHelp.Url = "file://" & Application.Path &/ MMain.HELPFILE
-        FHelp.Show()
+        FHelp.ShowModal()
     Else
         Message.Error(("Help file was not found"))
     Endif

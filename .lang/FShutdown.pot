@@ -5,52 +5,48 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2017-09-12 13:43 UTC\n"
+"POT-Creation-Date: 2017-09-19 13:47 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FShutdown.form:33
+#: FShutdown.form:15
 msgid "Shutdown daemon"
 msgstr ""
 
-#: FShutdown.form:40
-msgid "Close"
-msgstr ""
-
-#: FShutdown.form:50
+#: FShutdown.form:24
 msgid "Apply"
 msgstr ""
 
-#: FShutdown.form:59
+#: FShutdown.form:33
 msgid "Exit"
 msgstr ""
 
-#: FShutdown.form:71
+#: FShutdown.form:45
 msgid "Shutdown default"
 msgstr ""
 
-#: FShutdown.form:78
+#: FShutdown.form:52
 msgid "Shutdown soft"
 msgstr ""
 
-#: FShutdown.form:84
+#: FShutdown.form:58
 msgid "Shutdown hard"
 msgstr ""
 
-#: FShutdown.form:90
+#: FShutdown.form:64
 msgid "Shutdown cancel"
 msgstr ""
 
-#: FShutdown.class:67
+#: FShutdown.class:20
 msgid "Are you sure to shutdown the daemon?"
 msgstr ""
 
-#: FShutdown.class:67
+#: FShutdown.class:20
 msgid "Yes"
 msgstr ""
 
-#: FShutdown.class:67
+#: FShutdown.class:20
 msgid "No"
 msgstr ""
 

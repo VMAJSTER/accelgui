@@ -1,27 +1,26 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,928,560)
+  Move(0,0,928,536)
   #Scaled = False
   Text = ("Accel GUI")
   Icon = Picture["icons/16.png"]
   Resizable = False
-  Border = False
   Maximized = True
   { wksServers Workspace
-    Move(8,128,912,424)
+    Move(8,80,912,448)
   }
   { pnlToolBar Panel
-    Move(7,49,912,64)
+    Move(8,8,912,64)
     { tlbFilter ToolButton
-      Move(70,8,48,48)
+      Move(69,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Filter sessions")
       Picture = Picture["images/filteradd.png"]
     }
     { tlbKill ToolButton
-      Move(140,8,48,48)
+      Move(139,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Terminate session")
@@ -71,7 +70,7 @@
       Picture = Picture["images/servers.png"]
     }
     { tlbReload ToolButton
-      Move(279,8,48,48)
+      Move(278,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Reload config file")
@@ -86,24 +85,6 @@
       Mouse = Mouse.Pointing
       ToolTip = ("Shutdown daemon")
       Picture = Picture["images/shutdown.png"]
-    }
-  }
-  { pnlTitle Panel
-    Move(7,7,912,32)
-    Background = &H3F81B8&
-    { lblTitle Label
-      Move(8,4,833,24)
-      Font = Font["Bold,12"]
-      Foreground = Color.White
-      Text = ("Accel GUI")
-    }
-    { pctClose PictureBox
-      Move(880,0,32,32)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Close")
-      Picture = Picture["images/exit.png"]
-      Alignment = Align.Center
     }
   }
 }

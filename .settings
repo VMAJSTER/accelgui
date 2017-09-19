@@ -134,11 +134,9 @@ Geometry=[587,244,256,320]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=3
+Count=1
 File[1]=".src/forms/FMain.form"
-Active=3
-File[2]=".src/forms/FSessions.form"
-File[3]=".src/forms/FSessions.class:32.80"
+Active=1
 
 [Watches]
 Count=0

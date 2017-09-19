@@ -1,8 +1,5 @@
 ' Gambas class file
 
-Private intX As Integer
-Private intY As Integer
-
 Private Sub ShowRowNum(intCur As Integer)
 
     lblSrvCount.Text = CStr(intCur) & " / " & CStr(grvServers.Rows.Count)
@@ -48,6 +45,7 @@ Public Sub Form_Open()
     Dim arrPort As New String[]
 
     Me.Center()
+    Message.Title = "Accel GUI"
     ClearGrid()
     MMain.EnableControls(False)
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
@@ -90,7 +88,7 @@ Public Sub tlbAdd_Click()
 
     With FSrvAction
         .bolEdit = False
-        .lblTitle.Text = ("Add server")
+        .Text = ("Add server")
         .ShowModal()
     End With
 
@@ -101,7 +99,7 @@ Public Sub tlbEdit_Click()
     With FSrvAction
         If grvServers.Row > -1 Then
             .bolEdit = True
-            .lblTitle.Text = ("Edit server")
+            .Text = ("Edit server")
             .ShowModal()
         Endif
     End With
@@ -260,56 +258,5 @@ Public Sub grvServers_Select()
             tlbAction.Tooltip = ("Start")
         Endif
     Endif
-
-End
-
-Public Sub pctClose_MouseDown()
-
-    Me.Close()
-
-End
-
-Public Sub grvServers_DblClick()
-
-    tlbEdit_Click()
-
-End
-
-Public Sub pnlTitle_MouseDown()
-
-    intX = Mouse.X + pnlTitle.Left
-    intY = Mouse.Y + pnlTitle.Top
-
-End
-
-Public Sub pnlTitle_MouseMove()
-
-    Dim intLeft As Integer
-    Dim intTop As Integer
-
-    If Mouse.Left Then
-        intLeft = Mouse.ScreenX - intX
-        intTop = Mouse.ScreenY - intY
-        If intLeft >= 0 And intTop >= 0 Then
-            If intLeft + Me.W <= Screen.W Then
-                If intTop + Me.H <= Screen.H Then
-                    Me.Left = intLeft
-                    Me.Top = intTop
-                Endif
-            Endif
-        Endif
-    Endif
-
-End
-
-Public Sub lblTitle_MouseDown()
-
-    pnlTitle_MouseDown()
-
-End
-
-Public Sub lblTitle_MouseMove()
-
-    pnlTitle_MouseMove()
 
 End
