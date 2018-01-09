@@ -9,6 +9,7 @@
   SkipTaskbar = True
   { btnApply Button
     Move(8,184,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Apply")
@@ -17,6 +18,7 @@
   }
   { btnExit Button
     Move(192,184,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Exit")
@@ -28,22 +30,26 @@
     Border = Border.Plain
     { rdbDefault RadioButton
       Move(24,16,264,24)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Shutdown default")
       Value = True
     }
     { rdbSoft RadioButton
       Move(24,48,264,24)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Shutdown soft")
     }
     { rdbHard RadioButton
       Move(24,80,264,24)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Shutdown hard")
     }
     { rdbCancel RadioButton
       Move(24,128,264,24)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Shutdown cancel")
     }

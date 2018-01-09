@@ -9,6 +9,7 @@
   SkipTaskbar = True
   { btnExit Button
     Move(280,160,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Exit")
@@ -17,6 +18,7 @@
   }
   { btnSave Button
     Move(8,160,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Save")
@@ -27,33 +29,40 @@
     Border = Border.Plain
     { Label1 Label
       Move(16,20,64,24)
+      Font = Font["10"]
       Text = ("admin")
       Alignment = Align.Right
     }
     { Label2 Label
       Move(16,60,64,24)
+      Font = Font["10"]
       Text = ("user")
       Alignment = Align.Right
     }
     { Label3 Label
       Move(16,100,64,24)
+      Font = Font["10"]
       Text = ("guest")
       Alignment = Align.Right
     }
     { txbAdmin TextBox
       Move(88,16,136,32)
+      Font = Font["10"]
       Password = True
     }
     { txbUser TextBox
       Move(88,56,136,32)
+      Font = Font["10"]
       Password = True
     }
     { txbGuest TextBox
       Move(88,96,136,32)
+      Font = Font["10"]
       Password = True
     }
     { rdbAdmin RadioButton
       Move(232,20,152,24)
+      Font = Font["10"]
       Tag = "0"
       Mouse = Mouse.Pointing
       Text = ("default")
@@ -61,12 +70,14 @@
     }
     { rdbUser RadioButton
       Move(232,60,152,24)
+      Font = Font["10"]
       Tag = "1"
       Mouse = Mouse.Pointing
       Text = ("default")
     }
     { rdbGuest RadioButton
       Move(232,100,152,24)
+      Font = Font["10"]
       Tag = "2"
       Mouse = Mouse.Pointing
       Text = ("default")
@@ -74,6 +85,7 @@
   }
   { btnReset Button
     Move(144,160,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Reset")

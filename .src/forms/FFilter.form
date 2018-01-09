@@ -3,7 +3,7 @@
 { Form Form
   Move(0,0,464,120)
   #Scaled = False
-  Text = ("Filter sessions")
+  Text = ("Sessions filter")
   Resizable = False
   Utility = True
   SkipTaskbar = True
@@ -12,22 +12,26 @@
     Border = Border.Plain
     { Label1 Label
       Move(16,20,96,24)
+      Font = Font["10"]
       Text = ("Column:")
       Alignment = Align.Right
     }
     { Label3 Label
       Move(16,60,96,24)
+      Font = Font["10"]
       Text = ("Value:")
       Alignment = Align.Right
     }
     { cmbColumn ComboBox
       Move(120,16,168,32)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       ReadOnly = True
       List = [("Not chosen"), ("Interface"), ("Username"), ("Calling"), ("Ip Address")]
     }
     { btnApply Button
       Move(304,16,128,32)
+      Font = Font["10"]
       NoTabFocus = True
       Mouse = Mouse.Pointing
       Text = ("Apply")
@@ -36,6 +40,7 @@
     }
     { btnExit Button
       Move(304,56,128,32)
+      Font = Font["10"]
       NoTabFocus = True
       Mouse = Mouse.Pointing
       Text = ("Exit")
@@ -45,6 +50,7 @@
     { txbValue TextBox
       Move(120,56,168,32)
       Enabled = False
+      Font = Font["10"]
     }
   }
 }

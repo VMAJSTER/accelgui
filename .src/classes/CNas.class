@@ -52,6 +52,7 @@ Property MatchMode As String
 Property MatchValue As String
 Property Column As String
 
+
 ' ------
 ' Events
 ' ------
@@ -205,6 +206,7 @@ Private Sub Column_Write(Value As String)
 
 End
 
+
 ' -----------
 ' Constructor
 ' -----------
@@ -286,10 +288,12 @@ Public Sub KillSession(Username As String)
 
     Dim strLineToSend As String
 
-    Username = Trim(Username)
-    If Username <> "" Then
-        strLineToSend = CMD_KILL & " " & Username
-        SendData(strLineToSend)
+    If bolConnected Then
+        Username = Trim(Username)
+        If Username <> "" Then
+            strLineToSend = CMD_KILL & " " & Username
+            SendData(strLineToSend)
+        Endif
     Endif
 
 End

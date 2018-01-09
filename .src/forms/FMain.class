@@ -43,14 +43,23 @@ Public Sub Form_Open()
             If User.Id > 0 Then tlbSettings.Enabled = False
         Case "user"
             tlbReload.Enabled = False
+            tlbRestart.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
         Case "guest"
+            tlbTerminate.Enabled = False
+            tlbShaper.Enabled = False
             tlbReload.Enabled = False
+            tlbRestart.Enabled = False
             tlbShutdown.Enabled = False
             tlbSettings.Enabled = False
-            tlbKill.Enabled = False
     End Select
+
+End
+
+Public Sub Form_Close()
+
+    triMain.Delete()
 
 End
 
@@ -135,7 +144,7 @@ Public Sub wksServers_Activate()
 
 End
 
-Public Sub tlbKill_Click()
+Public Sub tlbTerminate_Click()
 
     Dim objWindow As FSessions
     Dim intRow As Integer
@@ -154,7 +163,7 @@ Public Sub tlbKill_Click()
 
 End
 
-Public Sub tlbAbout_Click()
+Public Sub tlbHelp_Click()
 
     If Exist(MMain.HELPFILE) Then
         FHelp.wwwHelp.Url = "file://" & Application.Path &/ MMain.HELPFILE
@@ -162,5 +171,37 @@ Public Sub tlbAbout_Click()
     Else
         Message.Error(("Help file was not found"))
     Endif
+
+End
+
+Public Sub mnuTrayExit_Click()
+
+    Me.Close()
+
+End
+
+Public Sub mnuTrayShow_Click()
+
+    Me.Show()
+    triMain.Hide()
+
+End
+
+Public Sub tlbTray_Click()
+
+    Me.Hide()
+    triMain.Show()
+
+End
+
+Public Sub triMain_Click()
+
+    mnuTrayShow_Click()
+
+End
+
+Public Sub tlbExit_Click()
+
+    Me.Close()
 
 End

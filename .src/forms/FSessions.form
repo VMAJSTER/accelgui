@@ -9,7 +9,7 @@
   Maximized = True
   SkipTaskbar = True
   { grvSessions GridView
-    Move(7,7,917,539)
+    Move(7,7,608,536)
     Font = Font["10"]
     Tracking = True
     Mouse = Mouse.Pointing
@@ -21,48 +21,63 @@
     Sorted = True
   }
   { tmrState #Timer
-    #Move(856,480)
+    #Move(24,480)
     Enabled = True
     Delay = 100
   }
+  { pnlStat Panel
+    Move(624,8,298,480)
+    Background = Color.White
+    Border = Border.Plain
+    { txaStat TextArea
+      Move(16,16,264,448)
+      Font = Font["10"]
+      ReadOnly = True
+      Border = False
+      ScrollBar = Scroll.None
+    }
+  }
   { pnlToolBar Panel
-    Move(287,462,350,62)
-    Visible = False
-    Background = Color.Background
+    Move(624,496,298,48)
+    Background = Color.White
+    Border = Border.Plain
     { tlbFirst ToolButton
-      Move(7,7,48,48)
+      Move(6,6,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("First session")
       Picture = Picture["images/big_first.png"]
     }
     { tlbPrevious ToolButton
-      Move(56,7,48,48)
+      Move(48,6,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Previous session")
       Picture = Picture["images/big_previous.png"]
     }
     { tlbNext ToolButton
-      Move(245,7,48,48)
+      Move(214,6,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Next session")
       Picture = Picture["images/big_next.png"]
     }
     { tlbLast ToolButton
-      Move(294,7,48,48)
+      Move(256,6,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Last session")
       Picture = Picture["images/big_last.png"]
     }
     { lblSessions Label
-      Move(112,7,126,49)
+      Move(90,6,118,36)
       Font = Font["Bold,12"]
       Foreground = &H3F81B8&
       Text = ("0 / 0")
       Alignment = Align.Center
     }
+  }
+  { tmrStat #Timer
+    #Move(80,480)
   }
 }

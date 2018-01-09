@@ -11,6 +11,7 @@
     Border = Border.Plain
     { wwwHelp WebView
       Move(7,42,707,378)
+      Font = Font["10"]
     }
     { pnlButtons Panel
       Move(7,6,154,28)
@@ -50,6 +51,7 @@
       Background = Color.White
       { txbUrl TextBox
         Move(7,0,497,28)
+        Font = Font["10"]
         Background = Color.White
         ReadOnly = True
         Border = False

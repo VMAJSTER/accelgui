@@ -62,16 +62,29 @@ End
 Public Sub Form_Resize()
 
     With grvSessions
-        .Width = Me.ClientW - MMain.MARGIN * 2
+        .Width = Me.ClientW - pnlStat.Width - MMain.MARGIN * 3
         .Height = Me.ClientH - MMain.MARGIN * 2
         .Left = MMain.MARGIN
         .Top = MMain.MARGIN
         .Columns[1].Width = grvSessions.ClientW - 855
     End With
 
+    With pnlStat
+        .Height = grvSessions.Height - pnlToolBar.Height - MMain.MARGIN
+        .Top = grvSessions.Top
+        .Left = grvSessions.Width + MMain.MARGIN * 2
+    End With
+
+    With txaStat
+        .Height = pnlStat.Height - MMain.MARGIN * 4
+        .Width = pnlStat.Width - MMain.MARGIN * 4
+        .Left = MMain.MARGIN * 2
+        .Top = MMain.MARGIN * 2
+    End With
+
     With pnlToolBar
-        .Left = (Me.ClientW - .W) / 2
-        .Top = Me.ClientH - .H - MMain.MARGIN * 2
+        .Left = pnlStat.Left
+        .Top = pnlStat.Height + MMain.MARGIN * 2
     End With
 
 End
@@ -103,25 +116,6 @@ Public Sub objServer_Killed()
     grvSessions.Clear()
     grvSessions.Rows.Count = 0
     objServer.GetSessions()
-
-End
-
-Public Sub grvSessions_MouseMove()
-
-    Dim X, Y As Integer
-    Dim bolCondition As Boolean
-
-    X = Mouse.X
-    Y = Mouse.Y
-    bolCondition = (X >= pnlToolBar.Left)
-    bolCondition = (Y >= pnlToolBar.Top) And bolCondition
-    bolCondition = (X <= pnlToolBar.Left + pnlToolBar.W) And bolCondition
-    bolCondition = (Y <= pnlToolBar.Top + pnlToolBar.H) And bolCondition
-    If bolCondition Then
-        pnlToolBar.Show()
-    Else
-        pnlToolBar.Hide()
-    Endif
 
 End
 

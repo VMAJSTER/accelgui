@@ -2,6 +2,7 @@
 
 ' Name of global config file
 Public Const GLOBAL_CONFIG As String = "/etc/accelgui.conf"
+' Name of global config backup file
 Public Const GLOBAL_CONFIG_BACKUP As String = "/etc/accelgui.conf.bak"
 ' Margin between controls
 Public Const MARGIN As Byte = 8
@@ -17,6 +18,10 @@ Public Const PREFIX As String = "UwcITSooYIcpI"
 Public objSettings As Settings
 ' Currently authorized user
 Public strCurrentUser As String
+
+' -----------------------------------------------------------------------
+'' The startup procedure
+' -----------------------------------------------------------------------
 
 Public Sub Main()
 
@@ -67,6 +72,9 @@ Public Function IsIpAddress(strIp As String) As Boolean
 
 End
 
+' -----------------------------------------------------------------------
+'' The procedure nakes the given row active and visible in the grid
+' -----------------------------------------------------------------------
 Public Sub ActivateRow(Grid As GridView, Row As Integer)
 
     If Grid.Rows.Count > 0 Then
@@ -76,6 +84,9 @@ Public Sub ActivateRow(Grid As GridView, Row As Integer)
 
 End
 
+' -----------------------------------------------------------------------
+'' The function checks whether there is a duplicate data in the grid
+' -----------------------------------------------------------------------
 Public Function NoDuplicates(strName As String, varAddress As Variant, Optional intSkip As Integer = -1) As Boolean
 
     Dim i As Integer
@@ -91,6 +102,9 @@ Public Function NoDuplicates(strName As String, varAddress As Variant, Optional 
 
 End
 
+' -----------------------------------------------------------------------
+'' The procedure enables/disables toolbar buttons
+' -----------------------------------------------------------------------
 Public Sub EnableControls(bolAction As Boolean)
 
     With FServers

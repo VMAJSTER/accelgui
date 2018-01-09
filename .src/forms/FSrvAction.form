@@ -11,34 +11,41 @@
     Border = Border.Plain
     { Label1 Label
       Move(14,20,63,21)
+      Font = Font["10"]
       Text = ("Name: ")
       Alignment = Align.Right
     }
     { Label2 Label
       Move(16,60,63,21)
+      Font = Font["10"]
       Text = ("Address: ")
       Alignment = Align.Right
     }
     { Label3 Label
       Move(16,102,63,21)
+      Font = Font["10"]
       Text = ("Port: ")
       Alignment = Align.Right
     }
     { txbName TextBox
       Move(88,16,200,32)
+      Font = Font["10"]
       Text = ("accel-ppp")
     }
     { vlbAddress ValueBox
       Move(88,56,152,32)
+      Font = Font["10"]
       Type = ValueBox.IPAddress
     }
     { vlbPort ValueBox
       Move(88,96,88,32)
+      Font = Font["10"]
       Text = ("2001")
     }
   }
   { btnApply Button
     Move(8,160,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Apply")
@@ -47,6 +54,7 @@
   }
   { btnCancel Button
     Move(184,160,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Cancel")

@@ -1,65 +1,74 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,928,536)
+  Move(0,0,928,504)
   #Scaled = False
   Text = ("Accel GUI")
   Icon = Picture["icons/16.png"]
   Maximized = True
+  { mnuTrayIcon Menu
+    Text = ("TrayIcon")
+    Visible = False
+    { mnuTrayShow Menu
+      Text = ("Show")
+      Picture = Picture["icon:/22/screen"]
+      Shortcut = "Ctrl+O"
+    }
+    { mnuTrayExit Menu
+      Text = ("Exit")
+      Picture = Picture["icon:/22/quit"]
+      Shortcut = "Ctrl+X"
+    }
+  }
   { wksServers Workspace
-    Move(8,80,912,448)
+    Move(8,80,912,416)
+    Font = Font["10"]
   }
   { pnlToolBar Panel
     Move(8,8,912,64)
     { tlbFilter ToolButton
-      Move(69,8,48,48)
+      Move(72,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
-      ToolTip = ("Filter sessions")
+      ToolTip = ("Sessions filter")
       Picture = Picture["images/filteradd.png"]
     }
-    { tlbKill ToolButton
-      Move(139,8,48,48)
+    { tlbTerminate ToolButton
+      Move(144,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Terminate session")
       Picture = Picture["images/onedel.png"]
     }
     { tlbUpdate ToolButton
-      Move(208,8,48,48)
+      Move(200,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Update list of sessions")
       Picture = Picture["images/update.png"]
     }
     { tlbSettings ToolButton
-      Move(405,8,48,48)
+      Move(512,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Settings")
       Picture = Picture["images/settings.png"]
     }
-    { tlbAbout ToolButton
-      Move(475,8,48,48)
+    { tlbHelp ToolButton
+      Move(584,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Help")
       Picture = Picture["images/help.png"]
     }
     { Separator1 Separator
-      Move(48,8,21,48)
+      Move(48,8,24,48)
     }
-    { Separator3 Separator
-      Move(118,8,21,48)
-    }
-    { Separator4 Separator
-      Move(187,8,21,48)
+    { Separator2 Separator
+      Move(120,8,24,48)
     }
     { Separator5 Separator
-      Move(257,8,21,48)
-    }
-    { Separator6 Separator
-      Move(454,8,21,48)
+      Move(560,8,24,48)
     }
     { tlbServers ToolButton
       Move(0,8,48,48)
@@ -69,21 +78,61 @@
       Picture = Picture["images/servers.png"]
     }
     { tlbReload ToolButton
-      Move(278,8,48,48)
+      Move(328,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Reload config file")
-      Picture = Picture["images/reboot.png"]
+      Picture = Picture["images/reload.png"]
     }
-    { Separator7 Separator
-      Move(384,8,21,48)
+    { Separator3 Separator
+      Move(304,8,24,48)
     }
     { tlbShutdown ToolButton
-      Move(335,8,48,48)
+      Move(440,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Shutdown daemon")
       Picture = Picture["images/shutdown.png"]
     }
+    { tlbTray ToolButton
+      Move(656,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Hide to tray")
+      Picture = Picture["images/tray.png"]
+    }
+    { tlbRestart ToolButton
+      Move(384,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Restart daemon")
+      Picture = Picture["images/restart.png"]
+    }
+    { Separator4 Separator
+      Move(488,8,24,48)
+    }
+    { tlbShaper ToolButton
+      Move(256,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Shaper change / restore")
+      Picture = Picture["images/shaper.png"]
+    }
+    { Separator6 Separator
+      Move(632,8,24,48)
+    }
+    { tlbExit ToolButton
+      Move(704,8,48,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Quit the programm")
+      Picture = Picture["images/exit.png"]
+    }
+  }
+  { triMain #TrayIcon
+    #Move(864,16)
+    Tooltip = ("Accel GUI")
+    Picture = Picture["icons/24.png"]
+    PopupMenu = "mnuTrayIcon"
   }
 }

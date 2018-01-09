@@ -9,6 +9,7 @@
   SkipTaskbar = True
   { btnEnter Button
     Move(8,128,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Enter")
@@ -17,6 +18,7 @@
   }
   { btnExit Button
     Move(192,128,128,32)
+    Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
     Text = ("Exit")
@@ -28,20 +30,24 @@
     Border = Border.Plain
     { txbPassword TextBox
       Move(136,64,160,32)
+      Font = Font["10"]
       Password = True
     }
     { Label1 Label
       Move(22,20,104,24)
+      Font = Font["10"]
       Text = ("Username:")
       Alignment = Align.Right
     }
     { Label2 Label
       Move(24,68,104,24)
+      Font = Font["10"]
       Text = ("Password:")
       Alignment = Align.Right
     }
     { cmbUsername ComboBox
       Move(136,16,96,32)
+      Font = Font["10"]
       Mouse = Mouse.Pointing
       ReadOnly = True
       List = [("admin"), ("user"), ("guest")]
