@@ -20,6 +20,52 @@
       Shortcut = "Ctrl+X"
     }
   }
+  { mnuShutdown Menu
+    Text = ("Shutdown")
+    Visible = False
+    { mnuShutdownDefault Menu
+      Text = ("Shutdown default")
+    }
+    { mnuShutdownSoft Menu
+      Text = ("Shutdown soft")
+    }
+    { mnuShutdownHard Menu
+      Text = ("Shutdown hard")
+    }
+    { Sep1 Menu
+    }
+    { mnuShutdownCancel Menu
+      Text = ("Shutdown cancel")
+    }
+  }
+  { mnuRestart Menu
+    Text = ("Restart")
+    Visible = False
+    { mnuRestartSoft Menu
+      Text = ("Restart soft")
+    }
+    { mnuRestartHard Menu
+      Text = ("Restart hard")
+    }
+  }
+  { mnuTerminate Menu
+    Text = ("Terminate")
+    Visible = False
+    { mnuTermCurrSoft Menu
+      Text = ("Soft terminate current session")
+    }
+    { mnuTermCurrHard Menu
+      Text = ("Hard terminate current session")
+    }
+    { Sep2 Menu
+    }
+    { mnuTermAllSoft Menu
+      Text = ("Soft terminate all sessions")
+    }
+    { mnuTermAllHard Menu
+      Text = ("Hard terminate all sessions")
+    }
+  }
   { wksServers Workspace
     Move(8,80,912,416)
     Font = Font["10"]
@@ -33,29 +79,22 @@
       ToolTip = ("Sessions filter")
       Picture = Picture["images/filteradd.png"]
     }
-    { tlbTerminate ToolButton
-      Move(144,8,48,48)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Terminate session")
-      Picture = Picture["images/onedel.png"]
-    }
     { tlbUpdate ToolButton
-      Move(200,8,48,48)
+      Move(216,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Update list of sessions")
       Picture = Picture["images/update.png"]
     }
     { tlbSettings ToolButton
-      Move(512,8,48,48)
+      Move(576,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Settings")
       Picture = Picture["images/settings.png"]
     }
     { tlbHelp ToolButton
-      Move(584,8,48,48)
+      Move(648,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Help")
@@ -68,7 +107,7 @@
       Move(120,8,24,48)
     }
     { Separator5 Separator
-      Move(560,8,24,48)
+      Move(624,8,24,48)
     }
     { tlbServers ToolButton
       Move(0,8,48,48)
@@ -78,55 +117,73 @@
       Picture = Picture["images/servers.png"]
     }
     { tlbReload ToolButton
-      Move(328,8,48,48)
+      Move(360,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Reload config file")
       Picture = Picture["images/reload.png"]
     }
     { Separator3 Separator
-      Move(304,8,24,48)
-    }
-    { tlbShutdown ToolButton
-      Move(440,8,48,48)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Shutdown daemon")
-      Picture = Picture["images/shutdown.png"]
+      Move(336,8,24,48)
     }
     { tlbTray ToolButton
-      Move(656,8,48,48)
+      Move(720,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Hide to tray")
       Picture = Picture["images/tray.png"]
     }
-    { tlbRestart ToolButton
-      Move(384,8,48,48)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Restart daemon")
-      Picture = Picture["images/restart.png"]
-    }
     { Separator4 Separator
-      Move(488,8,24,48)
-    }
-    { tlbShaper ToolButton
-      Move(256,8,48,48)
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      ToolTip = ("Shaper change / restore")
-      Picture = Picture["images/shaper.png"]
+      Move(552,8,24,48)
     }
     { Separator6 Separator
-      Move(632,8,24,48)
+      Move(696,8,24,48)
     }
     { tlbExit ToolButton
-      Move(704,8,48,48)
+      Move(776,8,48,48)
       NoTabFocus = True
       Mouse = Mouse.Pointing
       ToolTip = ("Quit the programm")
       Picture = Picture["images/exit.png"]
+    }
+    { mnbShutdown MenuButton
+      Move(488,8,64,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Shutdown daemon")
+      Picture = Picture["images/shutdown.png"]
+      Border = False
+      Menu = "mnuShutdown"
+      MenuOnly = True
+    }
+    { mnbRestart MenuButton
+      Move(416,8,64,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Restart daemon")
+      Picture = Picture["images/restart.png"]
+      Border = False
+      Menu = "mnuRestart"
+      MenuOnly = True
+    }
+    { mnbTerminate MenuButton
+      Move(144,8,64,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Terminate session")
+      Picture = Picture["images/terminate.png"]
+      Border = False
+      Menu = "mnuTerminate"
+      MenuOnly = True
+    }
+    { mnbShaper MenuButton
+      Move(272,8,64,48)
+      NoTabFocus = True
+      Mouse = Mouse.Pointing
+      ToolTip = ("Change / restore shaper")
+      Picture = Picture["images/shaper.png"]
+      Border = False
+      MenuOnly = True
     }
   }
   { triMain #TrayIcon

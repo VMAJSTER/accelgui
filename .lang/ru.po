@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-09 08:44 UTC\n"
+"PO-Revision-Date: 2018-01-15 13:02 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -27,9 +27,9 @@ msgstr "Авторизация"
 
 #: FAuth.form:24
 msgid "Enter"
-msgstr "Войти"
+msgstr "Вход"
 
-#: FShutdown.form:35
+#: FAuth.form:34 FFilter.form:67 FMain.form:61 FSettings.form:30
 msgid "Exit"
 msgstr "Выход"
 
@@ -57,7 +57,7 @@ msgstr "-"
 msgid "Value is not entered"
 msgstr "Значение не указано"
 
-#: FFilter.form:14 FMain.form:64
+#: FFilter.form:14 FMain.form:140
 msgid "Sessions filter"
 msgstr "Фильтр сессий"
 
@@ -89,7 +89,7 @@ msgstr "Не выбрано"
 msgid "Username"
 msgstr "Пользователь"
 
-#: FFilter.form:50 FShutdown.form:25 FSrvAction.form:69
+#: FFilter.form:57 FSrvAction.form:69
 msgid "Apply"
 msgstr "Применить"
 
@@ -113,81 +113,129 @@ msgstr "Вперед - Right"
 msgid "Backward - Left"
 msgstr "Назад - Left"
 
-#: FMain.class:95
+#: FMain.class:98
 msgid "Are you sure to reload config file?"
 msgstr "Уверены, что хотите перезагрузить файл конфигурации?"
 
-#: FMain.class:95 FServers.class:114 FShutdown.class:20 MMain.module:31
+#: FMain.class:98 FServers.class:114 MMain.module:31
 msgid "No"
 msgstr "Нет"
 
-#: FMain.class:95 FServers.class:114 FShutdown.class:20 MMain.module:31
+#: FMain.class:98 FServers.class:114 MMain.module:31
 msgid "Yes"
 msgstr "Да"
 
-#: FMain.class:155
-msgid "Are you sure to kill session?"
-msgstr "Уверены, что хотите сбросить сессию?"
-
-#: FMain.class:169
+#: FMain.class:140
 msgid "Help file was not found"
 msgstr "Файл справки не найден"
 
-#: FMain.form:31
+#: FMain.form:46
 msgid "Accel GUI"
 msgstr "-"
 
-#: FMain.form:36
+#: FMain.form:51
 msgid "TrayIcon"
 msgstr "-"
 
-#: FMain.form:40
+#: FMain.form:55
 msgid "Show"
 msgstr "Показать"
 
+#: FMain.form:68
+msgid "Shutdown"
+msgstr "-"
+
 #: FMain.form:72
-msgid "Terminate session"
-msgstr "Оборвать сессию"
+msgid "Shutdown default"
+msgstr "Завершение по-умолчанию"
+
+#: FMain.form:76
+msgid "Shutdown soft"
+msgstr "Легкое завершение"
 
 #: FMain.form:80
-msgid "Update list of sessions"
-msgstr "Обновить список сессий"
+msgid "Shutdown hard"
+msgstr "Жесткое завершение"
 
-#: FMain.form:88 FSettings.form:20
+#: FMain.form:87
+msgid "Shutdown cancel"
+msgstr "Отмена завершения"
+
+#: FMain.form:92
+msgid "Restart"
+msgstr "-"
+
+#: FMain.form:96
+msgid "Restart soft"
+msgstr "Легкий перезапуск"
+
+#: FMain.form:100
+msgid "Restart hard"
+msgstr "Жесткий перезапуск"
+
+#: FMain.form:105
+msgid "Terminate"
+msgstr "-"
+
+#: FMain.form:109
+msgid "Soft terminate current session"
+msgstr "Легкий обрыв текущей сессии"
+
+#: FMain.form:113
+msgid "Hard terminate current session"
+msgstr "Жесткий обрыв текущей сессии"
+
+#: FMain.form:120
+msgid "Soft terminate all sessions"
+msgstr "Легкий обрыв всех сессий"
+
+#: FMain.form:124
+msgid "Hard terminate all sessions"
+msgstr "Жесткий обрыв всех сессий"
+
+#: FMain.form:148
+msgid "Update list of sessions"
+msgstr "Обновление списка сессий"
+
+#: FMain.form:156 FSettings.form:20
 msgid "Settings"
 msgstr "Настройки"
 
-#: FMain.form:96
+#: FMain.form:164
 msgid "Help"
 msgstr "Справка"
 
-#: FMain.form:116 FServers.form:25
+#: FMain.form:184 FServers.form:25
 msgid "Servers manager"
 msgstr "Менеджер серверов"
 
-#: FMain.form:124
+#: FMain.form:192
 msgid "Reload config file"
-msgstr "Перезагрузить файл конфигурации"
+msgstr "Перезагрузка файла конфигурации"
 
-#: FMain.form:136 FShutdown.form:15
-msgid "Shutdown daemon"
-msgstr "Завершить службу"
-
-#: FMain.form:144
+#: FMain.form:204
 msgid "Hide to tray"
-msgstr "Свернуть в трей"
+msgstr "Сворачивание в трей"
 
-#: FMain.form:152
-msgid "Restart daemon"
-msgstr "Перезапустить службу"
-
-#: FMain.form:164
-msgid "Shaper change / restore"
-msgstr "Изменить / восстановить шейпер"
-
-#: FMain.form:176
+#: FMain.form:220
 msgid "Quit the programm"
-msgstr "Выйти из программы"
+msgstr "Выход из программы"
+
+#: FMain.form:228
+msgid "Shutdown daemon"
+msgstr "Завершение службы"
+
+#: FMain.form:239
+msgid "Restart daemon"
+msgstr "Перезапуск службы"
+
+#: FMain.form:250
+msgid "Terminate session"
+msgstr "Обрыв сессий"
+
+#: FMain.form:261
+msgid "Change / restore shaper"
+msgstr "Изменение / восстановление шейпера"
 
 #: FServers.class:24
 msgid "P"
@@ -267,7 +315,7 @@ msgstr "Автозапуск"
 
 #: FServers.form:129 FSettings.form:40
 msgid "Save"
-msgstr "Сохранить"
+msgstr "Сохранение"
 
 #: FServers.form:148 FSessions.form:97
 msgid "0 / 0"
@@ -337,26 +385,6 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
-#: FShutdown.class:20
-msgid "Are you sure to shutdown the daemon?"
-msgstr "Уверены, что хотите отключить службу?"
-
-#: FShutdown.form:48
-msgid "Shutdown default"
-msgstr "Отключение по-умолчанию"
-
-#: FShutdown.form:56
-msgid "Shutdown soft"
-msgstr "Легкое отключение"
-
-#: FShutdown.form:63
-msgid "Shutdown hard"
-msgstr "Жесткое отключение"
-
-#: FShutdown.form:70
-msgid "Shutdown cancel"
-msgstr "Отмена отключения"
-
 #: FSrvAction.class:42
 msgid "Fill in text fields"
 msgstr "Заполните текстовые поля"
@@ -396,4 +424,20 @@ msgstr "Файл конфигурации отсутствует."
 #: MMain.module:31
 msgid "Want to use backup?"
 msgstr "Хотите использовать резервную копию?"
+
+#: MMain.module:33
+msgid "Could not use backup config"
+msgstr "Не удалось использовать резервную копию конфигурации"
+
+#: MMain.module:131
+msgid "Are you sure to shutdown the daemon?"
+msgstr "Уверены, что хотите завершить службу?"
+
+#: MMain.module:157
+msgid "Are you sure to kill all sessions?"
+msgstr "Уверены, что хотите оборвать все сессии?"
+
+#: MMain.module:164
+msgid "Are you sure to kill current session?"
+msgstr "Уверены, что хотите оборвать текущую сессию?"
 

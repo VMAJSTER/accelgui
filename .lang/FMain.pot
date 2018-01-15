@@ -5,73 +5,125 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-09 08:49 UTC\n"
+"POT-Creation-Date: 2018-01-15 13:03 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FMain.form:31
+#: FMain.form:46
 msgid "Accel GUI"
 msgstr ""
 
-#: FMain.form:36
+#: FMain.form:51
 msgid "TrayIcon"
 msgstr ""
 
-#: FMain.form:40
+#: FMain.form:55
 msgid "Show"
 msgstr ""
 
-#: FMain.form:46
+#: FMain.form:61
 msgid "Exit"
 msgstr ""
 
-#: FMain.form:64
-msgid "Sessions filter"
+#: FMain.form:68
+msgid "Shutdown"
 msgstr ""
 
 #: FMain.form:72
-msgid "Terminate session"
+msgid "Shutdown default"
+msgstr ""
+
+#: FMain.form:76
+msgid "Shutdown soft"
 msgstr ""
 
 #: FMain.form:80
-msgid "Update list of sessions"
+msgid "Shutdown hard"
 msgstr ""
 
-#: FMain.form:88
-msgid "Settings"
+#: FMain.form:87
+msgid "Shutdown cancel"
+msgstr ""
+
+#: FMain.form:92
+msgid "Restart"
 msgstr ""
 
 #: FMain.form:96
-msgid "Help"
+msgid "Restart soft"
 msgstr ""
 
-#: FMain.form:116
-msgid "Servers manager"
+#: FMain.form:100
+msgid "Restart hard"
+msgstr ""
+
+#: FMain.form:105
+msgid "Terminate"
+msgstr ""
+
+#: FMain.form:109
+msgid "Soft terminate current session"
+msgstr ""
+
+#: FMain.form:113
+msgid "Hard terminate current session"
+msgstr ""
+
+#: FMain.form:120
+msgid "Soft terminate all sessions"
 msgstr ""
 
 #: FMain.form:124
-msgid "Reload config file"
+msgid "Hard terminate all sessions"
 msgstr ""
 
-#: FMain.form:136
-msgid "Shutdown daemon"
+#: FMain.form:140
+msgid "Sessions filter"
 msgstr ""
 
-#: FMain.form:144
-msgid "Hide to tray"
+#: FMain.form:148
+msgid "Update list of sessions"
 msgstr ""
 
-#: FMain.form:152
-msgid "Restart daemon"
+#: FMain.form:156
+msgid "Settings"
 msgstr ""
 
 #: FMain.form:164
-msgid "Shaper change / restore"
+msgid "Help"
 msgstr ""
 
-#: FMain.form:176
+#: FMain.form:184
+msgid "Servers manager"
+msgstr ""
+
+#: FMain.form:192
+msgid "Reload config file"
+msgstr ""
+
+#: FMain.form:204
+msgid "Hide to tray"
+msgstr ""
+
+#: FMain.form:220
 msgid "Quit the programm"
+msgstr ""
+
+#: FMain.form:228
+msgid "Shutdown daemon"
+msgstr ""
+
+#: FMain.form:239
+msgid "Restart daemon"
+msgstr ""
+
+#: FMain.form:250
+msgid "Terminate session"
+msgstr ""
+
+#: FMain.form:261
+msgid "Change / restore shaper"
 msgstr ""
 
 #: FMain.class:98
@@ -86,11 +138,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: FMain.class:158
-msgid "Are you sure to kill session?"
-msgstr ""
-
-#: FMain.class:172
+#: FMain.class:140
 msgid "Help file was not found"
 msgstr ""
 

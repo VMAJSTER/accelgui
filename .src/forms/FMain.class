@@ -43,15 +43,15 @@ Public Sub Form_Open()
             If User.Id > 0 Then tlbSettings.Enabled = False
         Case "user"
             tlbReload.Enabled = False
-            tlbRestart.Enabled = False
-            tlbShutdown.Enabled = False
+            mnbRestart.Enabled = False
+            mnbShutdown.Enabled = False
             tlbSettings.Enabled = False
         Case "guest"
-            tlbTerminate.Enabled = False
-            tlbShaper.Enabled = False
+            mnbTerminate.Enabled = False
+            mnbShaper.Enabled = False
             tlbReload.Enabled = False
-            tlbRestart.Enabled = False
-            tlbShutdown.Enabled = False
+            mnbRestart.Enabled = False
+            mnbShutdown.Enabled = False
             tlbSettings.Enabled = False
     End Select
 
@@ -103,19 +103,6 @@ Public Sub tlbReload_Click()
 
 End
 
-Public Sub tlbShutdown_Click()
-
-    Dim objWindow As FSessions
-
-    If wksServers.Windows.Count > 0 Then
-        objWindow = wksServers.ActiveWindow
-        If objWindow.objServer.Connected Then
-            FShutdown.ShowModal()
-        Endif
-    Endif
-
-End
-
 Public Sub tlbFilter_Click()
 
     Dim objWindow As FSessions
@@ -139,25 +126,6 @@ Public Sub wksServers_Activate()
             tlbFilter.Picture = Picture["images/filteradd.png"]
         Else
             tlbFilter.Picture = Picture["images/filterdel.png"]
-        Endif
-    Endif
-
-End
-
-Public Sub tlbTerminate_Click()
-
-    Dim objWindow As FSessions
-    Dim intRow As Integer
-    Dim strName As String
-
-    If wksServers.Windows.Count > 0 Then
-        objWindow = wksServers.ActiveWindow
-        intRow = objWindow.grvSessions.Row
-        If intRow >= 0 Then
-            strName = objWindow.grvSessions[intRow, 1].Text
-            If Message.Question(("Are you sure to kill session?"), ("Yes"), ("No")) = 1 Then
-                objWindow.objServer.KillSession(strName)
-            Endif
         Endif
     Endif
 
@@ -203,5 +171,29 @@ End
 Public Sub tlbExit_Click()
 
     Me.Close()
+
+End
+
+Public Sub mnuShutdownDefault_Click()
+
+    MMain.ShutdownDaemon(MShutMode.Default)
+
+End
+
+Public Sub mnuShutdownSoft_Click()
+
+    MMain.ShutdownDaemon(MShutMode.Soft)
+
+End
+
+Public Sub mnuShutdownHard_Click()
+
+    MMain.ShutdownDaemon(MShutMode.Hard)
+
+End
+
+Public Sub mnuShutdownCancel_Click()
+
+    MMain.ShutdownDaemon(MShutMode.Cancel)
 
 End

@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,328,168)
+  Move(0,0,304,168)
   #Scaled = False
   Text = ("Authorization")
   Resizable = False
@@ -17,7 +17,7 @@
     Default = True
   }
   { btnExit Button
-    Move(192,128,128,32)
+    Move(168,128,128,32)
     Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
@@ -26,10 +26,10 @@
     Cancel = True
   }
   { Panel1 Panel
-    Move(8,8,312,112)
+    Move(8,8,288,112)
     Border = Border.Plain
     { txbPassword TextBox
-      Move(136,64,160,32)
+      Move(136,64,136,32)
       Font = Font["10"]
       Password = True
     }

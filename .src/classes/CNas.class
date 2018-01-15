@@ -1,12 +1,14 @@
 ' Gambas class file
 
+
 ' ---------
 ' Constants
 ' ---------
 Private Const CMD_SESSIONS As String = "show sessions"
 Private Const CMD_RELOAD As String = "reload"
 Private Const CMD_SHUTDOWN As String = "shutdown"
-Private Const CMD_KILL As String = "terminate username"
+Private Const CMD_KILL As String = "terminate"
+
 
 ' ---------------------
 ' Fields default values
@@ -16,11 +18,13 @@ Private Const DFL_HOST As String = "127.0.0.1"
 Private Const DFL_PORT As Integer = 2001
 Private Const DFL_MATCH As String = "active"
 
+
 ' ---------
 ' Variables
 ' ---------
 Private objSrv As Socket
 Private arrSessionsData As String[]
+
 
 ' ------
 ' Fields
@@ -36,6 +40,8 @@ Private strOrderMode As String = MColumn.UserName
 Private strMatchMode As String = MColumn.State
 Private strMatchValue As String = DFL_MATCH
 Private strColumn As String = MColumn.Default
+Private strTermMode As String = MTermMode.Soft
+
 
 ' ----------
 ' Properties
@@ -51,6 +57,7 @@ Property OrderMode As String
 Property MatchMode As String
 Property MatchValue As String
 Property Column As String
+Property TermMode As String
 
 
 ' ------
@@ -206,6 +213,23 @@ Private Sub Column_Write(Value As String)
 
 End
 
+Private Function TermMode_Read() As String
+
+    Return strTermMode
+
+End
+
+Private Sub TermMode_Write(Value As String)
+
+    Value = Trim(Value)
+    If MTermMode.Mode.Exist(Value) Then
+        strShutMode = Value
+    Else
+        strShutMode = MTermMode.Default
+    Endif
+
+End
+
 
 ' -----------
 ' Constructor
@@ -291,9 +315,20 @@ Public Sub KillSession(Username As String)
     If bolConnected Then
         Username = Trim(Username)
         If Username <> "" Then
-            strLineToSend = CMD_KILL & " " & Username
+            strLineToSend = CMD_KILL & " username " & Username & " " & strTermMode
             SendData(strLineToSend)
         Endif
+    Endif
+
+End
+
+Public Sub KillAll()
+
+    Dim strLineToSend As String
+
+    If bolConnected Then
+        strLineToSend = CMD_KILL & " all " & strTermMode
+        SendData(strLineToSend)
     Endif
 
 End

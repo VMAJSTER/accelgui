@@ -1,0 +1,6 @@
+' Gambas module file
+
+Public Const Soft As String = "soft"
+Public Const Hard As String = "hard"
+
+Public Mode As String[] = [Soft, Hard]

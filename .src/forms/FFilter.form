@@ -1,14 +1,14 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,464,120)
+  Move(0,0,320,160)
   #Scaled = False
   Text = ("Sessions filter")
   Resizable = False
   Utility = True
   SkipTaskbar = True
   { Panel1 Panel
-    Move(8,8,448,104)
+    Move(8,8,304,104)
     Border = Border.Plain
     { Label1 Label
       Move(16,20,96,24)
@@ -29,28 +29,28 @@
       ReadOnly = True
       List = [("Not chosen"), ("Interface"), ("Username"), ("Calling"), ("Ip Address")]
     }
-    { btnApply Button
-      Move(304,16,128,32)
-      Font = Font["10"]
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      Text = ("Apply")
-      Picture = Picture["images/enable.png"]
-      Default = True
-    }
-    { btnExit Button
-      Move(304,56,128,32)
-      Font = Font["10"]
-      NoTabFocus = True
-      Mouse = Mouse.Pointing
-      Text = ("Exit")
-      Picture = Picture["images/close.png"]
-      Cancel = True
-    }
     { txbValue TextBox
       Move(120,56,168,32)
       Enabled = False
       Font = Font["10"]
     }
+  }
+  { btnApply Button
+    Move(8,120,128,32)
+    Font = Font["10"]
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Apply")
+    Picture = Picture["images/enable.png"]
+    Default = True
+  }
+  { btnExit Button
+    Move(184,120,128,32)
+    Font = Font["10"]
+    NoTabFocus = True
+    Mouse = Mouse.Pointing
+    Text = ("Exit")
+    Picture = Picture["images/close.png"]
+    Cancel = True
   }
 }

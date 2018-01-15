@@ -29,7 +29,8 @@ Public Sub Main()
         If Exist(MMain.GLOBAL_CONFIG_BACKUP) Then
             If User.Id = 0 Then
                 If Message.Question(("Config file does not exist.") & gb.CrLf & ("Want to use backup?"), ("Yes"), ("No")) = 1 Then
-                    Copy MMain.GLOBAL_CONFIG_BACKUP To MMain.GLOBAL_CONFIG
+                    Try Copy MMain.GLOBAL_CONFIG_BACKUP To MMain.GLOBAL_CONFIG
+                    If Error Then Message.Warning(("Could not use backup config"))
                 Endif
             Endif
         Endif
@@ -73,7 +74,7 @@ Public Function IsIpAddress(strIp As String) As Boolean
 End
 
 ' -----------------------------------------------------------------------
-'' The procedure nakes the given row active and visible in the grid
+'' The procedure makes the given row active and visible in the grid
 ' -----------------------------------------------------------------------
 Public Sub ActivateRow(Grid As GridView, Row As Integer)
 
@@ -114,5 +115,66 @@ Public Sub EnableControls(bolAction As Boolean)
         .tlbNext.Enabled = bolAction
         .tlbLast.Enabled = bolAction
     End With
+
+End
+
+' -----------------------------------------------------------------------
+'' The procedure shuts down daeamon using given method
+' -----------------------------------------------------------------------
+Public Sub ShutdownDaemon(strShutMode As String)
+
+    Dim objWindow As FSessions
+
+    If FMain.wksServers.Windows.Count > 0 Then
+        objWindow = FMain.wksServers.ActiveWindow
+        If objWindow.objServer.Connected Then
+            If Message.Question(("Are you sure to shutdown the daemon?"), ("Yes"), ("No")) = 1 Then
+                If Trim(strShutMode) = "" Then strShutMode = MShutMode.Default
+                objWindow.objServer.ShutMode = strShutMode
+                objWindow.grvSessions.Clear()
+                objWindow.grvSessions.Rows.Count = 0
+                objWindow.objServer.Shutdown()
+            Endif
+        Endif
+    Endif
+
+End
+
+' -----------------------------------------------------------------------
+'' The procedure terminates current or all sessions using given method
+' -----------------------------------------------------------------------
+Public Sub TerminateSessions(strTermMode As String, Optional bolAll As Boolean)
+
+    Dim objWindow As FSessions
+    Dim intRow As Integer
+    Dim strName As String
+
+    If FMain.wksServers.Windows.Count > 0 Then
+        objWindow = FMain.wksServers.ActiveWindow
+        If Trim(strTermMode) = "" Then strTermMode = MTermMode.Soft
+        objWindow.objServer.TermMode = strTermMode
+        If bolAll Then
+            If Message.Question(("Are you sure to kill all sessions?"), ("Yes"), ("No")) = 1 Then
+                objWindow.objServer.KillAll()
+            Endif
+        Else
+            intRow = objWindow.grvSessions.Row
+            If intRow >= 0 Then
+                strName = objWindow.grvSessions[intRow, 1].Text
+                If Message.Question(("Are you sure to kill current session?"), ("Yes"), ("No")) = 1 Then
+                    objWindow.objServer.KillSession(strName)
+                Endif
+            Endif
+        Endif
+    Endif
+
+End
+
+' -----------------------------------------------------------------------
+'' The procedure restarts daeamon using given method
+' -----------------------------------------------------------------------
+Public Sub RestartDaemon(strTermMode As String)
+
+
 
 End
