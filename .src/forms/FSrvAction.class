@@ -4,6 +4,7 @@ Private Const DFL_ADDRESS As String = "127.0.0.1"
 ' Dialogbox is in edit mode
 Public bolEdit As Boolean = False
 
+
 Private Function FieldsAreFilled() As Boolean
 
     If Trim(txbName.Text) = Null Then Return False
@@ -18,7 +19,6 @@ Public Sub Form_Open()
     Dim intRow As Integer
 
     Me.Center()
-    Message.Title = "Accel GUI"
     vlbAddress.Value = DFL_ADDRESS
     If bolEdit Then
         With FServers
@@ -39,7 +39,7 @@ Public Sub btnApply_Click()
     Dim objWindow As Window
 
     If Not FieldsAreFilled() Then
-        Message.Warning(("Fill in text fields"))
+        MMain.ShowMessage(("Fill in text fields"), MMsgType.Warning)
         Return
     Endif
     If bolEdit Then
@@ -49,7 +49,7 @@ Public Sub btnApply_Click()
         intSkip = -1
     Endif
     If Not MMain.NoDuplicates(txbName.Text, vlbAddress.Value, intSkip) Then
-        Message.Warning(("Name or address already exists"))
+        MMain.ShowMessage(("Name or address already exists"), MMsgType.Warning)
         Return
     Endif
     With FServers

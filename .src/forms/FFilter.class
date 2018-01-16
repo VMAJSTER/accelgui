@@ -5,7 +5,6 @@ Public Sub Form_Open()
     Dim objWindow As FSessions
 
     Me.Center()
-    Message.Title = "Accel GUI"
     If FMain.wksServers.Windows.Count > 0 Then
         objWindow = FMain.wksServers.ActiveWindow
         Select Case objWindow.objServer.MatchMode
@@ -60,7 +59,7 @@ Public Sub btnApply_Click()
             FMain.tlbUpdate_Click()
             Me.Close()
         Else
-            Message.Error(("Value is not entered"))
+            MMain.ShowMessage(("Value is not entered"), MMsgType.Err)
             txbValue.Clear()
             txbValue.SetFocus()
         Endif

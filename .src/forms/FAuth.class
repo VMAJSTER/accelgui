@@ -10,7 +10,7 @@ End
 
 Private Sub PassError()
 
-    Message.Error(("Password you entered is incorrect"))
+    MMain.ShowMessage(("Password you entered is incorrect"), MMsgType.Err)
     txbPassword.Clear()
     txbPassword.SetFocus()
 
@@ -21,7 +21,6 @@ Public Sub Form_Open()
     Dim bytDefault As Byte
 
     Me.Center()
-    Message.Title = "Accel GUI"
     bytDefault = CByte(MMain.objSettings["Auth/default", "0"])
     cmbUsername.Index = bytDefault
 

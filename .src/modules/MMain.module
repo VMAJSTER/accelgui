@@ -28,9 +28,9 @@ Public Sub Main()
     If Not Exist(MMain.GLOBAL_CONFIG) Then
         If Exist(MMain.GLOBAL_CONFIG_BACKUP) Then
             If User.Id = 0 Then
-                If Message.Question(("Config file does not exist.") & gb.CrLf & ("Want to use backup?"), ("Yes"), ("No")) = 1 Then
+                If ShowMessage(("Config file does not exist.") & gb.CrLf & ("Want to use backup?"), MMsgType.Question) = 1 Then
                     Try Copy MMain.GLOBAL_CONFIG_BACKUP To MMain.GLOBAL_CONFIG
-                    If Error Then Message.Warning(("Could not use backup config"))
+                    If Error Then ShowMessage(("Could not use backup config"), MMsgType.Warning)
                 Endif
             Endif
         Endif
@@ -124,12 +124,17 @@ End
 Public Sub ShutdownDaemon(strShutMode As String)
 
     Dim objWindow As FSessions
+    Dim strMessage As String
 
     If FMain.wksServers.Windows.Count > 0 Then
         objWindow = FMain.wksServers.ActiveWindow
         If objWindow.objServer.Connected Then
-            If Message.Question(("Are you sure to shutdown the daemon?"), ("Yes"), ("No")) = 1 Then
-                If Trim(strShutMode) = "" Then strShutMode = MShutMode.Default
+            If strShutMode <> MShutMode.Cancel Then
+                strMessage = ("Are you sure to shutdown the daemon?")
+            Else
+                strMessage = ("Are you sure to cancel the shutdown process?")
+            Endif
+            If ShowMessage(strMessage, MMsgType.Question) = 1 Then
                 objWindow.objServer.ShutMode = strShutMode
                 objWindow.grvSessions.Clear()
                 objWindow.grvSessions.Rows.Count = 0
@@ -154,14 +159,14 @@ Public Sub TerminateSessions(strTermMode As String, Optional bolAll As Boolean)
         If Trim(strTermMode) = "" Then strTermMode = MTermMode.Soft
         objWindow.objServer.TermMode = strTermMode
         If bolAll Then
-            If Message.Question(("Are you sure to kill all sessions?"), ("Yes"), ("No")) = 1 Then
+            If ShowMessage(("Are you sure to kill all sessions?"), MMsgType.Question) = 1 Then
                 objWindow.objServer.KillAll()
             Endif
         Else
             intRow = objWindow.grvSessions.Row
             If intRow >= 0 Then
                 strName = objWindow.grvSessions[intRow, 1].Text
-                If Message.Question(("Are you sure to kill current session?"), ("Yes"), ("No")) = 1 Then
+                If ShowMessage(("Are you sure to kill current session?"), MMsgType.Question) = 1 Then
                     objWindow.objServer.KillSession(strName)
                 Endif
             Endif
@@ -175,6 +180,40 @@ End
 ' -----------------------------------------------------------------------
 Public Sub RestartDaemon(strTermMode As String)
 
+    Dim objWindow As FSessions
 
+    If FMain.wksServers.Windows.Count > 0 Then
+        objWindow = FMain.wksServers.ActiveWindow
+        If objWindow.objServer.Connected Then
+            If ShowMessage(("Are you sure to restart the daemon?"), MMsgType.Question) = 1 Then
+                If Trim(strTermMode) = "" Then strTermMode = MTermMode.Soft
+                objWindow.objServer.TermMode = strTermMode
+                objWindow.grvSessions.Clear()
+                objWindow.grvSessions.Rows.Count = 0
+                objWindow.objServer.Restart()
+            Endif
+        Endif
+    Endif
+
+End
+
+' -----------------------------------------------------------------------
+'' The procedure shows message in dialogbox of given type
+' -----------------------------------------------------------------------
+Public Function ShowMessage(strMessage As String, strType As String) As Integer
+
+    Message.Title = "Accel GUI"
+    Select Case strType
+        Case MMsgType.Delete
+            Return Message.Delete(strMessage, ("Yes"), ("No"))
+        Case MMsgType.Err
+            Return Message.Error(strMessage)
+        Case MMsgType.Info
+            Return Message.Info(strMessage)
+        Case MMsgType.Question
+            Return Message.Question(strMessage, ("Yes"), ("No"))
+        Case MMsgType.Warning
+            Return Message.Warning(strMessage)
+    End Select
 
 End

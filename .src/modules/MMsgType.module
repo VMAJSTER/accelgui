@@ -1,0 +1,9 @@
+' Gambas module file
+
+Public Const Delete As String = "delete"
+Public Const Err As String = "error"
+Public Const Info As String = "info"
+Public Const Question As String = "question"
+Public Const Warning As String = "warning"
+
+Public Mode As String[] = [Delete, Err, Info, Question, Warning]

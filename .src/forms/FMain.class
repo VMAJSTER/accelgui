@@ -27,7 +27,6 @@ Public Sub Form_Open()
     Dim arrPort As New String[]
     Dim objForm As FSessions
 
-    Message.Title = "Accel GUI"
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
     arrName = Split(MMain.objSettings["Servers/Name"], ";")
     arrAddress = Split(MMain.objSettings["Servers/Address"], ";")
@@ -99,7 +98,7 @@ Public Sub tlbReload_Click()
     If wksServers.Windows.Count > 0 Then
         objWindow = wksServers.ActiveWindow
         If objWindow.objServer.Connected Then
-            If Message.Question(("Are you sure to reload config file?"), ("Yes"), ("No")) = 1 Then
+            If MMain.ShowMessage(("Are you sure to reload config file?"), MMsgType.Question) = 1 Then
                 objWindow.objServer.Reload()
             Endif
         Endif
@@ -141,7 +140,7 @@ Public Sub tlbHelp_Click()
         FHelp.wwwHelp.Url = "file://" & Application.Path &/ MMain.HELPFILE
         FHelp.ShowModal()
     Else
-        Message.Error(("Help file was not found"))
+        MMain.ShowMessage(("Help file was not found"), MMsgType.Err)
     Endif
 
 End
@@ -223,5 +222,17 @@ End
 Public Sub mnuTermAllHard_Click()
 
     MMain.TerminateSessions(MTermMode.Hard, True)
+
+End
+
+Public Sub mnuRestartSoft_Click()
+
+    MMain.RestartDaemon(MTermMode.Soft)
+
+End
+
+Public Sub mnuRestartHard_Click()
+
+    MMain.RestartDaemon(MTermMode.Hard)
 
 End

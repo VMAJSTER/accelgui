@@ -8,6 +8,7 @@ Private Const CMD_SESSIONS As String = "show sessions"
 Private Const CMD_RELOAD As String = "reload"
 Private Const CMD_SHUTDOWN As String = "shutdown"
 Private Const CMD_KILL As String = "terminate"
+Private Const CMD_RESTART As String = "restart"
 
 
 ' ---------------------
@@ -69,6 +70,7 @@ Event GotSessions
 Event Reloaded
 Event Shutdown
 Event Killed
+Event Restarted
 
 ' ------------------------------
 ' Properties setters and getters
@@ -333,6 +335,18 @@ Public Sub KillAll()
 
 End
 
+Public Sub Restart()
+
+    If bolConnected Then
+        If strTermMode = MTermMode.Soft Then
+            SendData(CMD_RESTART)
+        Else
+            SendData(CMD_RESTART & " " & strTermMode)
+        Endif
+    Endif
+
+End
+
 
 ' ---------------------
 ' Socket event handlers
@@ -387,10 +401,12 @@ Private Sub SendData(strCommand As String)
     Select Case strCommand
         Case Like CMD_RELOAD
             Raise Reloaded
-        Case Like CMD_SHUTDOWN
+        Case Like CMD_SHUTDOWN & "*"
             Raise Shutdown
         Case Like CMD_KILL & "*"
             Raise Killed
+        Case Like CMD_RESTART & "*"
+            Raise Restarted
     End Select
 
 End

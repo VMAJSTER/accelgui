@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-16 06:35 UTC\n"
+"POT-Creation-Date: 2018-01-16 10:09 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,31 +82,23 @@ msgstr ""
 msgid "Port"
 msgstr ""
 
-#: FServers.class:91
+#: FServers.class:90
 msgid "Add server"
 msgstr ""
 
-#: FServers.class:102
+#: FServers.class:101
 msgid "Edit server"
 msgstr ""
 
-#: FServers.class:114
+#: FServers.class:113
 msgid "Are you sure to delete server?"
 msgstr ""
 
-#: FServers.class:114
-msgid "Yes"
-msgstr ""
-
-#: FServers.class:114
-msgid "No"
-msgstr ""
-
-#: FServers.class:130
+#: FServers.class:129
 msgid "Are you sure to clear list of servers?"
 msgstr ""
 
-#: FServers.class:158
+#: FServers.class:157
 msgid "Stop"
 msgstr ""
 

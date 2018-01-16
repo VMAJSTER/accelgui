@@ -1,11 +1,5 @@
 ' Gambas class file
 
-Public Sub Form_Open()
-
-    Message.Title = "Accel GUI"
-
-End
-
 Public Sub Form_Resize()
 
     With pnlWeb

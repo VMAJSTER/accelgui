@@ -53,12 +53,6 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
 
 End
 
-Public Sub Form_Open()
-
-    Message.Title = "Accel GUI"
-
-End
-
 Public Sub Form_Resize()
 
     With grvSessions

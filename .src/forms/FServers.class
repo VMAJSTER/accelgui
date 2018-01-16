@@ -45,7 +45,6 @@ Public Sub Form_Open()
     Dim arrPort As New String[]
 
     Me.Center()
-    Message.Title = "Accel GUI"
     ClearGrid()
     MMain.EnableControls(False)
     arrStatus = Split(MMain.objSettings["Servers/Status"], ";")
@@ -111,7 +110,7 @@ Public Sub tlbDelete_Click()
     Dim intRow As Integer
 
     If grvServers.Row > -1 Then
-        If Message.Question(("Are you sure to delete server?"), ("Yes"), ("No")) = 1 Then
+        If MMain.ShowMessage(("Are you sure to delete server?"), MMsgType.Question) = 1 Then
             intRow = grvServers.Row
             grvServers.Rows.Remove(intRow)
             If intRow = grvServers.Rows.Count Then Dec intRow
@@ -127,7 +126,7 @@ End
 
 Public Sub tlbClear_Click()
 
-    If Message.Question(("Are you sure to clear list of servers?"), ("Yes"), ("No")) = 1 Then
+    If MMain.ShowMessage(("Are you sure to clear list of servers?"), MMsgType.Question) = 1 Then
         ClearGrid()
         MMain.EnableControls(False)
     Endif

@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-15 13:02 UTC\n"
+"POT-Creation-Date: 2018-01-16 09:56 UTC\n"
+"PO-Revision-Date: 2018-01-16 09:24 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgstr "-"
 msgid "Graphical user interface for accel-ppp access server"
 msgstr "Графический интерфейс пользователя для сервера доступа accel-ppp"
 
-#: FAuth.class:13
+#: FAuth.class:14
 msgid "Password you entered is incorrect"
 msgstr "Введенный вами пароль не верен"
 
@@ -53,7 +54,7 @@ msgstr "-"
 msgid "user"
 msgstr "-"
 
-#: FFilter.class:63
+#: FFilter.class:62
 msgid "Value is not entered"
 msgstr "Значение не указано"
 
@@ -113,19 +114,11 @@ msgstr "Вперед - Right"
 msgid "Backward - Left"
 msgstr "Назад - Left"
 
-#: FMain.class:98
+#: FMain.class:101
 msgid "Are you sure to reload config file?"
 msgstr "Уверены, что хотите перезагрузить файл конфигурации?"
 
-#: FMain.class:98 FServers.class:114 MMain.module:31
-msgid "No"
-msgstr "Нет"
-
-#: FMain.class:98 FServers.class:114 MMain.module:31
-msgid "Yes"
-msgstr "Да"
-
-#: FMain.class:140
+#: FMain.class:143
 msgid "Help file was not found"
 msgstr "Файл справки не найден"
 
@@ -257,11 +250,11 @@ msgstr "Адрес"
 msgid "Port"
 msgstr "Порт"
 
-#: FServers.class:91
+#: FServers.class:90
 msgid "Add server"
 msgstr "Добавить сервер"
 
-#: FServers.class:102
+#: FServers.class:101
 msgid "Edit server"
 msgstr "Изменить сервер"
 
@@ -269,11 +262,19 @@ msgstr "Изменить сервер"
 msgid "Are you sure to delete server?"
 msgstr "Уверены, что хотите удалить сервер?"
 
-#: FServers.class:130
+#: FServers.class:114 MMain.module:31
+msgid "No"
+msgstr "Нет"
+
+#: FServers.class:114 MMain.module:31
+msgid "Yes"
+msgstr "Да"
+
+#: FServers.class:131
 msgid "Are you sure to clear list of servers?"
 msgstr "Уверены, что хотите очистить список серверов?"
 
-#: FServers.class:158
+#: FServers.class:159
 msgid "Stop"
 msgstr "Остановить"
 
@@ -385,11 +386,11 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
-#: FSrvAction.class:42
+#: FSrvAction.class:43
 msgid "Fill in text fields"
 msgstr "Заполните текстовые поля"
 
-#: FSrvAction.class:52
+#: FSrvAction.class:54
 msgid "Name or address already exists"
 msgstr "Имя или адрес уже существуют"
 
@@ -429,15 +430,22 @@ msgstr "Хотите использовать резервную копию?"
 msgid "Could not use backup config"
 msgstr "Не удалось использовать резервную копию конфигурации"
 
-#: MMain.module:131
+#: MMain.module:133
 msgid "Are you sure to shutdown the daemon?"
 msgstr "Уверены, что хотите завершить службу?"
 
-#: MMain.module:157
+#: MMain.module:136
+msgid "Are you sure to cancel the shutdown process?"
+msgstr "Уверены, что хотите отменить процесс завершения?"
+
+#: MMain.module:163
 msgid "Are you sure to kill all sessions?"
 msgstr "Уверены, что хотите оборвать все сессии?"
 
-#: MMain.module:164
+#: MMain.module:170
 msgid "Are you sure to kill current session?"
 msgstr "Уверены, что хотите оборвать текущую сессию?"
 
+#: MMain.module:189
+msgid "Are you sure to restart the daemon?"
+msgstr "Уверены, что хотите перезапустить службу?"
