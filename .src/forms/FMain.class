@@ -46,6 +46,8 @@ Public Sub Form_Open()
             mnbRestart.Enabled = False
             mnbShutdown.Enabled = False
             tlbSettings.Enabled = False
+            mnuTermAllSoft.Enabled = False
+            mnuTermAllHard.Enabled = False
         Case "guest"
             mnbTerminate.Enabled = False
             mnbShaper.Enabled = False
@@ -53,6 +55,8 @@ Public Sub Form_Open()
             mnbRestart.Enabled = False
             mnbShutdown.Enabled = False
             tlbSettings.Enabled = False
+            mnuTermAllSoft.Enabled = False
+            mnuTermAllHard.Enabled = False
     End Select
 
 End
@@ -195,5 +199,29 @@ End
 Public Sub mnuShutdownCancel_Click()
 
     MMain.ShutdownDaemon(MShutMode.Cancel)
+
+End
+
+Public Sub mnuTermCurrSoft_Click()
+
+    MMain.TerminateSessions(MTermMode.Soft)
+
+End
+
+Public Sub mnuTermCurrHard_Click()
+
+    MMain.TerminateSessions(MTermMode.Hard)
+
+End
+
+Public Sub mnuTermAllSoft_Click()
+
+    MMain.TerminateSessions(MTermMode.Soft, True)
+
+End
+
+Public Sub mnuTermAllHard_Click()
+
+    MMain.TerminateSessions(MTermMode.Hard, True)
 
 End

@@ -55,3 +55,9 @@ Public Sub btnEnter_Click()
     Endif
 
 End
+
+Public Sub cmbUsername_Click()
+
+    txbPassword.SetFocus()
+
+End
