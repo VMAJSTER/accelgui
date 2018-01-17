@@ -4,6 +4,7 @@
   Move(0,0,304,168)
   #Scaled = False
   Text = ("Authorization")
+  Icon = Picture["icons/16.png"]
   Resizable = False
   Utility = True
   SkipTaskbar = True

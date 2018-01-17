@@ -1,0 +1,81 @@
+' Gambas class file
+
+Public Sub btnCancel_Click()
+
+    Me.Close()
+
+End
+
+Public Sub Form_Open()
+
+    Me.Center()
+
+End
+
+Public Sub rdbAll_Click()
+
+    If rdbAll.Value Then
+        chbRestore.Enabled = False
+        chbApply.Enabled = True
+    Endif
+
+End
+
+Public Sub rdbCurrent_Click()
+
+    If rdbCurrent.Value Then
+        chbRestore.Enabled = True
+        chbApply.Enabled = False
+    Endif
+
+End
+
+Public Sub btnRestore_Click()
+
+    Dim objWindow As FSessions
+    Dim intRow As Integer
+    Dim strInterface As String
+
+    objWindow = FMain.wksServers.ActiveWindow
+    intRow = objWindow.grvSessions.Row
+    strInterface = objWindow.grvSessions[intRow, 0].Text
+    If rdbCurrent.Value Then
+        objWindow.objServer.ShaperRestore(strInterface)
+    Else
+        objWindow.objServer.ShaperRestoreAll()
+    Endif
+    FMain.tlbUpdate_Click()
+    Me.Close()
+
+End
+
+Public Sub btnChange_Click()
+
+    Dim objWindow As FSessions
+    Dim intRow As Integer
+    Dim strInterface As String
+
+    objWindow = FMain.wksServers.ActiveWindow
+    intRow = objWindow.grvSessions.Row
+    strInterface = objWindow.grvSessions[intRow, 0].Text
+    If vlbInput.Value And If vlbOutput.Value Then
+        If rdbCurrent.Value Then
+            If chbRestore.Value Then
+                objWindow.objServer.ShaperChange(strInterface, vlbInput.Value, vlbOutput.Value, True)
+            Else
+                objWindow.objServer.ShaperChange(strInterface, vlbInput.Value, vlbOutput.Value)
+            Endif
+        Else
+            If chbApply.Value Then
+                objWindow.objServer.ShaperChangeAll(vlbInput.Value, vlbOutput.Value, True)
+            Else
+                objWindow.objServer.ShaperChangeAll(vlbInput.Value, vlbOutput.Value)
+            Endif
+        Endif
+        FMain.tlbUpdate_Click()
+        Me.Close()
+    Else
+        MMain.ShowMessage(("Values must be more than zero"), MMsgType.Warning)
+    Endif
+
+End

@@ -1,0 +1,56 @@
+[Not Implemented]
+ - show stat - shows various statistics information
+
+[Implemented]
+ + terminate if <interface> [soft|hard]- terminate session by interface name
+      [match] username <username> [soft|hard]- terminate session by username
+      ip <addresss> [soft|hard]- terminate session by ip address
+      csid <id> [soft|hard]- terminate session by calling station id
+      sid <id> [soft|hard]- terminate session by session id
+      all [soft|hard]- terminate all sessions
+
+[Implemented]
+ + reload - reload config file
+
+[Implemented]
+ + restart [hard] - restart daemon
+      hard - restart immediatly
+      default action - terminate all connections then restart
+
+[Implemented]
+ + shutdown [soft|hard|cancel]- shutdown daemon
+      default action - send termination signals to all clients and wait everybody disconnects
+      soft - wait until all clients disconnects, don't accept new connections
+      hard - shutdown now, don't wait anything
+      cancel - cancel 'shutdown soft' and return to normal operation
+
+[Implemented]
+ + show sessions [columns] [order <column>] [match <column> <regexp>] - shows sessions
+      columns:
+         ifname - interface name
+         username - user name
+         ip - IP address
+         ip6 - IPv6 address
+         ip6-dp - IPv6 delegated prefix
+         type - VPN type
+         state - state of session
+         uptime - uptime
+         calling-sid - calling station id
+         called-sid - called station id
+         sid - session id
+         comp - compression/ecnryption method
+         rx-bytes - received bytes (human readable)
+         tx-bytes - transmitted bytes (human readable)
+         rx-bytes-raw - received bytes
+         tx-bytes-raw - transmitted bytes
+         rx-pkts - received packets
+         tx-pkts - transmitted packets
+         ipoe-type - IPoE session type
+         rate-limit - rate limit down-stream/up-stream (Kbit)
+
+[Implemented]
+ + shaper change <interface> <value> [temp] - change shaper on specified interface, if temp is set then previous settings may be restored later by 'shaper restore'
+ + shaper change all <value> [temp] - change shaper on all interfaces, if temp is set also new interfaces will have specified shaper value
+ + shaper restore <interface> - restores shaper settings on specified interface made by 'shaper change' command with 'temp' flag
+ + shaper restore all - restores shaper settings on all interfaces made by 'shaper change' command with 'temp' flag
+ 

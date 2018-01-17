@@ -4,6 +4,7 @@
   Move(0,0,416,200)
   #Scaled = False
   Text = ("Settings")
+  Icon = Picture["icons/16.png"]
   Resizable = False
   Utility = True
   SkipTaskbar = True

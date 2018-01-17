@@ -4,6 +4,7 @@
   Move(0,0,546,392)
   #Scaled = False
   Text = ("Servers manager")
+  Icon = Picture["icons/16.png"]
   Resizable = False
   Utility = True
   SkipTaskbar = True

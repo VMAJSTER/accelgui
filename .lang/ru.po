@@ -2,8 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"POT-Creation-Date: 2018-01-16 09:56 UTC\n"
-"PO-Revision-Date: 2018-01-16 09:24 UTC\n"
+"PO-Revision-Date: 2018-01-17 13:27 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +17,7 @@ msgstr "-"
 msgid "Graphical user interface for accel-ppp access server"
 msgstr "Графический интерфейс пользователя для сервера доступа accel-ppp"
 
-#: FAuth.class:14
+#: FAuth.class:13
 msgid "Password you entered is incorrect"
 msgstr "Введенный вами пароль не верен"
 
@@ -26,31 +25,31 @@ msgstr "Введенный вами пароль не верен"
 msgid "Authorization"
 msgstr "Авторизация"
 
-#: FAuth.form:24
+#: FAuth.form:25
 msgid "Enter"
 msgstr "Вход"
 
-#: FAuth.form:34 FFilter.form:67 FMain.form:61 FSettings.form:30
+#: FAuth.form:35 FFilter.form:68 FMain.form:61 FSettings.form:31
 msgid "Exit"
 msgstr "Выход"
 
-#: FAuth.form:52
+#: FAuth.form:53
 msgid "Username:"
 msgstr "Пользователь:"
 
-#: FAuth.form:59
+#: FAuth.form:60
 msgid "Password:"
 msgstr "Пароль:"
 
-#: FAuth.form:68 FSettings.form:51
+#: FAuth.form:69 FSettings.form:52
 msgid "admin"
 msgstr "-"
 
-#: FAuth.form:68 FSettings.form:65
+#: FAuth.form:69 FSettings.form:66
 msgid "guest"
 msgstr "-"
 
-#: FAuth.form:68 FSettings.form:58
+#: FAuth.form:69 FSettings.form:59
 msgid "user"
 msgstr "-"
 
@@ -62,35 +61,35 @@ msgstr "Значение не указано"
 msgid "Sessions filter"
 msgstr "Фильтр сессий"
 
-#: FFilter.form:26
+#: FFilter.form:27
 msgid "Column:"
 msgstr "Столбец:"
 
-#: FFilter.form:33
+#: FFilter.form:34
 msgid "Value:"
 msgstr "Значение:"
 
-#: FFilter.form:42
+#: FFilter.form:43
 msgid "Calling"
 msgstr "Вызывающий"
 
-#: FFilter.form:42 FSessions.class:19
+#: FFilter.form:43 FSessions.class:19
 msgid "Interface"
 msgstr "Интерфейс"
 
-#: FFilter.form:42
+#: FFilter.form:43
 msgid "Ip Address"
 msgstr "Айпи адрес"
 
-#: FFilter.form:42
+#: FFilter.form:43
 msgid "Not chosen"
 msgstr "Не выбрано"
 
-#: FFilter.form:42 FSessions.class:21
+#: FFilter.form:43 FSessions.class:21
 msgid "Username"
 msgstr "Пользователь"
 
-#: FFilter.form:57 FSrvAction.form:69
+#: FFilter.form:58 FSrvAction.form:70
 msgid "Apply"
 msgstr "Применить"
 
@@ -226,7 +225,7 @@ msgstr "Перезапуск службы"
 msgid "Terminate session"
 msgstr "Обрыв сессий"
 
-#: FMain.form:261
+#: FMain.form:261 FShaper.form:21
 msgid "Change / restore shaper"
 msgstr "Изменение / восстановление шейпера"
 
@@ -258,71 +257,63 @@ msgstr "Добавить сервер"
 msgid "Edit server"
 msgstr "Изменить сервер"
 
-#: FServers.class:114
+#: FServers.class:113
 msgid "Are you sure to delete server?"
 msgstr "Уверены, что хотите удалить сервер?"
 
-#: FServers.class:114 MMain.module:31
-msgid "No"
-msgstr "Нет"
-
-#: FServers.class:114 MMain.module:31
-msgid "Yes"
-msgstr "Да"
-
-#: FServers.class:131
+#: FServers.class:129
 msgid "Are you sure to clear list of servers?"
 msgstr "Уверены, что хотите очистить список серверов?"
 
-#: FServers.class:159
+#: FServers.class:157
 msgid "Stop"
 msgstr "Остановить"
 
-#: FServers.form:48
+#: FServers.form:49
 msgid "Add"
 msgstr "Добавить"
 
-#: FServers.form:57
+#: FServers.form:58
 msgid "Edit"
 msgstr "Изменить"
 
-#: FServers.form:66
+#: FServers.form:67
 msgid "Delete"
 msgstr "Удалить"
 
-#: FServers.form:75
+#: FServers.form:76
 msgid "Clear"
 msgstr "Очистить"
 
-#: FServers.form:84
+#: FServers.form:85
 msgid "First"
 msgstr "Первый"
 
-#: FServers.form:93
+#: FServers.form:94
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: FServers.form:102
+#: FServers.form:103
 msgid "Next"
 msgstr "Следующий"
 
-#: FServers.form:111
+#: FServers.form:112
 msgid "Last"
 msgstr "Последний"
 
-#: FServers.form:120
+#: FServers.form:121
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: FServers.form:129 FSettings.form:40
+#: FServers.form:130 FSettings.form:41
 msgid "Save"
 msgstr "Сохранение"
 
-#: FServers.form:148 FSessions.form:97
+#: FServers.form:149 FSessions.form:98
 msgid "0 / 0"
 msgstr "-"
 
-#: FServers.form:157
+#: FServers.form:158
 msgid "Start"
 msgstr "Запустить"
 
@@ -362,61 +353,97 @@ msgstr "Время"
 msgid " Primary server"
 msgstr "-"
 
-#: FSessions.form:65
+#: FSessions.form:66
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:73
+#: FSessions.form:74
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:81
+#: FSessions.form:82
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:89
+#: FSessions.form:90
 msgid "Last session"
 msgstr "Последняя сессия"
 
-#: FSettings.form:92
+#: FSettings.form:93
 msgid "default"
 msgstr "по-умолчанию"
 
-#: FSettings.form:118
+#: FSettings.form:119
 msgid "Reset"
 msgstr "Сброс"
 
-#: FSrvAction.class:43
+#: FShaper.class:63
+msgid "Values must be more than zero"
+msgstr "Значения должны быть больше нуля"
+
+#: FShaper.form:35
+msgid "Current interface"
+msgstr "Текущий интерфейс"
+
+#: FShaper.form:43
+msgid "All interfaces"
+msgstr "Все интерфейсы"
+
+#: FShaper.form:65
+msgid "Apply to new interfaces"
+msgstr "Применять к новым интерфейсам"
+
+#: FShaper.form:77
+msgid "Input:"
+msgstr "Входящая:"
+
+#: FShaper.form:83
+msgid "Output:"
+msgstr "Исходящая:"
+
+#: FShaper.form:90
+msgid "Changes may be restored"
+msgstr "Изменения обратимы"
+
+#: FShaper.form:100
+msgid "Change"
+msgstr "Изменить"
+
+#: FShaper.form:109 FSrvAction.form:80
+msgid "Cancel"
+msgstr "Отмена"
+
+#: FShaper.form:119
+msgid "Restore"
+msgstr "Восстановить"
+
+#: FSrvAction.class:42
 msgid "Fill in text fields"
 msgstr "Заполните текстовые поля"
 
-#: FSrvAction.class:54
+#: FSrvAction.class:52
 msgid "Name or address already exists"
 msgstr "Имя или адрес уже существуют"
 
-#: FSrvAction.form:27
+#: FSrvAction.form:28
 msgid "Name: "
 msgstr "Имя: "
 
-#: FSrvAction.form:34
+#: FSrvAction.form:35
 msgid "Address: "
 msgstr "Адрес: "
 
-#: FSrvAction.form:41
+#: FSrvAction.form:42
 msgid "Port: "
 msgstr "Порт: "
 
-#: FSrvAction.form:48
+#: FSrvAction.form:49
 msgid "accel-ppp"
 msgstr "-"
 
-#: FSrvAction.form:60
+#: FSrvAction.form:61
 msgid "2001"
 msgstr "-"
-
-#: FSrvAction.form:79
-msgid "Cancel"
-msgstr "Отмена"
 
 #: MMain.module:31
 msgid "Config file does not exist."
@@ -434,18 +461,27 @@ msgstr "Не удалось использовать резервную копи
 msgid "Are you sure to shutdown the daemon?"
 msgstr "Уверены, что хотите завершить службу?"
 
-#: MMain.module:136
+#: MMain.module:135
 msgid "Are you sure to cancel the shutdown process?"
 msgstr "Уверены, что хотите отменить процесс завершения?"
 
-#: MMain.module:163
+#: MMain.module:162
 msgid "Are you sure to kill all sessions?"
 msgstr "Уверены, что хотите оборвать все сессии?"
 
-#: MMain.module:170
+#: MMain.module:169
 msgid "Are you sure to kill current session?"
 msgstr "Уверены, что хотите оборвать текущую сессию?"
 
-#: MMain.module:189
+#: MMain.module:188
 msgid "Are you sure to restart the daemon?"
 msgstr "Уверены, что хотите перезапустить службу?"
+
+#: MMain.module:208
+msgid "No"
+msgstr "Нет"
+
+#: MMain.module:208
+msgid "Yes"
+msgstr "Да"
+

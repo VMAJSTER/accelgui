@@ -9,6 +9,8 @@ Private Const CMD_RELOAD As String = "reload"
 Private Const CMD_SHUTDOWN As String = "shutdown"
 Private Const CMD_KILL As String = "terminate"
 Private Const CMD_RESTART As String = "restart"
+Private Const CMD_CHAPER_CHANGE As String = "shaper change"
+Private Const CMD_CHAPER_RESTORE As String = "shaper restore"
 
 
 ' ---------------------
@@ -71,6 +73,8 @@ Event Reloaded
 Event Shutdown
 Event Killed
 Event Restarted
+Event Changed
+Event Restored
 
 ' ------------------------------
 ' Properties setters and getters
@@ -347,6 +351,52 @@ Public Sub Restart()
 
 End
 
+Public Sub ShaperChange(strInterface As String, intIn As Integer, intOut As Integer, Optional bolTemp As Boolean)
+
+    Dim strLineToSend As String
+
+    If bolConnected Then
+        strLineToSend = CMD_CHAPER_CHANGE & " " & strInterface & " " & Str(intIn) & "/" & Str(intOut)
+        If bolTemp Then strLineToSend &= " temp"
+        SendData(strLineToSend)
+    Endif
+
+End
+
+Public Sub ShaperChangeAll(intIn As Integer, intOut As Integer, Optional bolTemp As Boolean)
+
+    Dim strLineToSend As String
+
+    If bolConnected Then
+        strLineToSend = CMD_CHAPER_CHANGE & " all " & Str(intIn) & "/" & Str(intOut)
+        If bolTemp Then strLineToSend &= " temp"
+        SendData(strLineToSend)
+    Endif
+
+End
+
+Public Sub ShaperRestore(strInterface As String)
+
+    Dim strLineToSend As String
+
+    If bolConnected Then
+        strLineToSend = CMD_CHAPER_RESTORE & " " & strInterface
+        SendData(strLineToSend)
+    Endif
+
+End
+
+Public Sub ShaperRestoreAll()
+
+    Dim strLineToSend As String
+
+    If bolConnected Then
+        strLineToSend = CMD_CHAPER_RESTORE & " all "
+        SendData(strLineToSend)
+    Endif
+
+End
+
 
 ' ---------------------
 ' Socket event handlers
@@ -407,6 +457,10 @@ Private Sub SendData(strCommand As String)
             Raise Killed
         Case Like CMD_RESTART & "*"
             Raise Restarted
+        Case Like CMD_CHAPER_CHANGE & "*"
+            Raise Changed
+        Case Like CMD_CHAPER_RESTORE & "*"
+            Raise Restored
     End Select
 
 End

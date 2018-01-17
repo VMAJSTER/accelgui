@@ -4,6 +4,7 @@
   Move(0,0,320,160)
   #Scaled = False
   Text = ("Sessions filter")
+  Icon = Picture["icons/16.png"]
   Resizable = False
   Utility = True
   SkipTaskbar = True

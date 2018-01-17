@@ -5,36 +5,36 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-16 10:09 UTC\n"
+"POT-Creation-Date: 2018-01-17 13:42 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: FSrvAction.form:27
+#: FSrvAction.form:28
 msgid "Name: "
 msgstr ""
 
-#: FSrvAction.form:34
+#: FSrvAction.form:35
 msgid "Address: "
 msgstr ""
 
-#: FSrvAction.form:41
+#: FSrvAction.form:42
 msgid "Port: "
 msgstr ""
 
-#: FSrvAction.form:48
+#: FSrvAction.form:49
 msgid "accel-ppp"
 msgstr ""
 
-#: FSrvAction.form:60
+#: FSrvAction.form:61
 msgid "2001"
 msgstr ""
 
-#: FSrvAction.form:69
+#: FSrvAction.form:70
 msgid "Apply"
 msgstr ""
 
-#: FSrvAction.form:79
+#: FSrvAction.form:80
 msgid "Cancel"
 msgstr ""
 

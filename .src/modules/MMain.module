@@ -198,7 +198,7 @@ Public Sub RestartDaemon(strTermMode As String)
 End
 
 ' -----------------------------------------------------------------------
-'' The procedure shows message in dialogbox of given type
+'' The procedure shows message in a dialogbox of given type
 ' -----------------------------------------------------------------------
 Public Function ShowMessage(strMessage As String, strType As String) As Integer
 

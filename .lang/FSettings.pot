@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-16 10:09 UTC\n"
+"POT-Creation-Date: 2018-01-17 13:42 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,31 +14,31 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: FSettings.form:30
+#: FSettings.form:31
 msgid "Exit"
 msgstr ""
 
-#: FSettings.form:40
+#: FSettings.form:41
 msgid "Save"
 msgstr ""
 
-#: FSettings.form:51
+#: FSettings.form:52
 msgid "admin"
 msgstr ""
 
-#: FSettings.form:58
+#: FSettings.form:59
 msgid "user"
 msgstr ""
 
-#: FSettings.form:65
+#: FSettings.form:66
 msgid "guest"
 msgstr ""
 
-#: FSettings.form:92
+#: FSettings.form:93
 msgid "default"
 msgstr ""
 
-#: FSettings.form:118
+#: FSettings.form:119
 msgid "Reset"
 msgstr ""
 

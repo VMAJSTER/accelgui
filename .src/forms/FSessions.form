@@ -32,6 +32,7 @@
     { txaStat TextArea
       Move(16,16,264,448)
       Font = Font["10"]
+      Background = Color.White
       ReadOnly = True
       Border = False
       ScrollBar = Scroll.None

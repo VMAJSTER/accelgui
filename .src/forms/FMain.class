@@ -49,7 +49,7 @@ Public Sub Form_Open()
             mnuTermAllHard.Enabled = False
         Case "guest"
             mnbTerminate.Enabled = False
-            mnbShaper.Enabled = False
+            tlbShaper.Enabled = False
             tlbReload.Enabled = False
             mnbRestart.Enabled = False
             mnbShutdown.Enabled = False
@@ -234,5 +234,26 @@ End
 Public Sub mnuRestartHard_Click()
 
     MMain.RestartDaemon(MTermMode.Hard)
+
+End
+
+Public Sub tlbShaper_Click()
+
+    Dim objWindow As FSessions
+    Dim intInput As Integer
+    Dim intOutput As Integer
+    Dim intRow As Integer
+
+    If wksServers.Windows.Count > 0 Then
+        objWindow = wksServers.ActiveWindow
+        If objWindow.objServer.Connected And If objWindow.objServer.Sessions.Count > 0 Then
+            intRow = objWindow.grvSessions.Row
+            intInput = CInt(objWindow.grvSessions[intRow, 4].Text)
+            intOutput = CInt(objWindow.grvSessions[intRow, 5].Text)
+            FShaper.vlbInput.Value = intInput
+            FShaper.vlbOutput.Value = intOutput
+            FShaper.ShowModal()
+        Endif
+    Endif
 
 End
