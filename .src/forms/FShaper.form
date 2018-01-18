@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,416,272)
+  Move(0,0,432,272)
   #Scaled = False
   Text = ("Change / restore shaper")
   Icon = Picture["icons/16.png"]
@@ -9,23 +9,23 @@
   Utility = True
   SkipTaskbar = True
   { Panel1 Panel
-    Move(8,8,264,256)
+    Move(8,8,280,256)
     Border = Border.Plain
     { rdbCurrent RadioButton
-      Move(16,16,232,24)
+      Move(16,16,248,24)
       Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Current interface")
       Value = True
     }
     { rdbAll RadioButton
-      Move(16,48,232,24)
+      Move(16,48,248,24)
       Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("All interfaces")
     }
     { Separator1 Separator
-      Move(16,72,232,24)
+      Move(16,72,248,24)
     }
     { vlbInput ValueBox
       Move(24,120,104,32)
@@ -33,17 +33,17 @@
       Mouse = Mouse.Pointing
     }
     { Separator2 Separator
-      Move(16,160,232,24)
+      Move(16,160,248,24)
     }
     { chbApply CheckBox
-      Move(16,216,232,16)
+      Move(16,216,248,24)
       Enabled = False
       Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Apply to new interfaces")
     }
     { vlbOutput ValueBox
-      Move(136,120,104,32)
+      Move(152,120,104,32)
       Font = Font["10"]
       Mouse = Mouse.Pointing
     }
@@ -53,12 +53,12 @@
       Text = ("Input:")
     }
     { Label2 Label
-      Move(140,96,96,24)
+      Move(156,96,96,24)
       Font = Font["10"]
       Text = ("Output:")
     }
     { chbRestore CheckBox
-      Move(16,192,232,16)
+      Move(16,192,248,24)
       Font = Font["10"]
       Mouse = Mouse.Pointing
       Text = ("Changes may be restored")
@@ -66,7 +66,7 @@
     }
   }
   { btnChange Button
-    Move(280,8,128,32)
+    Move(296,8,128,32)
     Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
@@ -74,7 +74,7 @@
     Picture = Picture["images/change.png"]
   }
   { btnCancel Button
-    Move(280,232,128,32)
+    Move(296,232,128,32)
     Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
@@ -83,7 +83,7 @@
     Cancel = True
   }
   { btnRestore Button
-    Move(280,48,128,32)
+    Move(296,48,128,32)
     Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing

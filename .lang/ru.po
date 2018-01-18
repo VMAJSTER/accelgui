@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-17 13:27 UTC\n"
+"PO-Revision-Date: 2018-01-18 06:05 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Значение:"
 msgid "Calling"
 msgstr "Вызывающий"
 
-#: FFilter.form:43 FSessions.class:19
+#: FFilter.form:43 FSessions.class:21
 msgid "Interface"
 msgstr "Интерфейс"
 
@@ -85,7 +85,7 @@ msgstr "Айпи адрес"
 msgid "Not chosen"
 msgstr "Не выбрано"
 
-#: FFilter.form:43 FSessions.class:21
+#: FFilter.form:43 FSessions.class:23
 msgid "Username"
 msgstr "Пользователь"
 
@@ -317,35 +317,31 @@ msgstr "-"
 msgid "Start"
 msgstr "Запустить"
 
-#: FSessions.class:22
+#: FSessions.class:24
 msgid "CallingSID"
 msgstr "Вызывающий"
 
-#: FSessions.class:24
-msgid "IP"
-msgstr "Айпи"
-
 #: FSessions.class:26
+msgid "IP address"
+msgstr "Айпи адрес"
+
+#: FSessions.class:28
 msgid "RateIn"
 msgstr "СкорВх"
 
-#: FSessions.class:28
+#: FSessions.class:30
 msgid "RateOut"
 msgstr "СкорИсх"
 
-#: FSessions.class:30
+#: FSessions.class:32
 msgid "Type"
 msgstr "Тип"
 
-#: FSessions.class:32
-msgid "Compress"
-msgstr "Сжатие"
-
-#: FSessions.class:34
+#: FSessions.class:36
 msgid "State"
 msgstr "Состояние"
 
-#: FSessions.class:36
+#: FSessions.class:38
 msgid "Uptime"
 msgstr "Время"
 
@@ -377,7 +373,7 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
-#: FShaper.class:63
+#: FShaper.class:78
 msgid "Values must be more than zero"
 msgstr "Значения должны быть больше нуля"
 

@@ -3,6 +3,8 @@
 Public objServer As CNas
 ' Column number to sort by
 Private bytColSort As Byte = 1
+' Width of all columns in grid except for username column
+Private Const COLUMNS_W As Short = 775
 
 Private Sub ShowRowNum(intCur As Integer)
 
@@ -15,13 +17,13 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
     Dim i As Integer
 
     With grvSessions
-        .Columns.Count = 10
+        .Columns.Count = 9
         .Columns[0].Text = ("Interface")
         .Columns[0].Width = 100
         .Columns[1].Text = ("Username")
         .Columns[2].Text = ("CallingSID")
         .Columns[2].Width = 135
-        .Columns[3].Text = ("IP")
+        .Columns[3].Text = ("IP address")
         .Columns[3].Width = 135
         .Columns[4].Text = ("RateIn")
         .Columns[4].Width = 85
@@ -29,13 +31,13 @@ Public Sub _new(Name As String, Host As String, Port As Integer)
         .Columns[5].Width = 85
         .Columns[6].Text = ("Type")
         .Columns[6].Width = 60
-        .Columns[7].Text = ("Compress")
-        .Columns[7].Width = 60
-        .Columns[8].Text = ("State")
-        .Columns[8].Width = 85
-        .Columns[9].Text = ("Uptime")
-        .Columns[9].Width = 110
-        For i = 0 To 9
+        ' .Columns[7].Text = ("Compress")
+        ' .Columns[7].Width = 60
+        .Columns[7].Text = ("State")
+        .Columns[7].Width = 75
+        .Columns[8].Text = ("Uptime")
+        .Columns[8].Width = 100
+        For i = 0 To 8
             .Columns[i].Alignment = Align.Center
         Next
         .Columns.Sort = bytColSort
@@ -60,7 +62,7 @@ Public Sub Form_Resize()
         .Height = Me.ClientH - MMain.MARGIN * 2
         .Left = MMain.MARGIN
         .Top = MMain.MARGIN
-        .Columns[1].Width = grvSessions.ClientW - 855
+        .Columns[1].Width = grvSessions.ClientW - COLUMNS_W
     End With
 
     With pnlStat
@@ -100,7 +102,7 @@ Public Sub objServer_GotSessions()
     grvSessions.Rows.Count = objServer.Sessions.Count
     If grvSessions.Rows.Count > 0 Then
         MMain.ActivateRow(grvSessions, 0)
-        grvSessions.Columns[1].Width = grvSessions.ClientW - 855
+        grvSessions.Columns[1].Width = grvSessions.ClientW - COLUMNS_W
     Endif
 
 End
@@ -214,11 +216,11 @@ Public Sub grvSessions_Data(Row As Integer, Column As Integer)
             grvSessions.Data.Text = objServer.Sessions[Row].RateOut
         Case 6
             grvSessions.Data.Text = objServer.Sessions[Row].Type
+            ' Case 7
+            '     grvSessions.Data.Text = objServer.Sessions[Row].Comp
         Case 7
-            grvSessions.Data.Text = objServer.Sessions[Row].Comp
-        Case 8
             grvSessions.Data.Text = objServer.Sessions[Row].State
-        Case 9
+        Case 8
             grvSessions.Data.Text = objServer.Sessions[Row].Uptime
     End Select
 

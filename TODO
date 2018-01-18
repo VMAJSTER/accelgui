@@ -54,3 +54,5 @@
  + shaper restore <interface> - restores shaper settings on specified interface made by 'shaper change' command with 'temp' flag
  + shaper restore all - restores shaper settings on all interfaces made by 'shaper change' command with 'temp' flag
  
+[Not Implemented]
+ - Using password in connection to server
