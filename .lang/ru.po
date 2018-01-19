@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-18 06:05 UTC\n"
+"PO-Revision-Date: 2018-01-19 06:47 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,11 +29,11 @@ msgstr "Авторизация"
 msgid "Enter"
 msgstr "Вход"
 
-#: FAuth.form:35 FFilter.form:68 FMain.form:61 FSettings.form:31
+#: FAuth.form:35 FFilter.form:68 FMain.form:62 FSettings.form:31
 msgid "Exit"
 msgstr "Выход"
 
-#: FAuth.form:53
+#: FAuth.form:53 FView.form:105
 msgid "Username:"
 msgstr "Пользователь:"
 
@@ -57,7 +57,7 @@ msgstr "-"
 msgid "Value is not entered"
 msgstr "Значение не указано"
 
-#: FFilter.form:14 FMain.form:140
+#: FFilter.form:14 FMain.form:141
 msgid "Sessions filter"
 msgstr "Фильтр сессий"
 
@@ -121,113 +121,117 @@ msgstr "Уверены, что хотите перезагрузить файл 
 msgid "Help file was not found"
 msgstr "Файл справки не найден"
 
-#: FMain.form:46
+#: FMain.form:47
 msgid "Accel GUI"
 msgstr "-"
 
-#: FMain.form:51
+#: FMain.form:52
 msgid "TrayIcon"
 msgstr "-"
 
-#: FMain.form:55
+#: FMain.form:56
 msgid "Show"
 msgstr "Показать"
 
-#: FMain.form:68
+#: FMain.form:69
 msgid "Shutdown"
 msgstr "-"
 
-#: FMain.form:72
+#: FMain.form:73
 msgid "Shutdown default"
 msgstr "Завершение по-умолчанию"
 
-#: FMain.form:76
+#: FMain.form:77
 msgid "Shutdown soft"
 msgstr "Легкое завершение"
 
-#: FMain.form:80
+#: FMain.form:81
 msgid "Shutdown hard"
 msgstr "Жесткое завершение"
 
-#: FMain.form:87
+#: FMain.form:88
 msgid "Shutdown cancel"
 msgstr "Отмена завершения"
 
-#: FMain.form:92
+#: FMain.form:93
 msgid "Restart"
 msgstr "-"
 
-#: FMain.form:96
+#: FMain.form:97
 msgid "Restart soft"
 msgstr "Легкий перезапуск"
 
-#: FMain.form:100
+#: FMain.form:101
 msgid "Restart hard"
 msgstr "Жесткий перезапуск"
 
-#: FMain.form:105
+#: FMain.form:106
 msgid "Terminate"
 msgstr "-"
 
-#: FMain.form:109
+#: FMain.form:110
 msgid "Soft terminate current session"
 msgstr "Легкий обрыв текущей сессии"
 
-#: FMain.form:113
+#: FMain.form:114
 msgid "Hard terminate current session"
 msgstr "Жесткий обрыв текущей сессии"
 
-#: FMain.form:120
+#: FMain.form:121
 msgid "Soft terminate all sessions"
 msgstr "Легкий обрыв всех сессий"
 
-#: FMain.form:124
+#: FMain.form:125
 msgid "Hard terminate all sessions"
 msgstr "Жесткий обрыв всех сессий"
 
-#: FMain.form:148
+#: FMain.form:149
 msgid "Update list of sessions"
 msgstr "Обновление списка сессий"
 
-#: FMain.form:156 FSettings.form:20
+#: FMain.form:157 FSettings.form:20
 msgid "Settings"
 msgstr "Настройки"
 
-#: FMain.form:164
+#: FMain.form:165
 msgid "Help"
 msgstr "Справка"
 
-#: FMain.form:184 FServers.form:25
+#: FMain.form:185 FServers.form:25
 msgid "Servers manager"
 msgstr "Менеджер серверов"
 
-#: FMain.form:192
+#: FMain.form:193
 msgid "Reload config file"
 msgstr "Перезагрузка файла конфигурации"
 
-#: FMain.form:204
+#: FMain.form:205
 msgid "Hide to tray"
 msgstr "Сворачивание в трей"
 
-#: FMain.form:220
+#: FMain.form:221
 msgid "Quit the programm"
 msgstr "Выход из программы"
 
-#: FMain.form:228
+#: FMain.form:229
 msgid "Shutdown daemon"
 msgstr "Завершение службы"
 
-#: FMain.form:239
+#: FMain.form:240
 msgid "Restart daemon"
 msgstr "Перезапуск службы"
 
-#: FMain.form:250
+#: FMain.form:251
 msgid "Terminate session"
 msgstr "Обрыв сессий"
 
-#: FMain.form:261 FShaper.form:21
+#: FMain.form:262 FShaper.form:21
 msgid "Change / restore shaper"
 msgstr "Изменение / восстановление шейпера"
+
+#: FMain.form:270 FView.form:51
+msgid "View session info"
+msgstr "Просмотр информации о сессии"
 
 #: FServers.class:24
 msgid "P"
@@ -405,7 +409,7 @@ msgstr "Изменения обратимы"
 msgid "Change"
 msgstr "Изменить"
 
-#: FShaper.form:109 FSrvAction.form:80
+#: FShaper.form:109 FSrvAction.form:80 FView.form:62
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -440,6 +444,98 @@ msgstr "-"
 #: FSrvAction.form:61
 msgid "2001"
 msgstr "-"
+
+#: FView.form:71
+msgid "Automatic update"
+msgstr "Автоматическое обновление"
+
+#: FView.form:72
+msgid "Update"
+msgstr "Обновить"
+
+#: FView.form:87
+msgid "Primary"
+msgstr "Основная"
+
+#: FView.form:92
+msgid "Interface:"
+msgstr "Интерфейс:"
+
+#: FView.form:124
+msgid "Calling sid:"
+msgstr "Вызывающий:"
+
+#: FView.form:137
+msgid "Ip address:"
+msgstr "Айпи адрес:"
+
+#: FView.form:144
+msgid "Type:"
+msgstr "Тип:"
+
+#: FView.form:157
+msgid "State:"
+msgstr "Состояние:"
+
+#: FView.form:177
+msgid "Compression:"
+msgstr "Сжатие:"
+
+#: FView.form:190
+msgid "Uptime:"
+msgstr "Время:"
+
+#: FView.form:203
+msgid "Rate limit:"
+msgstr "Скорость:"
+
+#: FView.form:216
+msgid "Ipoe type:"
+msgstr "Тип ipoe:"
+
+#: FView.form:220
+msgid "Secondary"
+msgstr "Дополнительная"
+
+#: FView.form:231
+msgid "Tx packets:"
+msgstr "Исх пакетов:"
+
+#: FView.form:244
+msgid "Rx packets:"
+msgstr "Вх пакетов:"
+
+#: FView.form:251
+msgid "Rx bytes raw:"
+msgstr "Вх сырых байт:"
+
+#: FView.form:264
+msgid "Tx bytes raw:"
+msgstr "Исх сырых байт:"
+
+#: FView.form:283
+msgid "Tx bytes:"
+msgstr "Исх байт:"
+
+#: FView.form:296
+msgid "Rx bytes:"
+msgstr "Вх байт:"
+
+#: FView.form:303
+msgid "Called sid:"
+msgstr "Вызываемый:"
+
+#: FView.form:316
+msgid "Session id:"
+msgstr "Ид сессии:"
+
+#: FView.form:335
+msgid "Ipv6 prefix:"
+msgstr "Ipv6 префикс:"
+
+#: FView.form:348
+msgid "Ipv6 address:"
+msgstr "Ipv6 адрес:"
 
 #: MMain.module:31
 msgid "Config file does not exist."

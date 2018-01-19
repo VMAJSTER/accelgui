@@ -1,0 +1,20 @@
+' Gambas class file
+
+Public Sub Form_Open()
+
+    Me.Center()
+
+End
+
+Public Sub btnCancel_Click()
+
+    tmrUpdate.Stop()
+    Me.Close()
+
+End
+
+Public Sub tgbAutoUpdate_Click()
+
+    tmrUpdate.Enabled = tgbAutoUpdate.Value
+
+End

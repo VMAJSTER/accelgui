@@ -1,5 +1,11 @@
 [Not Implemented]
  - show stat - shows various statistics information
+ 
+[Not Implemented]
+ - View button on toolbar to see all the info about current session
+
+[Not Implemented]
+ - Using password in connection to server
 
 [Implemented]
  + terminate if <interface> [soft|hard]- terminate session by interface name
@@ -53,6 +59,3 @@
  + shaper change all <value> [temp] - change shaper on all interfaces, if temp is set also new interfaces will have specified shaper value
  + shaper restore <interface> - restores shaper settings on specified interface made by 'shaper change' command with 'temp' flag
  + shaper restore all - restores shaper settings on all interfaces made by 'shaper change' command with 'temp' flag
- 
-[Not Implemented]
- - Using password in connection to server
