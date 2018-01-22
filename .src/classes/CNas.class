@@ -351,25 +351,23 @@ Public Sub Restart()
 
 End
 
-Public Sub ShaperChange(strInterface As String, intIn As Integer, intOut As Integer, Optional bolTemp As Boolean)
+Public Sub ShaperChange(strInterface As String, intIn As Integer, intOut As Integer)
 
     Dim strLineToSend As String
 
     If bolConnected Then
-        strLineToSend = CMD_CHAPER_CHANGE & " " & strInterface & " " & Str(intIn) & "/" & Str(intOut)
-        If bolTemp Then strLineToSend &= " temp"
+        strLineToSend = CMD_CHAPER_CHANGE & " " & strInterface & " " & Str(intIn) & "/" & Str(intOut) & " temp"
         SendData(strLineToSend)
     Endif
 
 End
 
-Public Sub ShaperChangeAll(intIn As Integer, intOut As Integer, Optional bolTemp As Boolean)
+Public Sub ShaperChangeAll(intIn As Integer, intOut As Integer)
 
     Dim strLineToSend As String
 
     If bolConnected Then
-        strLineToSend = CMD_CHAPER_CHANGE & " all " & Str(intIn) & "/" & Str(intOut)
-        If bolTemp Then strLineToSend &= " temp"
+        strLineToSend = CMD_CHAPER_CHANGE & " all " & Str(intIn) & "/" & Str(intOut) & " temp"
         SendData(strLineToSend)
     Endif
 
@@ -391,7 +389,7 @@ Public Sub ShaperRestoreAll()
     Dim strLineToSend As String
 
     If bolConnected Then
-        strLineToSend = CMD_CHAPER_RESTORE & " all "
+        strLineToSend = CMD_CHAPER_RESTORE & " all"
         SendData(strLineToSend)
     Endif
 

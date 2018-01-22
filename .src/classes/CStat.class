@@ -1,0 +1,236 @@
+' Gambas class file
+
+
+' ---------
+' Constants
+' ---------
+Private Const CMD_STAT As String = "show stat"
+
+
+' ---------------------
+' Fields default values
+' ---------------------
+Private Const DFL_NAME As String = "accel-ppp"
+Private Const DFL_HOST As String = "127.0.0.1"
+Private Const DFL_PORT As Integer = 2001
+
+
+' ---------
+' Variables
+' ---------
+Private objSrv As Socket
+Private arrLines As String[]
+
+
+' ------
+' Fields
+' ------
+Private strName As String = DFL_NAME
+Private strHost As String = DFL_HOST
+Private intPort As Integer = DFL_PORT
+Private bolConnected As Boolean
+Private bolConnecting As Boolean
+Private strStats As String
+
+
+' ----------
+' Properties
+' ----------
+Property Name As String
+Property Host As String
+Property Port As Integer
+Property Read Connected As Boolean
+Property Read Connecting As Boolean
+Property Read Stats As String
+
+
+' ------
+' Events
+' ------
+Event Connected
+Event Disconnected
+Event GotStats
+
+' ------------------------------
+' Properties setters and getters
+' ------------------------------
+
+Private Function Name_Read() As String
+
+    Return strName
+
+End
+
+Private Sub Name_Write(Value As String)
+
+    Value = Trim(Value)
+    If Value = Null Then Value = DFL_NAME
+    strName = Value
+
+End
+
+Private Function Host_Read() As String
+
+    Return strHost
+
+End
+
+Private Sub Host_Write(Value As String)
+
+    Value = Trim(Value)
+    If Value = Null Or If Not MMain.IsIpAddress(Value) Then Value = DFL_HOST
+    strHost = Value
+
+End
+
+Private Function Port_Read() As Integer
+
+    Return intPort
+
+End
+
+Private Sub Port_Write(Value As Integer)
+
+    If Value < 1 Or Value > 65535 Then Value = DFL_PORT
+    intPort = Value
+
+End
+
+Private Function Connected_Read() As Boolean
+
+    Return bolConnected
+
+End
+
+Private Function Connecting_Read() As Boolean
+
+    Return bolConnecting
+
+End
+
+Private Function Stats_Read() As String
+
+    Return strStats
+
+End
+
+
+
+' -----------
+' Constructor
+' -----------
+
+Public Sub _new()
+
+    objSrv = New Socket As "objSrv"
+    arrLines = New String[]
+
+End
+
+' -----------
+' Desctructor
+' -----------
+
+Public Sub _free()
+
+    Disconnect()
+
+End
+
+
+' -------
+' Methods
+' -------
+
+Public Sub Connect()
+
+    If Not bolConnected And If Not bolConnecting Then
+        objSrv.Connect(strHost, intPort)
+        bolConnecting = True
+    Endif
+
+End
+
+Public Sub Disconnect()
+
+    If bolConnected Or bolConnecting Then objSrv.Close()
+
+End
+
+Public Sub GetStats()
+
+    If bolConnected Then
+        arrLines.Clear()
+        SendData(CMD_STAT)
+    Endif
+
+End
+
+
+
+' ---------------------
+' Socket event handlers
+' ---------------------
+
+Public Sub objSrv_Closed()
+
+    bolConnected = False
+    bolConnecting = False
+    Raise Disconnected
+
+End
+
+Public Sub objSrv_Error()
+
+    bolConnected = False
+    bolConnecting = False
+    Raise Disconnected
+
+End
+
+Public Sub objSrv_Ready()
+
+    bolConnected = True
+    bolConnecting = False
+    Raise Connected
+
+End
+
+Public Sub objSrv_Read()
+
+    Dim strLine As String
+
+    For Each strline In objSrv.Lines
+        arrLines.Add(strLine)
+    Next
+    ParseStats()
+
+End
+
+' -------------------
+' Private subroutines
+' -------------------
+
+Private Sub SendData(strCommand As String)
+
+    Dim intCommandLength As Integer
+
+    strCommand &= gb.Lf
+    intCommandLength = Len(strCommand)
+    Write #objSrv, strCommand, intCommandLength
+    Raise GotStats
+
+End
+
+Private Sub ParseStats()
+
+    Dim i As Integer
+
+    strStats = ""
+    If arrLines.Count > 0 Then
+        For i = 0 To arrLines.Max
+            strStats &= arrLines[i]
+        Next
+    Endif
+
+End

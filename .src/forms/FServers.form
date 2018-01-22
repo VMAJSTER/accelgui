@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,546,392)
+  Move(0,0,560,408)
   #Scaled = False
   Text = ("Servers manager")
   Icon = Picture["icons/16.png"]
@@ -9,7 +9,7 @@
   Utility = True
   SkipTaskbar = True
   { grvServers GridView
-    Move(8,48,530,336)
+    Move(8,64,544,336)
     Font = Font["10"]
     Mouse = Mouse.Pointing
     Mode = Select.Single
@@ -18,9 +18,10 @@
     Resizable = False
   }
   { pnlToolBar Panel
-    Move(8,7,530,32)
+    Move(8,8,544,48)
+    Border = Border.Plain
     { tlbAdd ToolButton
-      Move(0,0,32,32)
+      Move(7,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -28,7 +29,7 @@
       Picture = Picture["images/add.png"]
     }
     { tlbEdit ToolButton
-      Move(35,0,32,32)
+      Move(42,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -36,7 +37,7 @@
       Picture = Picture["images/edit.png"]
     }
     { tlbDelete ToolButton
-      Move(70,0,32,32)
+      Move(77,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -44,7 +45,7 @@
       Picture = Picture["images/delete.png"]
     }
     { tlbClear ToolButton
-      Move(105,0,32,32)
+      Move(112,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -52,7 +53,7 @@
       Picture = Picture["images/clear.png"]
     }
     { tlbFirst ToolButton
-      Move(203,0,32,32)
+      Move(210,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -60,7 +61,7 @@
       Picture = Picture["images/first.png"]
     }
     { tlbPrevious ToolButton
-      Move(238,0,32,32)
+      Move(245,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -68,7 +69,7 @@
       Picture = Picture["images/previous.png"]
     }
     { tlbNext ToolButton
-      Move(364,0,32,32)
+      Move(371,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -76,7 +77,7 @@
       Picture = Picture["images/next.png"]
     }
     { tlbLast ToolButton
-      Move(399,0,32,32)
+      Move(406,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -84,7 +85,7 @@
       Picture = Picture["images/last.png"]
     }
     { tlbCheck ToolButton
-      Move(448,0,32,32)
+      Move(455,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -92,7 +93,7 @@
       Picture = Picture["images/enable.png"]
     }
     { tlbSave ToolButton
-      Move(497,0,32,32)
+      Move(504,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -100,22 +101,22 @@
       Picture = Picture["images/save.png"]
     }
     { Separator1 Separator
-      Move(135,0,21,32)
+      Move(142,8,21,32)
     }
     { Separator2 Separator
-      Move(429,0,21,32)
+      Move(436,8,21,32)
     }
     { Separator3 Separator
-      Move(478,0,21,32)
+      Move(485,8,21,32)
     }
     { lblSrvCount Label
-      Move(275,0,84,35)
+      Move(282,8,84,35)
       Font = Font["Ubuntu,Bold,12"]
       Text = ("0 / 0")
       Alignment = Align.Center
     }
     { tlbAction ToolButton
-      Move(154,0,32,32)
+      Move(161,8,32,32)
       Enabled = False
       NoTabFocus = True
       Mouse = Mouse.Pointing
@@ -123,7 +124,7 @@
       Picture = Picture["images/start.png"]
     }
     { Separator4 Separator
-      Move(184,0,21,32)
+      Move(191,8,21,32)
     }
   }
 }

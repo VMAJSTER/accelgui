@@ -192,7 +192,7 @@
     }
   }
   { triMain #TrayIcon
-    #Move(864,16)
+    #Move(856,432)
     Tooltip = ("Accel GUI")
     Picture = Picture["icons/24.png"]
     PopupMenu = "mnuTrayIcon"

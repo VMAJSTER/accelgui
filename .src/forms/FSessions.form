@@ -26,20 +26,26 @@
     Delay = 100
   }
   { pnlStat Panel
-    Move(624,8,298,480)
+    Move(624,8,296,424)
     Background = Color.White
     Border = Border.Plain
     { txaStat TextArea
-      Move(16,16,264,448)
+      Move(16,16,264,392)
       Font = Font["10"]
       Background = Color.White
       ReadOnly = True
       Border = False
       ScrollBar = Scroll.None
     }
+    { lblLabel Label
+      Move(24,200,248,24)
+      Font = Font["10"]
+      Text = ("No data")
+      Alignment = Align.Center
+    }
   }
   { pnlToolBar Panel
-    Move(624,496,298,48)
+    Move(624,496,296,48)
     Background = Color.White
     Border = Border.Plain
     { tlbFirst ToolButton
@@ -80,5 +86,23 @@
   }
   { tmrStat #Timer
     #Move(80,480)
+    Enabled = True
+  }
+  { pnlButtons Panel
+    Move(624,440,296,48)
+    Border = Border.Plain
+    { btnUpdate Button
+      Move(8,8,136,32)
+      Enabled = False
+      Mouse = Mouse.Pointing
+      Text = ("Update")
+      Picture = Picture["images/renew.png"]
+    }
+    { swbAutoUpdate SwitchButton
+      Move(152,8,136,32)
+      Mouse = Mouse.Pointing
+      ToolTip = ("Autoupdate")
+      Value = True
+    }
   }
 }

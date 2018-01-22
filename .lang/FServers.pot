@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-19 06:49 UTC\n"
+"POT-Creation-Date: 2018-01-22 11:48 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,51 +14,51 @@ msgstr ""
 msgid "Servers manager"
 msgstr ""
 
-#: FServers.form:49
+#: FServers.form:50
 msgid "Add"
 msgstr ""
 
-#: FServers.form:58
+#: FServers.form:59
 msgid "Edit"
 msgstr ""
 
-#: FServers.form:67
+#: FServers.form:68
 msgid "Delete"
 msgstr ""
 
-#: FServers.form:76
+#: FServers.form:77
 msgid "Clear"
 msgstr ""
 
-#: FServers.form:85
+#: FServers.form:86
 msgid "First"
 msgstr ""
 
-#: FServers.form:94
+#: FServers.form:95
 msgid "Previous"
 msgstr ""
 
-#: FServers.form:103
+#: FServers.form:104
 msgid "Next"
 msgstr ""
 
-#: FServers.form:112
+#: FServers.form:113
 msgid "Last"
 msgstr ""
 
-#: FServers.form:121
+#: FServers.form:122
 msgid "Autostart"
 msgstr ""
 
-#: FServers.form:130
+#: FServers.form:131
 msgid "Save"
 msgstr ""
 
-#: FServers.form:149
+#: FServers.form:150
 msgid "0 / 0"
 msgstr ""
 
-#: FServers.form:158
+#: FServers.form:159
 msgid "Start"
 msgstr ""
 

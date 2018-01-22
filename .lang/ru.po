@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-19 06:47 UTC\n"
+"PO-Revision-Date: 2018-01-22 11:48 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Значение:"
 msgid "Calling"
 msgstr "Вызывающий"
 
-#: FFilter.form:43 FSessions.class:21
+#: FFilter.form:43 FSessions.class:22
 msgid "Interface"
 msgstr "Интерфейс"
 
@@ -85,7 +85,7 @@ msgstr "Айпи адрес"
 msgid "Not chosen"
 msgstr "Не выбрано"
 
-#: FFilter.form:43 FSessions.class:23
+#: FFilter.form:43 FSessions.class:24
 msgid "Username"
 msgstr "Пользователь"
 
@@ -225,7 +225,7 @@ msgstr "Перезапуск службы"
 msgid "Terminate session"
 msgstr "Обрыв сессий"
 
-#: FMain.form:262 FShaper.form:21
+#: FMain.form:262 FShaper.form:18
 msgid "Change / restore shaper"
 msgstr "Изменение / восстановление шейпера"
 
@@ -273,101 +273,113 @@ msgstr "Уверены, что хотите очистить список сер
 msgid "Stop"
 msgstr "Остановить"
 
-#: FServers.form:49
+#: FServers.form:50
 msgid "Add"
 msgstr "Добавить"
 
-#: FServers.form:58
+#: FServers.form:59
 msgid "Edit"
 msgstr "Изменить"
 
-#: FServers.form:67
+#: FServers.form:68
 msgid "Delete"
 msgstr "Удалить"
 
-#: FServers.form:76
+#: FServers.form:77
 msgid "Clear"
 msgstr "Очистить"
 
-#: FServers.form:85
+#: FServers.form:86
 msgid "First"
 msgstr "Первый"
 
-#: FServers.form:94
+#: FServers.form:95
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: FServers.form:103
+#: FServers.form:104
 msgid "Next"
 msgstr "Следующий"
 
-#: FServers.form:112
+#: FServers.form:113
 msgid "Last"
 msgstr "Последний"
 
-#: FServers.form:121
+#: FServers.form:122
 msgid "Autostart"
 msgstr "Автозапуск"
 
-#: FServers.form:130 FSettings.form:41
+#: FServers.form:131 FSettings.form:41
 msgid "Save"
 msgstr "Сохранение"
 
-#: FServers.form:149 FSessions.form:98
+#: FServers.form:150 FSessions.form:109
 msgid "0 / 0"
 msgstr "-"
 
-#: FServers.form:158
+#: FServers.form:159
 msgid "Start"
 msgstr "Запустить"
 
-#: FSessions.class:24
+#: FSessions.class:25
 msgid "CallingSID"
 msgstr "Вызывающий"
 
-#: FSessions.class:26
+#: FSessions.class:27
 msgid "IP address"
 msgstr "Айпи адрес"
 
-#: FSessions.class:28
+#: FSessions.class:29
 msgid "RateIn"
 msgstr "СкорВх"
 
-#: FSessions.class:30
+#: FSessions.class:31
 msgid "RateOut"
 msgstr "СкорИсх"
 
-#: FSessions.class:32
+#: FSessions.class:33
 msgid "Type"
 msgstr "Тип"
 
-#: FSessions.class:36
+#: FSessions.class:35
 msgid "State"
 msgstr "Состояние"
 
-#: FSessions.class:38
+#: FSessions.class:37
 msgid "Uptime"
 msgstr "Время"
 
-#: FSessions.form:18
+#: FSessions.form:22
 msgid " Primary server"
 msgstr "-"
 
-#: FSessions.form:66
+#: FSessions.form:63
+msgid "No data"
+msgstr "Нет данных"
+
+#: FSessions.form:77
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:74
+#: FSessions.form:85
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:82
+#: FSessions.form:93
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:90
+#: FSessions.form:101
 msgid "Last session"
 msgstr "Последняя сессия"
+
+#: FSessions.form:126 FView.form:72
+msgid "Update"
+msgstr "Обновить"
+
+#: FSessions.form:133
+msgid "Autoupdate"
+msgstr "Автообновление"
 
 #: FSettings.form:93
 msgid "default"
@@ -377,43 +389,35 @@ msgstr "по-умолчанию"
 msgid "Reset"
 msgstr "Сброс"
 
-#: FShaper.class:78
+#: FShaper.class:52
 msgid "Values must be more than zero"
 msgstr "Значения должны быть больше нуля"
 
-#: FShaper.form:35
+#: FShaper.form:32
 msgid "Current interface"
 msgstr "Текущий интерфейс"
 
-#: FShaper.form:43
+#: FShaper.form:40
 msgid "All interfaces"
 msgstr "Все интерфейсы"
 
-#: FShaper.form:65
-msgid "Apply to new interfaces"
-msgstr "Применять к новым интерфейсам"
-
-#: FShaper.form:77
+#: FShaper.form:58
 msgid "Input:"
 msgstr "Входящая:"
 
-#: FShaper.form:83
+#: FShaper.form:64
 msgid "Output:"
 msgstr "Исходящая:"
 
-#: FShaper.form:90
-msgid "Changes may be restored"
-msgstr "Изменения обратимы"
-
-#: FShaper.form:100
+#: FShaper.form:77
 msgid "Change"
 msgstr "Изменить"
 
-#: FShaper.form:109 FSrvAction.form:80 FView.form:62
+#: FShaper.form:86 FSrvAction.form:80 FView.form:62
 msgid "Cancel"
 msgstr "Отмена"
 
-#: FShaper.form:119
+#: FShaper.form:96
 msgid "Restore"
 msgstr "Восстановить"
 
@@ -448,10 +452,6 @@ msgstr "-"
 #: FView.form:71
 msgid "Automatic update"
 msgstr "Автоматическое обновление"
-
-#: FView.form:72
-msgid "Update"
-msgstr "Обновить"
 
 #: FView.form:87
 msgid "Primary"
