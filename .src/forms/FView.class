@@ -13,8 +13,14 @@ Public Sub btnCancel_Click()
 
 End
 
-Public Sub tgbAutoUpdate_Click()
+Public Sub swbAutoUpdate_Click()
 
-    tmrUpdate.Enabled = tgbAutoUpdate.Value
+    If swbAutoUpdate.Value Then
+        tmrUpdate.Start()
+        btnUpdate.Enabled = False
+    Else
+        tmrUpdate.Stop()
+        btnUpdate.Enabled = True
+    Endif
 
 End

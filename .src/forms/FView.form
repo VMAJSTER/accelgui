@@ -17,16 +17,8 @@
     Picture = Picture["images/close.png"]
     Cancel = True
   }
-  { tgbAutoUpdate ToggleButton
-    Move(480,272,128,32)
-    Font = Font["10"]
-    Mouse = Mouse.Pointing
-    ToolTip = ("Automatic update")
-    Text = ("Update")
-    Picture = Picture["images/renew.png"]
-  }
   { tmrUpdate #Timer
-    #Move(24,200)
+    #Move(280,256)
   }
   { tbpInfo TabPanel
     Move(8,8,736,256)
@@ -261,5 +253,20 @@
       Alignment = Align.Right
     }
     Index = 0
+  }
+  { swbAutoUpdate SwitchButton
+    Move(8,272,128,32)
+    Font = Font["10"]
+    Mouse = Mouse.Pointing
+    ToolTip = ("Autoupdate")
+    Value = True
+  }
+  { btnUpdate Button
+    Move(144,272,128,32)
+    Enabled = False
+    Font = Font["10"]
+    Mouse = Mouse.Pointing
+    Text = ("Update")
+    Picture = Picture["images/renew.png"]
   }
 }

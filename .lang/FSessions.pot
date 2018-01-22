@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: $(PACKAGE) $(VERSION)\n"
-"POT-Creation-Date: 2018-01-22 11:48 UTC\n"
+"POT-Creation-Date: 2018-01-22 14:01 UTC\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,31 +18,31 @@ msgstr ""
 msgid "No data"
 msgstr ""
 
-#: FSessions.form:77
+#: FSessions.form:75
 msgid "First session"
 msgstr ""
 
-#: FSessions.form:85
+#: FSessions.form:83
 msgid "Previous session"
 msgstr ""
 
-#: FSessions.form:93
+#: FSessions.form:91
 msgid "Next session"
 msgstr ""
 
-#: FSessions.form:101
+#: FSessions.form:99
 msgid "Last session"
 msgstr ""
 
-#: FSessions.form:109
+#: FSessions.form:107
 msgid "0 / 0"
 msgstr ""
 
-#: FSessions.form:126
+#: FSessions.form:124
 msgid "Update"
 msgstr ""
 
-#: FSessions.form:133
+#: FSessions.form:132
 msgid "Autoupdate"
 msgstr ""
 
