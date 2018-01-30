@@ -26,11 +26,11 @@
     Delay = 100
   }
   { pnlStat Panel
-    Move(624,8,296,440)
+    Move(624,8,296,448)
     Background = Color.White
     Border = Border.Plain
     { txaStat TextArea
-      Move(16,16,264,408)
+      Move(16,16,264,416)
       Font = Font["10"]
       Background = Color.White
       ReadOnly = True
@@ -38,44 +38,44 @@
       ScrollBar = Scroll.None
     }
     { lblLabel Label
-      Move(24,208,248,24)
+      Move(24,216,248,24)
       Font = Font["10"]
       Text = ("No data")
       Alignment = Align.Center
     }
   }
   { pnlToolBar Panel
-    Move(624,496,296,48)
+    Move(624,504,296,36)
     { tlbFirst ToolButton
-      Move(6,6,36,36)
+      Move(0,0,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("First session")
       Picture = Picture["images/big_first.png"]
     }
     { tlbPrevious ToolButton
-      Move(48,6,36,36)
+      Move(44,0,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Previous session")
       Picture = Picture["images/big_previous.png"]
     }
     { tlbNext ToolButton
-      Move(214,6,36,36)
+      Move(216,0,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Next session")
       Picture = Picture["images/big_next.png"]
     }
     { tlbLast ToolButton
-      Move(256,6,36,36)
+      Move(260,0,36,36)
       Background = &HE0007FFF&
       Mouse = Mouse.Pointing
       ToolTip = ("Last session")
       Picture = Picture["images/big_last.png"]
     }
     { lblSessions Label
-      Move(90,6,118,36)
+      Move(88,0,120,36)
       Font = Font["Bold,12"]
       Foreground = &H3F81B8&
       Text = ("0 / 0")
@@ -87,7 +87,7 @@
     Enabled = True
   }
   { pnlButtons Panel
-    Move(624,456,296,32)
+    Move(624,464,296,32)
     { btnUpdate Button
       Move(0,0,144,32)
       Enabled = False

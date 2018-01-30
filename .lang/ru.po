@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: accelgui 3.10.0\n"
-"PO-Revision-Date: 2018-01-22 11:48 UTC\n"
+"PO-Revision-Date: 2018-01-30 13:26 UTC\n"
 "Last-Translator: Abdul Zagirov <zagirovaa@bk.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "Вход"
 msgid "Exit"
 msgstr "Выход"
 
-#: FAuth.form:53 FView.form:105
+#: FAuth.form:53 FView.form:94
 msgid "Username:"
 msgstr "Пользователь:"
 
@@ -229,7 +229,7 @@ msgstr "Обрыв сессий"
 msgid "Change / restore shaper"
 msgstr "Изменение / восстановление шейпера"
 
-#: FMain.form:270 FView.form:51
+#: FMain.form:270 FView.form:36
 msgid "View session info"
 msgstr "Просмотр информации о сессии"
 
@@ -313,7 +313,7 @@ msgstr "Автозапуск"
 msgid "Save"
 msgstr "Сохранение"
 
-#: FServers.form:150 FSessions.form:109
+#: FServers.form:150 FSessions.form:107
 msgid "0 / 0"
 msgstr "-"
 
@@ -357,27 +357,27 @@ msgstr "-"
 msgid "No data"
 msgstr "Нет данных"
 
-#: FSessions.form:77
+#: FSessions.form:75
 msgid "First session"
 msgstr "Первая сессия"
 
-#: FSessions.form:85
+#: FSessions.form:83
 msgid "Previous session"
 msgstr "Предыдущая сессия"
 
-#: FSessions.form:93
+#: FSessions.form:91
 msgid "Next session"
 msgstr "Следующая сессия"
 
-#: FSessions.form:101
+#: FSessions.form:99
 msgid "Last session"
 msgstr "Последняя сессия"
 
-#: FSessions.form:126 FView.form:72
+#: FSessions.form:124 FView.form:69
 msgid "Update"
 msgstr "Обновить"
 
-#: FSessions.form:133
+#: FSessions.form:132 FView.form:60
 msgid "Autoupdate"
 msgstr "Автообновление"
 
@@ -413,7 +413,7 @@ msgstr "Исходящая:"
 msgid "Change"
 msgstr "Изменить"
 
-#: FShaper.form:86 FSrvAction.form:80 FView.form:62
+#: FShaper.form:86 FSrvAction.form:80 FView.form:47
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -449,93 +449,49 @@ msgstr "-"
 msgid "2001"
 msgstr "-"
 
-#: FView.form:71
-msgid "Automatic update"
-msgstr "Автоматическое обновление"
-
-#: FView.form:87
-msgid "Primary"
-msgstr "Основная"
-
-#: FView.form:92
+#: FView.form:80
 msgid "Interface:"
 msgstr "Интерфейс:"
 
-#: FView.form:124
+#: FView.form:115
 msgid "Calling sid:"
 msgstr "Вызывающий:"
 
-#: FView.form:137
+#: FView.form:129
 msgid "Ip address:"
 msgstr "Айпи адрес:"
 
-#: FView.form:144
+#: FView.form:136
 msgid "Type:"
 msgstr "Тип:"
 
-#: FView.form:157
+#: FView.form:150
 msgid "State:"
 msgstr "Состояние:"
 
-#: FView.form:177
+#: FView.form:171
 msgid "Compression:"
 msgstr "Сжатие:"
 
-#: FView.form:190
+#: FView.form:185
 msgid "Uptime:"
 msgstr "Время:"
 
-#: FView.form:203
-msgid "Rate limit:"
-msgstr "Скорость:"
+#: FView.form:192
+msgid "In rate:"
+msgstr "Вх. скорость:"
 
-#: FView.form:216
-msgid "Ipoe type:"
-msgstr "Тип ipoe:"
+#: FView.form:206
+msgid "Out rate:"
+msgstr "Исх. скорость:"
 
 #: FView.form:220
-msgid "Secondary"
-msgstr "Дополнительная"
-
-#: FView.form:231
-msgid "Tx packets:"
-msgstr "Исх пакетов:"
-
-#: FView.form:244
-msgid "Rx packets:"
-msgstr "Вх пакетов:"
-
-#: FView.form:251
-msgid "Rx bytes raw:"
-msgstr "Вх сырых байт:"
-
-#: FView.form:264
-msgid "Tx bytes raw:"
-msgstr "Исх сырых байт:"
-
-#: FView.form:283
-msgid "Tx bytes:"
-msgstr "Исх байт:"
-
-#: FView.form:296
-msgid "Rx bytes:"
-msgstr "Вх байт:"
-
-#: FView.form:303
-msgid "Called sid:"
-msgstr "Вызываемый:"
-
-#: FView.form:316
 msgid "Session id:"
 msgstr "Ид сессии:"
 
-#: FView.form:335
-msgid "Ipv6 prefix:"
-msgstr "Ipv6 префикс:"
-
-#: FView.form:348
-msgid "Ipv6 address:"
-msgstr "Ipv6 адрес:"
+#: FView.form:234
+msgid "Called sid:"
+msgstr "Вызываемый:"
 
 #: MMain.module:31
 msgid "Config file does not exist."

@@ -261,11 +261,15 @@ End
 Public Sub tlbView_Click()
 
     Dim objWindow As FSessions
+    Dim objView As FView
+    Dim strUsername As String
 
     If wksServers.Windows.Count > 0 Then
         objWindow = wksServers.ActiveWindow
         If objWindow.objServer.Connected And If objWindow.objServer.Sessions.Count > 0 Then
-            FView.ShowModal()
+            strUsername = objWindow.grvSessions[objWindow.grvSessions.Row, 1].Text
+            objView = New FView(objWindow.objServer, strUsername)
+            objView.ShowModal()
         Endif
     Endif
 

@@ -1,6 +1,7 @@
 [Bookmarks]
 CNas=[352]
 FMain=[208]
+FView=[14]
 
 [Breakpoints]
 Count=0
@@ -138,10 +139,9 @@ Geometry=[587,244,256,320]
 Path="accelgui.gambas"
 
 [OpenFile]
-Count=2
+Count=1
 File[1]=".src/forms/FMain.form"
-Active=2
-File[2]=".src/forms/FSessions.form"
+Active=1
 
 [Watches]
 Count=0

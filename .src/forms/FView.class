@@ -1,5 +1,50 @@
 ' Gambas class file
 
+Private objServer As CNas
+
+Public Sub _new(objSrv As CNas, strUsername As String)
+
+    objServer = New CNas As "objServer"
+    With objServer
+        .Name = objSrv.Name
+        .Host = objSrv.Host
+        .Port = objSrv.Port
+        .MatchMode = MColumn.UserName
+        .MatchValue = strUsername
+        .Connect()
+    End With
+
+End
+
+Public Sub objServer_GotSessions()
+
+    txbInterface.Text = objServer.Sessions[0].IFName
+    txbUsername.Text = objServer.Sessions[0].UserName
+    txbIpAddress.Text = objServer.Sessions[0].IP
+    txbCallingSid.Text = objServer.Sessions[0].CallingSID
+    txbSessionId.Text = objServer.Sessions[0].SID
+    txbCalledSid.Text = objServer.Sessions[0].CalledSID
+    txbType.Text = objServer.Sessions[0].Type
+    txbState.Text = objServer.Sessions[0].State
+    txbUptime.Text = objServer.Sessions[0].Uptime
+    swbCompression.Value = CBool(objServer.Sessions[0].Comp)
+    txbRateIn.Text = objServer.Sessions[0].RateIn
+    txbRateOut.Text = objServer.Sessions[0].RateOut
+
+End
+
+Public Sub Form_Close()
+
+    objServer.Disconnect()
+
+End
+
+Public Sub objServer_Connected()
+
+    objServer.GetSessions()
+
+End
+
 Public Sub Form_Open()
 
     Me.Center()
@@ -8,19 +53,12 @@ End
 
 Public Sub btnCancel_Click()
 
-    tmrUpdate.Stop()
     Me.Close()
 
 End
 
-Public Sub swbAutoUpdate_Click()
+Public Sub btnUpdate_Click()
 
-    If swbAutoUpdate.Value Then
-        tmrUpdate.Start()
-        btnUpdate.Enabled = False
-    Else
-        tmrUpdate.Stop()
-        btnUpdate.Enabled = True
-    Endif
+    objServer.GetSessions()
 
 End

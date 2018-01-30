@@ -10,6 +10,8 @@ Private strType As String
 Private bolComp As Boolean
 Private strState As String
 Private strUptime As String
+Private strCalledSID As String
+Private strSID As String
 
 Property IFName As String
 Property UserName As String
@@ -21,6 +23,8 @@ Property Type As String
 Property Comp As Boolean
 Property State As String
 Property Uptime As String
+Property CalledSID As String
+Property SID As String
 
 Private Function IFName_Read() As String
 
@@ -139,5 +143,29 @@ End
 Private Sub Uptime_Write(Value As String)
 
     strUptime = Value
+
+End
+
+Private Function CalledSID_Read() As String
+
+    Return strCalledSID
+
+End
+
+Private Sub CalledSID_Write(Value As String)
+
+    strCalledSID = Value
+
+End
+
+Private Function SID_Read() As String
+
+    Return strSID
+
+End
+
+Private Sub SID_Write(Value As String)
+
+    strSID = Value
 
 End

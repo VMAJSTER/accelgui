@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  Move(0,0,752,312)
+  Move(0,0,624,320)
   #Scaled = False
   Text = ("View session info")
   Icon = Picture["icons/16.png"]
@@ -9,7 +9,7 @@
   Utility = True
   SkipTaskbar = True
   { btnCancel Button
-    Move(616,272,128,32)
+    Move(488,280,128,32)
     Font = Font["10"]
     NoTabFocus = True
     Mouse = Mouse.Pointing
@@ -18,255 +18,163 @@
     Cancel = True
   }
   { tmrUpdate #Timer
-    #Move(280,256)
+    #Move(24,24)
+    Enabled = True
   }
-  { tbpInfo TabPanel
-    Move(8,8,736,256)
+  { btnUpdate Button
+    Move(8,280,128,32)
     Font = Font["10"]
-    NoTabFocus = True
     Mouse = Mouse.Pointing
-    Count = 2
-    Highlight = True
-    Index = 0
-    Text = ("Primary")
+    Text = ("Update")
+    Picture = Picture["images/renew.png"]
+    Default = True
+  }
+  { Panel1 Panel
+    Move(8,8,608,264)
+    Border = Border.Plain
     { Label1 Label
-      Move(16,20,152,24)
+      Move(16,20,120,24)
       Font = Font["10"]
       Text = ("Interface:")
       Alignment = Align.Right
     }
     { txbInterface TextBox
-      Move(184,16,176,32)
+      Move(152,16,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label11 Label
-      Move(376,20,152,24)
+      Move(312,20,120,24)
       Font = Font["10"]
       Text = ("Username:")
       Alignment = Align.Right
     }
     { txbUsername TextBox
-      Move(544,16,176,32)
+      Move(448,16,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { txbCallingSid TextBox
-      Move(544,56,176,32)
+      Move(448,56,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label12 Label
-      Move(376,60,152,24)
+      Move(312,60,120,24)
       Font = Font["10"]
       Text = ("Calling sid:")
       Alignment = Align.Right
     }
     { txbIpAddress TextBox
-      Move(184,56,176,32)
+      Move(152,56,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label2 Label
-      Move(16,60,152,24)
+      Move(16,60,120,24)
       Font = Font["10"]
       Text = ("Ip address:")
       Alignment = Align.Right
     }
     { Label3 Label
-      Move(16,100,152,24)
+      Move(16,140,120,24)
       Font = Font["10"]
       Text = ("Type:")
       Alignment = Align.Right
     }
     { txbType TextBox
-      Move(184,96,176,32)
+      Move(152,136,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label13 Label
-      Move(376,100,152,24)
+      Move(312,140,120,24)
       Font = Font["10"]
       Text = ("State:")
       Alignment = Align.Right
     }
     { txbState TextBox
-      Move(544,96,176,32)
+      Move(448,136,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { swbCompression SwitchButton
-      Move(544,136,176,32)
+      Move(448,176,144,32)
       Enabled = False
       Font = Font["10"]
       Mouse = Mouse.Pointing
     }
     { Label20 Label
-      Move(376,140,152,24)
+      Move(312,180,120,24)
       Font = Font["10"]
       Text = ("Compression:")
       Alignment = Align.Right
     }
     { txbUptime TextBox
-      Move(184,136,176,32)
+      Move(152,176,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label4 Label
-      Move(16,140,152,24)
+      Move(16,180,120,24)
       Font = Font["10"]
       Text = ("Uptime:")
       Alignment = Align.Right
     }
-    { txbRateLimit TextBox
-      Move(184,176,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
     { Label5 Label
-      Move(16,180,152,24)
+      Move(16,220,120,24)
       Font = Font["10"]
-      Text = ("Rate limit:")
+      Text = ("In rate:")
       Alignment = Align.Right
     }
-    { txbIpoeType TextBox
-      Move(544,176,176,32)
+    { txbRateIn TextBox
+      Move(152,216,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
-    { Label21 Label
-      Move(376,180,152,24)
+    { Label6 Label
+      Move(312,220,120,24)
       Font = Font["10"]
-      Text = ("Ipoe type:")
+      Text = ("Out rate:")
       Alignment = Align.Right
     }
-    Index = 1
-    Text = ("Secondary")
-    { txbTxPackets TextBox
-      Move(544,176,176,32)
+    { txbRateOut TextBox
+      Move(448,216,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
-    { Label14 Label
-      Move(376,180,152,24)
+    { Label7 Label
+      Move(16,100,120,24)
       Font = Font["10"]
-      Text = ("Tx packets:")
+      Text = ("Session id:")
       Alignment = Align.Right
     }
-    { txbRxPackets TextBox
-      Move(184,176,176,32)
+    { txbSessionId TextBox
+      Move(152,96,144,32)
       Font = Font["10"]
-      ReadOnly = True
-    }
-    { Label9 Label
-      Move(16,180,152,24)
-      Font = Font["10"]
-      Text = ("Rx packets:")
-      Alignment = Align.Right
-    }
-    { Label10 Label
-      Move(16,140,152,24)
-      Font = Font["10"]
-      Text = ("Rx bytes raw:")
-      Alignment = Align.Right
-    }
-    { txbRxBytesRaw TextBox
-      Move(184,136,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { Label19 Label
-      Move(376,140,152,24)
-      Font = Font["10"]
-      Text = ("Tx bytes raw:")
-      Alignment = Align.Right
-    }
-    { txbTxBytesRaw TextBox
-      Move(544,136,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { txbTxBytes TextBox
-      Move(544,96,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { Label18 Label
-      Move(376,100,152,24)
-      Font = Font["10"]
-      Text = ("Tx bytes:")
-      Alignment = Align.Right
-    }
-    { txbRxBytes TextBox
-      Move(184,96,176,32)
-      Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
     { Label8 Label
-      Move(16,100,152,24)
-      Font = Font["10"]
-      Text = ("Rx bytes:")
-      Alignment = Align.Right
-    }
-    { Label7 Label
-      Move(16,60,152,24)
+      Move(312,100,120,24)
       Font = Font["10"]
       Text = ("Called sid:")
       Alignment = Align.Right
     }
     { txbCalledSid TextBox
-      Move(184,56,176,32)
+      Move(448,96,144,32)
       Font = Font["10"]
+      Alignment = Align.Center
       ReadOnly = True
     }
-    { Label17 Label
-      Move(376,60,152,24)
-      Font = Font["10"]
-      Text = ("Session id:")
-      Alignment = Align.Right
-    }
-    { txbSessinId TextBox
-      Move(544,56,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { txbIpv6Prefix TextBox
-      Move(544,16,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { Label16 Label
-      Move(376,20,152,24)
-      Font = Font["10"]
-      Text = ("Ipv6 prefix:")
-      Alignment = Align.Right
-    }
-    { txbIpv6Address TextBox
-      Move(184,16,176,32)
-      Font = Font["10"]
-      ReadOnly = True
-    }
-    { Label6 Label
-      Move(16,20,152,24)
-      Font = Font["10"]
-      Text = ("Ipv6 address:")
-      Alignment = Align.Right
-    }
-    Index = 0
-  }
-  { swbAutoUpdate SwitchButton
-    Move(8,272,128,32)
-    Font = Font["10"]
-    Mouse = Mouse.Pointing
-    ToolTip = ("Autoupdate")
-    Value = True
-  }
-  { btnUpdate Button
-    Move(144,272,128,32)
-    Enabled = False
-    Font = Font["10"]
-    Mouse = Mouse.Pointing
-    Text = ("Update")
-    Picture = Picture["images/renew.png"]
   }
 }

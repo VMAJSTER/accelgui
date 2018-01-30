@@ -300,15 +300,21 @@ End
 Public Sub GetSessions()
 
     Dim strLineToSend As String
+    Dim i As Byte
 
     If bolConnected Then
-        strLineToSend = CMD_SESSIONS
+        strLineToSend = CMD_SESSIONS & " "
+        For i = 1 To MColumn.Columns.Max - 1
+            strLineToSend &= MColumn.Columns[i] & ","
+        Next
+        strLineToSend &= MColumn.Columns[MColumn.Columns.Max]
         If strColumn <> MColumn.Default Then strLineToSend &= " " & strColumn
         If strOrderMode <> MColumn.Default Then strLineToSend &= " order " & strOrderMode
         If strMatchMode <> MColumn.Default And If strMatchValue <> Null Then
             strLineToSend &= " match " & strMatchMode & " " & strMatchValue
         Endif
         arrSessionsData.Clear()
+        Print strLineToSend
         SendData(strLineToSend)
     Endif
 
@@ -474,7 +480,7 @@ Private Sub ParseSessions()
         arrSessions.Clear()
         For i = 2 To arrSessionsData.Max
             arrRecord = Split(arrSessionsData[i], "|")
-            If arrRecord.Length = 9 Then
+            If arrRecord.Length = 11 Then
                 arrRate = Split(Trim(arrRecord[4]), "/")
                 arrSession = New CSession
                 With arrSession
@@ -493,6 +499,8 @@ Private Sub ParseSessions()
                     .Comp = CBool(Trim(arrRecord[6]))
                     .State = Trim(arrRecord[7])
                     .Uptime = Trim(arrRecord[8])
+                    .CalledSID = Trim(arrRecord[9])
+                    .SID = Trim(arrRecord[10])
                 End With
                 arrSessions.Add(arrSession)
             Endif
