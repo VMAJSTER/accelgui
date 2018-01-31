@@ -1,4 +1,4 @@
-# accelgui
+# Accel GUI
 Graphical user interface for accel-ppp server
 
 <p>Процесс установки и запуска приложения будет показан на примере дистрибутива Ubuntu.</p>
