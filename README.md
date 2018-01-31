@@ -1,2 +1,33 @@
 # accelgui
-Graphical user interface for accel-ppp vpn server
+Graphical user interface for accel-ppp server
+
+<p>Процесс установки и запуска приложения будет показан на примере дистрибутива Ubuntu.</p>
+<ol>
+    <li>
+        Установим необходимые пакеты<br>
+        <code>sudo apt-get install gambas3 git gksu -y</code>
+    </li><br>
+    <li>
+        Создаем каталог для будущего приложения<br>
+        <code>mkdir -p ~/soft/</code>
+    </li><br>
+    <li>
+        Переходим в созданный ранее каталог<br>
+        <code>cd ~/soft</code>
+    </li><br>
+    <li>
+        Клонируем репозиторий<br>
+        <code>git clone https://github.com/ZagirovAA/accelgui.git</code>
+    </li><br>
+    <li>
+        Назначаем файлу приложения бит исполнения<br>
+        <code>chmod +x ~/soft/accelgui/accelgui.gambas</code>
+    </li><br>
+    <li>
+        После клонирования появится каталог accelgui, в котором будет исполняемый файл accelgui.gambas, ярлык для которого нужно  создать на рабочем столе, использую средства
+        окружения рабочего стола, которое используете вы.
+    </li><br>
+    <li>
+        Для первоначальной настройки приложения необходимо запустить его с правами root, для чего можно использовать инструмент gksu. После добавления имеющихся у вас серверов и смены паролей для всех трех учетных записей, можно запустить приложение в нормальном режиме и начать им пользоваться.
+    </li><br>
+</ol>
