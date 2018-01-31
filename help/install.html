@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Справочная система : Настройка</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-9">
+          <h2 class="text-primary"><b>Справочная система</b></h2>
+          <h5>
+            Воспользуйтесь меню в левой части окна для перехода
+            в соответствующий раздел
+          </h5>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="list-group">
+            <a href="index.html" class="list-group-item">
+              <h4 class="list-group-item-heading">О программе</h4>
+              <p class="list-group-item-text">
+                Краткая информация о программе и ее авторе
+              </p>
+            </a>
+          </div>
+          <div class="list-group">
+            <a href="features.html" class="list-group-item">
+              <h4 class="list-group-item-heading">Возможности</h4>
+              <p class="list-group-item-text">
+                Список функциональных возможностей приложения
+              </p>
+            </a>
+          </div>
+          <div class="list-group">
+            <a href="install.html" class="list-group-item active">
+              <h4 class="list-group-item-heading">Установка</h4>
+              <p class="list-group-item-text">
+                Подробная инструкция по установке приложения
+              </p>
+            </a>
+          </div>
+          <div class="list-group">
+            <a href="settings.html" class="list-group-item">
+              <h4 class="list-group-item-heading">Настройка</h4>
+              <p class="list-group-item-text">
+                Подробная инструкция по настройке приложения
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-9">
+          <h4 class="text-primary"><b>Установка</b></h4>
+          <h5>Подробная инструкция по установке приложения</h5><br><hr>
+          <p>
+            Так как в приложении нет механизма проверки и последующей автоматической загрузки и установки последней версии,
+            лучшим способом установки является клонирование репозитория с github. Для этого нужно установить как саму
+            среду разработки, для последующего корректного запуска приложения, так и пакеты для работы с git репозиториями
+            и прочие. Процесс установки и запуска приложения будет показан на примере дистрибутива Ubuntu.
+          </p>
+          <ol>
+            <li>
+              Установим необходимые пакеты<br>
+              <code>sudo apt-get install gambas3 git gksu -y</code>
+            </li><br>
+            <li>
+              Создаем каталог для будущего приложения<br>
+              <code>mkdir -p ~/soft/</code>
+            </li><br>
+            <li>
+              Переходим в созданный ранее каталог<br>
+              <code>cd ~/soft</code>
+            </li><br>
+            <li>
+              Клонируем репозиторий<br>
+              <code>git clone https://github.com/ZagirovAA/accelgui.git</code>
+            </li><br>
+            <li>
+              Назначаем файлу приложения бит исполнения<br>
+              <code>chmod +x ~/soft/accelgui/accelgui.gambas</code>
+            </li><br>
+            <li>
+              После клонирования появится каталог accelgui, в котором будет исполняемый файл accelgui.gambas, ярлык для
+              которого нужно создать на рабочем столе, использую средства окружения рабочего стола, которое используете вы.
+            </li><br>
+            <li>
+              Для первоначальной настройки приложения необходимо запустить его с правами root, для чего можно использовать
+              инструмент gksu. После добавления имеющихся у вас серверов и смены паролей для всех трех учетных записей, можно
+              запустить приложение в нормальном режиме и начать им пользоваться.
+            </li><br>
+          </ol>
+          <div class="alert alert-info" role="alert">
+            <strong>Внимание!</strong>
+            Более детальное описание всех функциональных возможностей приложения
+            можно найти перейдя по ссылке "Настройка" в главном меню
+            справочной системы.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
