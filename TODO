@@ -1,11 +1,11 @@
 [Not Implemented]
- - show stat - shows various statistics information
- 
-[Not Implemented]
- - View button on toolbar to see all the info about current session
-
-[Not Implemented]
  - Using password in connection to server
+
+[Implemented]
+ + show stat - shows various statistics information
+ 
+[Implemented]
+ + View button on toolbar to see all the info about current session
 
 [Implemented]
  + terminate if <interface> [soft|hard]- terminate session by interface name

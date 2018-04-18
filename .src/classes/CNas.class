@@ -314,7 +314,6 @@ Public Sub GetSessions()
             strLineToSend &= " match " & strMatchMode & " " & strMatchValue
         Endif
         arrSessionsData.Clear()
-        Print strLineToSend
         SendData(strLineToSend)
     Endif
 

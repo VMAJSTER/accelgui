@@ -200,8 +200,10 @@ Public Sub tmrState_Timer()
         Me.Icon = Picture["./images/passive.png"]
         grvSessions.Clear()
         grvSessions.Rows.Count = 0
+        txaStat.Clear()
         ShowRowNum(0)
         objServer.Connect()
+        objStats.Connect()
     Endif
 
 End
